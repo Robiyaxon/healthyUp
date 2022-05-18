@@ -87,7 +87,7 @@
   justify-content: center;
   text-align: center;
   background-color: #fff;
-  width: 240px;
+  width: 45%;
 }
 
 .btn {
@@ -96,7 +96,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 45px;
-  width: 210px;
+  width: 100%;
   text-align: center;
   position: relative;
   text-decoration: none;
