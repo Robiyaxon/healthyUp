@@ -57,11 +57,13 @@
     display: flex;
     align-items: center;
 }
-.Card__UserName p{
+
+.Card__UserName p {
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 0;
 }
+
 .Card__UserCapitalLetter {
     background-color: red;
     color: white;
@@ -75,19 +77,54 @@
     border-radius: 50%;
     margin-right: 12px;
 }
-.Card h6{
+
+.Card h6 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     font-weight: 600;
     margin: 0.3rem 0 0.3rem 0;
 }
-.SocialNetworks{
-    border: 2px solid red;
+
+.SocialNetworks {
     margin-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.SocialNetworks__icon{
-    border: 2px solid red;
+
+.SocialNetworks__icon {
+    width: 30%;
+}
+
+.SocialNetworks__text {
+    width: 30%;
+
+}
+
+.SocialNetworks__text h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    width: 448px;
+
+    line-height: 51px;
+    color: #9F27E0;
+}
+.SocialNetworks__text p{
+    font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 30px;
+color: #9F27E0;
+
+}
+.fa {
+    transition: all .4s;
+    cursor: pointer;
+  }
+.fa:hover {
+    opacity: .9;
+    transform: rotate(360deg);
 }
