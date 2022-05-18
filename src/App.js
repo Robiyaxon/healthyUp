@@ -11,7 +11,7 @@ import { Spin } from "antd";
 
 function App() {
   const { t } = useTranslation();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
   };
@@ -19,6 +19,7 @@ function App() {
     window.addEventListener("load", handleLoading);
     return () => window.removeEventListener("load", handleLoading);
   }, []);
+
   const map = [
     { id: 1, url: "/", kompannent: <MyCabinet /> },
     { id: 2, url: "my_cabinets", kompannent: <MyCabinet /> },
@@ -26,6 +27,7 @@ function App() {
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
   ];
+
   const mapRoute = map.map((a) => (
     <Route
       key={a.id}

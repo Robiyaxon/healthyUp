@@ -5,6 +5,7 @@ import navbarOpen from "../../assets/TopHeader/navbaricon.svg";
 import i18n from "./../../i18n";
 import { Drawer } from "antd";
 import { Navbar } from "../navbar/Navbar";
+
 export const TopHeader = () => {
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
@@ -23,6 +24,7 @@ export const TopHeader = () => {
   const onClose = () => {
     setVisible(false);
   };
+
   return (
     <div className={style.Wrapper}>
       <Drawer placement="right" onClose={onClose} visible={visible}>
