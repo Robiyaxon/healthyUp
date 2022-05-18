@@ -25,12 +25,8 @@ export const TopHeader = () => {
   };
   return (
     <div className={style.Wrapper}>
-      <Drawer
-        placement="right"
-        onClose={onClose}
-        visible={visible}
-      >
-       <Navbar onClose={onClose}/>
+      <Drawer placement="right" onClose={onClose} visible={visible}>
+        <Navbar onClose={onClose} />
       </Drawer>
       <img src={logo} alt="" />
       <div className={style.Drawer}>
@@ -51,4 +47,3 @@ export const TopHeader = () => {
     </div>
   );
 };
-
