@@ -1,31 +1,65 @@
 import "./App.css";
-import React, { useState } from "react";
-import i18n from "./i18n";
-//antni shunaqa qilib kerakli joylariga ishlataveramiz!
+import React, { Suspense, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { TopHeader } from "./components/top_header/TopHeader";
+import { MyCabinet } from "./components/my_cabinet/My_Cabinet.jsx";
+import { News } from "./components/news/News";
+import { AboutUs } from "./components/about_us/AboutUs";
+import { Contact } from "./components/contact/Contact";
+import { Route, Routes } from "react-router-dom";
+import { Spin } from "antd";
 import { Home } from './components/home/Home';
 
 function App() {
-  const defaultLang = localStorage.getItem("lang") || "uz";
   const { t } = useTranslation();
-  const [lang, setLang] = useState(defaultLang);
-  const handleChange = (event) => {
-    setLang(event.target.value);
-    localStorage.setItem("lang", event.target.value);
-    i18n.changeLanguage(event.target.value);
+  const [isLoading, setIsLoading] = useState(false);
+  const handleLoading = () => {
+    setIsLoading(false);
   };
+  useEffect(() => {
+    window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
+  }, []);
+  const map = [
+    { id: 1, url: "/", kompannent: <Home /> },
+    { id: 2, url: "my_cabinets", kompannent: <MyCabinet /> },
+    { id: 3, url: "news", kompannent: <News /> },
+    { id: 4, url: "about_us", kompannent: <AboutUs /> },
+    { id: 5, url: "contact", kompannent: <Contact /> },
+  ];
+  const mapRoute = map.map((a) => (
+    <Route
+      key={a.id}
+      path={a.url}
+      element={
+        <Suspense
+          fallback={
+            <>
+              <Spin />
+            </>
+          }
+        >
+          {" "}
+          {a.kompannent}
+        </Suspense>
+      }
+    />
+  ));
   return (
     <div>
-      <h1>til o`zgaradigon bo`ldi!</h1>
-      <div className="select">
-        <select name="lang" value={lang} onChange={handleChange}>
-          <option value="uz">UZ</option>
-          <option value="ru">RU</option>
-          <option value="eng">en</option>
-        </select>
-        <h1> {t("navbar1")}</h1>
-        <Home/>
-      </div>
+      {isLoading ? (
+        <>
+          <Spin />
+        </>
+      ) : (
+        <>
+          <TopHeader />
+          <Routes>{mapRoute}</Routes>
+          <div className="select">
+            <h1> {t("navbar1")}</h1>
+          </div>
+        </>
+      )}
     </div>
   );
 }
