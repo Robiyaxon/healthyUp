@@ -8,9 +8,16 @@
 .select select {
     width: 62px;
     height: 28px;
-    left: 1230px;
-    top: 46px;
     border: none;
     outline: none;
+    font-weight: 700;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.Drawer{
+    display: flex;
+    align-items: center;
+}
+.NavbarIcon{
+    cursor: pointer;
+    margin-left: 10px;
 }
