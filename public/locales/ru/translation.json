@@ -2,5 +2,7 @@
   "navbar1": "Мой кабинет",
   "navbar2": "Новости",
   "navbar3": "О нас",
-  "navbar4": "Контакты"
+  "navbar4": "Контакты",
+  "homeHeaderBtn1":"Войти",
+  "homeHeaderBtn2":"ЗАРЕГИСТРИРОВАТЬСЯ"
 }
