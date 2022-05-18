@@ -10,6 +10,13 @@ export const Navbar = (props) => {
       <NavLink
         onClick={props.onClose}
         className={({ isActive }) => (isActive ? "active" : "Navlink")}
+        to={"/"}
+      >
+        {t("navbar5")}
+      </NavLink>
+      <NavLink
+        onClick={props.onClose}
+        className={({ isActive }) => (isActive ? "active" : "Navlink")}
         to={"my_cabinets"}
       >
         {t("navbar1")}

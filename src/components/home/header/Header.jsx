@@ -1,9 +1,10 @@
 import React from "react";
 
 import main from "../../../assets/home/header/main.png";
+import { Task } from "../../task/Task";
 
 import styles from "./Header.module.css";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -49,8 +50,8 @@ const Header = () => {
           shifokoringiz bilan maslahatlashishni tavsiya qilamiz
         </p>
       </div>
+      <Task />
     </>
   );
 };
-
 export default Header;
