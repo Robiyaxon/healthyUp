@@ -1,4 +1,24 @@
 .ant-drawer.ant-drawer-open .ant-drawer-mask {
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff1a;
     backdrop-filter: blur(6px)
+}
+
+.active {
+    color: red;
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 39px;
+}
+
+.Navlink {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #29292C;
+    line-height: 39px;
 }
