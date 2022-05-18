@@ -1,7 +1,10 @@
 import React from "react";
 import style from "./navbar.module.css";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export const Navbar = (props) => {
+  const { t } = useTranslation();
+
   return (
     <div className={style.Wrapper}>
       <NavLink
@@ -9,28 +12,28 @@ export const Navbar = (props) => {
         className={({ isActive }) => (isActive ? "active" : "Navlink")}
         to={"my_cabinets"}
       >
-        My Cabinet{" "}
+        {t("navbar1")}
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "Navlink")}
         onClick={props.onClose}
         to={"news"}
       >
-        News{" "}
+         {t("navbar2")}
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "Navlink")}
         onClick={props.onClose}
         to={"about_us"}
       >
-        About Us{" "}
+        {t("navbar3")}
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "Navlink")}
         onClick={props.onClose}
         to={"contact"}
       >
-        Contact{" "}
+         {t("navbar4")}
       </NavLink>
     </div>
   );

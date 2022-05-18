@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { Suspense, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { TopHeader } from "./components/top_header/TopHeader";
 import { MyCabinet } from "./components/my_cabinet/My_Cabinet.jsx";
 import { News } from "./components/news/News";
@@ -11,7 +10,6 @@ import { Spin } from "antd";
 import { Home } from './components/home/Home';
 
 function App() {
-  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
@@ -55,9 +53,7 @@ function App() {
         <>
           <TopHeader />
           <Routes>{mapRoute}</Routes>
-          <div className="select">
-            <h1> {t("navbar1")}</h1>
-          </div>
+          <div className="select"></div>
         </>
       )}
     </div>
