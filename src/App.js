@@ -1,14 +1,10 @@
 import "./App.css";
-<<<<<<< HEAD
 import React, { useState } from "react";
 import i18n from "./i18n";
 //antni shunaqa qilib kerakli joylariga ishlataveramiz!
 import { useTranslation } from "react-i18next";
-=======
-import { DatePicker } from "antd";
-import { Home } from "./components/home/Home";
+import { Home } from './components/home/Home';
 
->>>>>>> 0188b5e858556d9fc7b0476566e7ae6d1052abdf
 function App() {
   const defaultLang = localStorage.getItem("lang") || "uz";
   const { t } = useTranslation();
@@ -20,7 +16,6 @@ function App() {
   };
   return (
     <div>
-<<<<<<< HEAD
       <h1>til o`zgaradigon bo`ldi!</h1>
       <div className="select">
         <select name="lang" value={lang} onChange={handleChange}>
@@ -29,12 +24,8 @@ function App() {
           <option value="eng">en</option>
         </select>
         <h1> {t("navbar1")}</h1>
+        <Home/>
       </div>
-=======
-      <DatePicker />
-      hello world !
-      <Home />
->>>>>>> 0188b5e858556d9fc7b0476566e7ae6d1052abdf
     </div>
   );
 }
