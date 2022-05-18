@@ -4,6 +4,7 @@ import logo from "../../assets/TopHeader/logo.svg";
 import navbarOpen from "../../assets/TopHeader/navbaricon.svg";
 import i18n from "./../../i18n";
 import { Drawer } from "antd";
+import { Navbar } from "../navbar/Navbar";
 export const TopHeader = () => {
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
@@ -29,9 +30,7 @@ export const TopHeader = () => {
         onClose={onClose}
         visible={visible}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+       <Navbar onClose={onClose}/>
       </Drawer>
       <img src={logo} alt="" />
       <div className={style.Drawer}>
@@ -52,3 +51,4 @@ export const TopHeader = () => {
     </div>
   );
 };
+

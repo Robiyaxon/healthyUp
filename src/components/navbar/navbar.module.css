@@ -1,0 +1,14 @@
+.Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Navlink {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #29292C;
+    line-height: 39px;
+}
