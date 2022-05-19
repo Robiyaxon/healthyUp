@@ -2,16 +2,7 @@
   --main-font-family: "Arial";
   /* --main-font- */
 }
-<<<<<<< HEAD
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-=======
 
-body{
-  background-color: #f4ffff  !important;
-
+body {
+  background-color: #f4ffff !important;
 }
->>>>>>> 04fbb36230fae9a867d8d18879c990940aa96230
