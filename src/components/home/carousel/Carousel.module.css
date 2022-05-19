@@ -1,0 +1,40 @@
+.carousel {
+  background-color: #fcf5ff;
+  padding: 8rem 8%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item img {
+  width: 50%;
+}
+
+.item__text {
+  width: 38%;
+}
+
+.item__text h1 {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+
+  color: #9f27e0;
+}
+
+.item__text p {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  /* or 150% */
+
+  /* violet 9 */
+
+  color: #20082d;
+}
