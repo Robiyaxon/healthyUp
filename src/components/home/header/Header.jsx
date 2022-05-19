@@ -3,7 +3,7 @@ import React from "react";
 import main from "../../../assets/home/header/main.png";
 
 import styles from "./Header.module.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -22,25 +22,9 @@ export const Header = () => {
             saytimiz orqali o'z maslahatlarini berishadi.
           </p>
           <div className={styles.header__text_block__btn}>
-            <div class={styles.container}>
-              <a
-                href="/"
-                class={styles.btn + " " + styles.effect01}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{t("homeHeaderBtn1")}</span>
-              </a>
-            </div>
+            <div class={styles.container}>{t("homeHeaderBtn1")}</div>
             <div class={styles.container + " " + styles.container2}>
-              <a
-                href="/"
-                class={styles.btn + " " + styles.effect01}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{t("homeHeaderBtn2")}</span>
-              </a>
+              {t("homeHeaderBtn2")}
             </div>
           </div>
         </div>
