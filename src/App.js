@@ -1,27 +1,32 @@
 import "./App.css";
 import React, { Suspense, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { TopHeader } from "./components/top_header/TopHeader";
-import { MyCabinet } from "./components/my_cabinet/My_Cabinet";
+import { MyCabinet } from "./components/my_cabinet/My_Cabinet.jsx";
 import { News } from "./components/news/News";
 import { AboutUs } from "./components/about_us/AboutUs";
 import { Contact } from "./components/contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Spin } from "antd";
+import { Home } from "./components/home/Home";
+import { useTranslation } from "react-i18next";
+import HomeDetail from "./components/HomeDetail/HomeDetail";
+import Registration from "./components/registration/Registration";
 
 function App() {
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
+
   const handleLoading = () => {
     setIsLoading(false);
   };
+
   useEffect(() => {
     window.addEventListener("load", handleLoading);
     return () => window.removeEventListener("load", handleLoading);
   }, []);
 
   const map = [
-    { id: 1, url: "/", kompannent: <MyCabinet /> },
+    { id: 1, url: "/", kompannent: <Home /> },
     { id: 2, url: "my_cabinets", kompannent: <MyCabinet /> },
     { id: 3, url: "news", kompannent: <News /> },
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
@@ -40,12 +45,12 @@ function App() {
             </>
           }
         >
-          {" "}
           {a.kompannent}
         </Suspense>
       }
     />
   ));
+
   return (
     <div>
       {isLoading ? (
@@ -56,9 +61,9 @@ function App() {
         <>
           <TopHeader />
           <Routes>{mapRoute}</Routes>
-          <div className="select">
-            <h1> {t("navbar1")}</h1>
-          </div>
+          <div className="select"></div>
+          <HomeDetail />
+          <Registration />
         </>
       )}
     </div>

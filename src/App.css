@@ -4,21 +4,34 @@
 }
 
 .active {
-    color: red;
+    color: #9F27E0;
     width: 100%;
-    font-family: 'Poppins';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
     line-height: 39px;
 }
 
+.active:hover {
+    color: #9F27E0;
+
+}
+
 .Navlink {
     width: 100%;
-    font-family: 'Poppins';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
     color: #29292C;
     line-height: 39px;
+}
+
+.Navlink:hover {
+    color: #29292C;
+}
+
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+    width: auto !important;
 }
