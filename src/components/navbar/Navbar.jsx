@@ -26,7 +26,7 @@ export const Navbar = (props) => {
         onClick={props.onClose}
         to={"news"}
       >
-         {t("navbar2")}
+        {t("navbar2")}
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "Navlink")}
@@ -40,7 +40,7 @@ export const Navbar = (props) => {
         onClick={props.onClose}
         to={"contact"}
       >
-         {t("navbar4")}
+        {t("navbar4")}
       </NavLink>
     </div>
   );
