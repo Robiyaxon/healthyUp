@@ -4,6 +4,7 @@ import main from "../../../assets/home/header/main.png";
 
 import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -22,10 +23,10 @@ export const Header = () => {
             saytimiz orqali o'z maslahatlarini berishadi.
           </p>
           <div className={styles.header__text_block__btn}>
-            <div class={styles.container}>{t("homeHeaderBtn1")}</div>
-            <div class={styles.container + " " + styles.container2}>
+            <div class={'container'}>{t("homeHeaderBtn1")}</div>
+            <NavLink to="/signUp" className={'container'}>
               {t("homeHeaderBtn2")}
-            </div>
+            </NavLink>
           </div>
         </div>
         <p className={styles.endText}>
