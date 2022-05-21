@@ -17,22 +17,20 @@ export const instance = axios.create({
   headers: {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-    'Content-Type': 'application/json'
-
+    "Content-Type": "application/json",
   },
 });
 function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   var config = {
-    method: 'get',
-    url: 'http://10.10.8.46:8000/healthyUp/',
-    headers: { 
-    'Content-Type': 'application/json'
-    }
+    method: "get",
+    url: "http://10.10.8.46:8000/healthyUp/",
+    headers: {
+      "Content-Type": "application/json",
+    },
   };
 
-  
   useEffect(() => {
     axios(config)
       .then((res) => {
@@ -63,6 +61,7 @@ function App() {
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
     { id: 6, url: "signUp", kompannent: <Registration /> },
+    { id: 6, url: "carousel", kompannent: <HomeDetail /> },
   ];
 
   const mapRoute = map.map((a) => (
@@ -94,7 +93,6 @@ function App() {
           <TopHeader />
           <Routes>{mapRoute}</Routes>
           <div className="select"></div>
-          <HomeDetail />
         </>
       )}
     </div>

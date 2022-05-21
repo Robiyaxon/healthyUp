@@ -1,9 +1,7 @@
 .header_detail_parent {
-  background-color: #e5e5e5;
   width: 100%;
 }
 .header_detail {
-  background-color: #e5e5e5;
   padding-top: 47px;
   margin: 0 auto;
 }
@@ -23,6 +21,7 @@
   color: #9f27e0;
   margin-left: 40px;
   margin-bottom: 21px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header_detail_main p,
@@ -50,9 +49,16 @@
   .header_detail_main h2 {
     font-size: 20px;
     line-height: 25px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin: 30px 0 30px 10px;
+    text-align: center;
   }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+
   .header_detail {
     padding-top: 15px;
   }
