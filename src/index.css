@@ -58,10 +58,26 @@ body {
 .ant-back-top div:first-child{
   background-color: #55963B !important;
   border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  line-height: 60px !important;
 }
+
+.anticon svg{
+  font-size: 30px;
+}
+
 .eWjCzc:hover:enabled, .eWjCzc:focus:enabled{
   background-color: #55963B !important;
 }
+
+.anticon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 @media (min-width: 0) and (max-width: 620.9px) {
   .container {
     font-size: 12px;
