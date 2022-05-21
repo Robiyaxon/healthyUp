@@ -7,6 +7,7 @@ import { Drawer } from "antd";
 import { Navbar } from "../navbar/Navbar";
 import { instance } from "../../api/api";
 import  axios  from 'axios';
+import { NavLink } from "react-router-dom";
 var config = {
   method: 'get',
   url: 'http://10.10.8.46:8000/product/',
@@ -19,17 +20,15 @@ export const TopHeader = () => {
   useEffect(() => {
     axios(config)
     .then(function (response) {
-      console.log(response.data);
+      // console.log(response.data);
     })
     .catch(function (error) {
-      console.log(error);
     });
     
   }, []);
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
   function handleChange(value) {
-    console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
     setLang(value.target.value);
     localStorage.setItem("lang", value.target.value);
     i18n.changeLanguage(value.target.value);
@@ -46,10 +45,11 @@ export const TopHeader = () => {
 
   return (
     <div className={style.Wrapper}>
-      <Drawer placement="right" onClose={onClose} visible={visible}>
+      <Drawer placement="right" onClose={onClose} visible={visible} className={style.Drawer__navbar}>
         <Navbar onClose={onClose} />
       </Drawer>
-      <img src={logo} alt="" />
+      <NavLink to="/"> <img src={logo} alt="" /></NavLink>
+     
       <div className={style.Drawer}>
         <div className={style.select}>
           <select name="lang" value={lang} onChange={handleChange}>

@@ -19,6 +19,8 @@ export const MyCarousel = () => {
         <Item />
         <Item />
       </Carousel>
+      <button>Hey</button>
+
     </div>
   );
 };

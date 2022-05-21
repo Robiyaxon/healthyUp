@@ -25,6 +25,7 @@ function App() {
     { id: 3, url: "news", kompannent: <News /> },
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
+    { id: 6, url: "signUp", kompannent: <Registration /> },
   ];
   const mapRoute = map.map((a) => (
     <Route
@@ -55,7 +56,6 @@ function App() {
           <Routes>{mapRoute}</Routes>
           <div className="select"></div>
           <HomeDetail />
-          <Registration />
         </>
       )}
     </div>
