@@ -1,17 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 import main from "../../../assets/home/carousel/main.png";
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import styles from "./Carousel.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { axios } from "axios";
+
+var config = {
+  method: "get",
+  url: "http://10.10.8.46:8000/homeheader/",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
 export const MyCarousel = () => {
+  const [state, setState] = useState("");
+
   useEffect(() => {
-    AOS.init();
+    return () => {
+      window.removeEventListener("scroll", () => {});
+      axios(config)
+        .then(function (response) {
+          setState(response.data);
+        })
+        .catch(function (error) {});
+    };
   }, []);
-  const {t} = useTranslation()
+  
+  const { t } = useTranslation();
   return (
     <div className={styles.carousel}>
       <Carousel>
@@ -33,8 +53,7 @@ const Item = () => {
 
   return (
     <div className={styles.item}>
-      <img src={main} alt=""  data-aos="fade-down"
-        data-aos-duration="1000" />
+      <img src={main} alt="" />
       <div className={styles.item__text}>
         <h1>Vazn yo'qotish uchun eng yaxshi parhez qaysi?</h1>
         <p>
@@ -43,6 +62,6 @@ const Item = () => {
             : text.substring(0, 300)}
         </p>
       </div>
-      </div>
+    </div>
   );
 };

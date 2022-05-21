@@ -8,7 +8,9 @@ import { Drawer } from "antd";
 import { Navbar } from "../navbar/Navbar";
 // import { instance } from "../../api/api";
 import axios from "axios";
+
 import { NavLink } from "react-router-dom";
+
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/homeheader/",
@@ -19,13 +21,13 @@ var config = {
 export const TopHeader = () => {
   const [image, setImage] = useState([]);
   const [scroll, setScroll] = useState("");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY < 600) {
-      setScroll("");
-    } else {
-      setScroll("scroll23");
-    }
-  });
+  // window.addEventListener("scroll", () => {
+  //   if (window.scrollY < 600) {
+  //     setScroll("");
+  //   } else {
+  //     setScroll("scroll23");
+  //   }
+  // });
   useEffect(() => {
     return () => {
       window.removeEventListener("scroll", () => {});
