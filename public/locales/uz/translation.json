@@ -3,7 +3,13 @@
   "navbar2": "Yangiliklar",
   "navbar3": "Biz haqimizda",
   "navbar4": "Aloqa",
+<<<<<<< HEAD
   "homeHeaderBtn1": "Kirish",
   "homeHeaderBtn2": "Ro'yxatdan o'tish",
+=======
+  "homeHeaderBtn1":"Kirish",
+  "homeHeaderBtn2":"Ro'yxatdan o'tish",
+  "homeCarousel":"Barchasi",
+>>>>>>> 2a192b0c1452823835f8019a696ff29ba7dd12ec
   "navbar5": "Uy"
 }
