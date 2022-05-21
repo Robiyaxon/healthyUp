@@ -79,6 +79,11 @@ body {
   height: 100%;
 }
 
+.krmNah{
+  box-shadow: 0 0 1px 3px #55963B !important;
+  background-color: rgb(85 150 59, .5) !important;
+}
+
 @media (min-width: 0) and (max-width: 620.9px) {
   .container {
     font-size: 12px;

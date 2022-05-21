@@ -10,13 +10,33 @@ import { Spin } from "antd";
 import { Home } from "./components/home/Home";
 import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
-import { MyBackTop } from './components/backTop/BackTop';
+import { MyBackTop } from "./components/backTop/BackTop";
+import { axios } from "axios";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
   };
+
+  // var config = {
+  //   method: "get",
+  //   url: "http://10.10.8.46:8000/homeHeader/",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // };
+
+
+  
   useEffect(() => {
+    // axios(config)
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   })
+    //   .catch((err) => {
+    //     // Handle error
+    //     console.log(err);
+    //   });
     window.addEventListener("load", handleLoading);
     return () => window.removeEventListener("load", handleLoading);
   }, []);
@@ -59,7 +79,7 @@ function App() {
           <div className="select"></div>
         </>
       )}
-      <MyBackTop/>
+      <MyBackTop />
     </div>
   );
 }

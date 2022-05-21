@@ -11,6 +11,8 @@ export const Header = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  const text = "Vazn yo‘qotishni istaysizmi";
+  const first = text.split(' ')[1]
   return (
     <>
       <div className={styles.header}>
@@ -21,7 +23,7 @@ export const Header = () => {
         <div className={styles.header__text_block}>
           <h1 className={styles.header__text_block__title} data-aos="fade-down"
           data-aos-duration="1000">
-            Vazn <strong> yo‘qotishni </strong> istaysizmi
+            Vazn <strong> {first} </strong> istaysizmi
           </h1>
           <p className={styles.header__text_block__text} data-aos="fade-down"
           data-aos-duration="1000">
