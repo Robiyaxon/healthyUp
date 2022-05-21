@@ -32,7 +32,7 @@ body{
   background-color: #9F27E0;
 }
 .Header_header__text_block__btn__F7n8R .container:first-child{
-  background-color: #55e027;
+  background-color: #55e027 !important;
 }
 
 .container:hover {
@@ -42,7 +42,7 @@ body{
 }
 
 .Header_header__text_block__btn__F7n8R .container:first-child:hover{
-  box-shadow: 7px 7px #3ecd0e, -7px -7px #c1f3b0;
+  box-shadow: 7px 7px #3ecd0e, -7px -7px #c1f3b0 !important;
 }
 
 .container:hover::before {

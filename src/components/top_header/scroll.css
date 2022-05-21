@@ -1,0 +1,20 @@
+.Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 46px;
+    padding: 0 160px;
+}
+
+.scroll23 {
+    position: fixed !important;
+    border: 2px solid blue !important;
+
+}
+
+@media(min-width:0) and (max-width:750.9px) {
+    .Wrapper {
+        margin-top: 26px;
+        padding: 0 10px;
+    }
+}

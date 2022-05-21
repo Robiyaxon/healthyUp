@@ -31,11 +31,9 @@
 .Navlink:hover {
     color: #29292C;
 }
-
-.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
-    width: auto !important;
+.ant-drawer-wrapper-body {
+    width: 500px !important;
 }
-
 @media(min-width:0) and (max-width:600.9px) {
     .ant-drawer-wrapper-body {
         width: auto !important;
