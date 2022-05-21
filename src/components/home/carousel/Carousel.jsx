@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { axios } from "axios";
 
+
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/homeheader/",
@@ -18,23 +19,24 @@ var config = {
 };
 
 export const MyCarousel = () => {
-  const [state, setState] = useState("");
+  const [image, setImage] = useState([]);
 
   useEffect(() => {
     return () => {
-      window.removeEventListener("scroll", () => {});
+      // window.removeEventListener("scroll", () => {});
       axios(config)
         .then(function (response) {
-          setState(response.data);
+          setImage(response.data);
         })
         .catch(function (error) {});
     };
   }, []);
+  console.log(image)
   
   const { t } = useTranslation();
   return (
     <div className={styles.carousel}>
-      <Carousel>
+      {/* <Carousel>
         <Item />
         <Item />
         <Item />
@@ -42,7 +44,7 @@ export const MyCarousel = () => {
       </Carousel>
       <div className={styles.btn_body}>
         <BtnAnimation text={t("homeCarousel")} link={"carousel"} />
-      </div>
+      </div> */}
     </div>
   );
 };
