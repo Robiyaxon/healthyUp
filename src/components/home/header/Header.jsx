@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import main from "../../../assets/home/header/main.png";
 import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
@@ -28,18 +27,25 @@ export const Header = () => {
       })
       .catch(function (error) {});
   }, []);
-  const map=Home.map((a, index) => <img key={"http://10.10.8.46:8000"+index}
-  src={a.img}
-  alt=""
-  data-aos="fade-down"
-  data-aos-duration="1000"
-/>)
+  const map = Home.map((a, index) => (
+    <img
+      key={"http://10.10.8.46:8000" + index}
+      src={a.img}
+      alt=""
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    />
+  ));
   return (
     <>
       <div className={styles.header}>
-        <div className={styles.header__img}>
-      {map}
-        </div>
+        <div className={styles.header__img}>{map
+       
+        } 
+        
+        <video width="750" height="500" controls >
+        <source src="./Videos/video1.mp4" type="video/mp4"/>
+       </video></div>
         <div className={styles.header__text_block}>
           <h1
             className={styles.header__text_block__title}
@@ -61,18 +67,22 @@ export const Header = () => {
             data-aos="fade-down"
             data-aos-duration="1000"
           >
-           {language === "uz" ? (
+            {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.text_uz} </span>)
             ) : language === "eng" ? (
               Home.map((a, index) => <span key={index}> {a.text_en} </span>)
             ) : language === "ru" ? (
-              Home.map((a, index) => <span key={index}> {a.text_rug} </span>)
+              Home.map((a, index) => <span key={index}> {a.text_ru} </span>)
             ) : (
               <>...</>
             )}
           </p>
           <div className={styles.header__text_block__btn}>
-            <BtnAnimation text={t("homeHeaderBtn1")} link={"login"} />
+            <BtnAnimation
+              text={t("homeHeaderBtn1")}
+              link={"login"}
+              classes={" firstContainer"}
+            />
             <BtnAnimation text={t("homeHeaderBtn2")} link="/signUp" />
           </div>
         </div>
@@ -81,15 +91,15 @@ export const Header = () => {
           data-aos="fade-down"
           data-aos-duration="1000"
         >
-         {language === "uz" ? (
-              Home.map((a, index) => <span key={index}> {a.text2_uz} </span>)
-            ) : language === "eng" ? (
-              Home.map((a, index) => <span key={index}> {a.text2_en} </span>)
-            ) : language === "ru" ? (
-              Home.map((a, index) => <span key={index}> {a.text2_ru} </span>)
-            ) : (
-              <>...</>
-            )}
+          {language === "uz" ? (
+            Home.map((a, index) => <span key={index}> {a.text2_uz} </span>)
+          ) : language === "eng" ? (
+            Home.map((a, index) => <span key={index}> {a.text2_en} </span>)
+          ) : language === "ru" ? (
+            Home.map((a, index) => <span key={index}> {a.text2_ru} </span>)
+          ) : (
+            <>...</>
+          )}
         </p>
       </div>
     </>
