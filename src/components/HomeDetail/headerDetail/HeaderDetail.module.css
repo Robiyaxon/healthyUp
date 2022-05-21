@@ -45,7 +45,7 @@
   padding-bottom: 138px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
   .header_detail_main h2 {
     font-size: 20px;
     line-height: 25px;
@@ -63,7 +63,7 @@
     padding-top: 15px;
   }
   .header_detail_text_first {
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   .header_detail_main_third {

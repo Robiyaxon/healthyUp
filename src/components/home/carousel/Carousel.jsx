@@ -6,8 +6,10 @@ import main from "../../../assets/home/carousel/main.png";
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 
 import styles from "./Carousel.module.css";
+import { useTranslation } from 'react-i18next';
 
 export const MyCarousel = () => {
+  const {t} = useTranslation()
   return (
     <div className={styles.carousel}>
       <Carousel>
@@ -15,14 +17,9 @@ export const MyCarousel = () => {
         <Item />
         <Item />
         <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
       </Carousel>
       <div className={styles.btn_body}>
-        <BtnAnimation text={"Barchasi"} link={"carousel"} />
+        <BtnAnimation text={t("homeCarousel")} link={"carousel"} />
       </div>
     </div>
   );
