@@ -48,10 +48,19 @@ body{
   border: 0px;
 }
 
-@media (min-width: 0) and (max-width: 1200.9px) {
+@media (min-width: 0) and (max-width: 620.9px) {
   .container{
     font-size: 12px;
-   width: 48%;
+   width: 60%;
+
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1200.9px) {
+  .container{
+    font-size: 12px;
+   width: 38%;
 
     margin: 5px 0;
   }

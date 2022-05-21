@@ -38,3 +38,9 @@
 
   color: #20082d;
 }
+
+.btn_body{
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}

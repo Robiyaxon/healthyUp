@@ -3,6 +3,8 @@ import Carousel from "react-elastic-carousel";
 
 import main from "../../../assets/home/carousel/main.png";
 
+import { BtnAnimation } from "./../../../helpers/BtnAnimation";
+
 import styles from "./Carousel.module.css";
 
 export const MyCarousel = () => {
@@ -19,8 +21,9 @@ export const MyCarousel = () => {
         <Item />
         <Item />
       </Carousel>
-      <button>Hey</button>
-
+      <div className={styles.btn_body}>
+        <BtnAnimation text={"Barchasi"} link={"login"} />
+      </div>
     </div>
   );
 };
@@ -28,7 +31,7 @@ const Item = () => {
   return (
     <div className={styles.item}>
       <img src={main} alt="" />
-      <div  className={styles.item__text}>
+      <div className={styles.item__text}>
         <h1>Vazn yo'qotish uchun eng yaxshi parhez qaysi?</h1>
         <p>
           Ko'pchilik bir necha kilogramm vazn yo'qotish kerakligiga qaror
