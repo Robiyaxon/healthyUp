@@ -29,7 +29,7 @@ export const Header = () => {
             saytimiz orqali o'z maslahatlarini berishadi.
           </p>
           <div className={styles.header__text_block__btn}>
-            <BtnAnimation text={t("homeHeaderBtn1")} link={"login"}  />
+            <BtnAnimation text={t("homeHeaderBtn1")} link={"login"} classes={' firstContainer'} />
             <BtnAnimation text={t("homeHeaderBtn2")} link="/signUp" />
           </div>
         </div>

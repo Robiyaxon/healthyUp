@@ -24,7 +24,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: rgb(115, 114, 114);
-  transition: 0.3s all linear;
+  transition: 0.2s all linear !important;
   border: 2px solid rgb(115, 114, 114);
   filter: drop-shadow(0px 24px 54px rgba(65, 34, 117, 0.3));
   border-radius: 10px;
@@ -33,9 +33,10 @@ body {
 .container {
   background-color: transparent;
 }
-.Header_header__text_block__btn__F7n8R .container:first-child {
+
+.firstContainer{
   background-color: #55963b;
-  color: #fff;
+  color: #fff !important;
   border: none;
 }
 
@@ -47,7 +48,7 @@ body {
   border-radius: 0
 }
 
-.Header_header__text_block__btn__F7n8R .container:first-child:hover {
+.firstContainer:hover {
   box-shadow: 7px 7px #2f591e, -7px -7px #a2d38e;
 }
 
