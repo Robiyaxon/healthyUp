@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 
 import main from "../../../assets/home/header/main.png";
-
 import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BtnAnimation } from './../../../helpers/BtnAnimation';
 export const Header = () => {
   const { t } = useTranslation();
   useEffect(() => {
@@ -30,10 +29,8 @@ export const Header = () => {
             saytimiz orqali o'z maslahatlarini berishadi.
           </p>
           <div className={styles.header__text_block__btn}>
-            <div className={'container'}>{t("homeHeaderBtn1")}</div>
-            <NavLink to="/signUp" className={'container'}>
-              {t("homeHeaderBtn2")}
-            </NavLink>
+            <BtnAnimation text={t("homeHeaderBtn1")} link={"login"}  />
+            <BtnAnimation text={t("homeHeaderBtn2")} link="/signUp" />
           </div>
         </div>
         <p className={styles.endText} data-aos="fade-down"
