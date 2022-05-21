@@ -1,12 +1,12 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
+import { useTranslation } from 'react-i18next';
 
 import main from "../../../assets/home/carousel/main.png";
 
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 
 import styles from "./Carousel.module.css";
-import { useTranslation } from 'react-i18next';
 
 export const MyCarousel = () => {
   const {t} = useTranslation()

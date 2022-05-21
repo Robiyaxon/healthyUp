@@ -11,6 +11,7 @@ import { Home } from "./components/home/Home";
 import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import axios from "axios";
+import { MyBackTop } from "./components/backTop/BackTop";
 export const instance = axios.create({
   withCredentials: true,
   baseURL: "http://10.10.8.46:8000/",
@@ -25,7 +26,7 @@ function App() {
 
   var config = {
     method: "get",
-    url: "http://10.10.8.46:8000/healthyUp/",
+    url: "http://10.10.8.46:8000/homeHeader/",
     headers: {
       "Content-Type": "application/json",
     },
@@ -95,6 +96,7 @@ function App() {
           <div className="select"></div>
         </>
       )}
+      <MyBackTop/>
     </div>
   );
 }

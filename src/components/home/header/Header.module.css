@@ -28,12 +28,12 @@
   font-weight: 800;
   font-size: 68px;
   line-height: 80px;
-  color: #55e027;
+  color: #0B1C04;
   margin-bottom: 0;
 }
 
 .header__text_block__title strong {
-  color: #9f27e0;
+  color: #55963B;
 }
 
 .header__text_block__text {
@@ -43,8 +43,8 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
-  color: #c57dec;
-  margin-top: 8px;
+  color: #0B1C05;
+  margin-top: 30px;
 }
 
 .header__text_block__btn {
@@ -108,7 +108,8 @@
     width: 100%;
     text-align: center;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 20px;
+    margin-top: 8px;
   }
 
 

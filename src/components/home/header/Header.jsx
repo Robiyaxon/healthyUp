@@ -1,10 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import main from "../../../assets/home/header/main.png";
+import { BtnAnimation } from './../../../helpers/BtnAnimation';
 
 import styles from "./Header.module.css";
-import { useTranslation } from "react-i18next";
-import { BtnAnimation } from './../../../helpers/BtnAnimation';
 
 export const Header = () => {
   const { t } = useTranslation();
