@@ -3,7 +3,6 @@ import styles from "./HeaderDetail.module.css";
 import img1 from "../../../assets/home_detail/header_detail/header_detail_img1.png";
 import img2 from "../../../assets/home_detail/header_detail/header_detail_img2.png";
 import img3 from "../../../assets/home_detail/header_detail/header_detail_img3.png";
-
 function HeaderDetail() {
   return (
     <div className={styles.header_detail_parent}>

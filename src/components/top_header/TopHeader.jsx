@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./TopHeader.module.css";
 import logo from "../../assets/TopHeader/logo.svg";
 import navbarOpen from "../../assets/TopHeader/navbaricon.svg";
 import i18n from "./../../i18n";
 import { Drawer } from "antd";
 import { Navbar } from "../navbar/Navbar";
-
+import { instance } from "../../api/api";
+import  axios  from 'axios';
+var config = {
+  method: 'get',
+  url: 'http://10.10.8.46:8000/product/',
+  headers: { 
+  'Content-Type': 'application/json'
+  }
+};
 export const TopHeader = () => {
+  const [image, setImage] = useState([]);
+  useEffect(() => {
+    axios(config)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+  }, []);
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
   function handleChange(value) {
