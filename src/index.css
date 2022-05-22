@@ -2,11 +2,115 @@
   --main-font-family: "Arial";
   /* --main-font- */
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: #f4ffff !important;
+  background-color: #f5f5f6 !important;
+}
+
+.container {
+  width: 50%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px;
+  margin: 30px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(115, 114, 114);
+  transition: 0.2s all linear !important;
+  border: 2px solid rgb(115, 114, 114);
+  filter: drop-shadow(0px 24px 54px rgba(65, 34, 117, 0.3));
+  border-radius: 10px;
+}
+
+.container {
+  background-color: transparent;
+}
+
+.container:hover {
+  background-color: #0b1c04;
+  color: #fff;
+}
+
+.firstContainer {
+  background-color: #55963b;
+  color: #fff !important;
+  border: none;
+}
+
+.firstContainer:hover {
+  background-color: #376b23;
+}
+
+.ant-back-top div:first-child {
+  background-color: #55963b !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  line-height: 60px !important;
+}
+
+.anticon svg {
+  font-size: 30px;
+}
+
+.eWjCzc:hover:enabled,
+.eWjCzc:focus:enabled {
+  background-color: #55963b !important;
+}
+
+.anticon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.krmNah {
+  box-shadow: 0 0 1px 3px #55963b !important;
+  background-color: rgb(85 150 59, 0.5) !important;
+}
+
+@media (min-width: 0) and (max-width: 620.9px) {
+  .container {
+    font-size: 12px;
+    width: 60%;
+
+    margin: 5px 0;
+  }
+  .eWjCzc,
+  .eAyARa {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    line-height: 30px !important;
+    font-size: 1em !important;
+  }
+
+  .eLPooy {
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1200.9px) {
+  .container {
+    font-size: 12px;
+    width: 38%;
+
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1800.9px) {
+  .container {
+    width: 45%;
+    font-size: 14px;
+  }
 }

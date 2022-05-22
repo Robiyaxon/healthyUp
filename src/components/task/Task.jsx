@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./task.module.css";
 import instagram from "../../assets/home/socialnetwork/instagram.svg";
 import facebook from "../../assets/home/socialnetwork/facebook.svg";
 import telegram from "../../assets/home/socialnetwork/telegram.svg";
 import task from "../../assets/TopHeader/task.svg";
 import { Row, Col } from "antd";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const map = [
   {
     id: 1,
@@ -40,21 +41,33 @@ const mapCard = map.map((a) => (
   <div key={a.id} className={style.Card}>
     <div className={style.Card__UserName}>
       <div className={style.Card__UserCapitalLetter}>{a.capitalLetter}</div>
-      <p>{a.name}</p>
+      <p data-aos="fade-down" data-aos-duration="1000">
+        {a.name}
+      </p>
     </div>
-    <h6>{a.title}</h6>
+    <h6 data-aos="fade-down" data-aos-duration="1000">
+      {a.title}
+    </h6>
   </div>
 ));
 export const Task = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <div className={style.wrapper}>
-        <h1>
+        <h1 data-aos="fade-down" data-aos-duration="1000">
           Biz sizga tezroq natijalarga erishishga yordam beradigan va tanangizni
           chiniqtiradigan topshiriqlar beramiz.
         </h1>
         <div className={style.Task__img}>
-          <img src={task} alt="" />
+          <img
+            src={task}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          />
         </div>
         <div className={style.Cards_Blog}>{mapCard}</div>
       </div>
@@ -63,6 +76,9 @@ export const Task = () => {
   );
 };
 export const SocialNetworks = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className={style.SocialNetworks}>
       <div className={style.SocialNetworks__icon}>
@@ -89,8 +105,10 @@ export const SocialNetworks = () => {
         </Row>
       </div>
       <div className={style.SocialNetworks__text}>
-        <h1>Bizni ijtimoiy tarmoqlardan toping</h1>
-        <p>
+        <h1 data-aos="fade-down" data-aos-duration="1000">
+          Bizni ijtimoiy tarmoqlardan toping
+        </h1>
+        <p data-aos="fade-down" data-aos-duration="1000">
           Muhim yangilanishlar va vazn yo'qotish bo'yicha foydali maslahatlar
           uchun Unimeal umumiy sahifalarini kuzatib boring
         </p>

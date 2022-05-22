@@ -1,10 +1,4 @@
-.Wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 46px;
-    padding: 0 160px;
-}
+
 
 .select select {
     width: 62px;
@@ -23,11 +17,4 @@
 .NavbarIcon {
     cursor: pointer;
     margin-left: 10px;
-}
-
-@media(min-width:0) and (max-width:750.9px) {
-    .Wrapper {
-        margin-top: 26px;
-        padding: 0 10px;
-    }
 }

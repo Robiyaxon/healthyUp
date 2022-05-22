@@ -1,5 +1,5 @@
 .carousel {
-  background-color: #fcf5ff;
+  background-color: #F5F5F6;
   padding: 8rem 8%;
 }
 
@@ -23,7 +23,7 @@
   font-size: 34px;
   line-height: 51px;
 
-  color: #9f27e0;
+  color: #0B1C04;
 }
 
 .item__text p {
@@ -32,9 +32,45 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  /* or 150% */
-
-  /* violet 9 */
 
   color: #20082d;
+}
+
+.btn_body {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+@media (min-width: 0) and (max-width: 1200.9px) {
+  .item {
+    flex-direction: column;
+    width: 100%;
+  }
+  .carousel {
+    background-color: #fcf5ff;
+    padding: 3rem 2%;
+  }
+  .item img {
+    width: 100%;
+  }
+  .item__text {
+    width: 100%;
+  }
+  .item__text h1 {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .item__text p {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .btn_body {
+    text-align: center;
+    width: 50%;
+    margin: 1rem auto;
+  }
 }

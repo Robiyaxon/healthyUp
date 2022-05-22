@@ -8,14 +8,12 @@ import { Contact } from "./components/contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Spin } from "antd";
 import { Home } from "./components/home/Home";
-import { useTranslation } from "react-i18next";
 import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
+import { MyBackTop } from "./components/backTop/BackTop";
 
 function App() {
-  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
-
   const handleLoading = () => {
     setIsLoading(false);
   };
@@ -24,15 +22,15 @@ function App() {
     window.addEventListener("load", handleLoading);
     return () => window.removeEventListener("load", handleLoading);
   }, []);
-
   const map = [
     { id: 1, url: "/", kompannent: <Home /> },
     { id: 2, url: "my_cabinets", kompannent: <MyCabinet /> },
     { id: 3, url: "news", kompannent: <News /> },
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
+    { id: 6, url: "signUp", kompannent: <Registration /> },
+    { id: 6, url: "carousel", kompannent: <HomeDetail /> },
   ];
-
   const mapRoute = map.map((a) => (
     <Route
       key={a.id}
@@ -50,7 +48,6 @@ function App() {
       }
     />
   ));
-
   return (
     <div>
       {isLoading ? (
@@ -62,10 +59,9 @@ function App() {
           <TopHeader />
           <Routes>{mapRoute}</Routes>
           <div className="select"></div>
-          <HomeDetail />
-          <Registration />
         </>
       )}
+      <MyBackTop />
     </div>
   );
 }
