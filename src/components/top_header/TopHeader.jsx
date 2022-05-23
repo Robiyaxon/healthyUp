@@ -10,7 +10,9 @@ import { useDispatch } from "react-redux";
 import { Navbar } from "../navbar/Navbar";
 // import { instance } from "../../api/api";
 import axios from "axios";
+
 import { NavLink } from "react-router-dom";
+
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/homeheader/",

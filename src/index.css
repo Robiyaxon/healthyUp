@@ -34,42 +34,38 @@ body {
   background-color: transparent;
 }
 
-.firstContainer{
+.container:hover {
+  background-color: #0b1c04;
+  color: #fff;
+}
+
+.firstContainer {
   background-color: #55963b;
   color: #fff !important;
   border: none;
 }
-
-.container:hover {
-  box-shadow: 7px 7px rgb(96, 96, 96), -7px -7px #ccc;
-  cursor: pointer;
-  color: rgb(115, 114, 114);
-  border: 2px solid transparent;
-  border-radius: 0
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  display: none !important;
 }
-
 .firstContainer:hover {
-  box-shadow: 7px 7px #2f591e, -7px -7px #a2d38e;
+  background-color: #376b23;
 }
 
-.container:hover::before {
-  border: 0px;
-}
-
-.ant-back-top div:first-child{
-  background-color: #55963B !important;
+.ant-back-top div:first-child {
+  background-color: #55963b !important;
   border-radius: 50% !important;
   width: 60px !important;
   height: 60px !important;
   line-height: 60px !important;
 }
 
-.anticon svg{
+.anticon svg {
   font-size: 30px;
 }
 
-.eWjCzc:hover:enabled, .eWjCzc:focus:enabled{
-  background-color: #55963B !important;
+.eWjCzc:hover:enabled,
+.eWjCzc:focus:enabled {
+  background-color: #55963b !important;
 }
 
 .anticon {
@@ -79,9 +75,9 @@ body {
   height: 100%;
 }
 
-.krmNah{
-  box-shadow: 0 0 1px 3px #55963B !important;
-  background-color: rgb(85 150 59, .5) !important;
+.krmNah {
+  box-shadow: 0 0 1px 3px #55963b !important;
+  background-color: rgb(85 150 59, 0.5) !important;
 }
 
 @media (min-width: 0) and (max-width: 620.9px) {

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./FormRegistration.module.css";
 import { useState } from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, Progress } from "antd";
 
 function FormRegistration() {
   const [name, setName] = useState("");
@@ -15,15 +15,16 @@ function FormRegistration() {
       <div className={styles.form_content}>
         <h3>Registration</h3>
         <Form
-          name="normal_login"
-          className="login-form"
+          name="basic"
           initialValues={{ remember: true }}
+          className="login-form"
           layout="vertical"
         >
           <Form.Item
             rules={[{ required: true, message: "Please input your Name!" }]}
+            name="name"
+            label="Name"
           >
-            <label>Name</label>
             <Input
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -35,8 +36,9 @@ function FormRegistration() {
             rules={[
               { required: true, message: "Please input your Firstname  !" },
             ]}
+            name="firstname"
+            label="Firstname"
           >
-            <label>Firstname</label>
             <Input
               value={firstname}
               onChange={(e) => setFirstname(e.target.value)}
@@ -46,8 +48,9 @@ function FormRegistration() {
 
           <Form.Item
             rules={[{ required: true, message: "Please input your Username!" }]}
+            name="username"
+            label="Username"
           >
-            <label>Username</label>
             <Input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -57,8 +60,9 @@ function FormRegistration() {
 
           <Form.Item
             rules={[{ required: true, message: "Please input your Password!" }]}
+            name="password"
+            label="Create a password"
           >
-            <label>Create a password</label>
             <Input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -69,8 +73,9 @@ function FormRegistration() {
 
           <Form.Item
             rules={[{ required: true, message: "Please input your Password!" }]}
+            name="repassword"
+            label="Repeat the password"
           >
-            <label>Repeat the password</label>
             <Input
               value={repassword}
               onChange={(e) => setRepassword(e.target.value)}
@@ -82,6 +87,10 @@ function FormRegistration() {
             Continue
           </Button>
         </Form>
+        <div className={styles.progress}>
+          <span>2/25</span>
+          <Progress percent={50} showInfo={false} />
+        </div>
       </div>
     </div>
   );

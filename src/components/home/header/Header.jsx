@@ -41,10 +41,10 @@ export const Header = () => {
     <>
       <div className={styles.header}>
         <div className={styles.header__img}>
-          {map}
-        {/* <video  autoPlay muted loop >
+          {/* {map} */}
+        <video  autoPlay muted loop >
         <source src={video} type="video/mp4"/>
-       </video> */}
+       </video>
        </div>
         <div className={styles.header__text_block}>
           <h1

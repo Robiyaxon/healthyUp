@@ -1,48 +1,62 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 import main from "../../../assets/home/carousel/main.png";
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import styles from "./Carousel.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
+
+var config = {
+  method: "get",
+  url: "http://10.10.8.46:8000/new/",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
 export const MyCarousel = () => {
+  const [data, setData] = useState([]);
+
   useEffect(() => {
-    AOS.init();
+    axios(config)
+      .then(function (response) {
+        setData(response.data);
+      })
+      .catch(function (error) {});
   }, []);
-  const {t} = useTranslation()
+  console.log(data)
+
+  const { t } = useTranslation();
   return (
     <div className={styles.carousel}>
       <Carousel>
-        <Item />
+        <Item picture={data && data[0] && data[0].img} 
+        title={data && data[0] && data[0].title}
+        text={data && data[0] && data[0].text}
+        />
         <Item />
         <Item />
         <Item />
       </Carousel>
-      <div className={styles.btn_body}>
-        <BtnAnimation text={t("homeCarousel")} link={"carousel"} />
-      </div>
     </div>
   );
 };
 
-const Item = () => {
-  const text =
-    "Ko'pchilik bir necha kilogramm vazn yo'qotish kerakligiga qaror  qilgandan so'ng, bu savol ko'pchilikni o'ylaydi - vazn yo'qotish uchun  eng yaxshi tanlov parhezmi? Garchi bu asossiz savol bo'lmasa-da, u  ko'pincha optimaldan kamroq yondashuvni nazarda tutadi, ya'ni vazn  yo'qolgunga qadar bir muddat ovqatlanishning tubdan cheklovchi  rejimini qo'llashni rejalashtirish va keyin odatdagidek ovqatlanishga  qaytish. Og'irlikni yo'qotgan va undan saqlagan odamlar 'moda  dietalari' ni qabul qilish o'rniga, odatda sog'lom ovqatlanish  odatlariga doimiy o'tishadi. Shunchaki nosog'lom oziq-ovqatlarni  sog'lom ovqatlar bilan almashtirish - bir necha haftaga emas, balki  abadiy - vazn yo'qotishga yordam beradi va boshqa ko'plab  afzalliklarni...";
-
+const Item = ({ picture, title, text = "dssdsdg" }) => {
   return (
     <div className={styles.item}>
-      <img src={main} alt=""  data-aos="fade-down"
-        data-aos-duration="1000" />
+      <img src={picture} alt="" />
       <div className={styles.item__text}>
-        <h1>Vazn yo'qotish uchun eng yaxshi parhez qaysi?</h1>
+        <h1>{title}</h1>
         <p>
           {window.innerWidth > 801
             ? text.substring(0, 750)
             : text.substring(0, 300)}
         </p>
       </div>
-      </div>
+    </div>
   );
 };
