@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import video from "../../../assets/home/header/video.mp4"
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import { useSelector } from "react-redux";
 import axios from "axios";
@@ -39,13 +40,12 @@ export const Header = () => {
   return (
     <>
       <div className={styles.header}>
-        <div className={styles.header__img}>{map
-       
-        } 
-        
-        <video width="750" height="500" controls >
-        <source src="./Videos/video1.mp4" type="video/mp4"/>
-       </video></div>
+        <div className={styles.header__img}>
+          {map}
+        {/* <video  autoPlay muted loop >
+        <source src={video} type="video/mp4"/>
+       </video> */}
+       </div>
         <div className={styles.header__text_block}>
           <h1
             className={styles.header__text_block__title}
