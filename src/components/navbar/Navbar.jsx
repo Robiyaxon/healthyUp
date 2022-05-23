@@ -22,6 +22,41 @@ export const Navbar = (props) => {
   ));
   return (
     <div className={style.Wrapper}>
+      <NavLink
+        onClick={props.onClose}
+        className={({ isActive }) => (isActive ? "active" : "Navlink")}
+        to={"/"}
+      >
+        {t("navbar5")}
+      </NavLink>
+      <NavLink
+        onClick={props.onClose}
+        className={({ isActive }) => (isActive ? "active" : "Navlink")}
+        to={"my_cabinets"}
+      >
+        {t("navbar1")}
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "Navlink")}
+        onClick={props.onClose}
+        to={"news"}
+      >
+        {t("navbar2")}
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "Navlink")}
+        onClick={props.onClose}
+        to={"about_us"}
+      >
+        {t("navbar3")}
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "Navlink")}
+        onClick={props.onClose}
+        to={"contact"}
+      >
+        {t("navbar4")}
+      </NavLink>
       {map2}
       <a href="tel:+998 90 763 09 15" className={style.Wrapper__tel}>+998 90 763 09 15</a>
     </div>

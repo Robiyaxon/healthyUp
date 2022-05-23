@@ -51,6 +51,8 @@
 .form_content Button:active,
 .form_content Button:focus {
   background-color: #aa3de6;
+  outline: none;
+  border: 1px solid #aa3de6;
 }
 
 @media (max-width: 576px) {

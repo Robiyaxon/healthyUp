@@ -34,35 +34,36 @@ body {
   background-color: transparent;
 }
 
-.container:hover{
+.container:hover {
   background-color: #0b1c04;
   color: #fff;
 }
 
-.firstContainer{
+.firstContainer {
   background-color: #55963b;
   color: #fff !important;
   border: none;
 }
 
-.firstContainer:hover{
+.firstContainer:hover {
   background-color: #376b23;
 }
 
-.ant-back-top div:first-child{
-  background-color: #55963B !important;
+.ant-back-top div:first-child {
+  background-color: #55963b !important;
   border-radius: 50% !important;
   width: 60px !important;
   height: 60px !important;
   line-height: 60px !important;
 }
 
-.anticon svg{
+.anticon svg {
   font-size: 30px;
 }
 
-.eWjCzc:hover:enabled, .eWjCzc:focus:enabled{
-  background-color: #55963B !important;
+.eWjCzc:hover:enabled,
+.eWjCzc:focus:enabled {
+  background-color: #55963b !important;
 }
 
 .anticon {
@@ -72,9 +73,9 @@ body {
   height: 100%;
 }
 
-.krmNah{
-  box-shadow: 0 0 1px 3px #55963B !important;
-  background-color: rgb(85 150 59, .5) !important;
+.krmNah {
+  box-shadow: 0 0 1px 3px #55963b !important;
+  background-color: rgb(85 150 59, 0.5) !important;
 }
 
 @media (min-width: 0) and (max-width: 620.9px) {

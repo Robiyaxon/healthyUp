@@ -85,7 +85,6 @@ export const SocialNetworks = () => {
         <Row>
           <Col span={1}>
             <a href="https://www.instagram.com/accounts/login/?next=/farkhodjon_malikov_official/related_profiles/">
-              {" "}
               <img src={instagram} alt=" " className={style.fa} />
             </a>
           </Col>
@@ -100,7 +99,6 @@ export const SocialNetworks = () => {
         <Row>
           <Col span={1}>
             <a href="https://telegram.org/">
-              {" "}
               <img src={telegram} alt="" className={style.fa} />
             </a>
           </Col>
