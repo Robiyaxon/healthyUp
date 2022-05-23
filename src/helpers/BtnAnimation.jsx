@@ -7,9 +7,8 @@ export const BtnAnimation = ({ text, link, classes='' }) => {
     AOS.init();
   }, []);
   return (
-    <NavLink  data-aos="fade-down"
-    data-aos-duration="1000" to={link} className={"container " + classes}>
-      {text}
+    <NavLink to={link} className={"container " + classes}>
+        <span>{text}</span>
     </NavLink>
   );
 };

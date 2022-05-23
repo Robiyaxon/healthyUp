@@ -34,26 +34,19 @@ body {
   background-color: transparent;
 }
 
+.container:hover{
+  background-color: #0b1c04;
+  color: #fff;
+}
+
 .firstContainer{
   background-color: #55963b;
   color: #fff !important;
   border: none;
 }
 
-.container:hover {
-  box-shadow: 7px 7px rgb(96, 96, 96), -7px -7px #ccc;
-  cursor: pointer;
-  color: rgb(115, 114, 114);
-  border: 2px solid transparent;
-  border-radius: 0
-}
-
-.firstContainer:hover {
-  box-shadow: 7px 7px #2f591e, -7px -7px #a2d38e;
-}
-
-.container:hover::before {
-  border: 0px;
+.firstContainer:hover{
+  background-color: #376b23;
 }
 
 .ant-back-top div:first-child{

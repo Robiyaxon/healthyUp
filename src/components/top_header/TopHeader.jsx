@@ -5,6 +5,8 @@ import logo from "../../assets/TopHeader/logo.svg";
 import navbarOpen from "../../assets/TopHeader/navbaricon.svg";
 import i18n from "./../../i18n";
 import { Drawer } from "antd";
+import { useDispatch } from "react-redux";
+
 import { Navbar } from "../navbar/Navbar";
 // import { instance } from "../../api/api";
 import axios from "axios";
@@ -21,13 +23,15 @@ var config = {
 export const TopHeader = () => {
   const [image, setImage] = useState([]);
   const [scroll, setScroll] = useState("");
-  // window.addEventListener("scroll", () => {
-  //   if (window.scrollY < 600) {
-  //     setScroll("");
-  //   } else {
-  //     setScroll("scroll23");
-  //   }
-  // });
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 600) {
+      setScroll("");
+    } else {
+      setScroll("scroll23");
+    }
+  });
+  const dispatch = useDispatch();
+
   useEffect(() => {
     return () => {
       window.removeEventListener("scroll", () => {});
@@ -44,6 +48,7 @@ export const TopHeader = () => {
     setLang(value.target.value);
     localStorage.setItem("lang", value.target.value);
     i18n.changeLanguage(value.target.value);
+    dispatch({ type: "LANG_CHANGED", payload: value.target.value });
   }
   const [visible, setVisible] = useState(false);
 
