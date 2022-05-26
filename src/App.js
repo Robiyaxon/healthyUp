@@ -29,7 +29,7 @@ function App() {
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
     { id: 6, url: "signUp", kompannent: <Registration /> },
-    { id: 6, url: "carousel", kompannent: <HomeDetail /> },
+    { id: 7, url: "carousel", kompannent: <HomeDetail /> },
   ];
   const mapRoute = map.map((a) => (
     <Route

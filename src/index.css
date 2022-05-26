@@ -44,7 +44,8 @@ body {
   color: #fff !important;
   border: none;
 }
-.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+.ant-form-item-label
+  > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
   display: none !important;
 }
 .firstContainer:hover {
@@ -84,7 +85,6 @@ body {
   .container {
     font-size: 12px;
     width: 60%;
-
     margin: 5px 0;
   }
   .eWjCzc,

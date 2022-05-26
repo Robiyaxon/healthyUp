@@ -27,16 +27,18 @@ export const MyCarousel = () => {
       })
       .catch(function (error) {});
   }, []);
-  console.log(data)
+  console.log(data);
 
   const { t } = useTranslation();
   return (
     <div className={styles.carousel}>
       <Carousel>
-        <Item picture={data && data[0] && data[0].img} 
-        title={data && data[0] && data[0].title}
-        text={data && data[0] && data[0].text}
+        <Item
+          picture={data && data[0] && data[0].img}
+          title={data && data[0] && data[0].title}
+          text={data && data[0] && data[0].text}
         />
+        <Item />
         <Item />
         <Item />
         <Item />
@@ -45,7 +47,7 @@ export const MyCarousel = () => {
   );
 };
 
-const Item = ({ picture, title, text = "dssdsdg" }) => {
+const Item = ({ picture, title, text = "dssdsergrdg" }) => {
   return (
     <div className={styles.item}>
       <img src={picture} alt="" />

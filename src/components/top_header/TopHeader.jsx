@@ -20,6 +20,7 @@ var config = {
     "Content-Type": "application/json",
   },
 };
+
 export const TopHeader = () => {
   const [image, setImage] = useState([]);
   const [scroll, setScroll] = useState("");
@@ -44,6 +45,7 @@ export const TopHeader = () => {
   }, []);
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
+
   function handleChange(value) {
     setLang(value.target.value);
     localStorage.setItem("lang", value.target.value);
@@ -70,7 +72,6 @@ export const TopHeader = () => {
         <Navbar onClose={onClose} />
       </Drawer>
       <NavLink to="/">
-        {" "}
         <img src={logo} alt="" />
       </NavLink>
 
@@ -85,7 +86,7 @@ export const TopHeader = () => {
         <img
           src={navbarOpen}
           className={style.NavbarIcon}
-          alt=""
+          alt="navbar"
           onClick={showDrawer}
         />
       </div>
