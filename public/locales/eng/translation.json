@@ -1,8 +1,6 @@
 {
-  "navbar1": "My Cabinet",
-  "navbar2": "News",
-  "navbar3": "  About Us",
-  "navbar4": "Contact",
+  "navbar1": "About Us",
+  "navbar2": "Connection",
   "homeHeaderBtn1":"Login",
   "homeHeaderBtn2":"Sign up",
   "homeCarousel":"See more",

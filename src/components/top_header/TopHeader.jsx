@@ -1,48 +1,14 @@
-import React, { useEffect, useState } from "react";
-import style from "./TopHeader.module.css";
-import "./scroll.css";
-import logo from "../../assets/TopHeader/logo.svg";
-import navbarOpen from "../../assets/TopHeader/navbaricon.svg";
+import React, { useState } from "react";
 import i18n from "./../../i18n";
-import { Drawer } from "antd";
+import style from "./TopHeader.module.css";
 import { useDispatch } from "react-redux";
-
-import { Navbar } from "../navbar/Navbar";
-// import { instance } from "../../api/api";
-import axios from "axios";
-
+import logo from "../../assets/TopHeader/logo.svg";
 import { NavLink } from "react-router-dom";
-
-var config = {
-  method: "get",
-  url: "http://10.10.8.46:8000/homeheader/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+import { useTranslation } from "react-i18next";
 export const TopHeader = () => {
-  const [image, setImage] = useState([]);
-  const [scroll, setScroll] = useState("");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY < 600) {
-      setScroll("");
-    } else {
-      setScroll("scroll23");
-    }
-  });
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    return () => {
-      window.removeEventListener("scroll", () => {});
-      axios(config)
-        .then(function (response) {
-          setImage(response.data);
-        })
-        .catch(function (error) {});
-    };
-  }, []);
   const defaultLang = localStorage.getItem("lang") || "uz";
+  const { t } = useTranslation();
   const [lang, setLang] = useState(defaultLang);
   function handleChange(value) {
     setLang(value.target.value);
@@ -50,44 +16,40 @@ export const TopHeader = () => {
     i18n.changeLanguage(value.target.value);
     dispatch({ type: "LANG_CHANGED", payload: value.target.value });
   }
-  const [visible, setVisible] = useState(false);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
+  const map = [
+    { id: 2, name: t("navbar1"), url: "about_us" },
+    { id: 3, name: t("navbar2"), url: "contact" },
+  ];
+  const map2 = map.map((a) => (
+    <NavLink
+      key={a.id}
+      className={({ isActive }) => (isActive ? "active" : "Navlink")}
+      to={a.url}
+    >
+      {a.name}
+    </NavLink>
+  ));
   return (
-    <div className={"Wrapper" + scroll}>
-      <Drawer
-        placement="right"
-        onClose={onClose}
-        visible={visible}
-        className={style.Drawer__navbar}
-      >
-        <Navbar onClose={onClose} />
-      </Drawer>
-      <NavLink to="/">
-        {" "}
-        <img src={logo} alt="" />
-      </NavLink>
-
-      <div className={style.Drawer}>
-        <div className={style.select}>
+    <div className={style.Wrapper}>
+      <div className={style.Block}>
+        <NavLink to="/"> <img src={logo} alt="" /></NavLink>
+        <div className={style.Menu__link}>
+          <div className={style.Navlink}>{map2}</div>
+          <button  className={style.Navlink_href}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <NavLink to='/'>Kirish</NavLink>
+            
+          </button>
           <select name="lang" value={lang} onChange={handleChange}>
             <option value="uz">UZ</option>
             <option value="ru">RU</option>
             <option value="eng">ENG</option>
           </select>
+          
         </div>
-        <img
-          src={navbarOpen}
-          className={style.NavbarIcon}
-          alt=""
-          onClick={showDrawer}
-        />
       </div>
     </div>
   );
