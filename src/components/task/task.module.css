@@ -7,7 +7,7 @@
 }
 
 .wrapper h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(----main-font-family);
   font-style: normal;
   font-weight: 600;
   width: 500px;
@@ -76,7 +76,7 @@
 }
 
 .Card h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(----main-font-family);
   font-size: 17px;
   font-weight: 600;
   margin: 0.3rem 0 0.3rem 0;
@@ -98,7 +98,7 @@
 }
 
 .SocialNetworks__text h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(----main-font-family);
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
@@ -108,7 +108,7 @@
   color: #9f27e0;
 }
 .SocialNetworks__text p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(----main-font-family);
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
