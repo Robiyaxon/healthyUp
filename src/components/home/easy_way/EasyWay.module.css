@@ -1,0 +1,12 @@
+.header {
+  background-image: url(../../../assets/home/easy_way/easyway.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header_title {
+  max-width: 879px;
+  margin: 0 auto;
+}
