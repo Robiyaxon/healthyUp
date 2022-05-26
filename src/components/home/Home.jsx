@@ -8,7 +8,6 @@ export const Home = () => {
     <div>
       <Header />
       <MyCarousel />
-      <Task />  
       </div>              
   );
 };
