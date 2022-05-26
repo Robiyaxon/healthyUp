@@ -50,7 +50,9 @@ body {
   color: #fff !important;
   border: none;
 }
-
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  display: none !important;
+}
 .firstContainer:hover {
   background-color: #376b23;
 }

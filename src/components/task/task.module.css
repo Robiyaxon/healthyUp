@@ -1,9 +1,9 @@
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 200px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
 }
 
 .wrapper h1 {
