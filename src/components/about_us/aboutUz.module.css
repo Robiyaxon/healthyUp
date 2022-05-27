@@ -1,0 +1,9 @@
+.wrapper {
+    background-repeat: no-repeat;
+    background-image: url("../../assets/home/header/Glavniy.svg");
+    height: 100vh;
+    background-size: 100%;
+    width: 100%;
+    padding: 110px 155px 0;
+
+}

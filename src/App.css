@@ -1,11 +1,16 @@
+*{
+    padding: 0;
+}
 .ant-drawer.ant-drawer-open .ant-drawer-mask {
     background: #ffffff1a;
     backdrop-filter: blur(6px)
 }
 
 .active {
-    color: #9F27E0;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #FFA700;
+    text-align: center;
+    width: 20%;
+    font-family: var(----main-font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -13,17 +18,20 @@
 }
 
 .active:hover {
-    color: #9F27E0;
+    color: #FFA700;
 
 }
+
 .active,
 .Navlink {
-    margin: 0 36px 0 0;
+    margin: 0 26px 0 0;
 
 }
 
 .Navlink {
-    font-family: var(--main-font-family);
+    width: 20%;
+    text-align: center;
+    font-family: var(----main-font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -35,12 +43,20 @@
     color: #4C3C00;
 }
 
-.ant-drawer-wrapper-body {
-    width: 500px !important;
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+    width: auto !important;
 }
 
-@media(min-width:0) and (max-width:600.9px) {
+@media(min-width:0) and (max-width:1100.9px) {
     .ant-drawer-wrapper-body {
-        width: auto !important;
+        width: 90% !important;
+
+    }
+
+    .Navlink,
+    .active {
+        width: 90% !important;
+        margin: 1rem 0;
+
     }
 }

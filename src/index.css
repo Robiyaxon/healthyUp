@@ -1,6 +1,6 @@
 :root {
-  --main-font-family: "Arial";
-  /* --main-font- */
+  --main-font-family: "Poppins";
+  --main-font-color: #231c00
 }
 
 * {
@@ -12,6 +12,12 @@
 body {
   background-color: #f5f5f6 !important;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/poppins_regular.ttf') format('woff2');
+}
+
 
 .container {
   width: 50%;
@@ -63,11 +69,6 @@ body {
   font-size: 30px;
 }
 
-.eWjCzc:hover:enabled,
-.eWjCzc:focus:enabled {
-  background-color: #55963b !important;
-}
-
 .anticon {
   display: flex !important;
   justify-content: center;
@@ -75,9 +76,32 @@ body {
   height: 100%;
 }
 
+.hHJTFD{
+  overflow-x: hidden !important;
+}
+
+.guIbWC{
+  overflow: inherit !important;
+}
+
 .krmNah {
-  box-shadow: 0 0 1px 3px #55963b !important;
-  background-color: rgb(85 150 59, 0.5) !important;
+  box-shadow: 0 0 1px 3px #dfc085 !important;
+  background-color: rgba(223, 192, 133, .5) !important;
+}
+
+.jhmYzC{
+  box-shadow: 0 0 1px 2px #e4cea3 !important;
+}
+
+.eWjCzc,
+.eAyARa {
+  border: 1px solid #DFC085 !important;
+  color: #DFC085 !important;
+  background: linear-gradient(to left, #fff, #F6E4C2) !important;
+}
+
+.eAyARa{
+  opacity: .4;
 }
 
 @media (min-width: 0) and (max-width: 620.9px) {

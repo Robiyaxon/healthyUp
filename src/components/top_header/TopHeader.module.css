@@ -1,16 +1,19 @@
-.Wrapper {
+.Top_Header {
     /* height: 100vh; */
     position: absolute;
     padding: 50px 155px 0;
     width: 100%;
 }
 
+.Block_Navlink {
+    width: 20%;
+
+}
+
 .Navlink_href {
     width: 148px;
     height: 52px;
-    border-radius: 10px;
-    padding:0 20px;
-    justify-content: center;
+    justify-content: center !important;
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
@@ -22,10 +25,11 @@
 }
 
 .Navlink_href a {
+    width: 100%;
     font-size: 16px;
     color: #4C3C00;
-    font-weight: 600; 
-    text-align: center;
+    font-weight: 600;
+    margin: 0 auto;
 }
 
 .Navlink_href span {
@@ -79,7 +83,6 @@
 
 .Navlink_href spann:nth-child(2) {
     top: -100%;
-    border: 2px solid red;
     right: 0;
     border-radius: 10px;
     width: 2px;
@@ -140,18 +143,20 @@
 }
 
 .Navlink {
-    width: 60%;
-     justify-content: flex-end;
+    width: 90%;
+    justify-content: flex-end;
 }
 
 .Block {
     justify-content: space-between;
+    width: 100%;
 }
 
 .Navlink_href:hover {
     background-color: transparent;
     border-radius: 5px;
 }
+
 .Menu__link,
 .Navlink,
 .Navlink_href,
@@ -161,13 +166,90 @@
 }
 
 .Menu__link {
-    width: 50%;
+    width: 70%;
     justify-content: space-between;
 }
-.Menu__link select{
+
+.Menu__link select {
     background-color: transparent;
     border: none;
     font-size: 16px;
     outline: none;
     font-weight: 500;
+}
+
+.Drawer_Block {
+    display: none;
+}
+
+@media(min-width:0) and (max-width:1100.9px) {
+    .Navlink {
+        display: none;
+    }
+
+    .Block_Navlink {
+        width: auto !important;
+    }
+
+    .Top_Header {
+        /* height: 100vh; */
+        position: absolute;
+        padding: 24px 26px 0 20px;
+        width: 100%;
+    }
+
+    .Block {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Menu__link {
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    .Drawer_Block {
+        display: block;
+
+    }
+
+    .Drawer_Block img {
+        cursor: pointer;
+    }
+
+    .Drawer_Block_Navlink {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* padding: 2rem 0 0 4rem; */
+        width: 100%;
+    }
+
+    .Menu__link select {
+        margin-right: 14px;
+    }
+
+    .Navlink_href {
+        width: 128px;
+        height: 50px;
+        margin-top: 2rem;
+        background-color: #FFA700;
+    }
+}
+
+@media(min-width:1100.9px) and (max-width:1400.9px) {
+    .Top_Header {
+        /* height: 100vh; */
+        position: absolute;
+        padding: 50px 15px 0 15px;
+        width: 100%;
+    }
+
+    .Block_Navlink {
+        width: auto;
+    }
+    .Menu__link {
+        width: 75%;
+        justify-content: space-between;
+    }
 }

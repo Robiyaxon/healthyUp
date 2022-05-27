@@ -1,0 +1,12 @@
+.title {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+
+  color: var(--main-font-color);
+  text-align: center;
+  margin: 15 rem 0 2rem;
+  height: 1000px;
+}
