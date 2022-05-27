@@ -7,6 +7,7 @@ import drawer from "../../assets/home/header/drawer.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Drawer } from "antd";
+
 export const TopHeader = () => {
   const dispatch = useDispatch();
   const defaultLang = localStorage.getItem("lang") || "uz";
