@@ -70,10 +70,12 @@
     height: 450px;
     align-items: center;
     background-size: 100% 80%;
+
   }
   .carousel {
     background-color: #fcf5ff;
-    padding: 5rem 2%;
+    background-image: none;
+    padding: 3rem 2%;
   }
   .item img {
     width: 15%;

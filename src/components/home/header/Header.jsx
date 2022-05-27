@@ -30,15 +30,15 @@ export const Header = () => {
       })
       .catch(function (error) {});
   }, []);
-  const map = Home.map((a, index) => (
-    <img
-      key={"http://10.10.8.46:8000" + index}
-      src={a.img}
-      alt=""
-      data-aos="fade-down"
-      data-aos-duration="1000"
-    />
-  ));
+  // const map = Home.map((a, index) => (
+  //   <img
+  //     key={"http://10.10.8.46:8000" + index}
+  //     src={a.img}
+  //     alt=""
+  //     data-aos="fade-down"
+  //     data-aos-duration="1000"
+  //   />
+  // ));
   return (
     <>
       <div className={styles.header}>

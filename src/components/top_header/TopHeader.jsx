@@ -21,7 +21,7 @@ var config = {
   },
 };
 export const TopHeader = () => {
-  const [image, setImage] = useState([]);
+  // const [image, setImage] = useState([]);
   const [scroll, setScroll] = useState("");
   window.addEventListener("scroll", () => {
     if (window.scrollY < 600) {
@@ -37,7 +37,7 @@ export const TopHeader = () => {
       window.removeEventListener("scroll", () => {});
       axios(config)
         .then(function (response) {
-          setImage(response.data);
+          // setImage(response.data);
         })
         .catch(function (error) {});
     };

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+// import { useTranslation } from "react-i18next";
 import Carousel from "react-elastic-carousel";
-import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 import main from "../../../assets/home/carousel/main.png";
-import { BtnAnimation } from "./../../../helpers/BtnAnimation";
-import styles from "./Carousel.module.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import axios from "axios";
-import { useSelector } from "react-redux";
+
 import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
+
+import styles from "./Carousel.module.css";
+import "aos/dist/aos.css";
 
 var config = {
   method: "get",
@@ -32,7 +32,7 @@ export const MyCarousel = () => {
   }, []);
   console.log(data);
 
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className={styles.carousel}>
@@ -64,7 +64,7 @@ export const MyCarousel = () => {
           text={data && data[0] && data[0].text}
         />
       </Carousel>
-      {/* <LoseWeightFast /> */}
+      <LoseWeightFast />
     </div>
   );
 };
@@ -81,8 +81,8 @@ const Item = ({
         <h1>{title}</h1>
         <p>
           {window.innerWidth > 801
-            ? text.substring(0, 750)
-            : text.substring(0, 300)}
+            ? text
+            : text.substring(0, 250)+"..."}
         </p>
       </div>
     </div>
