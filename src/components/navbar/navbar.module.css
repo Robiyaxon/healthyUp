@@ -1,6 +1,7 @@
 .Wrapper {
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid red;
     padding: 4rem;
     box-sizing: border-box !important;
 }

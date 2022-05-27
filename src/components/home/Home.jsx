@@ -1,12 +1,12 @@
 import React from "react";
-import { Header } from "./header/Header";
+import { HomeHeader } from "./home_header/HomeHeader";
 import { MyCarousel } from "./carousel/Carousel";
 
 export const Home = () => {
   return (
     <div>
-      <Header />
+      <HomeHeader />
       <MyCarousel />
-      </div>              
+    </div>
   );
 };
