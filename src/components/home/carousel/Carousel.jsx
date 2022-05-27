@@ -9,7 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import LoseWeightFast from './../../../assets/home/loseWeightFast/LoseWeightFast';
+import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
 
 var config = {
   method: "get",
@@ -40,40 +40,40 @@ export const MyCarousel = () => {
         <Item
           picture={(data && data[0] && data[0].img) || main}
           title={
-            data && data[0] && data[0].title && language === "uz" ? (
-              data && data[0] && data[0].title
-            ) : language === "eng" ? (
-              data && data[0] && data[0].en_title
-            ) : language === "ru" ? (
-              data && data[0] && data[0].ru_title
-            ) : (
-              'bir'
-            )
+            data && data[0] && data[0].title && language === "uz"
+              ? data && data[0] && data[0].title
+              : language === "eng"
+              ? data && data[0] && data[0].en_title
+              : language === "ru"
+              ? data && data[0] && data[0].ru_title
+              : "bir"
           }
           text={data && data[0] && data[0].text}
         />
         <Item
           picture={data && data[0] && data[0].img}
           title={
-            data && data[0] && data[0].title && language === "uz" ? (
-              data && data[0] && data[0].title
-            ) : language === "eng" ? (
-              data && data[0] && data[0].en_title
-            ) : language === "ru" ? (
-              data && data[0] && data[0].ru_title
-            ) : (
-              'bir'
-            )
+            data && data[0] && data[0].title && language === "uz"
+              ? data && data[0] && data[0].title
+              : language === "eng"
+              ? data && data[0] && data[0].en_title
+              : language === "ru"
+              ? data && data[0] && data[0].ru_title
+              : "bir"
           }
           text={data && data[0] && data[0].text}
         />
       </Carousel>
-      <LoseWeightFast/>
+      {/* <LoseWeightFast /> */}
     </div>
   );
 };
 
-const Item = ({ picture, title='Qalqonsimon bez bilan bog‘liq muammo', text = "Gipoterioz vazn ortishining sabablaridan biri bo‘lishi mumkin. Agar qalqonsimon bezdan yetarli miqdorda gormon ajralib chiqmasa, metabolizm sekinlashadi va bu vazn to‘plashga olib keladi. Shuningdek, doimiy charchoqni his qilish, haroratning o‘zgarishi kuzatilishi mumkin. Ma’lumotlarga qaraganda, ayollar gipoteriozga erkaklarga nisbatan 8 marta ko‘proq chalinadi." }) => {
+const Item = ({
+  picture = main,
+  title = "Qalqonsimon bez bilan bog‘liq muammo",
+  text = "Gipoterioz vazn ortishining sabablaridan biri bo‘lishi mumkin. Agar qalqonsimon bezdan yetarli miqdorda gormon ajralib chiqmasa, metabolizm sekinlashadi va bu vazn to‘plashga olib keladi. Shuningdek, doimiy charchoqni his qilish, haroratning o‘zgarishi kuzatilishi mumkin. Ma’lumotlarga qaraganda, ayollar gipoteriozga erkaklarga nisbatan 8 marta ko‘proq chalinadi.",
+}) => {
   return (
     <div className={styles.item}>
       <img src={picture} alt="" />

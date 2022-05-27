@@ -17,18 +17,19 @@ export const TopHeader = () => {
     localStorage.setItem("lang", value.target.value);
     i18n.changeLanguage(value.target.value);
     dispatch({ type: "LANG_CHANGED", payload: value.target.value });
-  } 
-  
+  }
+
   const onClose = () => {
     setVisible(false);
   };
   const map = [
-    { id: 1, name: "Foydali maslahat", url: "/" },
+    { id: 1, name: t("navbar3"), url: "/" },
     { id: 2, name: t("navbar1"), url: "about_us" },
     { id: 3, name: t("navbar2"), url: "contact" },
   ];
   const map2 = map.map((a) => (
-    <NavLink   onClick={onClose}
+    <NavLink
+      onClick={onClose}
       key={a.id}
       className={({ isActive }) => (isActive ? "active" : "Navlink")}
       to={a.url}
@@ -42,14 +43,9 @@ export const TopHeader = () => {
     setVisible(true);
   };
 
- 
   return (
     <>
-      <Drawer
-        placement="right"
-        onClose={onClose}
-        visible={visible}
-      >
+      <Drawer placement="right" onClose={onClose} visible={visible}>
         <div className={style.Drawer_Block_Navlink}>
           {map2}
           <button className={style.Navlink_href}>
