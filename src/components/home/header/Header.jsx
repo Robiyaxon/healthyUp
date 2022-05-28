@@ -7,6 +7,7 @@ import video from "../../../assets/home/header/video.mp4"
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import { useSelector } from "react-redux";
 import axios from "axios";
+
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/homeheader/",
@@ -14,6 +15,7 @@ var config = {
     "Content-Type": "application/json",
   },
 };
+
 export const Header = () => {
   const { language } = useSelector((state) => state.langReducer);
   const [Home, setHome] = useState([]);

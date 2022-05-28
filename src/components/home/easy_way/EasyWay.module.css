@@ -1,12 +1,62 @@
 .header {
-  background-image: url(../../../assets/home/easy_way/easyway.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(../../../assets/home/easy_way/background.png);
   width: 100%;
+  background-size: cover;
   height: 100%;
 }
-
 .header_title {
-  max-width: 879px;
+  font-family: Poppins, sans-serif;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: #231c00;
+  padding-top: 68px;
+  padding-bottom: 150px;
+}
+
+.header_sport {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(./../../../assets/home/easy_way/boyBg.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 100% 90%;
+  border-radius: 30px;
+  width: 70%;
+  min-height: 600px;
   margin: 0 auto;
+  position: relative;
+}
+.header_sport img {
+  width: 480px;
+  height: 660px;
+  z-index: 10;
+  position: absolute;
+  top: 5%;
+  right: -14%;
+}
+
+.header__text {
+  width: 75%;
+  margin-top: 7rem;
+  font-family: var(--main-font-family);
+  margin-left: 2rem;
+}
+
+.header__text h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  color: var(--main-font-color);
+  width: 80%;
+}
+.header__text p {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 46px;
+  color: #20082d;
+  width: 80%;
 }

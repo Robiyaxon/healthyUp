@@ -1,39 +1,60 @@
 .carousel {
-  background-color: #F5F5F6;
+  background-color: #f5f5f6;
   padding: 8rem 8%;
+  background-image: url("../../../assets/home/carousel/background.png");
+  background-size: cover;
+  padding-top: 20rem;
 }
 
 .item {
   display: flex;
   justify-content: space-evenly;
+  background-image: url("../../../assets/home/carousel/bg.png")
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 100% 90%;
+  border-radius: 30px;
+  width: 70%;
+  height: 600px;
+  border-width: 80%;
 }
 
 .item img {
-  width: 50%;
+  width: auto;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 10rem;
+  z-index: 10;
 }
 
 .item__text {
-  width: 38%;
+  width: 68%;
+  margin-top: 7rem;
+  font-family: var(--main-font-family);
+  margin-left: auto;
 }
 
 .item__text h1 {
-  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
   line-height: 51px;
 
-  color: #0B1C04;
+  color: var(--main-font-color);
+  width: 80%;
 }
 
 .item__text p {
   font-family: var(--main-font-family);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 40px;
 
   color: #20082d;
+  width: 80%;
 }
 
 .btn_body {
@@ -67,7 +88,7 @@
     line-height: 20px;
     text-align: center;
   }
-  
+
   .btn_body {
     text-align: center;
     width: 50%;
