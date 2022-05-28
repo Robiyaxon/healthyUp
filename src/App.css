@@ -19,7 +19,6 @@
 
 .active:hover {
     color: #FFA700;
-
 }
 
 .active,
@@ -57,6 +56,5 @@
     .active {
         width: 90% !important;
         margin: 1rem 0;
-
     }
 }
