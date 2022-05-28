@@ -1,8 +1,7 @@
 {
-  "navbar1": "Мой кабинет",
-  "navbar2": "Новости",
-  "navbar3": "О нас",
-  "navbar4": "Контакты",
+  "navbar1": "О нас",
+  "navbar2": "Связь",
+  "navbar3": "Полезный совет",
   "homeHeaderBtn1":"Войти",
   "homeHeaderBtn2":"ЗАРЕГИСТРИРОВАТЬСЯ",
   "homeCarousel":"Увидеть большеe",

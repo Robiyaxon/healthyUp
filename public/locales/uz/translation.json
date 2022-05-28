@@ -1,8 +1,7 @@
 {
-  "navbar1": "Mening kabinetim",
-  "navbar2": "Yangiliklar",
-  "navbar3": "Biz haqimizda",
-  "navbar4": "Aloqa",
+  "navbar1": "Biz haqimizda",
+  "navbar2": "Bog'lanish",
+  "navbar3": "Foydali maslahat",
   "homeHeaderBtn1":"Kirish",
   "homeHeaderBtn2":"Ro'yxatdan o'tish",
   "homeCarousel":"Barchasi",

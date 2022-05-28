@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+// import { useTranslation } from "react-i18next";
 import Carousel from "react-elastic-carousel";
-import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 import main from "../../../assets/home/carousel/main.png";
-import { BtnAnimation } from "./../../../helpers/BtnAnimation";
+
+import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
+
 import styles from "./Carousel.module.css";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import axios from "axios";
-import { useSelector } from "react-redux";
-import LoseWeightFast from "./../../../assets/home/loseWeightFast/LoseWeightFast";
 
 var config = {
   method: "get",
@@ -32,7 +32,7 @@ export const MyCarousel = () => {
   }, []);
   console.log(data);
 
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className={styles.carousel}>
@@ -70,7 +70,7 @@ export const MyCarousel = () => {
 };
 
 const Item = ({
-  picture,
+  picture = main,
   title = "Qalqonsimon bez bilan bog‘liq muammo",
   text = "Gipoterioz vazn ortishining sabablaridan biri bo‘lishi mumkin. Agar qalqonsimon bezdan yetarli miqdorda gormon ajralib chiqmasa, metabolizm sekinlashadi va bu vazn to‘plashga olib keladi. Shuningdek, doimiy charchoqni his qilish, haroratning o‘zgarishi kuzatilishi mumkin. Ma’lumotlarga qaraganda, ayollar gipoteriozga erkaklarga nisbatan 8 marta ko‘proq chalinadi.",
 }) => {
@@ -79,11 +79,7 @@ const Item = ({
       <img src={picture} alt="" />
       <div className={styles.item__text}>
         <h1>{title}</h1>
-        <p>
-          {window.innerWidth > 801
-            ? text.substring(0, 750)
-            : text.substring(0, 300)}
-        </p>
+        <p>{window.innerWidth > 801 ? text : text.substring(0, 250) + "..."}</p>
       </div>
     </div>
   );
