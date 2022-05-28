@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import main from "../../../assets/home/laseWeightFast/main.png";
 
 import styles from "./LoseWeightFast.module.css";
 
 const LoseWeightFast = () => {
+  const { t } = useTranslation()
   const data = [
     { id: 1, number: "01", title: "Gollivud parhezi" },
     { id: 2, number: "02", title: "Karamli parhez" },
