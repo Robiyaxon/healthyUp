@@ -108,7 +108,7 @@
         width: 100%;
     }
 }
-@media(min-width:1201px) and (max-width:1350.9px){
+@media(min-width:1201px) and (max-width:1480.9px){
     .HomeHeader {
         padding: 110px 100px 0;
     }
