@@ -10,7 +10,7 @@ export const Home = () => {
       <HomeHeader />
       <Cause />
       <MyCarousel />
-      <Search/>
+      {/* <Search/> */}
     </div>
   );
 };
