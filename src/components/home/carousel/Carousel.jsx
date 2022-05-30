@@ -30,8 +30,6 @@ export const MyCarousel = () => {
       })
       .catch(function (error) {});
   }, []);
-  console.log(data);
-
   // const { t } = useTranslation();
 
   return (
