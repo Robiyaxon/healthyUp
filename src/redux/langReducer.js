@@ -9,7 +9,6 @@ const initialState = {
 
 function langReducer(state = initialState, action) {
   const { type, payload } = action;
-
   switch (type) {
     case LANG_CHANGED:
       return {

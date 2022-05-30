@@ -13,7 +13,7 @@
   text-align: center;
   color: #231c00;
   padding-top: 68px;
-  padding-bottom: 150px;
+  padding-bottom: 84px;
 }
 
 .header_sport_wrapper {
@@ -22,9 +22,9 @@
 }
 .header_lenta_wrapper {
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: flex-start;
-  margin-left: 350px;
+  margin-left: 5%;
   margin-top: -100px;
 }
 
@@ -36,12 +36,13 @@
   background-position-y: bottom;
   background-size: 100% 90%;
   border-radius: 30px;
-  width: 70%;
+  width: 100%;
   min-height: 600px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
 }
+
 .header_sport img {
   width: 40%;
   height: 660px;
@@ -54,10 +55,10 @@
 
 .header__text {
   width: 60%;
-  margin-top: 7rem;
+  margin-top: 2rem;
   font-family: var(--main-font-family);
-  margin-left: 2rem;
-  padding-left: 50px;
+  /* margin-left: 1rem; */
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,31 +85,46 @@
 .header_sport_wrapper {
   position: relative;
 }
-/* .header_lenta {
-  position: absolute;
-  bottom: -22%;
-  left: 19%;
-  z-index: 2;
-} */
+
 @media (max-width: 2000px) {
+  .header_sport img {
+    width: 50%;
+  }
 }
 @media (max-width: 1400px) {
-  .header__text {
-    padding-left: 20px;
+  .header__text h1 {
+    font-size: 28px;
+  }
+  .header__text p {
+    font-size: 16px;
+    line-height: 40px;
   }
 }
 @media (max-width: 1200px) {
+  .header_sport {
+    background-image: url(./../../../assets/home/easy_way/mobileBoyBg.png);
+  }
+  .header__text {
+    width: 90%;
+    margin-left: 15px;
+  }
+  .header__text {
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
   .header_sport img {
-    max-width: 400px;
+    width: 90%;
     margin: 0 auto;
     position: relative;
     right: 0;
-    top: 100px;
+    top: 70px;
+    margin-bottom: 40px;
   }
   .header_lenta_wrapper {
     display: flex;
     justify-content: flex-start;
-    margin-left: 350px;
+    margin-left: 20px;
     margin-top: -100px;
   }
 
@@ -130,19 +146,107 @@
     width: 100%;
     margin-bottom: 16px;
   }
-  .header__text {
-    padding-bottom: 84px;
-    padding-left: 20px;
-  }
+
   .header_title {
     font-size: 40px;
   }
+  .header_lenta_wrapper {
+    width: 120px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -7%;
+  }
 }
-/*
-@media (max-width: 992px) {
+@media (max-width: 998px) {
+  .header_lenta_wrapper {
+    height: 84px;
+    margin-top: -6%;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  .header_lenta_wrapper {
+    margin-top: -7%;
+  }
+}
+@media (max-width: 700px) {
+  .header_lenta_wrapper {
+    margin-top: -8%;
+  }
+  .header_sport img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    top: 40px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .header_lenta_wrapper {
+    margin-top: -9%;
+  }
+  .header_sport img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    top: -1px;
+    margin-bottom: -118px;
+  }
+  .header__text h1 {
+    font-size: 18px;
+    line-height: 35px;
+  }
+  .header__text p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .header_lenta_wrapper {
+    margin-top: -10%;
+  }
+  .header_sport img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    top: -60px;
+    margin-bottom: -250px;
+  }
 }
 
-@media (max-width: 576px) {
-} */
+@media (max-width: 400px) {
+  .header_lenta_wrapper {
+    margin-top: -15%;
+  }
+  .header_sport img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    top: -58px;
+    margin-bottom: -240px;
+  }
+}
+@media (max-width: 300px) {
+  .header_lenta_wrapper {
+    margin-top: -15%;
+  }
+  .header_sport img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    top: -75px;
+    margin-bottom: -289px;
+  }
+  .header__text h1 {
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .header__text p {
+    line-height: 22px;
+  }
+}
