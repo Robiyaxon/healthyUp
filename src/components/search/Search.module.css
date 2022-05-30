@@ -1,0 +1,14 @@
+.Search{
+    border: 2px solid red;
+    background-image: url("../../assets/home/search/yer.svg");
+    height: 500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.Search_Img{
+    position: absolute;
+width: 38px;
+height: 38px;
+left: 1279px;
+filter: blur(3px);
+}
