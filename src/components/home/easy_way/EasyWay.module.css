@@ -155,23 +155,23 @@
     height: auto;
     display: flex;
     justify-content: flex-start;
-    margin-top: -7%;
+    margin-top: -13%;
   }
 }
 @media (max-width: 998px) {
   .header_lenta_wrapper {
-    height: 84px;
-    margin-top: -6%;
+    height: 120px;
+    margin-top: -8%;
   }
 }
 @media (max-width: 800px) {
   .header_lenta_wrapper {
-    margin-top: -7%;
+    margin-top: -10%;
   }
 }
 @media (max-width: 700px) {
   .header_lenta_wrapper {
-    margin-top: -8%;
+    margin-top: -11%;
   }
   .header_sport img {
     width: 90%;
@@ -184,7 +184,7 @@
 }
 @media (max-width: 600px) {
   .header_lenta_wrapper {
-    margin-top: -9%;
+    margin-top: -13%;
   }
   .header_sport img {
     width: 90%;
@@ -205,7 +205,7 @@
 }
 @media (max-width: 500px) {
   .header_lenta_wrapper {
-    margin-top: -10%;
+    margin-top: -18%;
   }
   .header_sport img {
     width: 90%;
@@ -219,7 +219,7 @@
 
 @media (max-width: 400px) {
   .header_lenta_wrapper {
-    margin-top: -15%;
+    margin-top: -20%;
   }
   .header_sport img {
     width: 90%;
@@ -232,7 +232,7 @@
 }
 @media (max-width: 300px) {
   .header_lenta_wrapper {
-    margin-top: -15%;
+    margin-top: -22%;
   }
   .header_sport img {
     width: 90%;
