@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <div>
       <HomeHeader />
-      <Cause/>
+      <Cause />
       <MyCarousel />
       <Search/>
     </div>

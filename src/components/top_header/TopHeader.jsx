@@ -62,7 +62,6 @@ export const TopHeader = () => {
       <div className={style.Top_Header}>
         <div className={style.Block}>
           <NavLink to="/" className={style.Block_Navlink}>
-            {" "}
             <img src={logo} alt="" />
           </NavLink>
           <div className={style.Menu__link}>

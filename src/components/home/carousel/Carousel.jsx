@@ -32,28 +32,36 @@ export const MyCarousel = () => {
   }, []);
   // const { t } = useTranslation();
 
-  const dataMap = data.map((d) => {
-    console.log();
-    return (
-      <Item
-        key={d.id}
-        picture={(data && data[d.id - 1] && data[d.id - 1].img) || main}
-        title={
-          data && data[d.id - 1] && data[d.id - 1].title && language === "uz"
-            ? data && data[d.id - 1] && data[d.id - 1].title
-            : language === "eng"
-            ? data && data[d.id - 1] && data[d.id - 1].en_title
-            : language === "ru"
-            ? data && data[d.id - 1] && data[d.id - 1].ru_title
-            : "bir"
-        }
-        text={data && data[d.id - 1] && data[d.id - 1].text}
-      />
-    );
-  });
   return (
     <div className={styles.carousel}>
-      <Carousel>{dataMap}</Carousel>
+      <Carousel>
+        <Item
+          picture={(data && data[0] && data[0].img) || main}
+          title={
+            data && data[0] && data[0].title && language === "uz"
+              ? data && data[0] && data[0].title
+              : language === "eng"
+              ? data && data[0] && data[0].en_title
+              : language === "ru"
+              ? data && data[0] && data[0].ru_title
+              : "bir"
+          }
+          text={data && data[0] && data[0].text}
+        />
+        <Item
+          picture={data && data[0] && data[0].img}
+          title={
+            data && data[0] && data[0].title && language === "uz"
+              ? data && data[0] && data[0].title
+              : language === "eng"
+              ? data && data[0] && data[0].en_title
+              : language === "ru"
+              ? data && data[0] && data[0].ru_title
+              : "bir"
+          }
+          text={data && data[0] && data[0].text}
+        />
+      </Carousel>
       <LoseWeightFast />
     </div>
   );
@@ -64,7 +72,6 @@ const Item = ({
   title = "Qalqonsimon bez bilan bog‘liq muammo",
   text = "Gipoterioz vazn ortishining sabablaridan biri bo‘lishi mumkin. Agar qalqonsimon bezdan yetarli miqdorda gormon ajralib chiqmasa, metabolizm sekinlashadi va bu vazn to‘plashga olib keladi. Shuningdek, doimiy charchoqni his qilish, haroratning o‘zgarishi kuzatilishi mumkin. Ma’lumotlarga qaraganda, ayollar gipoteriozga erkaklarga nisbatan 8 marta ko‘proq chalinadi.",
 }) => {
-  console.log(text.length);
   return (
     <div className={styles.item}>
       <img src={picture} alt="" />
