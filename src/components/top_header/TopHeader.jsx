@@ -59,13 +59,9 @@ export const TopHeader = () => {
           </button>
         </div>
       </Drawer>
-      <NavLink to="/">
-        <img src={logo} alt="" />
-      </NavLink>
       <div className={style.Top_Header}>
         <div className={style.Block}>
           <NavLink to="/" className={style.Block_Navlink}>
-            {" "}
             <img src={logo} alt="" />
           </NavLink>
           <div className={style.Menu__link}>
@@ -90,12 +86,6 @@ export const TopHeader = () => {
             </div>
           </div>
         </div>
-        <img
-          src={drawer}
-          className={style.NavbarIcon}
-          alt="navbar"
-          onClick={showDrawer}
-        />
       </div>
     </>
   );

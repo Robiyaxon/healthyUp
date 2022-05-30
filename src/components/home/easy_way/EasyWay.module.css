@@ -3,7 +3,9 @@
   width: 100%;
   background-size: cover;
   height: 100%;
+  padding-bottom: 500px;
 }
+
 .header_title {
   font-family: Poppins, sans-serif;
   font-size: 56px;
@@ -12,6 +14,18 @@
   color: #231c00;
   padding-top: 68px;
   padding-bottom: 150px;
+}
+
+.header_sport_wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+.header_lenta_wrapper {
+  display: flex;
+  width: 70%;
+  justify-content: flex-start;
+  margin-left: 350px;
+  margin-top: -100px;
 }
 
 .header_sport {
@@ -26,10 +40,12 @@
   min-height: 600px;
   margin: 0 auto;
   position: relative;
+  z-index: 10;
 }
 .header_sport img {
-  width: 480px;
+  width: 40%;
   height: 660px;
+  object-fit: contain;
   z-index: 10;
   position: absolute;
   top: 5%;
@@ -37,10 +53,15 @@
 }
 
 .header__text {
-  width: 75%;
+  width: 60%;
   margin-top: 7rem;
   font-family: var(--main-font-family);
   margin-left: 2rem;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__text h1 {
@@ -56,7 +77,72 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 46px;
+  line-height: 40px;
   color: #20082d;
   width: 80%;
 }
+.header_sport_wrapper {
+  position: relative;
+}
+/* .header_lenta {
+  position: absolute;
+  bottom: -22%;
+  left: 19%;
+  z-index: 2;
+} */
+@media (max-width: 2000px) {
+}
+@media (max-width: 1400px) {
+  .header__text {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .header_sport img {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    top: 100px;
+  }
+  .header_lenta_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 350px;
+    margin-top: -100px;
+  }
+
+  .header_sport {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .header_title {
+    font-size: 50px;
+    line-height: 64px;
+    padding-top: 66px;
+    padding-bottom: 57px;
+  }
+  .header__text p {
+    width: 100%;
+  }
+  .header__text h1 {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .header__text {
+    padding-bottom: 84px;
+    padding-left: 20px;
+  }
+  .header_title {
+    font-size: 40px;
+  }
+}
+/*
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+} */

@@ -11,7 +11,7 @@ import { Home } from "./components/home/Home";
 import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
-
+import EasyWay from "./components/home/easy_way/EasyWay";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
@@ -62,6 +62,7 @@ function App() {
         </>
       )}
       <MyBackTop />
+      <EasyWay />
     </div>
   );
 }
