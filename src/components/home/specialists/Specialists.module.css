@@ -1,0 +1,46 @@
+.specialists {
+  background-image: url(../../../assets/home/specialists/bg.png);
+}
+
+.title {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  color: #231c00;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.desc {
+  width: 30%;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 46px;
+  text-align: center;
+  margin: 0 auto;
+  color: #545454;
+}
+
+.block {
+  display: flex;
+  width: 80%;
+  margin: 5rem auto;
+  justify-content: space-between;
+}
+
+.box {
+  width: 30%;
+  background-image: radial-gradient(circle at top right, #fff, #dfd9cd 50%);
+  border-radius: 10px;
+}
+
+.box .img {
+  width: 100%;
+  margin-bottom: 3rem;
+  background-image: url(../../../assets/home/specialists/p1.png);
+  background-size: 200px 200px;
+}
