@@ -30,7 +30,9 @@ function EasyWay() {
         </div>
       </div>
 
-      {/* <div className={styles.header_food}></div> */}
+      <div className={styles.header_food_wrapper}>
+        <div className={styles.header_food}></div>
+      </div>
     </div>
   );
 }

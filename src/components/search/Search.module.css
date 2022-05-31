@@ -1,14 +1,145 @@
-.Search{
-    border: 2px solid red;
+.Search {
     background-image: url("../../assets/home/search/yer.svg");
-    height: 500px;
     background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 122px;
     background-repeat: no-repeat;
+    background-color: #F8EACF;
 }
-.Search_Img{
+
+.Search p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #231C00;
+
+    text-shadow: 0px 24px 34px rgba(61, 61, 61, 0.15);
+}
+
+/* .Search_Img {
     position: absolute;
-width: 38px;
-height: 38px;
-left: 1279px;
-filter: blur(3px);
+    width: 38px;
+    height: 38px;
+    left: 1279px;
+    filter: blur(3px);
+} */
+
+.Title h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 51px;
+
+    color: #231C00;
+}
+
+.Title p {
+    width: 552px;
+
+}
+
+.Title {
+    width: 50%;
+}
+
+.SearchImg {
+    width: 45%;
+
+
+}
+
+.input {
+    margin-top: 60px;
+    width: 545px !important;
+    border-radius: 10px;
+
+}
+
+.Search_Img {
+    height: auto;
+}
+
+@media(min-width:0) and (max-width:800.9px) {
+    .Title {
+        width: 100%;
+     
+    }
+    .Title h1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 51px;
+    width: 100%;
+        color: #231C00;
+    }
+    
+    .Title p {
+        width: 100%;
+    
+    }
+    .input {
+        margin:0 auto !important;
+        width: 80% !important;
+    
+    }
+    .SearchImg {
+        width: 100%;
+flex-direction: column-reverse;
+
+    }
+
+    .Search {
+        justify-content: space-between;
+        flex-wrap: wrap;
+           padding:2rem 25px;
+    }
+    .Search_Img img{
+        width: 100%;
+    }
+}
+@media(min-width:801px) and (max-width:950.9px) {
+    .Title {
+        width: 50%;
+     
+    }
+    .Title h1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 51px;
+    width: 90%;
+        color: #231C00;
+    }
+    
+    .Title p {
+        width:90%;
+    
+    }
+    .input {
+        margin:0 auto !important;
+        width: 80% !important;
+    
+    }
+    .SearchImg {
+        width: 50%;
+flex-direction: column-reverse;
+
+    }
+
+    .Search {
+        justify-content: space-between;
+        flex-wrap: wrap;
+           padding:2rem 25px;
+    }
+    .Search_Img img{
+        width: 100%;
+    }
 }

@@ -72,6 +72,9 @@
     background-size: 100% 80%;
 
   }
+  .Cause{
+    border: 2px solid red;
+  }
   .carousel {
     background-color: #fcf5ff;
     background-image: none;
