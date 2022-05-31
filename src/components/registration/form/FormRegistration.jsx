@@ -87,10 +87,6 @@ function FormRegistration() {
             Continue
           </Button>
         </Form>
-        <div className={styles.progress}>
-          <span>2/25</span>
-          <Progress percent={50} showInfo={false} />
-        </div>
       </div>
     </div>
   );

@@ -9,15 +9,16 @@ import { useTranslation } from "react-i18next";
 import { Drawer } from "antd";
 
 export const TopHeader = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const defaultLang = localStorage.getItem("lang") || "uz";
-  const { t } = useTranslation();
   const [lang, setLang] = useState(defaultLang);
-  function handleChange(value) {
-    setLang(value.target.value);
-    localStorage.setItem("lang", value.target.value);
-    i18n.changeLanguage(value.target.value);
-    dispatch({ type: "LANG_CHANGED", payload: value.target.value });
+  function handleChange(event) {
+    setLang(event.target.value);
+    localStorage.setItem("lang", event.target.value);
+    i18n.changeLanguage(event.target.value);
+    console.log(event.target.value);
+    dispatch({ type: "LANG_CHANGED", payload: event.target.value });
   }
 
   const onClose = () => {
@@ -54,14 +55,13 @@ export const TopHeader = () => {
             <span></span>
             <span></span>
             <span></span>
-            <NavLink to="/">Kirish</NavLink>
+            <NavLink to="/">{t("homeHeaderBtn1")}</NavLink>
           </button>
         </div>
       </Drawer>
       <div className={style.Top_Header}>
         <div className={style.Block}>
           <NavLink to="/" className={style.Block_Navlink}>
-            {" "}
             <img src={logo} alt="" />
           </NavLink>
           <div className={style.Menu__link}>
@@ -72,7 +72,7 @@ export const TopHeader = () => {
                 <span></span>
                 <span></span>
                 <span></span>
-                <NavLink to="/">Kirish</NavLink>
+                <NavLink to="/">{t("homeHeaderBtn1")}</NavLink>
               </button>
             </div>
 

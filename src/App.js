@@ -11,7 +11,7 @@ import { Home } from "./components/home/Home";
 import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
-
+import EasyWay from "./components/home/easy_way/EasyWay";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
@@ -29,7 +29,7 @@ function App() {
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
     { id: 6, url: "signUp", kompannent: <Registration /> },
-    { id: 6, url: "carousel", kompannent: <HomeDetail /> },
+    { id: 7, url: "carousel", kompannent: <HomeDetail /> },
   ];
   const mapRoute = map.map((a) => (
     <Route
@@ -62,6 +62,7 @@ function App() {
         </>
       )}
       <MyBackTop />
+      <EasyWay />
     </div>
   );
 }

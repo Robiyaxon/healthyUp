@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import video from "../../../assets/home/header/video.mp4"
-import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import AOS from "aos";
+
+import video from "../../../assets/home/header/video.mp4"
+import { BtnAnimation } from "./../../../helpers/BtnAnimation";
+
+import styles from "./Header.module.css";
+import "aos/dist/aos.css";
 
 var config = {
   method: "get",

@@ -4,7 +4,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import langReducer from "./langReducer";
 const rootReducers = combineReducers({
   // form: formReduser,
-  langReducer
+  langReducer,
 });
 const compoceEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducers, compoceEnhancers(applyMiddleware()));

@@ -36,11 +36,63 @@
   width: 30%;
   background-image: radial-gradient(circle at top right, #fff, #dfd9cd 50%);
   border-radius: 10px;
+  transition: 1s all linear;
+  height: 400px;
 }
 
-.box .img {
+.img {
   width: 100%;
+  height: 100%;
   margin-bottom: 3rem;
   background-image: url(../../../assets/home/specialists/p1.png);
-  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: end;
+}
+
+.textInImg {
+  display: none;
+  margin-left: 1rem;
+  transition: 1s all linear;
+}
+
+.box:hover{
+  background-image: radial-gradient(circle at top right, #fff, #F6E4C2 50%);
+}
+
+.box:hover .textInImg{
+  display: flex;
+  flex-direction: column;
+}
+
+.textInImg h2{
+  margin: 0;
+}
+
+.textInImg h2 li {
+  width: 20px;
+}
+
+.textInImg h1 {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.textInImg p {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #e8e8e8;
 }

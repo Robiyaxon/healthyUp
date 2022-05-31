@@ -1,0 +1,171 @@
+.Cause {
+  background-image: url("../../../assets/home/cause/couse1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 3rem;
+}
+
+.Cause h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  width: 970px;
+  margin: 0 auto;
+  line-height: 64px;
+  text-align: center;
+  color: #231c00;
+}
+
+.Chek {
+  display: flex;
+  justify-content: center;
+  margin-top: 91px;
+  align-items: flex-start;
+}
+
+.Chek img {
+  margin-right: 16px;
+}
+
+.diseases {
+  height: 100%;
+  justify-content: center;
+}
+
+.diseases h2,
+.Chek h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 64px;
+  color: #272f36;
+}
+
+.advice_h2 {
+  width: 426px;
+}
+
+.diseases h2 {
+  margin-right: 16px;
+}
+
+.advice,
+.diseases {
+  display: flex;
+  align-items: center;
+}
+.advice {
+  margin: 168px 0;
+}
+
+.advice {
+  align-items: flex-start;
+}
+
+.advice2 img {
+  margin-right: 16px;
+}
+
+.img {
+  margin-top: 26px;
+}
+
+.advice3 {
+  justify-content: flex-end;
+}
+
+.diseases__block {
+  margin: 0 30px;
+  width: 40%;
+  height: 100%;
+}
+
+.diseases__block2 {
+  text-align: right;
+  margin: 0 30px;
+  width: 40%;
+  height: 100%;
+}
+@media (min-width: 0) and (max-width: 450.9px) {
+  .img {
+    height: 396px;
+    width: auto;
+  }
+}
+@media (min-width: 451px) and (max-width: 950.9px) {
+}
+@media (min-width: 0) and (max-width: 950.9px) {
+  .Cause {
+    margin-top: 30px;
+    padding: 0 24px;
+    background-size: 100% 100%;
+  }
+
+  .Chek {
+    margin-top: 91px;
+  }
+
+  .diseases {
+    flex-direction: column-reverse;
+  }
+  .advice_h2 {
+    width: auto;
+  }
+  .Cause h1 {
+    font-size: 34px;
+    width: 100%;
+  }
+  .diseases h2,
+  .Chek h2 {
+    font-size: 20px;
+  }
+  .advice {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .advice3 {
+    justify-content: center !important;
+  }
+  .diseases__block {
+    width: 100%;
+  }
+
+  .diseases__block2 {
+    width: 100%;
+  }
+}
+@media (min-width: 951px) and (max-width: 1200.9px) {
+  .Cause {
+    background-image: url("../../../assets/home/cause/couse1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 3rem;
+  }
+  .Chek {
+    margin-top: 51px;
+  }
+  .advice {
+    margin: 0 0;
+  }
+  .Cause {
+    background-size: 100% 100%;
+  }
+  .diseases h2,
+  .Chek h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 64px;
+    color: #272f36;
+  }
+  .advice_h2 {
+    width: auto;
+  }
+  .Cause h1 {
+    font-size: 50px;
+    width: 100%;
+  }
+}
