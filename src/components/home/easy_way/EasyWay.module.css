@@ -332,7 +332,7 @@
 }
 @media (max-width: 700px) {
   .header_lenta_wrapper {
-    margin-top: -9%;
+    margin-top: -10%;
   }
   .header_sport_wrapper {
     width: 74%;
@@ -369,7 +369,7 @@
     justify-content: space-around !important;
   }
   .header_lenta_wrapper {
-    margin-top: -11%;
+    margin-top: -9%;
   }
   .food_lenta_wrapper {
     margin-left: 46px;
