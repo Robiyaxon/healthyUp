@@ -5,7 +5,6 @@
   height: 100%;
   padding-bottom: 500px;
 }
-
 .header_title {
   font-family: Poppins, sans-serif;
   font-size: 56px;
@@ -14,18 +13,30 @@
   color: #231c00;
   padding-top: 68px;
   padding-bottom: 84px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.header_sport_wrapper {
+.header_sport_wrapper,
+.header_meal_wrapper {
   width: 70%;
   margin: 0 auto;
 }
-.header_lenta_wrapper {
+
+.header_meal {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
-  margin-left: 5%;
-  margin-top: -100px;
+  background-image: url(./../../../assets/home/easy_way/boyBg.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 100% 90%;
+  border-radius: 30px;
+  width: 100%;
+  min-height: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  align-items: center;
 }
 
 .header_sport {
@@ -41,6 +52,20 @@
   margin: 0 auto;
   position: relative;
   z-index: 10;
+}
+
+.header_meal img {
+  width: 50%;
+  height: 414px;
+  object-fit: contain;
+  position: relative;
+  right: 100px;
+}
+
+.header__meal_text {
+  width: 50%;
+  margin-left: -10rem;
+  position: relative;
 }
 
 .header_sport img {
@@ -65,7 +90,8 @@
   justify-content: center;
 }
 
-.header__text h1 {
+.header__text h1,
+.header__meal_text h1 {
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
@@ -73,7 +99,9 @@
   color: var(--main-font-color);
   width: 80%;
 }
-.header__text p {
+
+.header__text p,
+.header__meal_text p {
   font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 500;
@@ -82,8 +110,31 @@
   color: #20082d;
   width: 80%;
 }
-.header_sport_wrapper {
-  position: relative;
+.header__meal_text p {
+  width: 80%;
+}
+.header__meal_text {
+  width: 100%;
+}
+
+.header_lenta_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-left: 5%;
+  margin-top: -100px;
+}
+
+.food_lenta_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: 87px;
+  margin-top: -195px;
+}
+.food_lenta_wrapper img {
+  width: 350px;
+  height: 300px;
 }
 
 @media (max-width: 2000px) {
@@ -92,25 +143,44 @@
   }
 }
 @media (max-width: 1400px) {
-  .header__text h1 {
+  .header__text h1,
+  .header__meal_text h1 {
     font-size: 28px;
   }
-  .header__text p {
+  .header__text p,
+  .header__meal_text p {
     font-size: 16px;
     line-height: 40px;
   }
 }
+
 @media (max-width: 1200px) {
-  .header_sport {
+  .header_sport,
+  .header_meal {
     background-image: url(./../../../assets/home/easy_way/mobileBoyBg.png);
+  }
+  .header__meal_text {
+    width: 90%;
+    margin-left: 15%;
   }
   .header__text {
     width: 90%;
     margin-left: 15px;
   }
-  .header__text {
+  .header__text,
+  .header__meal_text {
     padding-bottom: 20px;
     padding-left: 20px;
+  }
+
+  .header_meal img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 450px;
   }
 
   .header_sport img {
@@ -121,6 +191,7 @@
     top: 70px;
     margin-bottom: 40px;
   }
+
   .header_lenta_wrapper {
     display: flex;
     justify-content: flex-start;
@@ -133,16 +204,37 @@
     flex-direction: column-reverse;
     align-items: flex-start;
   }
+
+  .header__meal_text {
+    width: 90%;
+    margin-left: 0px;
+    position: relative;
+  }
+  .header_meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+  }
+
+  .header__meal_text {
+    margin-top: 0px;
+    padding-top: 50px;
+  }
+
   .header_title {
     font-size: 50px;
     line-height: 64px;
     padding-top: 66px;
     padding-bottom: 57px;
   }
-  .header__text p {
+
+  .header__text p,
+  .header__meal_text p {
     width: 100%;
   }
-  .header__text h1 {
+  .header__text h1,
+  .header__meal_text h1 {
     width: 100%;
     margin-bottom: 16px;
   }
@@ -163,10 +255,23 @@
     height: 120px;
     margin-top: -8%;
   }
+  .header_meal img {
+    height: 400px;
+  }
 }
 @media (max-width: 800px) {
   .header_lenta_wrapper {
     margin-top: -10%;
+  }
+  .header__meal_text {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .header_meal {
+    padding-top: 80px;
+  }
+  .header_meal img {
+    height: 300px;
   }
 }
 @media (max-width: 700px) {
@@ -181,10 +286,24 @@
     top: 40px;
     margin-bottom: 5px;
   }
+  .header_meal img {
+    height: 300px;
+  }
 }
 @media (max-width: 600px) {
+  .header_meal img {
+    height: 230px;
+  }
   .header_lenta_wrapper {
     margin-top: -13%;
+  }
+  .food_lenta_wrapper {
+    margin-left: 46px;
+    margin-top: -117px;
+  }
+  .food_lenta_wrapper img {
+    width: 200px;
+    height: 180px;
   }
   .header_sport img {
     width: 90%;
@@ -194,11 +313,13 @@
     top: -1px;
     margin-bottom: -118px;
   }
-  .header__text h1 {
+  .header__text h1,
+  .header__meal_text h1 {
     font-size: 18px;
     line-height: 35px;
   }
-  .header__text p {
+  .header__text p,
+  .header__meal_text p {
     font-size: 16px;
     line-height: 28px;
   }
@@ -215,6 +336,9 @@
     top: -60px;
     margin-bottom: -250px;
   }
+  .header_meal img {
+    height: 180px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -229,6 +353,15 @@
     top: -58px;
     margin-bottom: -240px;
   }
+  .header__text h1,
+  .header__meal_text h1 {
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .header__text p,
+  .header__meal_text p {
+    line-height: 24px;
+  }
 }
 @media (max-width: 300px) {
   .header_lenta_wrapper {
@@ -241,12 +374,5 @@
     right: 0;
     top: -75px;
     margin-bottom: -289px;
-  }
-  .header__text h1 {
-    font-size: 18px;
-    line-height: 16px;
-  }
-  .header__text p {
-    line-height: 22px;
   }
 }

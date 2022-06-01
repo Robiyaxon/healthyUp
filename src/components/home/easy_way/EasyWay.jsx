@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./EasyWay.module.css";
 import boy from "./../../../assets/home/easy_way/boy.png";
 import lenta from "./../../../assets/home/easy_way/metr1.png";
+import meal from "./../../../assets/home/easy_way/food1.png";
+import lenta2 from "./../../../assets/home/easy_way/metr2.png";
+
 function EasyWay() {
   return (
     <div className={styles.header}>
@@ -28,8 +31,24 @@ function EasyWay() {
         </div>
       </div>
 
-      <div className={styles.header_food_wrapper}>
-        <div className={styles.header_food}></div>
+      <div className={styles.header_meal_wrapper}>
+        <div className={styles.header_meal}>
+          <img src={meal} alt="food img" />
+          <div className={styles.header__meal_text}>
+            <h1>Meyyor bilan ovqatlanish</h1>
+            <p>
+              Soat 18-00 dan keyin ovqat tanovul qilmang. Aynan shu davrda
+              organizm faolligi kamayadi va yeyilgan har qanday taom yaxshi hazm
+              bo‘lmay, organizmda o‘tirib qoladi. Qabul qilinadigan ovqatning
+              asosiy qismi tushlik vaqtiga to‘g‘ri kelishini ta’minlang. Kechki
+              ovqat uglevodlar tutmasligi kerak. Iloji bo‘lsa dimlangan
+              sabzavotlardan tayyorlangan taomlarni yegan ma’qul.
+            </p>
+          </div>
+        </div>
+        <div className={styles.food_lenta_wrapper}>
+          <img src={lenta2} alt="lenta" />
+        </div>
       </div>
     </div>
   );
