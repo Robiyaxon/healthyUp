@@ -2,7 +2,7 @@
   background-image: url("../../../assets/home/cause/couse1.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: 3rem;
+  padding: 3rem 0 0 0;
 }
 
 .Cause h1 {
@@ -90,11 +90,23 @@
 }
 @media (min-width: 0) and (max-width: 450.9px) {
   .img {
-    height: 396px;
-    width: auto;
+    height: auto;
+    margin-top: 0;
+    width: 50%;
+  }
+}
+@media (min-width: 451px) and (max-width: 900.9px) {
+  .img {
+    height: auto;
+    margin-top: 0;
+    width: 30%;
   }
 }
 @media (min-width: 451px) and (max-width: 950.9px) {
+
+
+
+
 }
 @media (min-width: 0) and (max-width: 950.9px) {
   .Cause {
@@ -136,7 +148,7 @@
     width: 100%;
   }
 }
-@media (min-width: 951px) and (max-width: 1200.9px) {
+@media (min-width: 951px) and (max-width: 1494.9px) {
   .Cause {
     background-image: url("../../../assets/home/cause/couse1.png");
     background-repeat: no-repeat;

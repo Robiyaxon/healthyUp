@@ -24,7 +24,9 @@ function EasyWay() {
               testdan o‘tish kerak.
             </p>
           </div>
-          <img src={boy} alt="boy" />
+          <div className={styles.Boy}>
+            <img src={boy} alt="boy" />
+          </div>
         </div>
         <div className={styles.header_lenta_wrapper}>
           <img className={styles.header_lenta} src={lenta} alt="lenta" />

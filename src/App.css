@@ -1,6 +1,9 @@
 * {
   padding: 0;
 }
+.App{
+  overflow: hidden;
+}
 .ant-drawer.ant-drawer-open .ant-drawer-mask {
   background: #ffffff1a;
   backdrop-filter: blur(6px);
@@ -43,6 +46,11 @@
 
 .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
   width: auto !important;
+}
+
+.ant-btn-primary {
+  background: #CB9A39 !important;
+
 }
 
 @media (min-width: 0) and (max-width: 1100.9px) {
