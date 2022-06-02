@@ -1,12 +1,15 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
-
+import React, { useEffect } from "react";
+// import { useTranslation } from "react-i18next";
 import main from "../../../assets/home/laseWeightFast/main.png";
 
 import styles from "./LoseWeightFast.module.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const LoseWeightFast = () => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const data = [
     { id: 1, number: "01", title: "Gollivud parhezi" },
     { id: 2, number: "02", title: "Karamli parhez" },
@@ -21,7 +24,7 @@ const LoseWeightFast = () => {
   ];
 
   const dataMap = data.map((d) => (
-    <div className={styles.blocks__box} key={d.id}>
+    <div data-aos="flip-left" className={styles.blocks__box} key={d.id}>
       <h1>{d.number}</h1>
       <p>{d.title}</p>
     </div>
@@ -29,12 +32,12 @@ const LoseWeightFast = () => {
 
   return (
     <div>
-      <h1 className={styles.title}>
+      <h1 className={styles.title} data-aos="fade-up" data-aos-duration="1000">
         {" "}
         TEZ OZISH UCHUN PARHEZLARNING 10 TA ENG SAMARALISI
       </h1>
       <div className={styles.main__block}>
-        <img src={main} alt="" />
+        <img src={main} alt="" data-aos="fade-up" data-aos-duration="1000" />
         <div className={styles.blocks}>{dataMap}</div>
       </div>
     </div>
