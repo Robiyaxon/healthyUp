@@ -162,10 +162,10 @@
     right: -15px;
   }
 }
-
-@media (min-width: 300px) and (max-width: 576.9px) {
-}
 @media (min-width: 0) and (max-width: 767.9px) {
+  .header_wrapper {
+    background-image: url("./../../../assets/home/comment/mobileBg.png");
+  }
   .header_card1 {
     padding-top: 70px;
   }
