@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import i18n from "./../../i18n";
 import style from "./TopHeader.module.css";
 import { useDispatch } from "react-redux";
-import logo from "../../assets/TopHeader/logo.svg";
+import logo from "../../assets/home/search/logo2.svg";
 import drawer from "../../assets/home/header/drawer.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -72,7 +72,7 @@ export const TopHeader = () => {
                 <span></span>
                 <span></span>
                 <span></span>
-                <NavLink to="/">{t("homeHeaderBtn1")}</NavLink>
+                <NavLink to="/">Kirish</NavLink>
               </button>
             </div>
 
