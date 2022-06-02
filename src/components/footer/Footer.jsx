@@ -54,7 +54,7 @@ export const Footer = () => {
               <img src={chiziq} alt="" className={style.chiziq}  />
 
       </center>
-      <p data-aos="fade-up" data-aos-duration="1000"git add className={style.Title}>Platforma digitalcityandijan tomonidan ishlab chiqilgan.</p>
+      <p data-aos="fade-up" data-aos-duration="1000" className={style.Title}>Platforma digitalcityandijan tomonidan ishlab chiqilgan.</p>
     </div>
   );
 };
