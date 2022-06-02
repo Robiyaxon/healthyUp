@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./FormRegistration.module.css";
 import { useState } from "react";
-import { Form, Input, Button, Progress } from "antd";
+import { Form, Input, Button } from "antd";
 
 function FormRegistration() {
   const [name, setName] = useState("");
@@ -28,7 +28,7 @@ function FormRegistration() {
             <Input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Enter your name"
+              placeholder="Enter your name" 
             />
           </Form.Item>
 
