@@ -3,7 +3,8 @@ import { HomeHeader } from "./home_header/HomeHeader";
 import { MyCarousel } from "./carousel/Carousel";
 import { Cause } from "./Cause/Cause";
 import { Search2 } from "../search/Search";
-import EasyWay from './easy_way/EasyWay';
+import EasyWay from "./easy_way/EasyWay";
+import Comment from "./comment/Comment";
 
 export const Home = () => {
   return (
@@ -12,7 +13,8 @@ export const Home = () => {
       <Cause />
       <MyCarousel />
       <EasyWay />
-      <Search2/>
+      <Search2 />
+      <Comment />
     </div>
   );
 };
