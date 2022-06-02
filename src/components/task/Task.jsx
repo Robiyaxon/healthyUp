@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from "./task.module.css";
 import instagram from "../../assets/home/socialnetwork/instagram.svg";
 import facebook from "../../assets/home/socialnetwork/facebook.svg";
