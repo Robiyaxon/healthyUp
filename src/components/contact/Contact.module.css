@@ -1,13 +1,175 @@
 .wrapper {
-    background-repeat: no-repeat;
-    background-image: url("../../assets/home/header/Glavniy.svg");
-    height: 100vh;
-    background-size: 100%;
+    background-color: white;
+    padding: 180px 175px 0 175px;
+}
+
+.Login {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 64px;
+    /* identical to box height, or 114% */
+
+    text-align: center;
+
+    color: #231C00;
+}
+
+.wrapper input {
+    width: 472px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.button {
     width: 100%;
-    padding: 110px 155px 0;
-  }
-  .wrapper h1{
-      margin: 2rem auto;
-      color: #ffa700;
-      font-family: cursive;
-  }
+    text-align: center;
+}
+
+.Title1 {
+    margin: 19px 0;
+}
+
+.Title1 h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 12px 0 0;
+    line-height: 30px;
+    color: #231C00;
+}
+
+.Title1 p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+    width: 351px;
+    color: #231C00;
+}
+
+.Title1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper textarea {
+    width: 1068px;
+    height: 116px !important;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.wrapper button{
+    width: 472px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+line-height: 24px;
+border-radius: 10px;
+}
+.login_form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media(min-width:0) and (max-width:550.9px){
+    .wrapper button{
+        width: 80%;
+    } 
+    .wrapper {
+        padding: 140px 20px 0 20px;
+    }
+    .button {
+        width: 100%;
+    }
+    .wrapper textarea {
+        width: 90% !important;
+        height: 116px !important;
+        border-radius: 10px;
+
+        margin-top: 40px;
+    }
+    .wrapper input {
+        width: 250px;
+        height: 42px;
+        border-radius: 10px;
+    }
+    .TextArea{
+        width: 100% !important;
+        text-align: center;
+    }
+    .wrapper h1 {
+        font-size: 36px;
+    }
+    .Title1 {
+        text-align: center;
+    }
+    
+    .Title1 h2 {
+        font-size: 22px;
+        width: 100%;
+    }
+    
+    .Title1 p {
+        font-size: 18px;
+        width: 100%;
+    }
+}
+@media(min-width:551px) and (max-width:850.9px){
+    .wrapper {
+        padding: 140px 30px 0 30px;
+    }
+    .button {
+        width: 100%;
+    }
+    .wrapper textarea {
+        width: 95% !important;
+    }
+    .wrapper input {
+        width: 450px;
+        height: 42px;
+        border-radius: 10px;
+    }
+    .TextArea{
+        width: 100% !important;
+        text-align: center;
+    }
+    .wrapper h1 {
+        font-size: 36px;
+    }
+    .Title1 {
+        text-align: center;
+    }
+    
+    .Title1 h2 {
+        font-size: 22px;
+        width: 100%;
+    }
+    
+    .Title1 p {
+        font-size: 18px;
+        width: 100%;
+    }
+}
+@media(min-width:851px) and (max-width:1050.9px){
+    .wrapper textarea {
+        width: 95% !important;
+    }
+    .TextArea{
+        width: 100% !important;
+        text-align: center;
+    }
+}
