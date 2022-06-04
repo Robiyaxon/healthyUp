@@ -26,7 +26,7 @@
     line-height: 30px;
     margin: 0.3rem 0;
     color: #0D0A00;
-    transition: all 0.4s;
+    transition: all 0.4s !important;
 }
 
 .Block1 a:hover {
@@ -61,7 +61,7 @@
     margin: 0px 0 19px 2rem;
     line-height: 24px;
     color: #4C3C00;
-    transition: all 0.4s;
+    transition: all 0.4s !important;
 }
 
 .Block2 a:hover {
@@ -81,7 +81,7 @@
 }
 
 .facebook_icon {
-    transition: all 0.5s;
+    transition: all 0.5s   !important;
 
 
 }
@@ -97,7 +97,7 @@
 }
 
 .instagram_icon {
-    transition: all 0.5s;
+    transition: all 0.5s !important;
 }
 
 .instagram_icon:hover {
