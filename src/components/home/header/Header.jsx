@@ -56,6 +56,7 @@ export const Header = () => {
             data-aos="fade-down"
             data-aos-duration="1000"
           >
+            Hey
             {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.title_uz} </span>)
             ) : language === "eng" ? (
@@ -63,7 +64,7 @@ export const Header = () => {
             ) : language === "ru" ? (
               Home.map((a, index) => <span key={index}> {a.title_ru} </span>)
             ) : (
-              <>...</>
+              <>Salom dunyo</>
             )}
           </h1>
           <p

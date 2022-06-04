@@ -12,6 +12,7 @@ import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import EasyWay from "./components/home/easy_way/EasyWay";
+import { Header } from "./components/home/header/Header";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
@@ -50,6 +51,7 @@ function App() {
   ));
   return (
     <div>
+      <Header/>
       {isLoading ? (
         <>
           <Spin />
