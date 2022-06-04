@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Footer.module.css";
 import logo2 from "../../assets/home/search/logo2.svg";
-import twitter from "../../assets/home/footer/t.svg";
+// import twitter from "../../assets/home/footer/t.svg";
 import facebook from "../../assets/home/footer/f.svg";
 import instagram from "../../assets/home/footer/i.svg";
 import google from "../../assets/home/footer/googleplay.svg";
@@ -9,14 +9,102 @@ import chiziq from "../../assets/home/footer/chiziq.svg";
 import telegram from "../../assets/home/footer/telegram.svg";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
-import "aos/dist/aos.css";
+import { useSelector } from "react-redux";
+import  axios from 'axios';
+var config = {
+  method: "get",
+  url: "http://10.10.8.46:8000/footer/",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
 export const Footer = () => {
+  const [data, setData] = useState([]);
+  const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
-    Aos.init();
-  }, []);
+   
+    axios(config)
+    .then(function (response) {
+      setData(response.data);
+    })
+    .catch(function (error) {});
+  }, []); 
+  Aos.init();
+  const map=data.map(a=> <div className={style.Footer} key={a.id}>
+    <div className={style.Block1}>
+      <img
+        src={logo2}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        alt="rasm bor edi!"
+      />{" "}
+      <br />
+      <a href={a.email} data-aos="fade-up" data-aos-duration="1000">
+     {a.email}
+      </a>
+      <a href={"tel:"+a.phone} data-aos="fade-up" data-aos-duration="1000">
+      {a.phone}
+      </a>
+      <a href="/" data-aos="fade-up" data-aos-duration="1000">
+     {a.address}
+      </a>
+      <p data-aos="fade-up" data-aos-duration="1000">
+        www.health.uz
+      </p>
+    </div>
+    <div className={style.Block2}>
+      <NavLink data-aos="fade-up" data-aos-duration="1000" to="about_us">
+        Biz haqimizda
+      </NavLink>
+      <NavLink data-aos="fade-up" data-aos-duration="1000" to="contact">
+        Bog'lanish
+      </NavLink>
+      <NavLink data-aos="fade-up" data-aos-duration="1000" to="/">
+        Foydali maslahat
+      </NavLink>
+    </div>
+    <div className={style.Block3}>
+      <a
+        href={a.facebook}
+        className={style.facebook_icon}
+      >
+        <img
+          src={facebook}
+          alt=""
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+      </a>
+      <a href={a.instagram} className={style.instagram_icon}>
+        <img
+          src={instagram}
+          alt=""
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+      </a>
+      <a href={a.telegram} className={style.telegram_icon}>
+        <img
+          src={telegram}
+          alt=""
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+      </a>
+      <a href={a.application}>
+        <img
+          src={google}
+          alt=""
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+      </a>
+    </div>
+  </div>)
   return (
     <div className={style.Wrapper}>
-      <div className={style.Footer}>
+      {map}
+      {/* <div className={style.Footer}>
         <div className={style.Block1}>
           <img
             src={logo2}
@@ -94,12 +182,12 @@ export const Footer = () => {
             />
           </a>
         </div>
-      </div>{" "}
+      </div>{" "} */}
       <center>
         <img src={chiziq} alt="" className={style.chiziq} />
       </center>
       <p data-aos="fade-up" data-aos-duration="1000" className={style.Title}>
-        Platforma digitalcityandijan tomonidan ishlab chiqilgan.
+        Platforma ROC tomonidan ishlab chiqilgan.
       </p>
     </div>
   );

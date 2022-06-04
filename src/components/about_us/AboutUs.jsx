@@ -3,11 +3,11 @@ import style from "./aboutUz.module.css";
 import man from "./../../assets/about_us/man.png";
 import girl from "./../../assets/about_us/girl.png";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 export const AboutUs = () => {
-  useEffect(() => {
     Aos.init({ once: true });
+  useEffect(() => {
+  
   }, []);
   return (
     <div className={style.header_wrapper}>

@@ -4,14 +4,11 @@ import Carousel from "react-elastic-carousel";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import main from "../../../assets/home/carousel/main.png";
 
 import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
 
 import styles from "./Carousel.module.css";
-import "aos/dist/aos.css";
-
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/new/",
@@ -23,9 +20,8 @@ var config = {
 export const MyCarousel = () => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
-
+   Aos.init();
   useEffect(() => {
-    Aos.init();
     axios(config)
       .then(function (response) {
         setData(response.data);

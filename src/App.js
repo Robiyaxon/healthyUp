@@ -12,6 +12,7 @@ import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
+import ScrollToTop from "./ScrollerOn";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
@@ -55,6 +56,7 @@ function App() {
         </>
       ) : (
         <>
+          <ScrollToTop/>
           <TopHeader />
           <Routes>{mapRoute}</Routes>
           <div className="select"></div>

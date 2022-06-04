@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import video from "../../../assets/home/header/video.mp4"
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import { useSelector } from "react-redux";
@@ -20,9 +19,7 @@ export const Header = () => {
   const { language } = useSelector((state) => state.langReducer);
   const [Home, setHome] = useState([]);
   const { t } = useTranslation();
-  useEffect(() => {
-    AOS.init();
-  }, []);
+ AOS.init();
   useEffect(() => {
     axios(config)
       .then(function (response) {

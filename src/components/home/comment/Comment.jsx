@@ -5,14 +5,13 @@ import man1 from "./../../../assets/home/comment/man1.png";
 import top from "./../../../assets/home/comment/top.png";
 import bottom from "./../../../assets/home/comment/bottom.png";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 function Comment() {
   useEffect(() => {
-    Aos.init();
+  
   }, []);
-
+  Aos.init();
   return (
     <div className={styles.header_wrapper}>
       <div className={styles.header}>

@@ -1,15 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import { useTranslation } from "react-i18next";
 import main from "../../../assets/home/laseWeightFast/main.png";
 
 import styles from "./LoseWeightFast.module.css";
 import Aos from "aos";
-import "aos/dist/aos.css";
 const LoseWeightFast = () => {
   // const { t } = useTranslation()
-  useEffect(() => {
-    Aos.init();
-  }, []);
+  Aos.init();
   const data = [
     { id: 1, number: "01", title: "Gollivud parhezi" },
     { id: 2, number: "02", title: "Karamli parhez" },

@@ -1,15 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./EasyWay.module.css";
 import boy from "./../../../assets/home/easy_way/boy.png";
 import lenta from "./../../../assets/home/easy_way/metr1.png";
 import meal from "./../../../assets/home/easy_way/food1.png";
 import lenta2 from "./../../../assets/home/easy_way/metr2.png";
 import Aos from "aos";
-import "aos/dist/aos.css";
-function EasyWay() {
-  useEffect(() => {
-    Aos.init();
-  }, []);
+function EasyWay() {;
+      Aos.init();
   return (
     <div className={styles.header}>
       <h2 className={styles.header_title} data-aos="fade-up" data-aos-duration="1000">
