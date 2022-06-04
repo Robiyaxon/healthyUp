@@ -1,34 +1,31 @@
 import i18n from "i18next";
-import Backend from "i18next-http-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-i18n
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    lng: localStorage.getItem("lang"),
-    fallbackLng: "uz",
-    debug: false,
-    react: {
-      useSuspense: false,
-    },
-    detection: {
-      order: [
-        "localStorage",
-        "cookie",
-        "sessionStorage",
-        "navigator",
-        "htmlTag",
-      ],
-      lookupLocalStorage: "lang",
-      lookupCookie: "i18next",
-      lookupSessionStorage: "i18nextLng",
-    },
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+import translationEN from "./locales/en/translationEN.json";
+import translationUZ from "./locales/uz/translationUZ.json";
+import translationRU from "./locales/ru/translationRU.json";
 
-export default i18n;
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  uz: {
+    translation: translationUZ,
+  },
+  ru: {
+    translation: translationRU,
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "en",
+
+  keySeparator: false,
+
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n

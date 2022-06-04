@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 import main from "../../../assets/home/laseWeightFast/main.png";
 
 import styles from "./LoseWeightFast.module.css";
-import axios from 'axios';
-import { useSelector } from 'react-redux';
+import axios from "axios";
+import { useSelector } from "react-redux";
 
 const LoseWeightFast = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
 
@@ -33,13 +33,13 @@ const LoseWeightFast = () => {
   };
   console.log(data);
   const dataMap = data.map((d) => {
-    console.log(d.id.lenght < 2)
-    return(
-    <div className={styles.blocks__box} key={d.id}>
-      <h1>{d.id.lenght < 2 ? d.id : "0" + d.id}</h1>
-      <p>{d.en_text}</p>
-    </div>
-  )});
+    return (
+      <div className={styles.blocks__box} key={d.id}>
+        <h1>{d.id === 10 ? d.id : "0" + d.id}</h1>
+        <p>{d.en_text}</p>
+      </div>
+    );
+  });
   useEffect(() => {
     axios(config)
       .then(function (response) {
@@ -50,15 +50,7 @@ const LoseWeightFast = () => {
   return (
     <div>
       <h1 className={styles.title}>
-        {
-           data && data[0] && data[0].title && language === "uz"
-           ? data && data[0] && data[0].title
-           : language === "eng"
-           ? data && data[0] && data[0].en_title
-           : language === "ru"
-           ? data && data[0] && data[0].ru_title
-           : "bir"
-        }
+        TEZ OZISH UCHUN PARHEZLARNING ENG SAMARALILASRI
       </h1>
       <div className={styles.main__block}>
         <img src={main} alt="" data-aos="fade-up" data-aos-duration="1000" />
