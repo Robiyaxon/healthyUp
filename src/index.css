@@ -8,6 +8,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> b4dc46792fe14a81b2dfd4fa3de00a7e298cd499
 @font-face {
   font-family: 'Poppins';
   src: url('./fonts/poppins_regular.ttf') format('woff2');

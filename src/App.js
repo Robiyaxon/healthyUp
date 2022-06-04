@@ -12,6 +12,8 @@ import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
+import i18n from'./i18n'
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {

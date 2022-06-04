@@ -1,10 +1,18 @@
+<<<<<<< HEAD
+import React, { useEffect } from "react";
+import { Row, Col } from "antd";
+
+=======
 import React from "react";
 import style from "./task.module.css";
+>>>>>>> 84c17331a49517275c5513a94064ed0922c2562d
 import instagram from "../../assets/home/socialnetwork/instagram.svg";
 import facebook from "../../assets/home/socialnetwork/facebook.svg";
 import telegram from "../../assets/home/socialnetwork/telegram.svg";
 import task from "../../assets/TopHeader/task.svg";
-import { Row, Col } from "antd";
+
+import style from "./task.module.css";
+
 const map = [
   {
     id: 1,
@@ -39,28 +47,21 @@ const mapCard = map.map((a) => (
   <div key={a.id} className={style.Card}>
     <div className={style.Card__UserName}>
       <div className={style.Card__UserCapitalLetter}>{a.capitalLetter}</div>
-      <p >
-        {a.name}
-      </p>
+      <p>{a.name}</p>
     </div>
-    <h6 >
-      {a.title}
-    </h6>
+    <h6>{a.title}</h6>
   </div>
 ));
 export const Task = () => {
   return (
     <>
       <div className={style.wrapper}>
-        <h1 >
+        <h1>
           Biz sizga tezroq natijalarga erishishga yordam beradigan va tanangizni
           chiniqtiradigan topshiriqlar beramiz.
         </h1>
         <div className={style.Task__img}>
-          <img
-            src={task}
-            alt=""
-          />
+          <img src={task} alt="" />
         </div>
         <div className={style.Cards_Blog}>{mapCard}</div>
       </div>
@@ -95,10 +96,8 @@ export const SocialNetworks = () => {
         </Row>
       </div>
       <div className={style.SocialNetworks__text}>
-        <h1 >
-          Bizni ijtimoiy tarmoqlardan toping
-        </h1>
-        <p >
+        <h1>Bizni ijtimoiy tarmoqlardan toping</h1>
+        <p>
           Muhim yangilanishlar va vazn yo'qotish bo'yicha foydali maslahatlar
           uchun Unimeal umumiy sahifalarini kuzatib boring
         </p>

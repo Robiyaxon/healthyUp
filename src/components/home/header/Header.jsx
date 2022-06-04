@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import video from "../../../assets/home/header/video.mp4"
-import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import AOS from "aos";
+
+import video from "../../../assets/home/header/video.mp4"
+import { BtnAnimation } from "./../../../helpers/BtnAnimation";
+
+import styles from "./Header.module.css";
+import "aos/dist/aos.css";
 
 var config = {
   method: "get",
@@ -54,6 +56,7 @@ export const Header = () => {
             data-aos="fade-down"
             data-aos-duration="1000"
           >
+            Hey
             {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.title_uz} </span>)
             ) : language === "eng" ? (
@@ -61,7 +64,7 @@ export const Header = () => {
             ) : language === "ru" ? (
               Home.map((a, index) => <span key={index}> {a.title_ru} </span>)
             ) : (
-              <>...</>
+              <>Salom dunyo</>
             )}
           </h1>
           <p
