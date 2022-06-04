@@ -2,11 +2,58 @@ import React, { useState } from "react";
 import style from "./Contact.module.css";
 import { Form, Input, Button } from "antd";
 import TextArea from "antd/lib/input/TextArea";
+import { message } from "antd";
+import YandexMap from "./Map";
 export const Contact = () => {
   const [name, setName] = useState("");
   const [firstname, setFirstname] = useState("");
   const [tel, setTel] = useState("");
-  const [message, setMessage] = useState("");
+  const [textarea, setTextarea] = useState("");
+  const success = () => {
+    if ((name !== "", firstname !== "", tel !== "", textarea !== "")) {
+      message.success("This is a success message");
+    }
+  };
+  const map = [
+    {
+      value: name,
+      name: "name",
+      label: "Ismingiz:",
+      message: " Name!",
+      placeholder: "",
+      useEffect: setName,
+    },
+    {
+      value: firstname,
+      name: "Firstname",
+      label: "Familyangiz:",
+      message: " Firstname!",
+      placeholder: "Firstname",
+      useEffect: setFirstname,
+    },
+    {
+      value: tel,
+      name: "Tel",
+      label: "Telefon raqamingiz::",
+      message: " Tel!",
+      placeholder: "Tel",
+      useEffect: setTel,
+    },
+  ];
+  const map2 = map.map((a) => (
+    <Form.Item key={a.name}
+      rules={[{ required: true, message2: "Please input your " + a.message }]}
+      name={a.name}
+      label={a.label} className={style.InputGroup}
+    >
+      <Input
+        value={a.value}
+        onChange={(e) => a.useEffect(e.target.value)}
+        placeholder={"Enter your " + a.placeholder}
+        className={style.Input}
+      />
+    </Form.Item>
+  ));
   return (
     <div className={style.wrapper}>
       <h1>Bog‘lanish</h1>
@@ -40,65 +87,27 @@ export const Contact = () => {
               <h2>Manzil:</h2> <p>Andijon sh, Boburshox 2</p>
             </div>
           </div>
-          <div>
-            <Form.Item
-              rules={[{ required: true, message: "Please input your Name!" }]}
-              name="name"
-              label="Name"
-            >
-              <Input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name"
-                className={style.Input}
-              />
-            </Form.Item>
-            <Form.Item
-              rules={[
-                { required: true, message: "Please input your SurName!" },
-              ]}
-              name="Familyangiz:"
-              label="Familyangiz:"
-            >
-              <Input
-                value={firstname}
-                onChange={(e) => setFirstname(e.target.value)}
-                placeholder="Enter your Surname"
-                className={style.Input}
-              />
-            </Form.Item>
-            <Form.Item
-              rules={[{ required: true, message: "Please input your Name!" }]}
-              name="name"
-              label="Telefon raqamingiz:"
-            >
-              <Input
-                value={tel}
-                onChange={(e) => setTel(e.target.value)}
-                placeholder="Enter your tel"
-                className={style.Input}
-              />
-            </Form.Item>
-          </div>
+          <div>{map2}</div>
           <Form.Item
-            rules={[{ required: true, message: "Please input your Name!" }]}
-            name="name"
+            rules={[{ required: true, message2: "Please input your Name!" }]}
+            name="message"
             label=""
             className={style.TextArea}
           >
             <TextArea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={textarea}
+              onChange={(e) => setTextarea(e.target.value)}
               placeholder="Matn kiriting"
             />
           </Form.Item>
           <div className={style.button}>
-            <Button type="primary" htmlType="submit">
+            <Button onClick={success} type="primary" htmlType="submit">
               Yuborish
             </Button>
           </div>
         </Form>
       </div>
+      <YandexMap/>
     </div>
   );
 };
