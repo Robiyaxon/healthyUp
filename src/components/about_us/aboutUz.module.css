@@ -1,8 +1,137 @@
-.wrapper {
+.TopHeader_Top_Header__oWkvX {
+  background-color: white;
+}
+.header_wrapper {
+  background: white;
+}
+.header {
+  padding-top: 300px;
+}
+.first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+}
+.manWrapper {
+  width: 45%;
+  background-image: url(./../../assets/about_us/desktop.png);
   background-repeat: no-repeat;
-  background-image: url("../../assets/home/header/Glavniy.svg");
-  height: 100vh;
-  background-size: 100%;
-  width: 100%;
-  padding: 110px 155px 0;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+}
+
+.manWrapper img {
+  margin-top: -150px;
+}
+
+.first_content {
+  width: 55%;
+  margin-left: 25px;
+}
+.first_content h2 {
+  font-size: 56px;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: 64px;
+  color: #231c00;
+}
+
+.first_content p,
+.second_content p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  color: #47454a;
+}
+
+.second {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 220px;
+}
+.girlWrapper {
+  background-image: url(./../../assets/about_us/desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+}
+.girlWrapper img {
+  margin-top: -160px;
+}
+.second_content {
+  width: 55%;
+  margin-right: 25px;
+}
+@media (min-width: 0) and (max-width: 500px) {
+  .first_content p,
+  .second_content p {
+    line-height: 30px;
+    color: #47454a;
+  }
+  .second {
+    margin-top: 120px;
+  }
+  .manWrapper img {
+    margin-top: -67px;
+    height: 320px;
+    object-fit: contain;
+  }
+  .girlWrapper img {
+    margin-top: -80px;
+    height: 320px;
+    object-fit: contain;
+  }
+}
+@media (min-width: 0) and (max-width: 768px) {
+  .first_content h2 {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 700;
+  }
+  .first_content p,
+  .second_content p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 1199.9px) {
+  .first {
+    display: flex;
+    flex-direction: column;
+  }
+  .second {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .manWrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .girlWrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .second_content {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 10px;
+    margin-top: 24px;
+  }
+  .first_content {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 10px;
+    margin-top: 24px;
+  }
 }

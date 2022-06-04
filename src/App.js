@@ -11,14 +11,12 @@ import { Home } from "./components/home/Home";
 import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
-import EasyWay from "./components/home/easy_way/EasyWay";
-import { Header } from "./components/home/header/Header";
+import { Footer } from "./components/footer/Footer";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
   };
-
   useEffect(() => {
     window.addEventListener("load", handleLoading);
     return () => window.removeEventListener("load", handleLoading);
@@ -50,8 +48,7 @@ function App() {
     />
   ));
   return (
-    <div>
-      <Header/>
+    <div className="App">
       {isLoading ? (
         <>
           <Spin />
@@ -64,7 +61,7 @@ function App() {
         </>
       )}
       <MyBackTop />
-      <EasyWay />
+      <Footer/>
     </div>
   );
 }

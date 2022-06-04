@@ -1,0 +1,198 @@
+.Footer {
+    display: flex;
+    padding: 3rem 230px 0 230px;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.Block1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33%;
+}
+
+.Block1 img {
+    margin-bottom: 14px;
+}
+
+.Block1 a {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0.3rem 0;
+    color: #0D0A00;
+    transition: all 0.4s;
+}
+
+.Block1 a:hover {
+    color: #ffa700;
+    margin-left: 4px;
+}
+
+.Block1 p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 14px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #0D0A00;
+}
+
+.Block2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 33%;
+
+}
+
+.Block2 a {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0px 0 19px 2rem;
+    line-height: 24px;
+    color: #4C3C00;
+    transition: all 0.4s;
+}
+
+.Block2 a:hover {
+    color: #ffa700;
+    margin: 0px 0 19px 2.3rem;
+}
+
+.Block3 {
+    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Block3 a {
+    margin: 0 24px 30px 0;
+}
+
+.facebook_icon {
+    transition: all 0.5s;
+
+
+}
+
+.telegram_icon:hover {
+    margin-top: -2px;
+    margin-left: 2px;
+}
+
+.facebook_icon:hover {
+    transform: rotate(360deg);
+
+}
+
+.instagram_icon {
+    transition: all 0.5s;
+}
+
+.instagram_icon:hover {
+    transform: rotate(-360deg);
+}
+.chiziq{
+    text-align: center;
+    margin: 0 auto;
+}
+.Wrapper {
+    background-color: white;
+}
+
+.Title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #0D0A00;
+    margin-top: 22px;
+}
+
+@media(min-width:0) and (max-width:600.9px) {
+    .Footer {
+        padding: 2rem 38px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .Block2,
+    .Block1,
+    .Block3 {
+        width: 90%;
+        margin: 0.5rem 0;
+    }
+
+    .Block3 {
+        margin: 1.5rem 0;
+    }
+
+    .Block2 {
+        justify-content: flex-start;
+    }
+
+    .Block3 a {
+        margin: 0 16px 30px 0;
+    }
+
+    .Block2 a {
+        margin: 0px;
+    }
+}
+
+@media(min-width:601px) and (max-width:800.9px) {
+    .Footer {
+        padding: 2rem 32px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .Block2,
+    .Block1,
+    .Block3 {
+        width: 34%;
+        margin: 0.5rem 0;
+    }
+
+    .Block2 {
+        justify-content: flex-end;
+    }
+
+    .Block3 {
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+
+    .Block2 {
+        justify-content: flex-start;
+    }
+
+    .Block3 a {
+        margin: 0 16px 30px 0;
+    }
+
+    .Block2 a {
+        margin: 0px;
+    }
+}
+
+@media(min-width:801px) and (max-width:1300.9px) {
+    .Footer {
+        padding: 2rem 32px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}

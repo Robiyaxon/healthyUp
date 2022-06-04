@@ -61,7 +61,7 @@ const LoseWeightFast = () => {
         }
       </h1>
       <div className={styles.main__block}>
-        <img src={main} alt="" />
+        <img src={main} alt="" data-aos="fade-up" data-aos-duration="1000" />
         <div className={styles.blocks}>{dataMap}</div>
       </div>
     </div>

@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector } from "react-redux";
 import axios from "axios";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 import main from "../../../assets/home/carousel/main.png";
 
 import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
@@ -24,6 +25,7 @@ export const MyCarousel = () => {
   const { language } = useSelector((state) => state.langReducer);
 
   useEffect(() => {
+    Aos.init();
     axios(config)
       .then(function (response) {
         setData(response.data);
@@ -33,8 +35,8 @@ export const MyCarousel = () => {
   // const { t } = useTranslation();
 
   return (
-    <div className={styles.carousel}>
-      <Carousel>
+    <div className={styles.carousel}data-aos="zoom-in">
+      <Carousel  >
         <Item
           picture={(data && data[0] && data[0].img) || main}
           title={

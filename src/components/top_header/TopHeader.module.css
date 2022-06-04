@@ -233,7 +233,7 @@
   }
 }
 
-@media (min-width: 1100.9px) and (max-width: 1400.9px) {
+@media (min-width: 1101px) and (max-width: 1400.9px) {
   .Top_Header {
     /* height: 100vh; */
     position: absolute;
