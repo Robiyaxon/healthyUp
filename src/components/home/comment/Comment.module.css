@@ -36,6 +36,7 @@
   padding-bottom: 40px;
   border-radius: 10px;
   box-shadow: 0 14px 24px #eecf94;
+  height: 100%;
 }
 .header_card1 p {
   font-weight: 400;
@@ -85,8 +86,10 @@
   color: #231c00;
   margin: 0;
   padding: 0;
-  width: 373px;
+  /* width: 373px; */
+  margin-top: 20px;
 }
+
 .header_card3 p {
   margin: 0;
   padding: 0;
@@ -96,7 +99,7 @@
   font-weight: 400;
   color: #072d29;
   font-family: "Poppins";
-  width: 391px;
+  /* width: 391px; */
 }
 
 .header_card3 {
@@ -121,18 +124,90 @@
   bottom: -80px;
   right: -50px;
 }
-@media (min-width: 0) and (max-width: 299.9px) {
-}
 
-@media (min-width: 300px) and (max-width: 576.9px) {
+@media (min-width: 0) and (max-width: 470px) {
+  .header_card3 h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-top: 20px;
+  }
+
+  .header_person h3 {
+    font-size: 13px;
+  }
+  .header_person p {
+    font-size: 13px;
+  }
+  .header_card3 p {
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 400;
+  }
+  .top,
+  .bottom {
+    width: 80px;
+    height: 75px;
+    object-fit: contain;
+  }
+  .top {
+    position: absolute;
+    top: -70px;
+    left: 0;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: -50px;
+    right: -15px;
+  }
 }
-@media (min-width: 577px) and (max-width: 767.9px) {
+@media (min-width: 0) and (max-width: 767.9px) {
+  .header_wrapper {
+    background-image: url("./../../../assets/home/comment/mobileBg.png");
+  }
+  .header_card1 {
+    padding-top: 70px;
+  }
+  .header_cards {
+    margin-top: 40px;
+    grid-template-columns: 100%;
+  }
+  .header_card3 {
+    width: 100%;
+    margin-top: 100px;
+  }
+  .header_card3 {
+    margin-left: 0px;
+  }
+  .header h2 {
+    font-weight: 700;
+  }
 }
-@media (min-width: 768px) and (max-width: 991.9px) {
-}
-@media (min-width: 992px) and (max-width: 1199.9px) {
+@media (min-width: 768px) and (max-width: 1199.9px) {
+  .header_card1 {
+    padding-top: 70px;
+  }
+
+  .header_card3 {
+    margin-left: 0px;
+  }
+  .header_cards {
+    margin-top: 40px;
+    grid-template-columns: 50% 50%;
+  }
+  .header_card3 {
+    width: 100%;
+    margin-top: 100px;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
 }
+
 @media screen and (min-width: 1401px) {
+  .bottom {
+    position: absolute;
+    bottom: -80px;
+    right: 0px;
+  }
 }

@@ -176,9 +176,9 @@
     justify-content: center;
   }
   .Boy img {
-    width: 60% ;
+    width: 60%;
     height: auto;
-    top: -4rem ;
+    top: -4rem;
   }
   .header__text {
     width: 90%;
@@ -196,7 +196,8 @@
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
+    text-align: center;
     height: 450px;
   }
 
@@ -289,7 +290,7 @@
     width: 50%;
     top: 0;
   }
-  .header__text{
+  .header__text {
     margin-top: -2rem;
   }
 }
@@ -297,7 +298,7 @@
   .header_lenta_wrapper {
     margin-top: -8%;
   }
-  .header__text{
+  .header__text {
     margin-top: -3rem;
   }
   .header__meal_text {
@@ -355,7 +356,7 @@
   .header_meal img {
     height: 300px;
   }
-  .header__text{
+  .header__text {
     margin-top: -8rem;
   }
 }
@@ -392,7 +393,7 @@
     width: 90%;
     margin: 0 auto;
   }
-  .header__text{
+  .header__text {
     margin-top: 8rem;
   }
   .header_sport img {
@@ -419,7 +420,7 @@
   .header_lenta_wrapper {
     margin-top: -11%;
   }
-  .header__text{
+  .header__text {
     margin-top: 8rem !important;
   }
   .header_sport_wrapper {
