@@ -2,7 +2,10 @@
   background-color: white;
 }
 .header_wrapper {
-  background: white;
+  background-image: url(./../../assets/about_us/aboutUSBG.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 .header {
   padding-top: 300px;
@@ -31,7 +34,7 @@
 
 .first_content {
   width: 55%;
-  margin-left: 25px;
+  margin-left: 3rem;
 }
 .first_content h2 {
   font-size: 56px;
@@ -44,9 +47,15 @@
 .first_content p,
 .second_content p {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16pt;
   line-height: 36px;
   color: #47454a;
+}
+.second_content p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  /* padding-bottom: 50px; */
 }
 
 .second {
@@ -55,6 +64,7 @@
   width: 90%;
   margin: 0 auto;
   margin-top: 220px;
+  padding-bottom: 30px;
 }
 .girlWrapper {
   background-image: url(./../../assets/about_us/desktop.png);
@@ -74,6 +84,9 @@
   margin-right: 25px;
 }
 @media (min-width: 0) and (max-width: 500px) {
+  .header {
+    padding-top: 165px;
+  }
   .first_content p,
   .second_content p {
     line-height: 30px;
@@ -95,6 +108,7 @@
 }
 @media (min-width: 0) and (max-width: 768px) {
   .first_content h2 {
+    text-align: center;
     font-size: 28px;
     line-height: 42px;
     font-weight: 700;
@@ -102,6 +116,10 @@
   .first_content p,
   .second_content p {
     font-size: 16px;
+    line-height: 24px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
