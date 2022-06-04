@@ -13,8 +13,8 @@ export const Home = () => {
       <Cause />
       <MyCarousel />
       <EasyWay />
-      <Search2 />
       <Comment />
+      <Search2 />
     </div>
   );
 };
