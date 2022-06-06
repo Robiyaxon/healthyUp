@@ -11,6 +11,9 @@ export const AboutUs = () => {
   }, []);
   return (
     <div className={style.header_wrapper}>
+      <div>
+        Hey
+      </div>
       <div className={style.header}>
         {/* first */}
         <div data-aos="zoom-in-up" className={style.first}>
