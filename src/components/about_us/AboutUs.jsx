@@ -50,10 +50,26 @@ export const AboutUs = () => {
 
   return (
     <div className={style.header_wrapper}>
-      <div>
-        Hey
+      <div id={style.app}>
+        <div className={style.title}>
+          <div className={style.title_inner}>
+            <div className={style.cafe}>
+              <div className={style.cafe_inner}>Keyframé</div>
+            </div>
+            <div className={style.mozart}>
+              <div className={style.mozart_inner}>Artistes</div>
+            </div>
+          </div>
+        </div>
+
+        <div className={style.image}>
+          <img
+            src="https://denverweightlossclinic.com/wp-content/uploads/2.png"
+            alt=""
+          />
+        </div>
       </div>
-      <div className={style.header}>
+      <div classNameName={style.header}>
         {/* first */}
         {map}
         {/* <div data-aos="zoom-in-up" className={style.first}>
