@@ -4,11 +4,50 @@ import man from "./../../assets/about_us/man.png";
 import girl from "./../../assets/about_us/girl.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useSelector } from "react-redux";
+
+var config = {
+  method: "get",
+  url: "http://10.10.8.46:8000/aboutus/",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
 export const AboutUs = () => {
+  const [data, setData] = useState([]);
+  const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
     Aos.init({ once: true });
+    axios(config)
+      .then(function (response) {
+        setData(response.data);
+        console.log(response.data);
+      })
+      .catch(function (error) {});
   }, []);
+
+  const map = data.map((d) => {
+    return (
+      <div data-aos="zoom-in-up" className={style.first} key={d.id}>
+        <div data-aos="fade-up-right" className={style.manWrapper}>
+          <img src={d.img1} alt="man img" />
+        </div>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          className={style.first_content}
+        >
+          <h2>{d.title_uz}</h2>
+          <p>{d.uz_text1}</p>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <div className={style.header_wrapper}>
       <div>
@@ -16,7 +55,8 @@ export const AboutUs = () => {
       </div>
       <div className={style.header}>
         {/* first */}
-        <div data-aos="zoom-in-up" className={style.first}>
+        {map}
+        {/* <div data-aos="zoom-in-up" className={style.first}>
           <div data-aos="fade-up-right" className={style.manWrapper}>
             <img src={man} alt="man img" />
           </div>
@@ -37,7 +77,7 @@ export const AboutUs = () => {
               yarasi va depressiya kasalligi paydo bo‘lishi mumkin.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* second  */}
         <div data-aos="zoom-in-down" className={style.second}>

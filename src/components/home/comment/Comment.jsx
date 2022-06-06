@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 function Comment() {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ once: true });
   }, []);
 
   return (

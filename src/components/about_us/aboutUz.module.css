@@ -5,20 +5,27 @@
   background-image: url(./../../assets/about_us/aboutUSBG.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: center;
 }
 .header {
   padding-top: 300px;
 }
 .first {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  width: 90%;
+  width: 100%;
+  padding: 0 180px 50px;
+}
+.second {
+  display: flex;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 220px;
+  padding: 0 180px 50px;
 }
 .manWrapper {
-  width: 45%;
+  width: 48%;
   background-image: url(./../../assets/about_us/desktop.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -27,15 +34,35 @@
   text-align: center;
   object-fit: cover;
 }
-
+.girlWrapper {
+  background-image: url(./../../assets/about_us/desktop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 45%;
+  text-align: center;
+  object-fit: cover;
+  background-size: 100% 100%;
+  height: 100%;
+}
 .manWrapper img {
-  margin-top: -150px;
+  margin-top: -20%;
+  height: 111%;
 }
 
-.first_content {
-  width: 55%;
-  margin-left: 3rem;
+.girlWrapper img {
+  margin-top: -20%;
+  height: 111%;
 }
+.first_content {
+  width: 48%;
+  /* margin-left: 3rem; */
+}
+.second_content {
+  width: 48%;
+  margin-right: 25px;
+  padding-bottom: 100px;
+}
+
 .first_content h2 {
   font-size: 56px;
   font-family: "Poppins";
@@ -51,41 +78,34 @@
   line-height: 36px;
   color: #47454a;
 }
+
 .second_content p {
   width: 80%;
-  margin: 0 auto;
   text-align: left;
-  /* padding-bottom: 50px; */
+  /* padding-bottom: 100px; */
 }
 
-.second {
-  display: flex;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 220px;
-  padding-bottom: 30px;
+@media (min-width: 500px) and (max-width: 650.9px) {
+  .manWrapper {
+    width: 100% !important;
+  }
+  .girlWrapper {
+    width: 100% !important;
+  }
 }
-.girlWrapper {
-  background-image: url(./../../assets/about_us/desktop.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-  width: 45%;
-  height: 100%;
-  text-align: center;
-  object-fit: cover;
+@media (min-width: 500px) and (max-width: 1199.9px) {
+  .first_content h2 {
+    margin-top: 2rem;
+    font-size: 50px;
+  }
 }
-.girlWrapper img {
-  margin-top: -160px;
-}
-.second_content {
-  width: 55%;
-  margin-right: 25px;
-}
-@media (min-width: 0) and (max-width: 500px) {
+@media (min-width: 0) and (max-width: 499.9px) {
   .header {
+    margin-top: 1rem;
     padding-top: 165px;
+  }
+  .first_content h2 {
+    font-size: 28px;
   }
   .first_content p,
   .second_content p {
@@ -106,8 +126,10 @@
     object-fit: contain;
   }
 }
-@media (min-width: 0) and (max-width: 768px) {
+
+@media (min-width: 0) and (max-width: 768.9px) {
   .first_content h2 {
+    margin-top: 1rem;
     text-align: center;
     font-size: 28px;
     line-height: 42px;
@@ -127,29 +149,46 @@
   .first {
     display: flex;
     flex-direction: column;
+    padding: 0 20px 0;
   }
   .second {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 150px;
+    padding: 0 20px 0;
   }
+
   .manWrapper {
-    width: 90%;
     margin: 0 auto;
+    width: 70%;
   }
   .girlWrapper {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
   }
+
   .second_content {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
-    padding-left: 10px;
-    margin-top: 24px;
+    margin-top: 2rem;
   }
   .first_content {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
-    padding-left: 10px;
-    margin-top: 24px;
+  }
+  .second_content p {
+    width: 100%;
+    text-align: center;
+  }
+  .first_content p,
+  .first_content h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1293px) {
+  .second,
+  .first {
+    padding: 0 30px 50px;
   }
 }
