@@ -6,5 +6,8 @@
   "homeHeaderBtn2":"Ro'yxatdan o'tish",
   "homeCarousel":"Barchasi",
   "navbar5": "Uy",
-  "test":"salom"
+  "test":"salom",
+  "faq":"Savol Javoblar",
+  "question_text":"Bu erda bizni eng ko'p oladigan savollarning bir nechtasi. Agar xayolingizda nima borligini ko'rmasangiz, istalgan vaqtda telefon, chat yoki elektron pochta orqali biz bilan bog'laning.",
+  "question":"Tez-tez so'raladigan savollar"
 }

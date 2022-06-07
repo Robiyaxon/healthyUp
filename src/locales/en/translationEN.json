@@ -6,5 +6,8 @@
   "homeHeaderBtn2":"Sign up",
   "homeCarousel":"See more",
   "navbar5": "Home",
-  "test":"hello"
+  "test":"hello",
+  "faq":"Question Answers",
+  "question":"Frequently Asked Questions",
+  "question_text":"Here are a few of the questions we get the most. If you don't see what's on your mind, reach out to us anytime on phone, chat, or email."
 }

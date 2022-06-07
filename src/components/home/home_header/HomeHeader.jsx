@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./HomeHeader.module.css";
 import { NavLink } from "react-router-dom";
-import Aos from "aos";
 import axios from "axios";
 import { useSelector } from "react-redux";
 var config = {
@@ -64,7 +63,6 @@ export const HomeHeader = () => {
       />
     </div>
   ));
-   Aos.init();
   useEffect(() => {
     axios(config)
       .then(function (response) {

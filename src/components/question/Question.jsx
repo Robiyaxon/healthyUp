@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Question.module.css";
-// import img from "../../assets/FAQ/logo.svg";
-import data from "./data";
 import Question2 from "./Question2";
 import faq from "../../assets/FAQ/faq.png";
+import axios from 'axios';
+import { useTranslation } from "react-i18next";
+var config = {
+  method: "get",
+  url: "http://10.10.8.35:8000/question",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
 const Question = () => {
-  const [questions, setQuestions] = useState(data);
-  const [questions2, setQuestions2] = useState(data);
-
+  const { t } = useTranslation();
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios(config)
+      .then(function (response) {
+        setData(response.data);
+      })
+      .catch(function (error) {});
+  }, []);
   return (
     <div className={style.WrapperQuestion}>
       <div className={style.Question}></div>    
@@ -15,33 +28,21 @@ const Question = () => {
         <div className={style.CardBlock}>
           <img src={faq} alt="" />
           <div>
-            <h1>Frequently Asked Questions</h1>
+            <h1>  {t("question")}</h1>
             <p>
-              Here are a few of the questions we get the most. If you don't see
-              what's on your mind, reach out to us anytime on phone, chat, or
-              email.
+            {t("question_text")}
             </p>
           </div>
         </div>
       </div>
       <div className={style.accardion}>
-          <h1>Sport  bo`yicha</h1>
+          <h1>{t("faq")}</h1>
       <section className="info">
-          {questions.map((question) => {
+          {data.map((question) => {
             return <Question2 key={question.id} {...question} />;
           })}
         </section>
-
-        <h1>Dietolog bo`yicha</h1>
-
-      <section className="info">
-          {questions2.map((question) => {
-            return <Question2 key={question.id} {...question} />;
-          })}
-        </section>
-
       </div>
-    
     </div>
   );
 };

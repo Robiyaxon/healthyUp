@@ -6,7 +6,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 var config = {
   method: "get",
-  url: "http://10.10.8.46:8000/ill/",
+  url: "http://10.10.8.35:8000/ill/",
   headers: {
     "Content-Type": "application/json",
   },
