@@ -10,8 +10,6 @@ export const BtnAnimation = ({ text, link, classes = "" }) => {
     <NavLink
       to={link}
       className={"container " + classes}
-      data-aos="fade-down"
-      data-aos-duration="1000"
     >
       <span>{text}</span>
     </NavLink>

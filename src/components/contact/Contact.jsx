@@ -1,50 +1,69 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Contact.module.css";
 import { Form, Input, Button } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import { message } from "antd";
 import YandexMap from "./Map";
-
+import { useTranslation } from "react-i18next";
+import axios from "axios";
+var config = {
+  method: "get",
+  url: "http://10.10.8.35:8000/footer/",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
 export const Contact = () => {
+  const [data, setData] = useState([]);
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [firstname, setFirstname] = useState("");
   const [tel, setTel] = useState("");
   const [textarea, setTextarea] = useState("");
+  useEffect(() => {
+    axios(config)
+      .then(function (response) {
+        setData(response.data);
+      })
+      .catch(function (error) {});
+  }, []);
   const success = () => {
     if ((name !== "", firstname !== "", tel !== "", textarea !== "")) {
       message.success("This is a success message");
     }
   };
+  const data2=data.map(a=><>{a}</>)
+  console.log(data2.address);
   const map = [
     {
       value: name,
       name: "name",
-      label: "Ismingiz:",
-      message: " Name!",
-      placeholder: "",
+      label: t("userName"),
+      message: t("plaseholderUserName") + "!",
+      placeholder: t("plaseholderUserName"),
       useEffect: setName,
     },
     {
       value: firstname,
       name: "Firstname",
-      label: "Familyangiz:",
-      message: " Firstname!",
-      placeholder: "Firstname",
+      label: t("userSurname"),
+      message: t("plaseholderUserSurname") +"!",
+      placeholder: t("plaseholderUserSurname"),
       useEffect: setFirstname,
     },
     {
       value: tel,
       name: "Tel",
-      label: "Telefon raqamingiz::",
+      label: t("userTel"),
       message: " Tel!",
-      placeholder: "Tel",
+      placeholder:  t("userTel"),
       useEffect: setTel,
     },
   ];
   const map2 = map.map((a) => (
     <Form.Item
       key={a.name}
-      rules={[{ required: true, message2: "Please input your " + a.message }]}
+      rules={[{ required: true, message2: + a.message }]}
       name={a.name}
       label={a.label}
       className={style.InputGroup}
@@ -52,14 +71,14 @@ export const Contact = () => {
       <Input
         value={a.value}
         onChange={(e) => a.useEffect(e.target.value)}
-        placeholder={"Enter your " + a.placeholder}
+        placeholder={a.placeholder}
         className={style.Input}
       />
     </Form.Item>
   ));
   return (
     <div className={style.wrapper}>
-      <h1>Bog‘lanish</h1>
+      <h1>{t("contact")}</h1>
       <div className={style.Login}>
         <Form
           name="basic"
@@ -70,24 +89,24 @@ export const Contact = () => {
           <div className={style.Title}>
             <div className={style.Title1}>
               {" "}
-              <h2>Ish kunlari:</h2> <p>Dushanba-Shanba</p>
+              <h2>{t("Working_Days")} :</h2> <p>{t("week")}</p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>Ish vaqti:</h2>{" "}
-              <p>09:00 dan 18:00 gacha (12:00 dan 13:00 gacha tushlik)</p>
+              <h2>{t("Working_hours")}</h2>{" "}
+              <p>{data.map(a=><React.Fragment key={a.id}>{a.work_time}</React.Fragment>)}</p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>Elektron pochta:</h2> <p>healthuz@gmail.com</p>
+              <h2>{t("email")}:</h2> <p>{data.map(a=><React.Fragment key={a.id}>{a.email}</React.Fragment>)}</p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>Telefon:</h2> <p>+998552012121</p>
+              <h2>{t("Telefon")}:</h2> <p>{data.map(a=><React.Fragment key={a.id}>{a.phone}</React.Fragment>)}</p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>Manzil:</h2> <p>Andijon sh, Boburshox 2</p>
+              <h2>{t("Address")}:</h2> <p>{data.map(a=><React.Fragment key={a.id}>{a.address}</React.Fragment>)}</p>
             </div>
           </div>
           <div>{map2}</div>
@@ -100,12 +119,12 @@ export const Contact = () => {
             <TextArea
               value={textarea}
               onChange={(e) => setTextarea(e.target.value)}
-              placeholder="Matn kiriting"
+              placeholder={t("Text_Area")}
             />
           </Form.Item>
           <div className={style.button}>
             <Button onClick={success} type="primary" htmlType="submit">
-              Yuborish
+              {t("send")}
             </Button>
           </div>
         </Form>

@@ -6,7 +6,7 @@ import translationUZ from "./locales/uz/translationUZ.json";
 import translationRU from "./locales/ru/translationRU.json";
 
 const resources = {
-  en: {
+  eng: {
     translation: translationEN,
   },
   uz: {

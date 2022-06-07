@@ -1,9 +1,11 @@
 * {
   padding: 0;
 }
-.App{
+
+.App {
   overflow: hidden;
 }
+
 .ant-drawer.ant-drawer-open .ant-drawer-mask {
   background: #ffffff1a;
   backdrop-filter: blur(6px);
@@ -11,7 +13,8 @@
 
 .active {
   color: #ffa700;
-  /* width: 20%; */
+  width: 20%;
+  text-align: center;
   font-family: var(----main-font-family);
   font-style: normal;
   font-weight: 500;
@@ -52,7 +55,6 @@
   border-color: none;
 
 }
-
 @media (min-width: 0) and (max-width: 1100.9px) {
   .ant-drawer-wrapper-body {
     width: 90% !important;

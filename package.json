@@ -52,8 +52,11 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+<<<<<<< HEAD
     "react-countup": "^6.2.0",
     "react-visibility-sensor": "^5.1.1",
+=======
+>>>>>>> 0d0a65c6c20dd172c15ea9088e8663a32f1fd02e
     "react-yandex-maps": "^4.6.0"
   }
 }

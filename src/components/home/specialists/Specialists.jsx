@@ -1,10 +1,8 @@
 import { Rate } from "antd";
 import React, { useEffect, useState } from "react";
 
-
 import styles from "./Specialists.module.css";
 import axios from "axios";
-
 var config = {
   method: "get",
   url: "http://10.10.8.35:8000/expert/",
@@ -35,7 +33,7 @@ export const Specialists = () => {
           border: "2px solid red",
         }}
       >
-        <div className={styles.textInImg}>
+        <div className={styles.textInImg}> 
           <h2>
             <Rate disabled defaultValue={d.reyting / d.reyting_count} />
           </h2>

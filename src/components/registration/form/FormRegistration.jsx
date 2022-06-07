@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./FormRegistration.module.css";
 import { useState } from "react";
 import { Form, Input, Button } from "antd";
-
+import axios from "axios";
+var config = {
+  method: "post",
+  url: "http://10.10.8.35:8000/register/",
+  headers: {
+    "Content-Type": "application/json"
+  },
+};
 function FormRegistration() {
   const [name, setName] = useState("");
   const [firstname, setFirstname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [repassword, setRepassword] = useState("");
-
+  let item = { name, firstname, username, password, repassword };
+async  function SignApp() {
+let result= await  axios(config)
+      .then(function (response) {
+        item(response.data);
+      })
+      .catch(function (error) {});
+console.warn(result);
+  }
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
@@ -28,7 +43,7 @@ function FormRegistration() {
             <Input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Enter your name" 
+              placeholder="Enter your name"
             />
           </Form.Item>
 
@@ -83,7 +98,7 @@ function FormRegistration() {
               placeholder="Repeate the password"
             />
           </Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" onClick={SignApp}>
             Continue
           </Button>
         </Form>
