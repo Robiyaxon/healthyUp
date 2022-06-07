@@ -4,6 +4,7 @@ import { Form, Input, Button } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import { message } from "antd";
 import YandexMap from "./Map";
+
 export const Contact = () => {
   const [name, setName] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -41,10 +42,12 @@ export const Contact = () => {
     },
   ];
   const map2 = map.map((a) => (
-    <Form.Item key={a.name}
+    <Form.Item
+      key={a.name}
       rules={[{ required: true, message2: "Please input your " + a.message }]}
       name={a.name}
-      label={a.label} className={style.InputGroup}
+      label={a.label}
+      className={style.InputGroup}
     >
       <Input
         value={a.value}
@@ -107,7 +110,7 @@ export const Contact = () => {
           </div>
         </Form>
       </div>
-      <YandexMap/>
+      <YandexMap />
     </div>
   );
 };

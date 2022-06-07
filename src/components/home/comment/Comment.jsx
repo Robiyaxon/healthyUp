@@ -8,7 +8,6 @@ import { useEffect } from "react";
 
 function Comment() {
   useEffect(() => {
-  
   }, []);
   return (
     <div className={styles.header_wrapper}>
