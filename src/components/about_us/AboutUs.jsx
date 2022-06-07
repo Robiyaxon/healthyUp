@@ -1,11 +1,9 @@
 import React from "react";
 import style from "./aboutUz.module.css";
 import man from "./../../assets/about_us/man.png";
-import girl from "./../../assets/about_us/girl.png";
-import Aos from "aos";
+import girl from "./../../assets/about_us/girl.png"
 import { useEffect } from "react";
 export const AboutUs = () => {
-    Aos.init({ once: true });
   useEffect(() => {
   
   }, []);
@@ -13,14 +11,11 @@ export const AboutUs = () => {
     <div className={style.header_wrapper}>
       <div className={style.header}>
         {/* first */}
-        <div data-aos="zoom-in-up" className={style.first}>
-          <div data-aos="fade-up-right" className={style.manWrapper}>
+        <div  className={style.first}>
+          <div  className={style.manWrapper}>
             <img src={man} alt="man img" />
           </div>
           <div
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
             className={style.first_content}
           >
             <h2>Biz haqimizda</h2>
@@ -37,10 +32,8 @@ export const AboutUs = () => {
         </div>
 
         {/* second  */}
-        <div data-aos="zoom-in-down" className={style.second}>
+        <div className={style.second}>
           <div
-            data-aos="fade-up"
-            data-aos-duration="3000"
             className={style.second_content}
           >
             <p>
@@ -50,7 +43,7 @@ export const AboutUs = () => {
               beradi.
             </p>
           </div>
-          <div data-aos="fade-up-left" className={style.girlWrapper}>
+          <div  className={style.girlWrapper}>
             <img src={girl} alt="" />
           </div>
         </div>

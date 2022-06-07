@@ -78,8 +78,6 @@ export const SearchImg = () => {
   return (
     <div className={style.Search_Img}>
       <img
-        data-aos="fade-up"
-        data-aos-duration="1000"
         src={img1}
         alt=""
         className={style.img1}

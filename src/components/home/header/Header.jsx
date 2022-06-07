@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
-import AOS from "aos";
-import video from "../../../assets/home/header/video.mp4"
-import { BtnAnimation } from "./../../../helpers/BtnAnimation";
 import { useSelector } from "react-redux";
 import axios from "axios";
-
+import video from "../../../assets/home/header/video.mp4"
+import { BtnAnimation } from "./../../../helpers/BtnAnimation";
+import styles from "./Header.module.css";
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/homeheader/",
@@ -19,7 +17,6 @@ export const Header = () => {
   const { language } = useSelector((state) => state.langReducer);
   const [Home, setHome] = useState([]);
   const { t } = useTranslation();
- AOS.init();
   useEffect(() => {
     axios(config)
       .then(function (response) {
@@ -48,9 +45,9 @@ export const Header = () => {
         <div className={styles.header__text_block}>
           <h1
             className={styles.header__text_block__title}
-            data-aos="fade-down"
-            data-aos-duration="1000"
+          
           >
+            Hey
             {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.title_uz} </span>)
             ) : language === "eng" ? (
@@ -58,13 +55,11 @@ export const Header = () => {
             ) : language === "ru" ? (
               Home.map((a, index) => <span key={index}> {a.title_ru} </span>)
             ) : (
-              <>...</>
+              <>Salom dunyo</>
             )}
           </h1>
           <p
             className={styles.header__text_block__text}
-            data-aos="fade-down"
-            data-aos-duration="1000"
           >
             {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.text_uz} </span>)
@@ -87,8 +82,6 @@ export const Header = () => {
         </div>
         <p
           className={styles.endText}
-          data-aos="fade-down"
-          data-aos-duration="1000"
         >
           {language === "uz" ? (
             Home.map((a, index) => <span key={index}> {a.text2_uz} </span>)

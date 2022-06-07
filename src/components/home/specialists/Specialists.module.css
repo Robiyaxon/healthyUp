@@ -1,0 +1,142 @@
+.specialists {
+  background-image: url(../../../assets/home/specialists/bg.png);
+}
+
+.title {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  color: #231c00;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.desc {
+  width: 30%;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 46px;
+  text-align: center;
+  margin: 0 auto;
+  color: #545454;
+}
+
+.block {
+  display: flex;
+  width: 80%;
+  margin: 5rem auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 30%;
+  background-image: radial-gradient(circle at top right, #fff, #dfd9cd 50%);
+  border-radius: 10px;
+  transition: 1s all linear;
+  height: 400px;
+  margin-bottom: 3rem;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+  /* background-image: url(../../../assets/home/specialists/p1.png); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: end;
+}
+
+.textInImg {
+  display: none;
+  margin-left: 1rem;
+  transition: 1s all linear;
+}
+
+.box:hover {
+  background-image: radial-gradient(circle at top right, #fff, #f6e4c2 50%);
+}
+
+.box:hover .textInImg {
+  display: flex;
+  flex-direction: column;
+}
+
+.textInImg h2 {
+  margin: 0;
+}
+
+.textInImg h2 li {
+  width: 20px;
+}
+
+.textInImg h1 {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.textInImg p {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #e8e8e8;
+}
+
+@media (min-width: 0) and (max-width: 700.9px) {
+  .desc {
+    width: 80%;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .block {
+    display: flex;
+    width: 80%;
+    margin: 2rem auto;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .box{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1189.9px) {
+  .desc {
+    width: 80%;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  
+  .block {
+    display: flex;
+    width: 80%;
+    margin: 2rem auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .box{
+    width: 48%;
+    margin-bottom: 2rem;
+  }
+}

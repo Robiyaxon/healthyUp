@@ -4,19 +4,17 @@ import boy from "./../../../assets/home/easy_way/boy.png";
 import lenta from "./../../../assets/home/easy_way/metr1.png";
 import meal from "./../../../assets/home/easy_way/food1.png";
 import lenta2 from "./../../../assets/home/easy_way/metr2.png";
-import Aos from "aos";
 function EasyWay() {;
-      Aos.init();
   return (
     <div className={styles.header}>
-      <h2 className={styles.header_title} data-aos="fade-up" data-aos-duration="1000">
+      <h2 className={styles.header_title} >
         Vazin yo`qotishning eng sodda va oson yollari
       </h2>
       <div className={styles.header_sport_wrapper}>
         <div className={styles.header_sport}>
           <div className={styles.header__text}>
-            <h1 data-aos="fade-up" data-aos-duration="1000"> Sport bilan shug‘ullanish</h1>
-            <p data-aos="fade-up" data-aos-duration="1000">
+            <h1> Sport bilan shug‘ullanish</h1>
+            <p>
               Sport metabolizmni tezlashtirish usullaridan biridir, ammo,
               afsuski, faqat bu emas. Tabiiyki, ko‘p narsa ovqatlanish va
               endokrin tizimning ishlashiga bog‘liq. Shuning uchun, agar uzoq
@@ -26,7 +24,7 @@ function EasyWay() {;
             </p>
           </div>
           <div className={styles.Boy}>
-            <img data-aos="fade-up" data-aos-duration="1000" src={boy} alt="boy" />
+            <img src={boy} alt="boy" />
           </div>
         </div>
         <div className={styles.header_lenta_wrapper}>

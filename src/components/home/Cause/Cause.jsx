@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import style from "./Cause.module.css";
 import chek from "../../../assets/home/header/chek.svg";
 // import img from "../../../assets/home/cause/boy.svg";
-import Aos from "aos";
 import axios from "axios";
 import { useSelector } from "react-redux";
 var config = {
@@ -24,7 +23,7 @@ export const Cause = () => {
       .catch(function (error) {});
   }, []);
   const map = data.map((a) => (
-    <h1 data-aos="fade-up" data-aos-duration="1000">
+    <h1>
       {language === "uz" ? (
         <>{a.title_uz}</>
       ) : language === "eng" ? (
@@ -36,14 +35,13 @@ export const Cause = () => {
       )}
     </h1>
   ));
-    Aos.init();
   return (
     <div className={style.Cause}>
       {map}
       <div className={style.Chek}>
         <img src={chek} alt="rasm bor edi!" />
         {data.map((a) => (
-          <h2 data-aos="fade-up" data-aos-duration="1000">
+          <h2 >
             {language === "uz" ? (
               <>{a.text2_uz}</>
             ) : language === "eng" ? (
@@ -60,7 +58,7 @@ export const Cause = () => {
         <div className={style.diseases__block2}>
           <div className={style.advice + " " + style.advice3}>
             {data.map((a) => (
-              <h2 data-aos="fade-up" data-aos-duration="1000">
+              <h2>
                 {language === "uz" ? (
                   <>{a.text1_uz}</>
                 ) : language === "eng" ? (
@@ -74,15 +72,13 @@ export const Cause = () => {
             ))}
 
             <img
-              data-aos="fade-up"
-              data-aos-duration="1000"
               src={chek}
               alt="rasm bor edi!"
             />
           </div>
           <div className={style.advice + " " + style.advice3}>
             {data.map((a) => (
-              <h2 data-aos="fade-up" data-aos-duration="1000">
+              <h2>
                 {language === "uz" ? (
                   <>{a.text4_uz}</>
                 ) : language === "eng" ? (
@@ -95,8 +91,6 @@ export const Cause = () => {
               </h2>
             ))}
             <img
-              data-aos="fade-up"
-              data-aos-duration="1000"
               src={chek}
               alt="rasm bor edi!"
             />
@@ -106,8 +100,6 @@ export const Cause = () => {
           <img
             src={a.img}
             alt=""
-            data-aos="fade-up"
-            data-aos-duration="1000"
             className={style.img}
           />
         ))}
@@ -115,16 +107,12 @@ export const Cause = () => {
         <div className={style.diseases__block}>
           <div className={style.advice + " " + style.advice2}>
             <img
-              data-aos="fade-up"
-              data-aos-duration="1000"
               src={chek}
               alt="rasm bor edi!"
             />
             {data.map((a) => (
               <h2
                 className={style.advice_h2}
-                data-aos="fade-up"
-                data-aos-duration="1000"
               >
                 {language === "uz" ? (
                   <>{a.text3_uz}</>
@@ -139,18 +127,14 @@ export const Cause = () => {
             ))}
           </div>
           <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
             className={style.advice + " " + style.advice2}
           >
             <img
-              data-aos="fade-up"
-              data-aos-duration="1000"
               src={chek}
               alt="rasm bor edi!"
             />
             {data.map((a) => (
-              <h2 data-aos="fade-up" data-aos-duration="1000">
+              <h2>
                 {language === "uz" ? (
                   <>{a.text5_uz}</>
                 ) : language === "eng" ? (

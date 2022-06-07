@@ -8,11 +8,11 @@ import { Contact } from "./components/contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Spin } from "antd";
 import { Home } from "./components/home/Home";
-import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
 import ScrollToTop from "./ScrollerOn";
+const Question = React.lazy(() => import("./components/question/Question.jsx"));
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
@@ -29,7 +29,7 @@ function App() {
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
     { id: 6, url: "signUp", kompannent: <Registration /> },
-    { id: 7, url: "carousel", kompannent: <HomeDetail /> },
+    { id: 6, url: "faq", kompannent: <Question /> },
   ];
   const mapRoute = map.map((a) => (
     <Route

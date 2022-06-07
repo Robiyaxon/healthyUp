@@ -42,8 +42,6 @@ export const HomeHeader = () => {
           )}
         </p>
         <button
-          data-aos="fade-up"
-          data-aos-duration="1000"
           type="button"
           className={style.SignUp}
         >
@@ -61,8 +59,6 @@ export const HomeHeader = () => {
         </button>
       </div>
       <img
-        data-aos="fade-up"
-        data-aos-duration="1000"
         src={a.img}
         alt="rasm bor edi"
       />

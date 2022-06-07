@@ -8,7 +8,6 @@ import google from "../../assets/home/footer/googleplay.svg";
 import chiziq from "../../assets/home/footer/chiziq.svg";
 import telegram from "../../assets/home/footer/telegram.svg";
 import { NavLink } from "react-router-dom";
-import Aos from "aos";
 import { useSelector } from "react-redux";
 import  axios from 'axios';
 var config = {
@@ -29,37 +28,34 @@ export const Footer = () => {
     })
     .catch(function (error) {});
   }, []); 
-  Aos.init();
   const map=data.map(a=> <div className={style.Footer} key={a.id}>
     <div className={style.Block1}>
       <img
         src={logo2}
-        data-aos="fade-up"
-        data-aos-duration="1000"
         alt="rasm bor edi!"
       />{" "}
       <br />
-      <a href={a.email} data-aos="fade-up" data-aos-duration="1000">
+      <a href={a.email} >
      {a.email}
       </a>
-      <a href={"tel:"+a.phone} data-aos="fade-up" data-aos-duration="1000">
+      <a href={"tel:"+a.phone}>
       {a.phone}
       </a>
-      <a href="/" data-aos="fade-up" data-aos-duration="1000">
+      <a href="/" >
      {a.address}
       </a>
-      <p data-aos="fade-up" data-aos-duration="1000">
+      <p >
         www.health.uz
       </p>
     </div>
     <div className={style.Block2}>
-      <NavLink data-aos="fade-up" data-aos-duration="1000" to="about_us">
+      <NavLink to="about_us">
         Biz haqimizda
       </NavLink>
-      <NavLink data-aos="fade-up" data-aos-duration="1000" to="contact">
+      <NavLink to="contact">
         Bog'lanish
       </NavLink>
-      <NavLink data-aos="fade-up" data-aos-duration="1000" to="/">
+      <NavLink  to="/">
         Foydali maslahat
       </NavLink>
     </div>
@@ -71,32 +67,24 @@ export const Footer = () => {
         <img
           src={facebook}
           alt=""
-          data-aos="fade-up"
-          data-aos-duration="1000"
         />
       </a>
       <a href={a.instagram} className={style.instagram_icon}>
         <img
           src={instagram}
-          alt=""
-          data-aos="fade-up"
-          data-aos-duration="1000"
+          alt=""                                     
         />
       </a>
       <a href={a.telegram} className={style.telegram_icon}>
         <img
           src={telegram}
           alt=""
-          data-aos="fade-up"
-          data-aos-duration="1000"
         />
       </a>
       <a href={a.application}>
         <img
           src={google}
           alt=""
-          data-aos="fade-up"
-          data-aos-duration="1000"
         />
       </a>
     </div>
@@ -186,7 +174,7 @@ export const Footer = () => {
       <center>
         <img src={chiziq} alt="" className={style.chiziq} />
       </center>
-      <p data-aos="fade-up" data-aos-duration="1000" className={style.Title}>
+      <p  className={style.Title}>
         Platforma ROC tomonidan ishlab chiqilgan.
       </p>
     </div>
