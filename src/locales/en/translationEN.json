@@ -9,5 +9,19 @@
   "test":"hello",
   "faq":"Question Answers",
   "question":"Frequently Asked Questions",
-  "question_text":"Here are a few of the questions we get the most. If you don't see what's on your mind, reach out to us anytime on phone, chat, or email."
+  "question_text":"Here are a few of the questions we get the most. If you don't see what's on your mind, reach out to us anytime on phone, chat, or email.",
+  "contact":"Contact",
+  "userName":"Your name",
+  "plaseholderUserName":"Enter your Name",
+  "userSurname":"Surname",
+  "plaseholderUserSurname":"Enter your  surname",
+  "userTel":"Your phone number",
+  "Working_Days":"Working days",
+  "week":"Monday-Saturday",
+  "Working_hours":"Working hours",
+  "email":"Email",
+  "Telefon":"Phone",
+  "Address":"Address",
+  "send":"Send",
+  "Text_Area":"Enter the text"
 }

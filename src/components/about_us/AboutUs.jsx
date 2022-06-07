@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./aboutUz.module.css";
-import man from "./../../assets/about_us/man.png";
+// import man from "./../../assets/about_us/man.png";
 import girl from "./../../assets/about_us/girl.png";
 import Aos from "aos";
 import "aos/dist/aos.css";

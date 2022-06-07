@@ -20,6 +20,5 @@
 @media(min-width:651px) and (max-width:1259.9px) {
     .Map {
               width: 100%;
-              border: 2px solid red !important;
     }
 }
