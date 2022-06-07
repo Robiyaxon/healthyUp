@@ -34,9 +34,9 @@ export const Footer = () => {
         <p>www.health.uz</p>
       </div>
       <div className={style.Block2}>
-        <NavLink to="about_us">Biz haqimizda</NavLink>
-        <NavLink to="contact">Bog'lanish</NavLink>
-        <NavLink to="/">Foydali maslahat</NavLink>
+        <NavLink to="about_us" className={({ isActive }) => (isActive ? "active2" : "Navlink2")}>Biz haqimizda</NavLink>
+        <NavLink to="contact" className={({ isActive }) => (isActive ? "active2" : "Navlink2")}>Bog'lanish</NavLink>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active2" : "Navlink2")}>Foydali maslahat</NavLink>
       </div>
       <div className={style.Block3}>
         <a href={a.facebook} className={style.facebook_icon}>
@@ -48,6 +48,7 @@ export const Footer = () => {
         <a href={a.telegram} className={style.telegram_icon}>
           <img src={telegram} alt="" />
         </a>
+       
         <a href={a.application}>
           <img src={google} alt="" />
         </a>

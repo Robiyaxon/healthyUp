@@ -19,7 +19,6 @@ const Question = ({ id, question_uz, answer_uz,question_ru, answer_ru,question_e
           ) : (
             <>Kilo yo'qotish uchun parhez yoki jismoniy mashqlar muhimroqmi ?</>
           )}</h4>
-        <hr />
         <button className="btn" onClick={() => setShowInfo(!showInfo)}>
           {showInfo ? <MinusOutlined /> : <PlusOutlined />}
         </button>
