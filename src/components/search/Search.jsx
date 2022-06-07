@@ -4,7 +4,9 @@ import img1 from "../../assets/home/search/group.svg";
 import Search from "antd/lib/input/Search";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 const onSearch = (value) => console.log(value);
+
 export const Search2 = () => {
   useEffect(() => {
     Aos.init();

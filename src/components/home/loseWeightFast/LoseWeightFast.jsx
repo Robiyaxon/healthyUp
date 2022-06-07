@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import main from "../../../assets/home/laseWeightFast/main.png";
 
 import styles from "./LoseWeightFast.module.css";
 import axios from "axios";
-import { useSelector } from "react-redux";
 
 const LoseWeightFast = () => {
-  const { t } = useTranslation();
   const [data, setData] = useState([]);
-  const { language } = useSelector((state) => state.langReducer);
 
   // const data = [
   //   { id: 1, number: "01", title: "Gollivud parhezi" },
@@ -26,7 +22,7 @@ const LoseWeightFast = () => {
   // ];
   var config = {
     method: "get",
-    url: "http://10.10.8.46:8000/advice/",
+    url: "http://10.10.8.35:8000/advice/",
     headers: {
       "Content-Type": "application/json",
     },

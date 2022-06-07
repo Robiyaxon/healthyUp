@@ -6,5 +6,10 @@
   "homeHeaderBtn2":"Sign up",
   "homeCarousel":"See more",
   "navbar5": "Home",
-  "test":"hello"
+  "test":"hello",
+  "aboutPatient":"Patients",
+  "aboutDietologist":"Dietologist",
+  "aboutSportsman":"Sportsman",
+  "aboutWomen":"Women",
+  "aboutMen":"Men"
 }

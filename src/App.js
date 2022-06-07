@@ -12,7 +12,7 @@ import HomeDetail from "./components/HomeDetail/HomeDetail";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
-import i18n from'./i18n'
+import {Search2} from './components/search/Search'
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -63,6 +63,8 @@ function App() {
         </>
       )}
       <MyBackTop />
+      <Search2 />
+
       <Footer/>
     </div>
   );

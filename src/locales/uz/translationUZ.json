@@ -6,5 +6,11 @@
   "homeHeaderBtn2":"Ro'yxatdan o'tish",
   "homeCarousel":"Barchasi",
   "navbar5": "Uy",
-  "test":"salom"
+  "test":"salom",
+  "aboutPatient":"Bemorlar",
+  "aboutDietologist":"Dietolog",
+  "aboutSportsman":"Sportchilar",
+  "aboutWomen":"Ayollar",
+  "aboutMen":"Erkaklar"
+
 }

@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 var config = {
   method: "get",
-  url: "http://10.10.8.46:8000/homeheader/",
+  url: "http://10.10.8.35:8000/homeheader/",
   headers: {
     "Content-Type": "application/json",
   },

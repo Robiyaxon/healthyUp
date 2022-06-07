@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 
 var config = {
   method: "get",
-  url: "http://10.10.8.46:8000/new/",
+  url: "http://10.10.8.35:8000/new/",
   headers: {
     "Content-Type": "application/json",
   },
