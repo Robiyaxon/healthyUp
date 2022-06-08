@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import style from "./Search.module.css";
 import img1 from "../../assets/home/search/group.svg";
 import Search from "antd/lib/input/Search";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import axios from "axios";
 import { useSelector } from "react-redux";
 const onSearch = (value) => console.log(value);
@@ -19,7 +17,6 @@ export const Search2 = () => {
   const { language } = useSelector((state) => state.langReducer);
 
   useEffect(() => {
-    Aos.init();
     axios(config)
       .then(function (response) {
         setData(response.data);
@@ -31,7 +28,7 @@ export const Search2 = () => {
       {data.map((a) => (
         <div className={style.Search}>
           <div className={style.Title}>
-            <h1 data-aos="fade-up" data-aos-duration="1000">
+            <h1>
               {language === "uz" ? (
                 <>{a.title_uz}</>
               ) : language === "eng" ? (
@@ -42,7 +39,7 @@ export const Search2 = () => {
                 <> 500+ dan ziyod mutaxassislar saytimizda ro‘yxatdan otdi</>
               )}
             </h1>
-            <p data-aos="fade-up" data-aos-duration="1000">
+            <p>
               {language === "uz" ? (
                 <>{a.text_uz}</>
               ) : language === "eng" ? (

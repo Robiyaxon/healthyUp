@@ -1,12 +1,9 @@
 import React from "react";
 import style from "./aboutUz.module.css";
-// import man from "./../../assets/about_us/man.png";
 import girl from "./../../assets/about_us/girl.png";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 var config = {
   method: "get",
@@ -18,9 +15,8 @@ var config = {
 
 export const AboutUs = () => {
   const [data, setData] = useState([]);
-  const { language } = useSelector((state) => state.langReducer);
+  // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
-    Aos.init({ once: true });
     axios(config)
       .then(function (response) {
         setData(response.data);
@@ -31,14 +27,11 @@ export const AboutUs = () => {
 
   const map = data.map((d) => {
     return (
-      <div data-aos="zoom-in-up" className={style.first} key={d.id}>
-        <div data-aos="fade-up-right" className={style.manWrapper}>
+      <div  className={style.first} key={d.id}>
+        <div  className={style.manWrapper}>
           <img src={d.img1} alt="man img" />
         </div>
         <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
           className={style.first_content}
         >
           <h2>{d.title_uz}</h2>
@@ -70,29 +63,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div classNameName={style.header}>
-        {/* first */}
         {map}
-        {/* <div data-aos="zoom-in-up" className={style.first}>
-          <div data-aos="fade-up-right" className={style.manWrapper}>
-            <img src={man} alt="man img" />
-          </div>
-          <div
-            className={style.first_content}
-          >
-            <h2>Biz haqimizda</h2>
-            <p>
-              Maqsad bilan ozishga intilish, xatarli intilishdir. Chunki bunday
-              ozishda nimanidir noto‘g‘ri qilsangiz, natija yomon bo‘lishi
-              mumkinki, undan ko‘ra hech narsa qilmaganingiz yaxshi edi. Agar
-              bunday ozishni uddalay olmay harakatni to‘xtatsangiz, yaxshi
-              holatda oldingi vazningizni ustiga yana 3 – 4 kg yuk olasiz. Yomon
-              holatda bunday ochlik va stress tufayli gastrit yoki oshqozon
-              yarasi va depressiya kasalligi paydo bo‘lishi mumkin.
-            </p>
-          </div>
-        </div> */}
-
-        {/* second  */}
         <div className={style.second}>
           <div
             className={style.second_content}

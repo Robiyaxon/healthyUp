@@ -34,10 +34,10 @@ function EasyWay() {;
 
       <div className={styles.header_meal_wrapper}>
         <div className={styles.header_meal}>
-          <img data-aos="fade-up" data-aos-duration="1000" src={meal} alt="food img" />
+          <img src={meal} alt="food img" />
           <div className={styles.header__meal_text}>
-            <h1 data-aos="fade-up" data-aos-duration="1000">Meyyor bilan ovqatlanish</h1>
-            <p data-aos="fade-up" data-aos-duration="1000">
+            <h1 >Meyyor bilan ovqatlanish</h1>
+            <p>
               Soat 18-00 dan keyin ovqat tanovul qilmang. Aynan shu davrda
               organizm faolligi kamayadi va yeyilgan har qanday taom yaxshi hazm
               bo‘lmay, organizmda o‘tirib qoladi. Qabul qilinadigan ovqatning
@@ -48,7 +48,7 @@ function EasyWay() {;
           </div>
         </div>
         <div className={styles.food_lenta_wrapper}>
-          <img data-aos="fade-up" data-aos-duration="1000" src={lenta2} alt="lenta" />
+          <img  src={lenta2} alt="lenta" />
         </div>
       </div>
     </div>

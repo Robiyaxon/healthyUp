@@ -3,7 +3,8 @@
 }
 
 .App {
-  overflow: hidden;
+  overflow: hidden !important;
+  width: 100% !important;
 }
 
 .ant-drawer.ant-drawer-open .ant-drawer-mask {

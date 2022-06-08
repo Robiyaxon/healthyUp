@@ -65,7 +65,7 @@
 }
 
 .Block2 a:hover {
-    color: #ffa700;
+    color: hsl(39, 100%, 50%);
     margin: 0px 0 19px 2.3rem;
 }
 
@@ -105,10 +105,12 @@
 }
 .chiziq{
     text-align: center;
+    width: 100%;
     margin: 0 auto;
 }
 .Wrapper {
     background-color: white;
+    width: 100% !important;
 }
 
 .Title {
