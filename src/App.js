@@ -11,14 +11,11 @@ import { Home } from "./components/home/Home";
 import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
-<<<<<<< HEAD
-import {Search2} from './components/search/Search'
-
-=======
 import ScrollToTop from "./ScrollerOn";
+import { Search2 } from './components/search/Search';
 const Question = React.lazy(() => import("./components/question/Question.jsx"));
->>>>>>> 0d0a65c6c20dd172c15ea9088e8663a32f1fd02e
 function App() {
+
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
