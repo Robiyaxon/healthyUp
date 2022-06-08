@@ -31,7 +31,7 @@ function App() {
     { id: 4, url: "about_us", kompannent: <AboutUs /> },
     { id: 5, url: "contact", kompannent: <Contact /> },
     { id: 6, url: "signUp", kompannent: <Registration /> },
-    { id: 6, url: "faq", kompannent: <Question /> },
+    { id: 7, url: "faq", kompannent: <Question /> },
   ];
   const mapRoute = map.map((a) => (
     <Route
