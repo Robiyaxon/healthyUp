@@ -4,10 +4,11 @@ import girl from "./../../assets/about_us/girl.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 // import { useSelector } from "react-redux";
+import { NumberSec } from './NumberSec';
 
 var config = {
   method: "get",
-  url: "http://10.10.8.46:8000/aboutus/",
+  url: "http://10.10.8.35:8000/aboutus/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -35,7 +36,7 @@ export const AboutUs = () => {
           className={style.first_content}
         >
           <h2>{d.title_uz}</h2>
-          <p>{d.uz_text1}</p>
+          <p>{d.uz_text}</p>
         </div>
       </div>
     );
@@ -47,10 +48,10 @@ export const AboutUs = () => {
         <div className={style.title}>
           <div className={style.title_inner}>
             <div className={style.cafe}>
-              <div className={style.cafe_inner}>Keyframé</div>
+              <div className={style.cafe_inner}>About</div>
             </div>
             <div className={style.mozart}>
-              <div className={style.mozart_inner}>Artistes</div>
+              <div className={style.mozart_inner}>Healthy Up</div>
             </div>
           </div>
         </div>
@@ -80,6 +81,7 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
+    <NumberSec />
     </div>
   );
 };

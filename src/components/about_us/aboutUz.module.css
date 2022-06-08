@@ -15,8 +15,14 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  padding: 0 180px 50px;
+  padding: 13rem 180px 50px;
 }
+
+.header .first:nth-child(even){
+  flex-direction: row-reverse !important;
+  border: 3px solidd rebeccapurple;
+}
+
 .second {
   display: flex;
   align-items: center;
@@ -124,8 +130,7 @@
   padding-bottom: 4vmin;
   height: 98vh;
   width: 100%;
-  background-image: url(../../assets/about_us/headerBG.png);
-
+  background-color: #F6E4C2;
   color: #3a3535;
 }
 body {

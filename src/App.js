@@ -12,8 +12,10 @@ import Registration from "./components/registration/Registration";
 import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
 import ScrollToTop from "./ScrollerOn";
+import { Search2 } from './components/search/Search';
 const Question = React.lazy(() => import("./components/question/Question.jsx"));
 function App() {
+
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
@@ -63,6 +65,7 @@ function App() {
         </>
       )}
       <MyBackTop />
+      <Search2 />
       <Footer/>
     </div>
   );
