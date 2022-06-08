@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Row, Col } from "antd";
-
-=======
-import React from "react";
-import style from "./task.module.css";
->>>>>>> 84c17331a49517275c5513a94064ed0922c2562d
 import instagram from "../../assets/home/socialnetwork/instagram.svg";
 import facebook from "../../assets/home/socialnetwork/facebook.svg";
 import telegram from "../../assets/home/socialnetwork/telegram.svg";

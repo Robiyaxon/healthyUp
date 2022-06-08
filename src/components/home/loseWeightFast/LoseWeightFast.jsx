@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
+// import { useTranslation } from "react-i18next";
 
 import main from "../../../assets/home/laseWeightFast/main.png";
 
 import styles from "./LoseWeightFast.module.css";
 import axios from "axios";
+// import { useSelector } from "react-redux";
 
 const LoseWeightFast = () => {
+  // const { t } = useTranslation();
   const [data, setData] = useState([]);
+  // const { language } = useSelector((state) => state.langReducer);
 
   // const data = [
   //   { id: 1, number: "01", title: "Gollivud parhezi" },
@@ -49,7 +53,7 @@ const LoseWeightFast = () => {
         TEZ OZISH UCHUN PARHEZLARNING ENG SAMARALILASRI
       </h1>
       <div className={styles.main__block}>
-        <img src={main} alt="" data-aos="fade-up" data-aos-duration="1000" />
+        <img src={main} alt="" />
         <div className={styles.blocks}>{dataMap}</div>
       </div>
     </div>

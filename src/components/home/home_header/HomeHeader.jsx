@@ -18,7 +18,7 @@ export const HomeHeader = () => {
     <div className={style.Block}>
       {" "}
       <div className={style.Block__Title}>
-        <h1 data-aos="fade-up" data-aos-duration="1000">
+        <h1>
           {language === "uz" ? (
             <>{a.title_uz}</>
           ) : language === "eng" ? (
@@ -29,7 +29,7 @@ export const HomeHeader = () => {
             <>Vazin yo‘qotish qiyin emas</>
           )}
         </h1>
-        <p data-aos="fade-up" data-aos-duration="1000">
+        <p>
           {language === "uz" ? (
             <>{a.text_uz}</>
           ) : language === "eng" ? (

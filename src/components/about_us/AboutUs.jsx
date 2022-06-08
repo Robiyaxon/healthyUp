@@ -1,10 +1,11 @@
 import React from "react";
 import style from "./aboutUz.module.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import girl from "./../../assets/about_us/girl.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
+// import { useSelector } from "react-redux";
 import { NumberSec } from './NumberSec';
+
 var config = {
   method: "get",
   url: "http://10.10.8.35:8000/aboutus/",
@@ -15,8 +16,8 @@ var config = {
 
 export const AboutUs = () => {
   const [data, setData] = useState([]);
+  // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
-    Aos.init({ once: true });
     axios(config)
       .then(function (response) {
         setData(response.data);
@@ -27,14 +28,11 @@ export const AboutUs = () => {
 
   const map = data.map((d) => {
     return (
-      <div data-aos="zoom-in-up" className={style.first} key={d.id}>
-        <div data-aos="fade-up-right" className={style.manWrapper}>
-          <img src={d.img} alt="man img" />
+      <div  className={style.first} key={d.id}>
+        <div  className={style.manWrapper}>
+          <img src={d.img1} alt="man img" />
         </div>
         <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
           className={style.first_content}
         >
           <h2>{d.title_uz}</h2>
@@ -65,9 +63,23 @@ export const AboutUs = () => {
           />
         </div>
       </div>
-      <div className={style.header}>
-        {/* first */}
+      <div classNameName={style.header}>
         {map}
+        <div className={style.second}>
+          <div
+            className={style.second_content}
+          >
+            <p>
+              Shu sababli biz tog`ri ozishga yordam beruvchi bepul sayt
+              yaratishga qaror qildik. bundan tashqari satimiz dietolog va
+              treynerlarni oz ozini bant qilishu uchun ham juda katta yordam
+              beradi.
+            </p>
+          </div>
+          <div  className={style.girlWrapper}>
+            <img src={girl} alt="" />
+          </div>
+        </div>
       </div>
     <NumberSec />
     </div>

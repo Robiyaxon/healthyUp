@@ -58,9 +58,7 @@ export const Footer = () => {
   return (
     <div className={style.Wrapper}>
       {map}
-      <center>
         <img src={chiziq} alt="" className={style.chiziq} />
-      </center>
       <p className={style.Title}>Platforma ROC tomonidan ishlab chiqilgan.</p>
     </div>
   );
