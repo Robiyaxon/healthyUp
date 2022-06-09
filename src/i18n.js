@@ -4,9 +4,11 @@ import { initReactI18next } from "react-i18next";
 import translationEN from "./locales/en/translationEN.json";
 import translationUZ from "./locales/uz/translationUZ.json";
 import translationRU from "./locales/ru/translationRU.json";
+import Backend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 const resources = {
-  eng: {
+  en: {
     translation: translationEN,
   },
   uz: {
@@ -17,9 +19,29 @@ const resources = {
   },
 };
 
-i18n.use(initReactI18next).init({
+i18n  .use(Backend)
+.use(LanguageDetector)
+.use(initReactI18next)
+.init({
+  lng: localStorage.getItem("lang"),
+  fallbackLng: "uz",
+  debug: false,
+  react: {
+    useSuspense: false,
+  },
+  detection: {
+    order: [
+      "localStorage",
+      "cookie",
+      "sessionStorage",
+      "navigator",
+      "htmlTag",
+    ],
+    lookupLocalStorage: "lang",
+    lookupCookie: "i18next",
+    lookupSessionStorage: "i18nextLng",
+  },
   resources,
-  lng: "en",
 
   keySeparator: false,
 

@@ -36,7 +36,7 @@ export const MyCarousel = () => {
           title={
             data && data[0] && data[0].title && language === "uz"
               ? data && data[0] && data[0].title
-              : language === "eng"
+              : language === "en"
               ? data && data[0] && data[0].en_title
               : language === "ru"
               ? data && data[0] && data[0].ru_title
@@ -49,7 +49,7 @@ export const MyCarousel = () => {
           title={
             data && data[0] && data[0].title && language === "uz"
               ? data && data[0] && data[0].title
-              : language === "eng"
+              : language === "en"
               ? data && data[0] && data[0].en_title
               : language === "ru"
               ? data && data[0] && data[0].ru_title

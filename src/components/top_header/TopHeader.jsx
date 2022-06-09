@@ -80,7 +80,7 @@ export const TopHeader = () => {
             <select name="lang" value={lang} onChange={handleChange}>
               <option value="uz">UZ</option>
               <option value="ru">RU</option>
-              <option value="eng">ENG</option>
+              <option value="en">EN</option>
             </select>
             <div className={style.Drawer_Block}>
               <img src={drawer} alt="" onClick={showDrawer} />

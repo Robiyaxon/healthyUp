@@ -13,6 +13,8 @@ import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
 import ScrollToTop from "./ScrollerOn";
 import { Search2 } from './components/search/Search';
+import i18n from'./i18n'
+
 const Question = React.lazy(() => import("./components/question/Question.jsx"));
 function App() {
 
