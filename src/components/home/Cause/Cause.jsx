@@ -26,7 +26,7 @@ export const Cause = () => {
     <h1>
       {language === "uz" ? (
         <>{a.title_uz}</>
-      ) : language === "eng" ? (
+      ) : language === "en" ? (
         <>{a.title_en}</>
       ) : language === "ru" ? (
         <>{a.title_ru}</>
@@ -44,7 +44,7 @@ export const Cause = () => {
           <h2 >
             {language === "uz" ? (
               <>{a.text2_uz}</>
-            ) : language === "eng" ? (
+            ) : language === "en" ? (
               <>{a.text2_en}</>
             ) : language === "ru" ? (
               <>{a.text2_ru}</>
@@ -61,7 +61,7 @@ export const Cause = () => {
               <h2>
                 {language === "uz" ? (
                   <>{a.text1_uz}</>
-                ) : language === "eng" ? (
+                ) : language === "en" ? (
                   <>{a.text1_en}</>
                 ) : language === "ru" ? (
                   <>{a.text1_ru}</>
@@ -81,7 +81,7 @@ export const Cause = () => {
               <h2>
                 {language === "uz" ? (
                   <>{a.text4_uz}</>
-                ) : language === "eng" ? (
+                ) : language === "en" ? (
                   <>{a.text4_en}</>
                 ) : language === "ru" ? (
                   <>{a.text4_ru}</>
@@ -116,7 +116,7 @@ export const Cause = () => {
               >
                 {language === "uz" ? (
                   <>{a.text3_uz}</>
-                ) : language === "eng" ? (
+                ) : language === "en" ? (
                   <>{a.text3_en}</>
                 ) : language === "ru" ? (
                   <>{a.text3_ru}</>
@@ -137,7 +137,7 @@ export const Cause = () => {
               <h2>
                 {language === "uz" ? (
                   <>{a.text5_uz}</>
-                ) : language === "eng" ? (
+                ) : language === "en" ? (
                   <>{a.text5_en}</>
                 ) : language === "ru" ? (
                   <>{a.text5_ru}</>

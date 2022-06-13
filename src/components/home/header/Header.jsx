@@ -50,7 +50,7 @@ export const Header = () => {
             Hey
             {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.title_uz} </span>)
-            ) : language === "eng" ? (
+            ) : language === "en" ? (
               Home.map((a, index) => <span key={index}> {a.title_en} </span>)
             ) : language === "ru" ? (
               Home.map((a, index) => <span key={index}> {a.title_ru} </span>)
@@ -63,7 +63,7 @@ export const Header = () => {
           >
             {language === "uz" ? (
               Home.map((a, index) => <span key={index}> {a.text_uz} </span>)
-            ) : language === "eng" ? (
+            ) : language === "en" ? (
               Home.map((a, index) => <span key={index}> {a.text_en} </span>)
             ) : language === "ru" ? (
               Home.map((a, index) => <span key={index}> {a.text_ru} </span>)
@@ -85,7 +85,7 @@ export const Header = () => {
         >
           {language === "uz" ? (
             Home.map((a, index) => <span key={index}> {a.text2_uz} </span>)
-          ) : language === "eng" ? (
+          ) : language === "en" ? (
             Home.map((a, index) => <span key={index}> {a.text2_en} </span>)
           ) : language === "ru" ? (
             Home.map((a, index) => <span key={index}> {a.text2_ru} </span>)

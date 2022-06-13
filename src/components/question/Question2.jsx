@@ -12,7 +12,7 @@ const Question = ({ id, question_uz, answer_uz,question_ru, answer_ru,question_e
       <header>
         <h4> {language === "uz" ? (
             <>{question_uz}</>
-          ) : language === "eng" ? (
+          ) : language === "en" ? (
             <>{question_en}</>
           ) : language === "ru" ? (
             <>{question_ru}</>
@@ -25,7 +25,7 @@ const Question = ({ id, question_uz, answer_uz,question_ru, answer_ru,question_e
       </header>
       {showInfo && <p>   {language === "uz" ? (
             <>{answer_uz}</>
-          ) : language === "eng" ? (
+          ) : language === "en" ? (
             <>{answer_en}</>
           ) : language === "ru" ? (
             <>{answer_ru}</>

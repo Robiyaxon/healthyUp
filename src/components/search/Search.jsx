@@ -31,7 +31,7 @@ export const Search2 = () => {
             <h1>
               {language === "uz" ? (
                 <>{a.title_uz}</>
-              ) : language === "eng" ? (
+              ) : language === "en" ? (
                 <>{a.title_en}</>
               ) : language === "ru" ? (
                 <>{a.title_ru}</>
@@ -42,7 +42,7 @@ export const Search2 = () => {
             <p>
               {language === "uz" ? (
                 <>{a.text_uz}</>
-              ) : language === "eng" ? (
+              ) : language === "en" ? (
                 <>{a.text_en}</>
               ) : language === "ru" ? (
                 <>{a.text_ru}</>

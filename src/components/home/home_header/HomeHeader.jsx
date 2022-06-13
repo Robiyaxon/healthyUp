@@ -21,7 +21,7 @@ export const HomeHeader = () => {
         <h1>
           {language === "uz" ? (
             <>{a.title_uz}</>
-          ) : language === "eng" ? (
+          ) : language === "en" ? (
             <>{a.title_en}</>
           ) : language === "ru" ? (
             <>{a.title_ru}</>
@@ -32,7 +32,7 @@ export const HomeHeader = () => {
         <p>
           {language === "uz" ? (
             <>{a.text_uz}</>
-          ) : language === "eng" ? (
+          ) : language === "en" ? (
             <>{a.text_en}</>
           ) : language === "ru" ? (
             <>{a.text_ru}</>
@@ -47,7 +47,7 @@ export const HomeHeader = () => {
           <NavLink to="signUp">
           {language === "uz" ? (
             <>{a.text2_uz}</>
-          ) : language === "eng" ? (
+          ) : language === "en" ? (
             <>{a.text2_en}</>
           ) : language === "ru" ? (
             <>{a.text2_ru}</>
