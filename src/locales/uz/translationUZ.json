@@ -32,5 +32,9 @@
   "login_text":"Akauntingizga kirish uchun foydalanuvchi nomi va paro‘lni kiriting  ","Username": "Foydalanuvchi nomi",
   "Password":"Parol",
   "footer":"Platforma ROC tomonidan ishlab chiqilgan.",
-  "login_register":"Yoki ro'yxatdan o'ting"
+  "login_register":"Yoki ro'yxatdan o'ting",
+  "gender":"Sizning jinsingiz?",
+  "woman":"Ayol",
+  "man":"Erkak"
+
 }

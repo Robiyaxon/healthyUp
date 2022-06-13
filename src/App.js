@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes } from "react-router-dom";
 import { Spin } from "antd";
 
@@ -11,8 +11,6 @@ import { MySearch } from "./components/search/Search";
 import { dataMapForRoute } from './helpers/RouteMap';
 
 import "./App.css";
-
-
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
