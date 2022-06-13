@@ -1,8 +1,11 @@
 import React from "react";
-export const FemaleOrMale = () => {
+
+const FemaleOrMale = () => {
   return ( 
     <div>
       ghjfj
     </div>
    );
 }
+
+export default FemaleOrMale

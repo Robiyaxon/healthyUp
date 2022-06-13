@@ -12,7 +12,7 @@ import { dataMapForRoute } from './helpers/RouteMap';
 
 import "./App.css";
 
-const Question = lazy(() => import("./components/question/Question.jsx"));
+
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);

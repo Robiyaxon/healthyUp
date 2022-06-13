@@ -1,16 +1,21 @@
+import { Suspense, lazy } from 'react';
 import { Route } from 'react-router-dom';
+import { Spin } from 'antd';
+
 import { Home } from './../components/home/Home';
 import { MyCabinet } from './../components/my_cabinet/My_Cabinet';
 import { News } from './../components/news/News';
 import { AboutUs } from './../components/about_us/AboutUs';
 import { Contact } from './../components/contact/Contact';
-import Registration from './../components/registration/Registration';
-import { FemaleOrMale } from './../components/registration/femaleOrMale/FemaleOrMale';
-import Question from './../components/question/Question2';
-import { Suspense } from 'react';
-import { Spin } from 'antd';
+
+
+const Question = lazy(() => import("./../components/question/Question.jsx"));
+const Login = lazy(() => import("./../components/login/Login.jsx"));
+const Registration = lazy(() => import("./../components/registration/Registration.jsx"));
+const FemaleOrMale = lazy(() => import("./../components/login/femaleOrMale/FemaleOrMale.jsx"));
 
 const data = [
+
   { id: 1, url: "/", element: <Home /> },
   { id: 2, url: "my_cabinets", element: <MyCabinet /> },
   { id: 3, url: "news", element: <News /> },
@@ -19,6 +24,7 @@ const data = [
   { id: 6, url: "signUp", element: <Registration /> },
   { id: 6, url: "femaleOrMale", element: <FemaleOrMale /> },
   { id: 7, url: "faq", element: <Question /> },
+  { id: 7, url: "login", element: <Login /> },
 ];
 
 export const dataMapForRoute = data.map((d) => (

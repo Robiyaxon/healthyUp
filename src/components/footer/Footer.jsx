@@ -8,6 +8,8 @@ import chiziq from "../../assets/home/footer/chiziq.svg";
 import telegram from "../../assets/home/footer/telegram.svg";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 var config = {
   method: "get",
   url: "http://10.10.8.35:8000/footer/",
@@ -16,6 +18,7 @@ var config = {
   },
 };
 export const Footer = () => {
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {
     axios(config)
@@ -34,9 +37,24 @@ export const Footer = () => {
         <p>www.health.uz</p>
       </div>
       <div className={style.Block2}>
-        <NavLink to="about_us" className={({ isActive }) => (isActive ? "active2" : "Navlink2")}>Biz haqimizda</NavLink>
-        <NavLink to="contact" className={({ isActive }) => (isActive ? "active2" : "Navlink2")}>Bog'lanish</NavLink>
-        <NavLink to="/" className={({ isActive }) => (isActive ? "active2" : "Navlink2")}>Foydali maslahat</NavLink>
+        <NavLink
+          to="about_us"
+          className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
+        >
+          Biz haqimizda
+        </NavLink>
+        <NavLink
+          to="contact"
+          className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
+        >
+          Bog'lanish
+        </NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
+        >
+          Foydali maslahat
+        </NavLink>
       </div>
       <div className={style.Block3}>
         <a href={a.facebook} className={style.facebook_icon}>
@@ -48,7 +66,7 @@ export const Footer = () => {
         <a href={a.telegram} className={style.telegram_icon}>
           <img src={telegram} alt="" />
         </a>
-       
+
         <a href={a.application}>
           <img src={google} alt="" />
         </a>
@@ -58,8 +76,8 @@ export const Footer = () => {
   return (
     <div className={style.Wrapper}>
       {map}
-        <img src={chiziq} alt="" className={style.chiziq} />
-      <p className={style.Title}>Platforma ROC tomonidan ishlab chiqilgan.</p>
+      <img src={chiziq} alt="" className={style.chiziq} />
+      <p className={style.Title}>{t("footer")}</p>
     </div>
   );
 };
