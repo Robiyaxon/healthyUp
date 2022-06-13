@@ -28,5 +28,9 @@
   "Telefon":"Telefon",
   "Address":"Manzil",
   "send":"Yuborish",
-  "Text_Area":"Matn kiriting"
+  "Text_Area":"Matn kiriting",
+  "login_text":"Akauntingizga kirish uchun foydalanuvchi nomi va paro‘lni kiriting  ","Username": "Foydalanuvchi nomi",
+  "Password":"Parol",
+  "footer":"Platforma ROC tomonidan ishlab chiqilgan.",
+  "login_register":"Yoki ro'yxatdan o'ting"
 }

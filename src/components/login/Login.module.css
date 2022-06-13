@@ -1,0 +1,79 @@
+.Login {
+    padding: 150px 175px 20px 175px;
+    background: rgba(247, 231, 200, 0.3);
+}
+
+.Login h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+    color: #4C3C00;
+}
+
+.Login p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    width: 451px;
+    font-size: 20px;
+    margin: 0 auto;
+    line-height: 24px;
+    text-align: center;
+    color: #4C3C00;
+    margin-bottom: 32px;
+}
+.button{
+    width: 472px;
+    height: 50px; 
+    background: linear-gradient(265.62deg, #E6BF4C -14.74%, #BC9520 154.51%);
+    border-radius: 10px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    border: none;
+}
+.login_form {
+    width: 472px !important;
+    margin: 0 auto !important;
+}
+
+.Input {
+    height: 45px;
+    border: 2px solid #C5C3CA;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.login_form label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2B2B2B;
+}
+.Span{
+    margin-top: 10px !important;
+    margin: 0 auto;
+    font-size: 20px;
+    float: right;
+}
+@media(min-width:0) and (max-width:750.9px){
+    .Login {
+        padding: 100px 5px 20px 5px;
+        background: rgba(247, 231, 200, 0.3);
+    }
+    .login_form {
+        width: 80% !important;
+        margin: 0 auto !important;
+    }
+    .button{
+        width: 100%;
+    }
+    .Login p {
+        width: 100%;
+    }
+
+}

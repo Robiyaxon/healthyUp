@@ -28,5 +28,10 @@
   "Telefon":"Phone",
   "Address":"Address",
   "send":"Send",
-  "Text_Area":"Enter the text"
+  "Text_Area":"Enter the text",
+  "login_text":"Enter your username and password to access your account",
+  "Username":"Username",
+  "Password":"Password",
+  "footer":"The platform was developed by ROC.",
+  "login_register":"Or register now"
 }

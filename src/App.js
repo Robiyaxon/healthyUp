@@ -13,11 +13,9 @@ import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
 import ScrollToTop from "./ScrollerOn";
 import { Search2 } from './components/search/Search';
-import i18n from'./i18n'
-
 const Question = React.lazy(() => import("./components/question/Question.jsx"));
+const Login = React.lazy(() => import("./components/login/Login.jsx"));
 function App() {
-
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
@@ -34,6 +32,7 @@ function App() {
     { id: 5, url: "contact", kompannent: <Contact /> },
     { id: 6, url: "signUp", kompannent: <Registration /> },
     { id: 7, url: "faq", kompannent: <Question /> },
+    { id: 8, url: "login", kompannent: <Login /> },
   ];
   const mapRoute = map.map((a) => (
     <Route

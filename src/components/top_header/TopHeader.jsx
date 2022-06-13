@@ -47,19 +47,20 @@ export const TopHeader = () => {
     setVisible(true);
   };
 const click=()=>{
-  navigate("about_uz")
+  navigate("login")
+  setVisible(false);
 }
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
         <div className={style.Drawer_Block_Navlink  + " " + style.borderXwidth}  >
           {map2}
-          <button className={style.Navlink_href}>
+          <button className={style.Navlink_href} onClick={click}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            <NavLink to="/">{t("homeHeaderBtn1")}</NavLink>
+          {t("homeHeaderBtn1")}
           </button>
         </div>
       </Drawer>
@@ -78,7 +79,7 @@ const click=()=>{
                 <span></span>
                 <span></span>
                 <span></span>     
-           Kirish
+           {t("homeHeaderBtn1")}
               </button>
             </div>
 
