@@ -15,7 +15,9 @@ import ScrollToTop from "./ScrollerOn";
 import { Search2 } from './components/search/Search';
 const Question = React.lazy(() => import("./components/question/Question.jsx"));
 const Login = React.lazy(() => import("./components/login/Login.jsx"));
+const Jinsi = React.lazy(() => import("./components/login/jinsi/Jinsi.jsx"));
 function App() {
+
   const [isLoading, setIsLoading] = useState(false);
   const handleLoading = () => {
     setIsLoading(false);
@@ -33,6 +35,7 @@ function App() {
     { id: 6, url: "signUp", kompannent: <Registration /> },
     { id: 7, url: "faq", kompannent: <Question /> },
     { id: 8, url: "login", kompannent: <Login /> },
+    { id: 8, url: "jinsi", kompannent: <Jinsi /> },
   ];
   const mapRoute = map.map((a) => (
     <Route
