@@ -12,7 +12,7 @@ var config = {
     "Content-Type": "application/json",
   },
 };
-export const Search2 = () => {
+export const MySearch = () => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
 

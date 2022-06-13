@@ -1,9 +1,11 @@
 import React from "react";
-import style from "./Jinsi.module.css";
-import erkak from "../../../assets/login/jinsi/erkak.svg";
-import ayol from "../../../assets/login/jinsi/ayol.svg";
 import { useTranslation } from "react-i18next";
-const Jinsi = () => {
+import erkak from "../../../assets/login/femaleOrMale/erkak.svg";
+import ayol from "../../../assets/login/femaleOrMale/ayol.svg";
+
+import style from "./FemaleOrMale.module.css";
+
+const FemaleOrMale = () => {
   const { t } = useTranslation();
   const women = () => {
     alert("Ayolni tanladingiz!");
@@ -28,4 +30,4 @@ const Jinsi = () => {
     </div>
   );
 };
-export default Jinsi;
+export default FemaleOrMale;

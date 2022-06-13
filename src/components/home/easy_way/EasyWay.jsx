@@ -1,13 +1,16 @@
 import React from "react";
-import styles from "./EasyWay.module.css";
+
 import boy from "./../../../assets/home/easy_way/boy.png";
 import lenta from "./../../../assets/home/easy_way/metr1.png";
 import meal from "./../../../assets/home/easy_way/food1.png";
 import lenta2 from "./../../../assets/home/easy_way/metr2.png";
-function EasyWay() {;
+
+import styles from "./EasyWay.module.css";
+
+const EasyWay = () => {
   return (
     <div className={styles.header}>
-      <h2 className={styles.header_title} >
+      <h2 className={styles.header_title}>
         Vazin yo`qotishning eng sodda va oson yollari
       </h2>
       <div className={styles.header_sport_wrapper}>
@@ -36,7 +39,7 @@ function EasyWay() {;
         <div className={styles.header_meal}>
           <img src={meal} alt="food img" />
           <div className={styles.header__meal_text}>
-            <h1 >Meyyor bilan ovqatlanish</h1>
+            <h1>Meyyor bilan ovqatlanish</h1>
             <p>
               Soat 18-00 dan keyin ovqat tanovul qilmang. Aynan shu davrda
               organizm faolligi kamayadi va yeyilgan har qanday taom yaxshi hazm
@@ -48,11 +51,11 @@ function EasyWay() {;
           </div>
         </div>
         <div className={styles.food_lenta_wrapper}>
-          <img  src={lenta2} alt="lenta" />
+          <img src={lenta2} alt="lenta" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default EasyWay;
