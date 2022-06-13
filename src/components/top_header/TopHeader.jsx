@@ -49,7 +49,7 @@ export const TopHeader = () => {
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
-        <div className={style.Drawer_Block_Navlink}>
+        <div className={style.Drawer_Block_Navlink  + " " + style.borderXwidth}  >
           {map2}
           <button className={style.Navlink_href}>
             <span></span>
@@ -66,7 +66,7 @@ export const TopHeader = () => {
             <img src={logo} alt="" />
           </NavLink>
           <div className={style.Menu__link}>
-            <div className={style.Navlink}>
+            <div className={style.Navlink+ " " + style.stroke}>
               {map2}
               <button className={style.Navlink_href}>
                 <span></span>
