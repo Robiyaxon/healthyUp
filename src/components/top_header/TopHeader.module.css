@@ -1,14 +1,22 @@
 .Top_Header {
   /* height: 100vh; */
-  position: absolute;
-  padding: 50px 155px 0;
+  position: fixed;
+  padding: 20px 155px;
   width: 100%;
   z-index: 10;
+  transition: .5s all linear;
+}
+
+.scroller{
+  background: rgba(0,0,0,0.3);
+
 }
 
 .Block_Navlink {
   width: 20%;
 }
+
+
 
 .Navlink_href {
   width: 148px;
