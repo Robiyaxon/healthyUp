@@ -37,7 +37,7 @@
   min-height: 600px;
   margin: 0 auto;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   align-items: center;
 }
 
@@ -53,7 +53,7 @@
   min-height: 600px;
   margin: 0 auto;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .header_meal img {

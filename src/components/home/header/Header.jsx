@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import axios from "axios";
+
 import video from "../../../assets/home/header/video.mp4"
+
 import { BtnAnimation } from "./../../../helpers/BtnAnimation";
+
 import styles from "./Header.module.css";
+
 var config = {
   method: "get",
   url: "http://10.10.8.35:8000/homeheader/",
@@ -24,15 +28,6 @@ export const Header = () => {
       })
       .catch(function (error) {});
   }, []);
-  // const map = Home.map((a, index) => (
-  //   <img
-  //     key={"http://10.10.8.46:8000" + index}
-  //     src={a.img}
-  //     alt=""
-  //     data-aos="fade-down"
-  //     data-aos-duration="1000"
-  //   />
-  // ));
   return (
     <>
       <div className={styles.header}>
