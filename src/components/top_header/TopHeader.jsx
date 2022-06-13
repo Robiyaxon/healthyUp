@@ -7,8 +7,9 @@ import drawer from "../../assets/home/header/drawer.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Drawer } from "antd";
-
+import { useNavigate } from 'react-router-dom';
 export const TopHeader = () => {
+  const navigate=useNavigate()
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const defaultLang = localStorage.getItem("lang") || "uz";
@@ -20,7 +21,6 @@ export const TopHeader = () => {
     console.log(event.target.value);
     dispatch({ type: "LANG_CHANGED", payload: event.target.value });
   }
-
   const onClose = () => {
     setVisible(false);
   };
@@ -32,10 +32,11 @@ export const TopHeader = () => {
   ];
   const map2 = map.map((a) => (
     <NavLink
+    key={a.id}
       onClick={onClose}
-      key={a.id}
       className={({ isActive }) => (isActive ? "active" : "Navlink")}
       to={a.url}
+      id="topHeader"
     >
       {a.name}
     </NavLink>
@@ -45,7 +46,9 @@ export const TopHeader = () => {
   const showDrawer = () => {
     setVisible(true);
   };
-
+const click=()=>{
+  navigate("about_uz")
+}
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
@@ -67,13 +70,15 @@ export const TopHeader = () => {
           </NavLink>
           <div className={style.Menu__link}>
             <div className={style.Navlink+ " " + style.stroke}>
-              {map2}
-              <button className={style.Navlink_href}>
+           
+                 {map2}
+             
+              <button className={style.Navlink_href} onClick={click}>
                 <span></span>
                 <span></span>
                 <span></span>
-                <span></span>
-                <NavLink to="/">Kirish</NavLink>
+                <span></span>     
+           Kirish
               </button>
             </div>
 
