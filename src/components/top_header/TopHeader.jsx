@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import i18n from "./../../i18n";
 import style from "./TopHeader.module.css";
 import { useDispatch } from "react-redux";
@@ -14,6 +14,22 @@ export const TopHeader = () => {
   const dispatch = useDispatch();
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
+  const [scroll, setScroll] = useState("");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 300) {
+      setScroll("");
+    } else {
+      setScroll(style.scroller);
+    }
+  });
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
+
   function handleChange(event) {
     setLang(event.target.value);
     localStorage.setItem("lang", event.target.value);
@@ -30,6 +46,7 @@ export const TopHeader = () => {
     { id: 3, name: t("navbar2"), url: "contact" },
     { id: 4, name: "FAQ", url: "faq" },
   ];
+
   const map2 = map.map((a) => (
     <NavLink
     key={a.id}
@@ -64,7 +81,7 @@ const click=()=>{
           </button>
         </div>
       </Drawer>
-      <div className={style.Top_Header}>
+      <div className={style.Top_Header + ' ' + scroll}>
         <div className={style.Block}>
           <NavLink to="/" className={style.Block_Navlink}>
             <img src={logo} alt="" />
