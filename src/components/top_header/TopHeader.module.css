@@ -1,3 +1,27 @@
+ .stroke a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #ffa700;
+  height: 2px;
+}
+.stroke  a:hover:after {
+  width: 76%;
+}
+.stroke a{
+  padding-bottom: 0.6rem;
+}
+.stroke a,
+.stroke a:after,
+.stroke a:before {
+  transition: all .5s;
+}
+
 .Top_Header {
   /* height: 100vh; */
   position: fixed;
@@ -28,17 +52,11 @@
   border: none;
   cursor: pointer;
   transition: all 0.5s;
-  background-color: white;
-}
-
-.Navlink_href a {
-  width: 100%;
-  font-size: 16px;
+  background-color: white;  font-size: 16px;
   color: #4c3c00;
   font-weight: 600;
   margin: 0 auto;
 }
-
 .Navlink_href span {
   position: absolute;
   display: block;

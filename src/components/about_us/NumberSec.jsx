@@ -4,7 +4,6 @@ import VisibilitySensor from "react-visibility-sensor";
 import styles from "./NumberSec.module.css";
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import Aos from 'aos';
 import { useTranslation } from "react-i18next";
 
 var config = {
@@ -21,7 +20,6 @@ export const NumberSec = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    Aos.init({ once: true });
     axios(config)
       .then(function (response) {
         setData(response.data);

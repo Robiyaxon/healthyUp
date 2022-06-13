@@ -8,9 +8,8 @@ import {
   FullscreenControl,
   GeolocationControl,
 } from "react-yandex-maps";
-
 const YandexMap = () => (
-  <div className={style.Map}>
+  <div className={style.Map}>   
     <YMaps className={style.Map_block}>
       <div className={style.Map_block}>
         <Map
