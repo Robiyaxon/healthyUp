@@ -2,28 +2,35 @@ import React, { useEffect } from "react";
 import styles from "./FormRegistration.module.css";
 import { useState } from "react";
 import { Form, Input, Button } from "antd";
-import axios from "axios";
-var config = {
-  method: "post",
-  url: "http://10.10.8.35:8000/register/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
 function FormRegistration() {
-  const [name, setName] = useState("");
-  const [firstname, setFirstname] = useState("");
+  const [last_name, setName] = useState("");
+  const [first_name, setFirstname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [repassword, setRepassword] = useState("");
-  let item = { name, firstname, username, password, repassword };
-  async function SignApp() {
-    let result = await axios(config)
-      .then(function (response) {
-        item(response.data);
-      })
-      .catch(function (error) {});
-    console.warn(result);
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("1");
+  const [age, setAge] = useState("18");
+  const [height, setheight] = useState("18");
+  const [weight, setweight] = useState("18");
+  const [type_loss, settype_loss] = useState("1");
+  const [going_to_loss, setgoing_to_loss] = useState("10");
+  const [can_not_sports, setcan_not_sports] = useState([2]);
+  const [can_not_dieta, setcan_not_dieta] = useState([3]);
+  const [type, settype] = useState(1);
+  // const [repassword, setRepassword] = useState("");
+ 
+   function SignApp() {
+     let item = { type,last_name, first_name, username, password,email,gender,age,height,weight,type_loss,going_to_loss,can_not_sports,can_not_dieta };
+     console.log(item);
+    fetch("http://10.10.8.46:8000/register/",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      },
+      body:JSON.stringify(item),
+     
+    }); 
   }
   const map = [
     {
@@ -31,7 +38,7 @@ function FormRegistration() {
       message: "Please input your Name!",
       name: "name",
       label: "Name",
-      value: { name },
+      value: last_name ,
       setname: setName,
       type: "text",
       placeholder: "Enter your name",
@@ -41,7 +48,7 @@ function FormRegistration() {
       message: "Please input your Firstname!",
       name: "firstname",
       label: "Firstname",
-      value: { firstname },
+      value: { first_name },
       setname: setFirstname,
       type: "text",
       placeholder: "Enter your Firstname",
@@ -65,6 +72,16 @@ function FormRegistration() {
       setname: setPassword,
       type: "password",
       placeholder: "Enter your Username",
+    },
+    {
+      id: 5,
+      message: "Please input your Email!",
+      name: "setEmail",
+      label: "Email",
+      value: { email },
+      setname: setEmail,
+      type: "email",
+      placeholder: "Enter your E",
     },
   ];
   const map2 = map.map((a) => (

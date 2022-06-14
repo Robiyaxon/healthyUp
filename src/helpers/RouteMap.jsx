@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import { Spin } from "antd";
 import { Home } from "./../components/home/Home";
 const Question = lazy(() => import("./../components/question/Question.jsx"));
+const Foods = lazy(() => import("../components/login/foods/Foods"));
 const AboutUs = lazy(() => import("./../components/about_us/AboutUs"));
 const Contact = lazy(() => import("./../components/contact/Contact"));
 const MyCabinet = lazy(() => import("./../components/my_cabinet/My_Cabinet"));
@@ -26,6 +27,7 @@ const data = [
   { id: 8, url: "faq", element: <Question /> },
   { id: 9, url: "login", element: <Login /> },
   { id: 10, url: "reference", element: <Reference /> },
+  { id: 11, url: "foods", element: <Foods /> },
 ];
 export const dataMapForRoute = data.map((d) => (
   <Route
