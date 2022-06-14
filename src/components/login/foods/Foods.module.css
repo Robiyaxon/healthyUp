@@ -1,0 +1,30 @@
+.Foods {
+    border: 2px solid red;
+    padding: 150px 175px 20px 175px;
+    background: rgba(247, 231, 200, 0.3);
+    height: 100vh;
+}
+
+.Foods h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+    width: 530px;
+    margin: 0 auto 56px auto;
+    color: #4C3C00;
+}
+
+.Select {
+    width: 472px;
+    border-radius: 10px;
+    height: 60px !important;
+   
+}
+.Select_block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

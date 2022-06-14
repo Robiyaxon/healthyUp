@@ -1,12 +1,11 @@
 .form_wrapper {
-  background-color: rgba(244, 255, 255, 1);
+  background: rgba(247, 231, 200, 0.3);
   width: 100%;
 }
-
 .form_content {
   max-width: 472px;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 120px;
   padding-bottom: 100px;
 }
 .form_content h3 {

@@ -1,29 +1,51 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./FormRegistration.module.css";
 import { useState } from "react";
 import { Form, Input, Button } from "antd";
-import axios from "axios";
-var config = {
-  method: "post",
-  url: "http://10.10.8.46:8000/register/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+import { useNavigate } from "react-router-dom";
 function FormRegistration() {
-  const [name, setName] = useState("");
-  const [firstname, setFirstname] = useState("");
+  const [last_name, setName] = useState("");
+  const [first_name, setFirstname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [repassword, setRepassword] = useState("");
-  let item = { name, firstname, username, password, repassword };
-  async function SignApp() {
-    let result = await axios(config)
-      .then(function (response) {
-        item(response.data);
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("1");
+  const [age, setAge] = useState("14545");
+  const [height, setheight] = useState("18454454");
+  const [weight, setweight] = useState("1854545");
+  const [type_loss, settype_loss] = useState("145454");
+  const [going_to_loss, setgoing_to_loss] = useState("145450");
+  const [can_not_sports, setcan_not_sports] = useState([1]);
+  const [can_not_dieta, setcan_not_dieta] = useState([6]);
+  const [type, settype] = useState("1");
+  const navigate = useNavigate();
+  function SignApp() {
+    var formdata = new FormData();
+    formdata.append("type", type);
+    formdata.append("username", username);
+    formdata.append("email", email);
+    formdata.append("password", password);
+    formdata.append("first_name", first_name);
+    formdata.append("last_name", last_name);
+    formdata.append("gender", gender);
+    formdata.append("age", age);
+    formdata.append("height", height);
+    formdata.append("weight", weight);
+    formdata.append("type_loss", type_loss);
+    formdata.append("going_to_loss", going_to_loss);
+    formdata.append("can_not_sports", can_not_sports);
+    formdata.append("can_not_dieta", can_not_dieta);
+    var requestOptions = {
+      method: "POST",
+      body: formdata,
+      redirect: "follow",
+    };
+
+    fetch("http://10.10.8.46:8000/register/", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
       })
-      .catch(function (error) {});
-    console.warn(result);
+      .catch((error) => console.log("error", error));
   }
   const map = [
     {
@@ -31,8 +53,8 @@ function FormRegistration() {
       message: "Please input your Name!",
       name: "name",
       label: "Name",
-      value: { name },
-      setname: setName,
+      value: last_name,
+      setname1: setName,
       type: "text",
       placeholder: "Enter your name",
     },
@@ -41,8 +63,8 @@ function FormRegistration() {
       message: "Please input your Firstname!",
       name: "firstname",
       label: "Firstname",
-      value: { firstname },
-      setname: setFirstname,
+      value: { first_name },
+      setname1: setFirstname,
       type: "text",
       placeholder: "Enter your Firstname",
     },
@@ -52,7 +74,7 @@ function FormRegistration() {
       name: "username",
       label: "Username",
       value: { username },
-      setname: setUsername,
+      setname1: setUsername,
       type: "text",
       placeholder: "Enter your Username",
     },
@@ -62,9 +84,19 @@ function FormRegistration() {
       name: "password",
       label: "Create a password",
       value: { password },
-      setname: setPassword,
+      setname1: setPassword,
       type: "password",
       placeholder: "Enter your Username",
+    },
+    {
+      id: 5,
+      message: "Please input your Email!",
+      name: "setEmail",
+      label: "Email",
+      value: { email },
+      setname1: setEmail,
+      type: "email",
+      placeholder: "Enter your E",
     },
   ];
   const map2 = map.map((a) => (
@@ -76,7 +108,7 @@ function FormRegistration() {
     >
       <Input
         value={a.value}
-        onChange={(e) => a.setname(e.target.value)}
+        onChange={(e) => a.setname1(e.target.value)}
         placeholder={a.placeholder}
         type={a.type}
       />
@@ -92,21 +124,7 @@ function FormRegistration() {
           className="login-form"
           layout="vertical"
         >
-          {" "}
           {map2}
-          {/* 
-          <Form.Item
-            rules={[{ required: true, message: "Please input your Password!" }]}
-            name="repassword"
-            label="Repeat the password"
-          >
-            <Input
-              value={repassword}
-              onChange={(e) => setRepassword(e.target.value)}
-              type="password"
-              placeholder="Repeate the password"
-            />
-          </Form.Item> */}
           <Button type="primary" htmlType="submit" onClick={SignApp}>
             Continue
           </Button>

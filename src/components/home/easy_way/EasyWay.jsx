@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-import lenta1 from "./../../../assets/home/easy_way/metr1.png";
-import meal from "./../../../assets/home/easy_way/food1.png";
-import lenta2 from "./../../../assets/home/easy_way/metr2.png";
+import React, { useEffect, useState } from "react"
 
 import styles from "./EasyWay.module.css";
 import { instance } from "../../../api/api";
@@ -10,13 +6,10 @@ import { instance } from "../../../api/api";
 const EasyWay = () => {
   const [data, setData] = useState([]);
 
-  const [lenta, setLenta] = useState(1);
-
   useEffect(() => {
     instance.get("home_card/").then((response) => setData(response.data));
   }, []);
 
-  console.log(data);
   const dataMap = data.map((d) => {
     return (
       <div className={styles.header_sport_wrapper} key={d.id}>
