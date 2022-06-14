@@ -18,7 +18,7 @@
   padding: 13rem 180px 50px;
 }
 
-.header .first:nth-child(even){
+.header .first:nth-child(even) {
   flex-direction: row-reverse !important;
   border: 3px solidd rebeccapurple;
 }
@@ -62,7 +62,6 @@
 }
 .first_content {
   width: 48%;
-  /* margin-left: 3rem; */
 }
 .second_content {
   width: 48%;
@@ -89,22 +88,20 @@
 .second_content p {
   width: 80%;
   text-align: left;
-  /* padding-bottom: 100px; */
 }
 
-.header__text__bg{
+.header__text__bg {
   background-image: url(../../assets/about_us/headerBG.png);
 }
 
-.header__text{
+.header__text {
   background-image: url(../../assets/about_us/header.png);
   background-repeat: no-repeat;
-  background-size: auto  85%;
+  background-size: auto 85%;
   background-position: 90% bottom;
   height: 100vh;
   width: 100%;
 }
-
 
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 * {
@@ -130,7 +127,7 @@
   padding-bottom: 4vmin;
   height: 98vh;
   width: 100%;
-  background-color: #F6E4C2;
+  background-color: #f6e4c2;
   color: #3a3535;
 }
 body {
@@ -173,7 +170,8 @@ body {
     transform: none;
   }
 }
-.cafe, .mozart {
+.cafe,
+.mozart {
   animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .title-inner {
@@ -182,7 +180,8 @@ body {
 }
 .cafe-inner {
   display: inline-block;
-  animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .mozart-inner {
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
@@ -220,7 +219,6 @@ body {
   margin: 13vh 0 0 auto;
 }
 
-
 .rotatingText {
   align-items: center;
   display: flex;
@@ -232,7 +230,7 @@ body {
   width: 100%;
 }
 .rotatingText_description {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-style: italic;
   font-size: 14px;
   margin: 0;
@@ -243,7 +241,7 @@ body {
   }
 }
 .rotatingText_adjective {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 40px;
   left: 0;
   margin-bottom: 0;
@@ -274,7 +272,8 @@ body {
     transform: translate3d(0, 80px, 0);
     opacity: 0;
   }
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
@@ -288,7 +287,8 @@ body {
     opacity: 0;
     transform: translate3d(0, 80px, 0);
   }
-  50%, 100% {
+  50%,
+  100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
@@ -299,7 +299,6 @@ body {
   right: 0;
   width: 50px;
 }
-
 
 @media (min-width: 500px) and (max-width: 650.9px) {
   .manWrapper {

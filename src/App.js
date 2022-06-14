@@ -8,7 +8,7 @@ import { MyBackTop } from "./components/backTop/BackTop";
 import { Footer } from "./components/footer/Footer";
 import { MySearch } from "./components/search/Search";
 import { dataMapForRoute } from './helpers/RouteMap';
-import "./App.css";
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {

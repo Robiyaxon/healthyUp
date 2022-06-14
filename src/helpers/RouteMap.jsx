@@ -38,7 +38,7 @@ const data = [
   { id: 10, url: "reference", element: <Reference /> },
   { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser /> },
   { id: 12, url: "goal", element: <Goal /> },
-  { id: 12, url: "direction", element: <Direction /> },
+  { id: 13, url: "direction", element: <Direction /> },
 ];
 export const dataMapForRoute = data.map((d) => (
   <Route
