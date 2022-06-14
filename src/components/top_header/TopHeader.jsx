@@ -44,7 +44,7 @@ export const TopHeader = () => {
     { id: 1, name: t("navbar5"), url: "/" },
     { id: 2, name: t("navbar1"), url: "about_us" },
     { id: 3, name: t("navbar2"), url: "contact" },
-    { id: 4, name: "FAQ", url: "faq" },
+    { id: 4, name: "FAQ", url: "faq" }
   ];
 
   const map2 = map.map((a) => (

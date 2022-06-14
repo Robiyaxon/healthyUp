@@ -13,7 +13,7 @@ var config = {
     "Content-Type": "application/json",
   },
 };
-export const Contact = () => {
+ const Contact = () => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -133,3 +133,4 @@ export const Contact = () => {
     </div>
   );
 };
+export default Contact

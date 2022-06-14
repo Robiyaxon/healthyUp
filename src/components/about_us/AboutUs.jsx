@@ -14,7 +14,7 @@ var config = {
   },
 };
 
-export const AboutUs = () => {
+ const AboutUs = () => {
   const [data, setData] = useState([]);
   // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
@@ -85,3 +85,4 @@ export const AboutUs = () => {
     </div>
   );
 };
+export default AboutUs
