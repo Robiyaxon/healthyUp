@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from "react";
 import style from "./HomeHeader.module.css";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 import { useSelector } from "react-redux";
-var config = {
-  method: "get",
-  url: "http://10.10.8.35:8000/homeheader/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
-
+import { instance } from "../../../api/api";
 export const HomeHeader = () => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
@@ -64,11 +56,7 @@ export const HomeHeader = () => {
     </div>
   ));
   useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {});
+    instance.get("homeheader/").then((response) => setData(response.data));
   }, []);
   return <div className={style.HomeHeader}>{map}</div>;
 };
