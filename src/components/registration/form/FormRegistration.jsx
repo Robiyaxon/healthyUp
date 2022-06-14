@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./FormRegistration.module.css";
 import { useState } from "react";
 import { Form, Input, Button } from "antd";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 function FormRegistration() {
   const [last_name, setName] = useState("");
   const [first_name, setFirstname] = useState("");
@@ -18,7 +18,7 @@ function FormRegistration() {
   const [can_not_sports, setcan_not_sports] = useState([1]);
   const [can_not_dieta, setcan_not_dieta] = useState([6]);
   const [type, settype] = useState("1");
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   function SignApp() {
     var formdata = new FormData();
     formdata.append("type", type);
@@ -35,7 +35,7 @@ function FormRegistration() {
     formdata.append("going_to_loss", going_to_loss);
     formdata.append("can_not_sports", can_not_sports);
     formdata.append("can_not_dieta", can_not_dieta);
-     var requestOptions = {
+    var requestOptions = {
       method: "POST",
       body: formdata,
       redirect: "follow",
@@ -43,9 +43,10 @@ function FormRegistration() {
 
     fetch("http://10.10.8.46:8000/register/", requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      .then((result) => {
+       console.log(result.key);
+      })
       .catch((error) => console.log("error", error));
-      navigate("/")
   }
   const map = [
     {
