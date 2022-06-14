@@ -1,10 +1,9 @@
-import React from "react";
-import style from "./aboutUz.module.css";
-import girl from "./../../assets/about_us/girl.png";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState }  from "react";
 import axios from "axios";
-// import { useSelector } from "react-redux";
-import { NumberSec } from './NumberSec';
+
+import { NumberSec } from "./NumberSec";
+
+import style from "./aboutUz.module.css";
 
 var config = {
   method: "get",
@@ -14,7 +13,7 @@ var config = {
   },
 };
 
- const AboutUs = () => {
+const AboutUs = () => {
   const [data, setData] = useState([]);
   // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
@@ -27,13 +26,11 @@ var config = {
 
   const map = data.map((d) => {
     return (
-      <div  className={style.first} key={d.id}>
-        <div  className={style.manWrapper}>
+      <div className={style.first} key={d.id}>
+        <div className={style.manWrapper}>
           <img src={d.img1} alt="man img" />
         </div>
-        <div
-          className={style.first_content}
-        >
+        <div className={style.first_content}>
           <h2>{d.title_uz}</h2>
           <p>{d.uz_text}</p>
         </div>
@@ -62,26 +59,9 @@ var config = {
           />
         </div>
       </div>
-      <div classNameName={style.header}>
-        {map}
-        <div className={style.second}>
-          <div
-            className={style.second_content}
-          >
-            <p>
-              Shu sababli biz tog`ri ozishga yordam beruvchi bepul sayt
-              yaratishga qaror qildik. bundan tashqari satimiz dietolog va
-              treynerlarni oz ozini bant qilishu uchun ham juda katta yordam
-              beradi.
-            </p>
-          </div>
-          <div  className={style.girlWrapper}>
-            <img src={girl} alt="" />
-          </div>
-        </div>
-      </div>
-    <NumberSec />
+      <div className={style.header}>{map}</div>
+      <NumberSec />
     </div>
   );
 };
-export default AboutUs
+export default AboutUs;
