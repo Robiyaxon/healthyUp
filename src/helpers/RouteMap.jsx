@@ -8,11 +8,11 @@ import { News } from './../components/news/News';
 import { AboutUs } from './../components/about_us/AboutUs';
 import { Contact } from './../components/contact/Contact';
 
-
 const Question = lazy(() => import("./../components/question/Question.jsx"));
 const Login = lazy(() => import("./../components/login/Login.jsx"));
 const Registration = lazy(() => import("./../components/registration/Registration.jsx"));
 const FemaleOrMale = lazy(() => import("./../components/login/femaleOrMale/FemaleOrMale.jsx"));
+const WhoIsTheUser = lazy(() => import("./../components/login/whoIsTheUser/WhoIsTheUser.jsx"));
 
 const data = [
 
@@ -25,6 +25,7 @@ const data = [
   { id: 6, url: "femaleOrMale", element: <FemaleOrMale /> },
   { id: 7, url: "faq", element: <Question /> },
   { id: 7, url: "login", element: <Login /> },
+  { id: 7, url: "whoIsTheUser", element: <WhoIsTheUser /> },
 ];
 
 export const dataMapForRoute = data.map((d) => (
