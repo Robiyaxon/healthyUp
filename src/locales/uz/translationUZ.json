@@ -35,6 +35,8 @@
   "login_register":"Yoki ro'yxatdan o'ting",
   "gender":"Sizning jinsingiz?",
   "woman":"Ayol",
-  "man":"Erkak"
+  "man":"Erkak",
+  "Continue":"Davom etish",
+  "information":"Ma'lumotlarni to'ldiring"
 
 }

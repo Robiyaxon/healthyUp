@@ -1,7 +1,10 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
 import style from "./Reference.module.css";
+import { useTranslation } from "react-i18next";
 const Reference = () => {
+  const { t } = useTranslation();
+
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
@@ -29,6 +32,7 @@ const Reference = () => {
     <Form.Item
       key={a.id}
       name={a.name}
+      className={style.Input}
       rules={[
         {
           required: true,
@@ -41,8 +45,26 @@ const Reference = () => {
   ));
   return (
     <div className={style.Reference}>
-      <h1>Ma'lumotlarni to'ldiring</h1>
-     
+      <h1>{t("information")}</h1>
+      <Form
+        name="normal_login"
+        className={style.login_form}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+      >
+        {map2}
+        <Form.Item>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="login-form-button"
+          >
+            {t("Continue")}
+          </Button>
+        </Form.Item>
+      </Form>
     </div>
   );
 };
