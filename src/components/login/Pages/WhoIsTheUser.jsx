@@ -1,5 +1,5 @@
 import React from "react";
-import LoginPages from "../../../helpers/LoginPages";
+import LoginPages from "../../../helpers/Helpers";
 
 const WhoIsTheUser = () => {
   const data = [
@@ -19,3 +19,6 @@ const WhoIsTheUser = () => {
 };
 
 export default WhoIsTheUser;
+
+
+

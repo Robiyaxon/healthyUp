@@ -44,7 +44,6 @@ function FormRegistration() {
     fetch("http://10.10.8.46:8000/register/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
-       console.log(result.key);
       })
       .catch((error) => console.log("error", error));
   }

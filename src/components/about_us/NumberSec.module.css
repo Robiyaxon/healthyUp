@@ -1,6 +1,5 @@
 .numberSec {
   height: 400px;
-  border: 3px solidd rebeccapurple;
   padding: 0 200px 0;
   width: 100%;
   display: flex;
@@ -31,7 +30,6 @@
 }
 
 .counter_block {
-  /* width: 15%; */
   font-family: Gilroy, sans-serif;
   border-right: 2px solid #06060c;
   padding: 0 5%;

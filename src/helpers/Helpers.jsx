@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
 import style from "./LoginPages.module.css";
+
+export const BtnAnimation = ({ text, link, classes = "" }) => {
+  useEffect(() => {
+  }, []);
+  return (
+    <NavLink
+      to={link}
+      className={"container " + classes}
+    >
+      <span>{text}</span>
+    </NavLink>
+  );
+};
+
 
 const LoginPages = ({ navigateUrl, data, title }) => {
   const navigate = useNavigate();
@@ -26,3 +41,4 @@ const LoginPages = ({ navigateUrl, data, title }) => {
 };
 
 export default LoginPages;
+

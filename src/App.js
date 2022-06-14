@@ -4,11 +4,11 @@ import { Spin } from "antd";
 
 import ScrollToTop from "./ScrollerOn";
 import { TopHeader } from "./components/top_header/TopHeader";
-import { MyBackTop } from "./components/backTop/BackTop";
+import { MyBackTop } from "./ScrollerOn";
 import { Footer } from "./components/footer/Footer";
 import { MySearch } from "./components/search/Search";
-import { dataMapForRoute } from './helpers/RouteMap';
-import "./App.css";
+import { RouterMap } from "./helpers/RouteMap";
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -30,7 +30,7 @@ const App = () => {
         <>
           <ScrollToTop />
           <TopHeader />
-          <Routes>{dataMapForRoute}</Routes>
+          <RouterMap />
           <div className="select"></div>
         </>
       )}
@@ -38,7 +38,6 @@ const App = () => {
       <MyBackTop />
       <MySearch />
       <Footer />
-
     </div>
   );
 };

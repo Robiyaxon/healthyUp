@@ -3,10 +3,9 @@
 }
 
 .SpinStyle {
-  border: 2px solid red;
   height: 100vh;
   width: 100% !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(56, 52, 52, 0.1) !important;
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;

@@ -2,29 +2,16 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./NumberSec.module.css";
-import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-var config = {
-  method: "get",
-  url: "http://10.10.8.46:8000/info_num",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
-
+import { instance } from './../../api/api';
 
 export const NumberSec = () => {
   const [data, setData] = useState({})
   const { t } = useTranslation();
 
   useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {});
+    instance.get("info_num/").then((response) => setData(response.data));
   }, [])
   return (
     <div className={styles.numberSec}>
@@ -86,7 +73,6 @@ export const NumberSec = () => {
               )}
             </CountUp>
             <h1>{t("aboutMen")}</h1>
-
           </div>
         </div>
       </div>
