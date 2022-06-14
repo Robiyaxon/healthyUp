@@ -8,7 +8,7 @@ import { NumberSec } from './NumberSec';
 
 var config = {
   method: "get",
-  url: "http://10.10.8.35:8000/aboutus/",
+  url: "http://10.10.8.46:8000/aboutus/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -21,7 +21,6 @@ var config = {
     axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {});
   }, []);

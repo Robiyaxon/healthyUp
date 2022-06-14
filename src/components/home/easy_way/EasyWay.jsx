@@ -1,59 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import boy from "./../../../assets/home/easy_way/boy.png";
-import lenta from "./../../../assets/home/easy_way/metr1.png";
+import lenta1 from "./../../../assets/home/easy_way/metr1.png";
 import meal from "./../../../assets/home/easy_way/food1.png";
 import lenta2 from "./../../../assets/home/easy_way/metr2.png";
 
 import styles from "./EasyWay.module.css";
+import { instance } from "../../../api/api";
 
 const EasyWay = () => {
+  const [data, setData] = useState([]);
+
+  const [lenta, setLenta] = useState(1);
+
+  useEffect(() => {
+    instance.get("home_card/").then((response) => setData(response.data));
+  }, []);
+
+  console.log(data);
+  const dataMap = data.map((d) => {
+    return (
+      <div className={styles.header_sport_wrapper} key={d.id}>
+        <div className={styles.header_sport}>
+          <div className={styles.header__text}>
+            <h1>{d.title_en}</h1>
+            <p>{d.text_uz}</p>
+          </div>
+          <div className={styles.Boy}>
+            <img src={d.img} alt="boy" />
+          </div>
+        </div>
+        <div className={styles.header_lenta_wrapper}>
+          <div className={styles.header_lenta}></div>
+        </div>
+      </div>
+    );
+  });
   return (
     <div className={styles.header}>
       <h2 className={styles.header_title}>
         Vazin yo`qotishning eng sodda va oson yollari
       </h2>
-      <div className={styles.header_sport_wrapper}>
-        <div className={styles.header_sport}>
-          <div className={styles.header__text}>
-            <h1> Sport bilan shug‘ullanish</h1>
-            <p>
-              Sport metabolizmni tezlashtirish usullaridan biridir, ammo,
-              afsuski, faqat bu emas. Tabiiyki, ko‘p narsa ovqatlanish va
-              endokrin tizimning ishlashiga bog‘liq. Shuning uchun, agar uzoq
-              vaqt davomida mashq qilinsa-yu, lekin hech qanday o‘zgarishlar
-              bo‘lmasa, hammasini ovqatlanishdan boshlash va gormonlar uchun
-              testdan o‘tish kerak.
-            </p>
-          </div>
-          <div className={styles.Boy}>
-            <img src={boy} alt="boy" />
-          </div>
-        </div>
-        <div className={styles.header_lenta_wrapper}>
-          <img className={styles.header_lenta} src={lenta} alt="lenta" />
-        </div>
-      </div>
-
-      <div className={styles.header_meal_wrapper}>
-        <div className={styles.header_meal}>
-          <img src={meal} alt="food img" />
-          <div className={styles.header__meal_text}>
-            <h1>Meyyor bilan ovqatlanish</h1>
-            <p>
-              Soat 18-00 dan keyin ovqat tanovul qilmang. Aynan shu davrda
-              organizm faolligi kamayadi va yeyilgan har qanday taom yaxshi hazm
-              bo‘lmay, organizmda o‘tirib qoladi. Qabul qilinadigan ovqatning
-              asosiy qismi tushlik vaqtiga to‘g‘ri kelishini ta’minlang. Kechki
-              ovqat uglevodlar tutmasligi kerak. Iloji bo‘lsa dimlangan
-              sabzavotlardan tayyorlangan taomlarni yegan ma’qul.
-            </p>
-          </div>
-        </div>
-        <div className={styles.food_lenta_wrapper}>
-          <img src={lenta2} alt="lenta" />
-        </div>
-      </div>
+      {dataMap}
     </div>
   );
 };

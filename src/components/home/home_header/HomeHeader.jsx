@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import style from "./HomeHeader.module.css";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 import { instance } from "../../../api/api";
+
+import style from "./HomeHeader.module.css";
+
 export const HomeHeader = () => {
+
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
   const map = data.map((a) => (
-    <div className={style.Block}>
+    <div className={style.Block} key={a.id}>
       {" "}
       <div className={style.Block__Title}>
         <h1>

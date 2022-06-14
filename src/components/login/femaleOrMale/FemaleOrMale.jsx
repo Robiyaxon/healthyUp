@@ -3,18 +3,18 @@ import { useTranslation } from "react-i18next";
 import erkak from "../../../assets/login/femaleOrMale/erkak.svg";
 import ayol from "../../../assets/login/femaleOrMale/ayol.svg";
 import style from "./FemaleOrMale.module.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const FemaleOrMale = () => {
   const { t } = useTranslation();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const women = () => {
     alert("Ayolni tanladingiz!");
-    navigate("/reference")
+    navigate("/reference");
   };
   const man = () => {
     alert("Ayolni tanladingiz!");
-    navigate("/reference")
+    navigate("/reference");
   };
   return (
     <div className={style.jinsi}>

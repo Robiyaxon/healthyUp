@@ -5,7 +5,7 @@ import styles from "./Specialists.module.css";
 import axios from "axios";
 var config = {
   method: "get",
-  url: "http://10.10.8.35:8000/expert/",
+  url: "http://10.10.8.46:8000/expert/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -21,9 +21,7 @@ export const Specialists = () => {
       .catch(function (error) {});
   }, []);
   const dataMap = data.map((d) => {
-    console.log('http://10.10.8.46:8000' + d.image);
     let image = 'http://10.10.8.46:8000' + d.image
-    console.log(image)
     return(
     <div className={styles.box} key={d.id}>
       <div

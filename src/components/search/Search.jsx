@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
-import style from "./Search.module.css";
-import img1 from "../../assets/home/search/group.svg";
-import Search from "antd/lib/input/Search";
 import { useSelector } from "react-redux";
+import Search from "antd/lib/input/Search";
+
+import img1 from "../../assets/home/search/group.svg";
+
 import { instance } from './../../api/api';
+
+import style from "./Search.module.css";
+
 const onSearch = (value) => console.log(value);
+
 export const MySearch = () => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
+
   useEffect(() => {
     instance.get("search_static/").then((response) => setData(response.data));
   }, []);
+
   return (
     <>
       {data.map((a) => (
-        <div className={style.Search}>
+        <div className={style.Search} key={a.id}>
           <div className={style.Title}>
             <h1>
               {language === "uz" ? (

@@ -34,7 +34,6 @@ export const TopHeader = () => {
     setLang(event.target.value);
     localStorage.setItem("lang", event.target.value);
     i18n.changeLanguage(event.target.value);
-    console.log(event.target.value);
     dispatch({ type: "LANG_CHANGED", payload: event.target.value });
   }
   const onClose = () => {

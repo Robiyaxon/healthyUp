@@ -6,6 +6,7 @@ import { message } from "antd";
 import YandexMap from "./Map";
 import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
+
  const Contact = () => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
@@ -22,7 +23,6 @@ import { instance } from './../../api/api';
     }
   };
   const data2=data.map(a=><>{a}</>)
-  console.log(data2.address);
   const map = [
     {
       value: name,

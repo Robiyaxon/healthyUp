@@ -2,10 +2,15 @@ import React from "react";
 import { Button, Form, Input } from "antd";
 import style from "./Reference.module.css";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 const Reference = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const onFinish = (values) => {
+
+    navigate('/goal');
+
     console.log("Received values of form: ", values);
   };
   const map = [
