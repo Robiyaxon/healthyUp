@@ -7,25 +7,13 @@ import google from "../../assets/home/footer/googleplay.svg";
 import chiziq from "../../assets/home/footer/chiziq.svg";
 import telegram from "../../assets/home/footer/telegram.svg";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
-
-var config = {
-  method: "get",
-  url: "http://10.10.8.35:8000/footer/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+import { instance } from './../../api/api';
 export const Footer = () => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {});
+    instance.get("footer/").then((response) => setData(response.data));
   }, []);
   const map = data.map((a) => (
     <div className={style.Footer} key={a.id}>

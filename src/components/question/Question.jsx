@@ -2,24 +2,13 @@ import React, { useEffect, useState } from "react";
 import style from "./Question.module.css";
 import Question2 from "./Question2";
 import faq from "../../assets/FAQ/faq.png";
-import axios from 'axios';
 import { useTranslation } from "react-i18next";
-var config = {
-  method: "get",
-  url: "http://10.10.8.35:8000/question",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+import { instance } from './../../api/api';
 const Question = () => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {});
+    instance.get("question/").then((response) => setData(response.data));
   }, []);
   return (
     <div className={style.WrapperQuestion}>
