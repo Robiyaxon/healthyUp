@@ -49,9 +49,9 @@ export const dataMapForRoute = data.map((d) => (
     element={
       <Suspense
         fallback={
-          <>
+          <div className="SpinStyle">
             <Spin />
-          </>
+          </div>
         }
       >
         {d.element}
