@@ -34,7 +34,6 @@ export const TopHeader = () => {
     setLang(event.target.value);
     localStorage.setItem("lang", event.target.value);
     i18n.changeLanguage(event.target.value);
-    console.log(event.target.value);
     dispatch({ type: "LANG_CHANGED", payload: event.target.value });
   }
   const onClose = () => {
@@ -44,7 +43,7 @@ export const TopHeader = () => {
     { id: 1, name: t("navbar5"), url: "/" },
     { id: 2, name: t("navbar1"), url: "about_us" },
     { id: 3, name: t("navbar2"), url: "contact" },
-    { id: 4, name: "FAQ", url: "faq" },
+    { id: 4, name: "FAQ", url: "faq" }
   ];
 
   const map2 = map.map((a) => (

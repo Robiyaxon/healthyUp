@@ -1,0 +1,69 @@
+.Reference {
+    padding: 200px 175px 20px 175px;
+    background: rgba(247, 231, 200, 0.3);
+    height: 100vh;
+}
+
+.Reference h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+
+    color: #4C3C00;
+}
+
+.login_form {
+    width: 472px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login_form button {
+    width: 472px;
+    height: 50px;
+    border: none;
+    margin-top: 70px;
+    background: linear-gradient(265.62deg, #E6BF4C -14.74%, #BC9520 154.51%);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Poppins';
+
+}
+
+.Input {
+    background: #FFFFFF;
+    width: 224px;
+    height: 42px;
+    margin: 0 auto;
+    border: 2px solid #C5C3CA;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.Input input {
+    width: 224px;
+    height: 42px;
+    border-radius: 10px;
+
+}
+@media(min-width:0) and (max-width:900.9px) {
+    .Reference {
+        padding: 140px 20px 20px 20px;
+        height: auto;
+    }
+    .Reference h1{
+    font-size: 27px;
+    width: 100%;
+    }
+    .login_form button {
+        width: 300px;
+    }
+    .login_form {
+        width: 100%;
+    }
+}

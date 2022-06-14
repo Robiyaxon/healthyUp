@@ -1,18 +1,21 @@
-
-import { React } from 'react';
-
-
-import style from './WhoIsTheUser.module.css'
+import React from "react";
+import LoginPages from "../../../helpers/LoginPages";
 
 const WhoIsTheUser = () => {
-  return ( 
-    <div className={style.body}>
-      <h1>Kim sifatida ro'yxatdan o'tmoqchisiz</h1>
-      <button>User</button>
-      <button>Dietolog</button>
-      <button>Treyner</button>
+  const data = [
+    { id: 0, name: "User" },
+    { id: 1, name: "Dietolog" },
+    { id: 2, name: "Treyner" },
+  ];
+  return (
+    <div>
+      <LoginPages
+        navigateUrl={"/femaleOrMale"}
+        title={"Kim sifatida ro'yxatdan o'tmoqchisiz"}
+        data={data}
+      />
     </div>
-   );
-}
- 
+  );
+};
+
 export default WhoIsTheUser;

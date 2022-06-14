@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 var config = {
   method: "get",
-  url: "http://10.10.8.35:8000/info_num",
+  url: "http://10.10.8.46:8000/info_num",
   headers: {
     "Content-Type": "application/json",
   },
@@ -23,11 +23,9 @@ export const NumberSec = () => {
     axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {});
   }, [])
-  console.log(data.ayollar);
   return (
     <div className={styles.numberSec}>
       <div className={styles.numberSec__block}>

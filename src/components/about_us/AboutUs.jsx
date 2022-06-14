@@ -8,20 +8,19 @@ import { NumberSec } from './NumberSec';
 
 var config = {
   method: "get",
-  url: "http://10.10.8.35:8000/aboutus/",
+  url: "http://10.10.8.46:8000/aboutus/",
   headers: {
     "Content-Type": "application/json",
   },
 };
 
-export const AboutUs = () => {
+ const AboutUs = () => {
   const [data, setData] = useState([]);
   // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
     axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {});
   }, []);
@@ -85,3 +84,4 @@ export const AboutUs = () => {
     </div>
   );
 };
+export default AboutUs

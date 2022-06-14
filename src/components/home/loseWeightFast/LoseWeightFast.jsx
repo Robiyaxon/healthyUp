@@ -26,12 +26,11 @@ const LoseWeightFast = () => {
   // ];
   var config = {
     method: "get",
-    url: "http://10.10.8.35:8000/advice/",
+    url: "http://10.10.8.46:8000/advice/",
     headers: {
       "Content-Type": "application/json",
     },
   };
-  console.log(data);
   const dataMap = data.map((d) => {
     return (
       <div className={styles.blocks__box} key={d.id}>

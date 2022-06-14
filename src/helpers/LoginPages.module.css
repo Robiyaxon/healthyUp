@@ -1,6 +1,6 @@
 .body {
   width: 30%;
-  margin: 5rem auto;
+  margin: 5rem auto 0;
   height: 86vh;
   display: flex;
   flex-direction: column;
@@ -39,4 +39,19 @@
   text-align: center;
 
   color: #4c3c00;
+}
+
+
+@media (min-width:0) and (max-width:950.9px) {
+  .body{
+    width: 80%;
+  }
+  .body button{
+    width: 95%
+  }
+
+  .body h1{
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

@@ -25,15 +25,15 @@
 .Top_Header {
   /* height: 100vh; */
   position: fixed;
-  padding: 20px 155px;
+  padding: 40px 155px;
   width: 100%;
   z-index: 10;
-  transition: .5s all linear;
+  transition: .3s all linear;
 }
 
 .scroller{
   background: rgba(0,0,0,0.3);
-
+  padding: 20px 155px;
 }
 
 .Block_Navlink {

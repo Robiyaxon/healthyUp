@@ -5,15 +5,9 @@ import TextArea from "antd/lib/input/TextArea";
 import { message } from "antd";
 import YandexMap from "./Map";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
-var config = {
-  method: "get",
-  url: "http://10.10.8.35:8000/footer/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
-export const Contact = () => {
+import { instance } from './../../api/api';
+
+ const Contact = () => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -21,11 +15,7 @@ export const Contact = () => {
   const [tel, setTel] = useState("");
   const [textarea, setTextarea] = useState("");
   useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {});
+    instance.get("footer/").then((response) => setData(response.data));
   }, []);
   const success = () => {
     if ((name !== "", firstname !== "", tel !== "", textarea !== "")) {
@@ -33,7 +23,6 @@ export const Contact = () => {
     }
   };
   const data2=data.map(a=><>{a}</>)
-  console.log(data2.address);
   const map = [
     {
       value: name,
@@ -133,3 +122,4 @@ export const Contact = () => {
     </div>
   );
 };
+export default Contact

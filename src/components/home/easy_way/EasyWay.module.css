@@ -19,6 +19,41 @@
   margin: 0 auto;
 }
 
+.header .header_sport_wrapper:nth-child(odd) .header_sport {
+  flex-direction: row-reverse;
+}
+
+.header .header_sport_wrapper:nth-child(odd) .header_sport img {
+  right: 0;
+  width: 100%;
+  position: relative;
+}
+.header .header_sport_wrapper:nth-child(odd) .Boy {
+  right: 100px;
+  position: relative;
+  width: 60%;
+}
+
+.header .header_sport_wrapper:nth-child(odd) .header__text{
+  width:100%;
+  margin-left: -20rem;
+}
+
+.header .header_sport_wrapper:nth-child(odd) .header_lenta{
+  background-image: url(../../../assets/home/easy_way/metr1.png);
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+  background-size: contain;
+}
+.header .header_sport_wrapper:nth-child(even) .header_lenta{
+  background-image: url(../../../assets/home/easy_way/metr2.png);
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+  background-size: contain;
+}
+
 .header_sport_wrapper,
 .header_meal_wrapper {
   width: 70%;

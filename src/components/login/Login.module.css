@@ -30,7 +30,7 @@
     height: 50px; 
     background: linear-gradient(265.62deg, #E6BF4C -14.74%, #BC9520 154.51%);
     border-radius: 10px;
-    margin-top: 32px;
+    margin-top: 27px;
     margin-bottom: 10px;
     border: none;
 }
@@ -40,7 +40,7 @@
 }
 
 .Input {
-    height: 45px;
+    height: 52px;
     border: 2px solid #C5C3CA;
     border-radius: 10px;
     margin-top: 6px;
