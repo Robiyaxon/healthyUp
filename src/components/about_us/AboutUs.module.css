@@ -7,9 +7,6 @@
   background-size: 100% 100%;
   z-index: 1;
 }
-.header {
-  padding-top: 300px;
-}
 .first {
   display: flex;
   justify-content: space-between;

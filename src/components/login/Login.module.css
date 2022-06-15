@@ -61,6 +61,17 @@
     font-size: 20px;
     float: right;
 }
+
+.error{
+    color: red !important;
+    display: none;
+    transition: .5s all linear;
+}
+
+.errorTrue{
+    display: inherit !important;
+    transition: .5s all linear;
+}
 @media(min-width:0) and (max-width:750.9px){
     .Login {
         padding: 100px 5px 20px 5px;

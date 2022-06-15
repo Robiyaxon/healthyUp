@@ -9,7 +9,7 @@ const AboutUs = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-        instance.get("aboutus/").then((response) => setData(response.data));
+    instance.get("aboutus/").then((response) => setData(response.data));
   }, []);
 
   const map = data.map((d) => {

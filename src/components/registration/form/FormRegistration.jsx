@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "./FormRegistration.module.css";
 import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./FormRegistration.module.css";
+
 function FormRegistration() {
   const [last_name, setName] = useState("");
   const [first_name, setFirstname] = useState("");

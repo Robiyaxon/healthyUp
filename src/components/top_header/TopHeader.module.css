@@ -9,15 +9,13 @@
 }
 
 .scroller{
-  background: rgba(0,0,0,0.3);
+  background: rgb(249 237 215);
   padding: 20px 155px;
 }
 
 .Block_Navlink {
   width: 20%;
 }
-
-
 
 .Navlink_href {
   width: 148px;
