@@ -24,7 +24,7 @@
 
 .wrapper input {
     width: 472px;
-    height: 45px;
+    height: 50px;
     border-radius: 10px;
 }
 
@@ -69,15 +69,17 @@
     border-radius: 10px;
     margin-top: 40px;
 }
-.wrapper button{
+
+.wrapper button {
     width: 472px;
     height: 50px;
     border: none;
     outline: none;
     font-size: 16px;
-line-height: 24px;
-border-radius: 10px;
+    line-height: 24px;
+    border-radius: 10px;
 }
+
 .login_form {
     width: 100%;
     display: flex;
@@ -85,17 +87,21 @@ border-radius: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
-@media(min-width:0) and (max-width:550.9px){
-    .wrapper button{
+
+@media(min-width:0) and (max-width:550.9px) {
+    .wrapper button {
         width: 80%;
-    } 
+    }
+
     .wrapper {
         padding: 140px 20px 0 20px;
 
     }
+
     .button {
         width: 100%;
     }
+
     .wrapper textarea {
         width: 90% !important;
         height: 116px !important;
@@ -103,73 +109,86 @@ border-radius: 10px;
 
         margin-top: 40px;
     }
+
     .wrapper input {
         width: 250px;
         height: 42px;
         border-radius: 10px;
     }
-    .TextArea{
+
+    .TextArea {
         width: 100% !important;
         text-align: center;
     }
+
     .wrapper h1 {
         font-size: 36px;
     }
+
     .Title1 {
         text-align: center;
     }
-    
+
     .Title1 h2 {
         font-size: 22px;
         width: 100%;
     }
-    
+
     .Title1 p {
         font-size: 18px;
         width: 100%;
     }
 }
-@media(min-width:551px) and (max-width:850.9px){
+
+@media(min-width:551px) and (max-width:850.9px) {
     .wrapper {
         padding: 140px 30px 0 30px;
     }
+
     .button {
         width: 100%;
     }
+
     .wrapper textarea {
         width: 95% !important;
     }
+
     .wrapper input {
         width: 450px;
         height: 42px;
         border-radius: 10px;
     }
-    .TextArea{
+
+    .TextArea {
         width: 100% !important;
         text-align: center;
     }
+
     .wrapper h1 {
         font-size: 36px;
     }
+
     .Title1 {
         text-align: center;
     }
-    
+
     .Title1 h2 {
         font-size: 22px;
         width: 100%;
     }
-    
+
     .Title1 p {
         font-size: 18px;
         width: 100%;
     }
 }
-@media(min-width:851px) and (max-width:1050.9px){
+
+@media(min-width:851px) and (max-width:1050.9px) {
     .wrapper textarea {
         width: 95% !important;
     }
-    .TextArea{
+
+    .TextArea {
         width: 100% !important;
         text-align: center;
     }

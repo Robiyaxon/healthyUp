@@ -1,5 +1,6 @@
 .Login {
-    padding: 150px 175px 20px 175px;
+    padding: 170px 175px 20px 175px;
+    height: 100vh;
     background: rgba(247, 231, 200, 0.3);
 }
 
@@ -19,14 +20,14 @@
     font-weight: 400;
     width: 451px;
     font-size: 20px;
-    margin: 0 auto;
+    margin: 0 auto ;
     line-height: 24px;
     text-align: center;
     color: #4C3C00;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
 }
 .button{
-    width: 472px;
+    width: 452px;
     height: 50px; 
     background: linear-gradient(265.62deg, #E6BF4C -14.74%, #BC9520 154.51%);
     border-radius: 10px;
@@ -35,7 +36,7 @@
     border: none;
 }
 .login_form {
-    width: 472px !important;
+    width: 452px !important;
     margin: 0 auto !important;
 }
 
@@ -43,7 +44,7 @@
     height: 52px;
     border: 2px solid #C5C3CA;
     border-radius: 10px;
-    margin-top: 6px;
+    margin-top: 7px;
 }
 
 .login_form label {

@@ -50,9 +50,9 @@ export const RouterMap = () => {
       element={
         <Suspense
           fallback={
-            <>
+            <div className="SpinStyle">
               <Spin />
-            </>
+            </div>
           }
         >
           {d.element}

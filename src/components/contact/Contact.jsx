@@ -5,9 +5,9 @@ import TextArea from "antd/lib/input/TextArea";
 import { message } from "antd";
 import YandexMap from "./Map";
 import { useTranslation } from "react-i18next";
-import { instance } from './../../api/api';
+import { instance } from "./../../api/api";
 
- const Contact = () => {
+const Contact = () => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -22,7 +22,6 @@ import { instance } from './../../api/api';
       message.success("This is a success message");
     }
   };
-  const data2=data.map(a=><>{a}</>)
   const map = [
     {
       value: name,
@@ -36,7 +35,7 @@ import { instance } from './../../api/api';
       value: firstname,
       name: "Firstname",
       label: t("userSurname"),
-      message: t("plaseholderUserSurname") +"!",
+      message: t("plaseholderUserSurname") + "!",
       placeholder: t("plaseholderUserSurname"),
       useEffect: setFirstname,
     },
@@ -45,14 +44,14 @@ import { instance } from './../../api/api';
       name: "Tel",
       label: t("userTel"),
       message: " Tel!",
-      placeholder:  t("userTel"),
+      placeholder: t("userTel"),
       useEffect: setTel,
     },
   ];
   const map2 = map.map((a) => (
     <Form.Item
       key={a.name}
-      rules={[{ required: true, message2: + a.message }]}
+      rules={[{ required: true, message2: +a.message }]}
       name={a.name}
       label={a.label}
       className={style.InputGroup}
@@ -83,19 +82,38 @@ import { instance } from './../../api/api';
             <div className={style.Title1}>
               {" "}
               <h2>{t("Working_hours")}</h2>{" "}
-              <p>{data.map(a=><React.Fragment key={a.id}>{a.work_time}</React.Fragment>)}</p>
+              <p>
+                {data.map((a) => (
+                  <React.Fragment key={a.id}>{a.work_time}</React.Fragment>
+                ))}
+              </p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>{t("email")}:</h2> <p>{data.map(a=><React.Fragment key={a.id}>{a.email}</React.Fragment>)}</p>
+              <h2>{t("email")}:</h2>{" "}
+              <p>
+                {data.map((a) => (
+                  <React.Fragment key={a.id}>{a.email}</React.Fragment>
+                ))}
+              </p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>{t("Telefon")}:</h2> <p>{data.map(a=><React.Fragment key={a.id}>{a.phone}</React.Fragment>)}</p>
+              <h2>{t("Telefon")}:</h2>{" "}
+              <p>
+                {data.map((a) => (
+                  <React.Fragment key={a.id}>{a.phone}</React.Fragment>
+                ))}
+              </p>
             </div>
             <div className={style.Title1}>
               {" "}
-              <h2>{t("Address")}:</h2> <p>{data.map(a=><React.Fragment key={a.id}>{a.address}</React.Fragment>)}</p>
+              <h2>{t("Address")}:</h2>{" "}
+              <p>
+                {data.map((a) => (
+                  <React.Fragment key={a.id}>{a.address}</React.Fragment>
+                ))}
+              </p>
             </div>
           </div>
           <div>{map2}</div>
@@ -122,4 +140,4 @@ import { instance } from './../../api/api';
     </div>
   );
 };
-export default Contact
+export default Contact;
