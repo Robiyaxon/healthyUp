@@ -11,7 +11,7 @@ export const NumberSec = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    instance.get("info_num/").then((response) => setData(response.data));
+    instance.get("info_num").then((response) => setData(response.data));
   }, [])
   return (
     <div className={styles.numberSec}>
@@ -33,7 +33,7 @@ export const NumberSec = () => {
 
           </div>
           <div className={styles.counter_block}>
-            <CountUp start={1} end={data.dietolog} duration={0.7}>
+            <CountUp start={0} end={data.dietolog} duration={0.7}>
               {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                   <span ref={countUpRef} />
