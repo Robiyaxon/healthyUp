@@ -14,7 +14,7 @@
   text-align: center;
   color: #231c00;
   padding-top: 68px;
-  padding-bottom: 84px;
+  padding-bottom: 30px;
   width: 80%;
   margin: 0 auto;
 }
@@ -29,14 +29,13 @@
   position: relative;
 }
 .header .header_sport_wrapper:nth-child(odd) .Boy {
-  right: 100px;
   position: relative;
   width: 60%;
 }
 
 .header .header_sport_wrapper:nth-child(odd) .header__text{
   width:100%;
-  margin-left: -20rem;
+  margin-left: -10rem;
 }
 
 .header .header_sport_wrapper:nth-child(odd) .header_lenta{
