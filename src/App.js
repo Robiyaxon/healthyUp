@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Routes } from "react-router-dom";
 import { Spin } from "antd";
 
 import ScrollToTop from "./ScrollerOn";

@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
 
 import { Home } from "./../components/home/Home";
+import Loader from "./../components/login/loader/Loader";
 
 const Question = lazy(() => import("./../components/question/Question.jsx"));
 const Foods = lazy(() => import("../components/login/foods/Foods"));
@@ -41,6 +42,7 @@ export const RouterMap = () => {
     { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser /> },
     { id: 12, url: "goal", element: <Goal /> },
     { id: 13, url: "direction", element: <Direction /> },
+    { id: 14, url: "loader", element: <Loader /> },
   ];
 
   const dataMapForRoute = data.map((d) => (
