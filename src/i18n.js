@@ -19,35 +19,36 @@ const resources = {
   },
 };
 
-i18n  .use(Backend)
-.use(LanguageDetector)
-.use(initReactI18next)
-.init({
-  lng: localStorage.getItem("lang"),
-  fallbackLng: "uz",
-  debug: false,
-  react: {
-    useSuspense: false,
-  },
-  detection: {
-    order: [
-      "localStorage",
-      "cookie",
-      "sessionStorage",
-      "navigator",
-      "htmlTag",
-    ],
-    lookupLocalStorage: "lang",
-    lookupCookie: "i18next",
-    lookupSessionStorage: "i18nextLng",
-  },
-  resources,
+i18n
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    lng: localStorage.getItem("lang"),
+    fallbackLng: "uz",
+    debug: false,
+    react: {
+      useSuspense: false,
+    },
+    detection: {
+      order: [
+        "localStorage",
+        "cookie",
+        "sessionStorage",
+        "navigator",
+        "htmlTag",
+      ],
+      lookupLocalStorage: "lang",
+      lookupCookie: "i18next",
+      lookupSessionStorage: "i18nextLng",
+    },
+    resources,
 
-  keySeparator: false,
+    keySeparator: false,
 
-  interpolation: {
-    escapeValue: false,
-  },
-});
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
-export default i18n
+export default i18n;

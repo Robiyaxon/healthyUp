@@ -1,9 +1,9 @@
+import { useEffect, useState } from "react";
 import CountUp from "react-countup";
+import { useTranslation } from "react-i18next";
 import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./NumberSec.module.css";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
 
 export const NumberSec = () => {
@@ -33,7 +33,7 @@ export const NumberSec = () => {
 
           </div>
           <div className={styles.counter_block}>
-            <CountUp start={1} end={data.dietolog} duration={0.7}>
+            <CountUp start={0} end={data.dietolog} duration={0.7}>
               {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                   <span ref={countUpRef} />

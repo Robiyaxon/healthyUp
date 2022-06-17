@@ -2,14 +2,33 @@ import React from "react";
 import style from "./Login.module.css";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const Login = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const [errorClass, setErrorClass] = useState("")
 
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
+
+    var formdata = new FormData();
+    formdata.append("username", values.username);
+    formdata.append("password", values.password);
+
+    var requestOptions = {
+      method: "POST",
+      body: formdata,
+      redirect: "follow",
+    };
+
+    fetch("http://10.10.8.46:8000/kirish/", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(Number(result) === 404 ? setErrorClass(style.errorTrue) : navigate('/home')))
+      .catch((error) => console.log("error", error));
   };
 
   return (
@@ -21,12 +40,13 @@ const Login = () => {
         className={style.login_form}
         initialValues={{ remember: true }}
         onFinish={onFinish}
+        autoComplete="off"
       >
+        <p className={style.error + ' ' + errorClass}>Username yoki password xato!</p>
         <Form.Item
           name="username"
-          rules={[{ required: true, message: "Please input your Username!" }]}
+          rules={[{ message: "Please input your Username!" }]}
         >
-          <label htmlFor="">{t("Username")}</label>
           <Input
             className={style.Input}
             prefix={<UserOutlined className="site-form-item-icon" />}
@@ -35,12 +55,10 @@ const Login = () => {
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ required: true, message: "Please input your Password!" }]}
+          rules={[{ message: "Please input your Password!" }]}
         >
-          <label htmlFor="">{t("Password")}</label>
           <Input
             prefix={<LockOutlined className="site-form-item-icon" />}
-            type="password"
             placeholder={t("Password")}
             className={style.Input}
           />

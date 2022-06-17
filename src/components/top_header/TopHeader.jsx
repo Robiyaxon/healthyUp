@@ -17,7 +17,7 @@ export const TopHeader = () => {
   const [scroll, setScroll] = useState("");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY < 300) {
+    if (window.scrollY < 100) {
       setScroll("");
     } else {
       setScroll(style.scroller);

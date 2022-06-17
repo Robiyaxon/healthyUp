@@ -53,7 +53,7 @@
 }
 
 .ant-back-top div:first-child {
-  background-color: #55963b !important;
+  background-color: #dfc085 !important;
   border-radius: 50% !important;
   width: 60px !important;
   height: 60px !important;
@@ -155,7 +155,6 @@
 .ant-btn-primary {
   background: #CB9A39 !important;
   border-color: none;
-
 }
 
 .Wrapper {

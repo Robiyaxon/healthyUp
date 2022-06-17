@@ -28,7 +28,7 @@
 .block {
   display: flex;
   width: 80%;
-  margin: 5rem auto;
+  margin: 5rem auto 0;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -50,7 +50,7 @@
   background-size: contain;
   background-position: center;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .textInImg {

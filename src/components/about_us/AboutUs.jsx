@@ -9,14 +9,14 @@ const AboutUs = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-        instance.get("aboutus/").then((response) => setData(response.data));
+    instance.get("aboutus/").then((response) => setData(response.data));
   }, []);
 
   const map = data.map((d) => {
     return (
       <div className={style.first} key={d.id}>
         <div className={style.manWrapper}>
-          <img src={d.img1} alt="man img" />
+          <img src={d.img} alt="man img" />
         </div>
         <div className={style.first_content}>
           <h2>{d.title_uz}</h2>

@@ -30,15 +30,14 @@ padding-bottom: 0.6rem;
 }
 
 .scroller{
-  background: rgba(0,0,0,0.3);
+  background: rgb(249 237 215);
   padding: 20px 155px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .Block_Navlink {
   width: 20%;
 }
-
-
 
 .Navlink_href {
   width: 148px;
