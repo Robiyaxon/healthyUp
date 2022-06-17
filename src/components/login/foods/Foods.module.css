@@ -1,7 +1,6 @@
 .Foods {
-    border: 2px solid red;
-    padding: 150px 175px 20px 175px;
-    background: rgba(247, 231, 200, 0.3);
+    padding: 290px 175px 20px 175px;
+    background-color: white;
     height: 100vh;
 }
 
@@ -20,7 +19,7 @@
 .Select {
     width: 472px;
     border-radius: 10px;
-    height: 60px !important;
+    /* height: 60px !important; */
    
 }
 .Select_block{

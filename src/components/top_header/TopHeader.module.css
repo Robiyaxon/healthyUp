@@ -1,4 +1,25 @@
+.stroke  a {
+  position: relative;
+  transition: all 0.4s !important;
+padding-bottom: 0.6rem;
+}
+.stroke a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #ffa700;
+  height: 2px;
+}
+.stroke a:hover:after {
+  width: 65%;
+  transition: all 0.4s !important;
 
+}
 .Top_Header {
   /* height: 100vh; */
   position: fixed;

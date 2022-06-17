@@ -18,17 +18,19 @@ export const BtnAnimation = ({ text, link, classes = "" }) => {
 };
 
 
-const LoginPages = ({ navigateUrl, data, title }) => {
+const LoginPages = ({ navigateUrl, data, title,settype }) => {
   const navigate = useNavigate();
 
   const OnClick = (who) => {
-    alert(who.target.innerText);
+    console.log(who.target.id);
     navigate(navigateUrl);
+    settype(who.target.id)
   };
 
   const dataMap = data.map((d) => (
-    <button onClick={OnClick} key={d.id}>
+    <button onClick={OnClick} key={d.id} id={d.id}>
       {d.name}
+      
     </button>
   ));
 

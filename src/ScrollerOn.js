@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import {useLocation} from "react-router-dom";
 import { BackTop } from 'antd';
 import { UpCircleOutlined } from '@ant-design/icons';
-
 export default function ScrollToTop() {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -10,8 +9,6 @@ export default function ScrollToTop() {
     }, [pathname]);
     return null;
 }
-
-
 const style = {
   height: 40,
   width: 40,

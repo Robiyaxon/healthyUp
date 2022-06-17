@@ -3,13 +3,13 @@ import { Button, Form, Input } from "antd";
 import style from "./Reference.module.css";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-const Reference = () => {
+const Reference = (props) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const onFinish = (values) => {
 
-    navigate('/goal');
+    navigate('/direction');
 
     console.log("Received values of form: ", values);
   };
@@ -19,18 +19,24 @@ const Reference = () => {
       name: "years",
       message: "Please input your age!",
       placeholder: "00 (years)",
+      value:  props.age ,
+      setname1: props.setAge,
     },
     {
       id: 2,
       name: "Height",
       message: "Please input your Height!",
       placeholder: "00 (sm)",
+      value:  props.height ,
+      setname1: props.setheight
     },
     {
       id: 3,
       name: "kg",
       message: "Please input your Weight!",
       placeholder: "00 (kg)",
+      value:  props.weight ,
+      setname1: props.setweight
     },
   ];
   const map2 = map.map((a) => (
@@ -45,7 +51,7 @@ const Reference = () => {
         },
       ]}
     >
-      <Input placeholder={a.placeholder} />
+      <Input   value={a.value}   onChange={(e) => a.setname1(e.target.value)} placeholder={a.placeholder} />
     </Form.Item>
   ));
   return (
