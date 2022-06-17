@@ -1,18 +1,20 @@
 import React from "react";
 import LoginPages from "../../../helpers/Helpers";
 
-const Direction = () => {
+const Direction = (props) => {
   const data = [
-    { id: 0, name: "Dieta" },
-    { id: 1, name: "Sport" },
-    { id: 2, name: "Diet & Sport" },
+    { id: 1, name: "Dieta" },
+    { id: 2, name: "Sport" },
+    { id: 3, name: "Diet & Sport" },
   ];
   return (
     <div>
-      <LoginPages
-        navigateUrl={"/food"}
+       <LoginPages
+       settype={props.settype}
+        navigateUrl={"/foods"}
         title={"Qaysi yo‘nalish sizga maqul "}
         data={data}
+
       />
     </div>
   );

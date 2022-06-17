@@ -1,25 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 import erkak from "../../../assets/login/erkak.svg";
 import ayol from "../../../assets/login/ayol.svg";
-
 import style from "./FemaleOrMale.module.css";
-
-const FemaleOrMale = () => {
-  
+const FemaleOrMale = (props) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-
   const women = () => {
-    alert("Ayolni tanladingiz!");
-    navigate("/reference");
+  props.setGender("2")
+  props.SignApp("2")
   };
 
   const man = () => {
-    alert("Ayolni tanladingiz!");
-    navigate("/reference");
+    props.setGender("1")
+    props.SignApp("1")
   };
 
   return (

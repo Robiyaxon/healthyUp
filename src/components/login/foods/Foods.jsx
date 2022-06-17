@@ -1,62 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from "./Foods.module.css"
-import { Select, Tag } from 'antd';
-const options = [
-    {
-      value: 'gold',
-    },
-    {
-      value: 'lime',
-    },
-    {
-      value: 'green',
-    },
-    {
-      value: 'cyan',
-    },
-  ];
-  const tagRender = (props) => {
-    const { label, value, closable, onClose } = props;
-  
-    const onPreventMouseDown = (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-    };
-  
-    return (
-      <Tag
-        color={value}
-        onMouseDown={onPreventMouseDown}
-        closable={closable}
-        onClose={onClose}
-        style={{
-          marginRight: 3,
-        }}
-      >
-        {label}
-      </Tag>
-    );
-  };
-  
- const Foods = () => {
-    
+import { Button} from 'antd';
+import { useEffect } from 'react';
+import { instance } from '../../../api/api';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+const Foods = React.memo((props) => {
+  const { t } = useTranslation();
+  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+  const [texnikaModal, setTexnikaModal] = useState(0);
+  // console.log(texnikaModal);
+  // props.setcan_not_dieta(texnikaModal)
+  useEffect(() => {
+    instance.get("product/").then((response) => setData(response.data));
+  }, []);
+  const clikc=()=>{
+    navigate("/femaleOrMale")
+  }
   return (
     <div className={style.Foods}>
-        <h1>Yemaydigan mahsulotingizni belgilab qo‘ying</h1>
-        <div className={style.Select_block}>
-                <Select
-    mode="multiple" 
-    listHeight="240px"
-    showArrow
-    tagRender={tagRender}
-    // defaultValue={['gold', 'cyan']}
-    placeholder="Mahsulotlar"
-  className={style.Select}
-    options={options}
-  />   
+      <h1>Yemaydigan mahsulotingizni belgilab qo‘ying</h1>
+      <div className={style.Select_block}>
+        {/* <Select
+          mode="multiple"
+          showArrow
+          tagRender={tagRender}
+          placeholder="Mahsulotlar"
+          className={style.Select}
+          options={data}
+        /> */}
+        <div>
+          {data.map(a => <div onClick={() => setTexnikaModal({ id: a.id })
+          }>{a.name}</div>)}
         </div>
- 
+      </div>
+      <Button
+            type="primary"
+            htmlType="submit"
+            className="login-form-button"
+            onClick={clikc}
+          >
+            {t("Continue")}
+          </Button>
     </div>
   )
-}
+})
 export default Foods

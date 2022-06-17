@@ -40,7 +40,17 @@
 
   color: #4c3c00;
 }
+.body button:hover:before {
+  transform: scale(2.15);
+}
 
+.body button:hover {
+  transition: all 0.5s ease-out !important;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #cccccc;
+  background-color: white;
+}
 
 @media (min-width:0) and (max-width:950.9px) {
   .body{
