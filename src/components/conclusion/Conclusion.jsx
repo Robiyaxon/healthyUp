@@ -36,13 +36,14 @@ const Conclusion = () => {
       <div className={style.topshiriq}>
         {/* <video src=""></video> */}
         <img src={img} alt="" />
-        <div>
+        <div className={style.Topshiriq2}>
           <p>1-topshiriq</p>
-          <label class={style.checkbox}>
+        
+        </div>  
+        <label class={style.checkbox}>
             <input type="checkbox" class={style.checkbox__input} />
             <span class={style.checkbox__inner}></span>
           </label>
-        </div>
       </div>
     </div>
   )
