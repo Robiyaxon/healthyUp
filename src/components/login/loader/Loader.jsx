@@ -1,6 +1,7 @@
-import style from "./Loader.module.css";
 import CountUp from "react-countup";
 import { useNavigate } from 'react-router-dom';
+
+import style from "./Loader.module.css";
 
 const Loader = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const Loader = () => {
     console.log( dom );
     if (Number(dom) === 100) {
       console.log(dom===100);
-      navigate('/home')
+      navigate('/')
     }else{
       console.log( dom===100 + " error");
 
@@ -19,7 +20,9 @@ const Loader = () => {
 
   return (
     <div className={style.loader}>
-      <CountUp id={'count'} start={1} end={100} duration={9}></CountUp>
+      <h1>Ma'lumotlarni qayta ishlash</h1>
+      <p>Sizning ovqatlanish rejangiz hisoblanmoqda...</p>
+      <CountUp id={'count'} start={1} end={100}  duration={9}></CountUp>
     </div>
   );
 };
