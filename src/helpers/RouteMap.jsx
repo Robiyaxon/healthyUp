@@ -31,6 +31,9 @@ const Goal = lazy(() =>
 const Loader = lazy(() =>
   import("./../components/login/loader/Loader.jsx")
 );
+const OtherCreateAccount = lazy(() =>
+  import("./../components/login/otherCreateAccount/OtherCreateAccount.jsx")
+);
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -96,6 +99,7 @@ export const RouterMap = () => {
     { id: 14, url: "direction", element: <Direction /> },
     { id: 15, url: "loader", element: <Loader /> },
     { id: 16, url: "conclusion", element: <Conclusion /> },
+    { id: 17, url: "otherAccount", element: <OtherCreateAccount first_name={first_name} last_name={last_name}/> },
   ];
 
   const dataMapForRoute = data.map((d) => (
