@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const UploadImg = () => {
+const UploadImg = ({setImg, setPassword}) => {
   const uploadedImage = useRef(null);
   const imageUploader = useRef(null);
 
@@ -14,6 +14,7 @@ const UploadImg = () => {
         current.src = e.target.result;
       };
       reader.readAsDataURL(file);
+      setImg(file)
     }
   };
 

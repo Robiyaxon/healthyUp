@@ -8,7 +8,7 @@ const WhoIsTheUser = (props) => {
     { id: 3, name: "Dietolog" },
   ];
   return (
-    <div className="WhoIsTheUser">
+    <div className="WhoIsTheUser"> 
       <LoginPages settype={props.settype}
         navigateUrl={"/reference"}
         title={"Kim sifatida ro'yxatdan o'tmoqchisiz"}
