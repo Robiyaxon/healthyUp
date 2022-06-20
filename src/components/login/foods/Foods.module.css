@@ -27,3 +27,11 @@
     display: flex;
     justify-content: center;
 }
+.card{
+    border: 2px solid red;
+    width: 100%;
+}
+.Block_Card{
+    width: 100px;
+    height: 100px;
+}

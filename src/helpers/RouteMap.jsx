@@ -35,15 +35,15 @@ export const RouterMap = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("");
-  const [age, setAge] = useState("14545");
-  const [height, setheight] = useState("18454454");
-  const [weight, setweight] = useState("1854545");
-  const [type_loss, settype_loss] = useState("145454");
+  const [age, setAge] = useState("");
+  const [height, setheight] = useState("");
+  const [weight, setweight] = useState("");
+  const [type_loss, settype_loss] = useState("");
   const [going_to_loss, setgoing_to_loss] = useState("1");
-  const [can_not_sports, setcan_not_sports] = useState([1]);
-  const [can_not_dieta, setcan_not_dieta] = useState([21]);
+  const [can_not_sports, setcan_not_sports] = useState("[1]");
+  const [can_not_dieta, setcan_not_dieta] = useState("[21]");
   const [type, settype] = useState("");
-  function SignApp(width) {
+  function SignApp(gender2) {
     var formdata = new FormData();
     formdata.append("type", type);
     formdata.append("username", username);
@@ -51,7 +51,7 @@ export const RouterMap = () => {
     formdata.append("password", password);
     formdata.append("first_name", first_name);
     formdata.append("last_name", last_name);
-    formdata.append("gender", width);
+    formdata.append("gender", gender2);
     formdata.append("age", age);
     formdata.append("height", height);
     formdata.append("weight", weight);

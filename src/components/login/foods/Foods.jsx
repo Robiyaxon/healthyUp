@@ -10,8 +10,6 @@ const Foods = React.memo((props) => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const [texnikaModal, setTexnikaModal] = useState(0);
-  // console.log(texnikaModal);
-  // props.setcan_not_dieta(texnikaModal)
   useEffect(() => {
     instance.get("product/").then((response) => setData(response.data));
   }, []);
@@ -20,18 +18,10 @@ const Foods = React.memo((props) => {
   }
   return (
     <div className={style.Foods}>
-      <h1>Yemaydigan mahsulotingizni belgilab qo‘ying</h1>
+      <h1>{t("foods")}</h1>
       <div className={style.Select_block}>
-        {/* <Select
-          mode="multiple"
-          showArrow
-          tagRender={tagRender}
-          placeholder="Mahsulotlar"
-          className={style.Select}
-          options={data}
-        /> */}
-        <div>
-          {data.map(a => <div onClick={() => setTexnikaModal({ id: a.id })
+        <div className={style.card}>
+          {data.map(a => <div className={style.Block_Card} onClick={() => setTexnikaModal({ id: a.id })
           }>{a.name}</div>)}
         </div>
       </div>
