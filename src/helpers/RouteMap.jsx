@@ -1,7 +1,6 @@
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
-import { useNavigate } from "react-router-dom";
 import { Home } from "./../components/home/Home";
 const Question = lazy(() => import("./../components/question/Question.jsx"));
 const Foods = lazy(() => import("../components/login/foods/Foods"));
@@ -26,7 +25,15 @@ const Conclusion = lazy(() =>
 const Reference = lazy(() =>
   import("./../components/login/reference/Reference.jsx")
 );
-
+const Goal = lazy(() =>
+  import("./../components/login/Pages/Goal.jsx")
+);
+const Loader = lazy(() =>
+  import("./../components/login/loader/Loader.jsx")
+);
+const OtherCreateAccount = lazy(() =>
+  import("./../components/login/otherCreateAccount/OtherCreateAccount.jsx")
+);
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -85,11 +92,14 @@ export const RouterMap = () => {
     { id: 7, url: "femaleOrMale", element: <FemaleOrMale SignApp={SignApp} setGender={setGender} /> },
     { id: 8, url: "faq", element: <Question /> },
     { id: 9, url: "login", element: <Login /> },
-    { id: 10, url: "reference", element: <Reference weight={weight} setweight={setweight} height={height} setheight={setheight} age={age} setAge={setAge} /> },
-    { id: 13, url: "foods", element: <Foods setcan_not_dieta={setcan_not_dieta} /> },
-    { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser settype={settype} /> },
-    { id: 14, url: "direction", element: <Direction settype={settype_loss} /> },
-    { id: 15, url: "conclusion", element: <Conclusion /> },
+    { id: 10, url: "reference", element: <Reference /> },
+    { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser /> },
+    { id: 12, url: "goal", element: <Goal /> },
+    { id: 13, url: "foods", element: <Foods /> },
+    { id: 14, url: "direction", element: <Direction /> },
+    { id: 15, url: "loader", element: <Loader /> },
+    { id: 16, url: "conclusion", element: <Conclusion /> },
+    { id: 17, url: "otherAccount", element: <OtherCreateAccount first_name={first_name} last_name={last_name}/> },
   ];
 
   const dataMapForRoute = data.map((d) => (

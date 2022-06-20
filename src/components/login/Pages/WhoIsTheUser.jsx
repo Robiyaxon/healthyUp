@@ -13,6 +13,7 @@ const WhoIsTheUser = (props) => {
         navigateUrl={"/reference"}
         title={"Kim sifatida ro'yxatdan o'tmoqchisiz"}
         data={data}
+        navigateUrl2={"/otherAccount"}
       />
     </div>
   );
