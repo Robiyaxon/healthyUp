@@ -13,6 +13,7 @@ export const BtnAnimation = ({ text, link, classes = "" }) => {
   );
 };
 
+
 const LoginPages = ({
   navigateUrl,
   navigateUrl2 = navigateUrl,
@@ -23,12 +24,12 @@ const LoginPages = ({
   const navigate = useNavigate();
 
   const OnClick = (who) => {
-    const id = Number(who.target.id) === 1;
+    const id = Number(who.target.id) === 1 ;
     console.log(id);
     if (Number(who.target.id) === 1) {
       navigate(navigateUrl);
     } else {
-      navigate(navigateUrl2);
+      navigate(navigateUrl2);   
     }
     settype(who.target.id);
   };

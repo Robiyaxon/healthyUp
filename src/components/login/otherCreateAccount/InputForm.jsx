@@ -1,6 +1,6 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import { Button, Form, Input, Select } from 'antd';
+import React from "react";
+import "antd/dist/antd.css";
+import { Button, Form, Input, Select } from "antd";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -17,32 +17,49 @@ const tailLayout = {
   },
 };
 
-const InputForm = () => {
+const InputForm = ({
+  setUserName,
+  setPassword,
+  setEmail,
+  setFirst_name,
+  setLast_name,
+  setBio,
+  setAge,
+  setAddres
+}) => {
   const [form] = Form.useForm();
 
   const onGenderChange = (value) => {
     switch (value) {
-      case 'male':
+      case "male":
         form.setFieldsValue({
-          note: 'Hi, man!',
+          userName: "Hi, man!",
         });
         return;
 
-      case 'female':
+      case "female":
         form.setFieldsValue({
-          note: 'Hi, lady!',
+          userName: "Hi, lady!",
         });
         return;
 
-      case 'other':
+      case "other":
         form.setFieldsValue({
-          note: 'Hi there!',
+          userName: "Hi there!",
         });
     }
   };
 
   const onFinish = (values) => {
     console.log(values);
+    setPassword(values.password);
+    setUserName(values.userName);
+    setFirst_name(values.first_name);
+    setLast_name(values.last_name);
+    setBio(values.bio);
+    setAge(values.age);
+    setAddres(values.addres);
+    setEmail(values.email);
   };
 
   const onReset = () => {
@@ -51,16 +68,111 @@ const InputForm = () => {
 
   const onFill = () => {
     form.setFieldsValue({
-      note: 'Hello world!',
-      gender: 'male',
+      userName: "Hello world!",
+      password: "Hello world!",
+      email: "Hello world!",
+      first_name: "first_name",
+      last_name: "last_name",
+      addres: "addres",
+      bio: "bio",
+      age: 23,
+      gender: "male",
     });
   };
 
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item
-        name="note"
-        label="Note"
+        name="userName"
+        label="UserName"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="password"
+        label="Password"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="email"
+        label="Email"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="first_name"
+        label="First name"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="last_name"
+        label="Last name"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="bio"
+        label="bio"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="age"
+        label="Age"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="addres"
+        label="Addres"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="info"
+        label="Info"
         rules={[
           {
             required: true,
@@ -90,10 +202,12 @@ const InputForm = () => {
       </Form.Item>
       <Form.Item
         noStyle
-        shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
+        shouldUpdate={(prevValues, currentValues) =>
+          prevValues.gender !== currentValues.gender
+        }
       >
         {({ getFieldValue }) =>
-          getFieldValue('gender') === 'other' ? (
+          getFieldValue("gender") === "other" ? (
             <Form.Item
               name="customizeGender"
               label="Customize Gender"
