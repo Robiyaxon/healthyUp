@@ -40,8 +40,10 @@ const Reference = (props) => {
     },
   ];
   const map2 = map.map((a) => (
-    <Form.Item
-      key={a.id}
+    <div key={a.id}>
+
+        <Form.Item
+      
       name={a.name}
       className={style.Input}
       rules={[
@@ -53,6 +55,8 @@ const Reference = (props) => {
     >
       <Input   value={a.value}   onChange={(e) => a.setname1(e.target.value)} placeholder={a.placeholder} />
     </Form.Item>
+    </div>
+  
   ));
   return (
     <div className={style.Reference}>

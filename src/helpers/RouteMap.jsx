@@ -35,6 +35,7 @@ const OtherCreateAccount = lazy(() =>
   import("./../components/login/otherCreateAccount/OtherCreateAccount.jsx")
 );
 
+
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
   const [first_name, setFirstname] = useState("");
@@ -47,10 +48,12 @@ export const RouterMap = () => {
   const [weight, setweight] = useState("");
   const [type_loss, settype_loss] = useState("");
   const [going_to_loss, setgoing_to_loss] = useState("1");
-  const [can_not_sports, setcan_not_sports] = useState("[1]");
-  const [can_not_dieta, setcan_not_dieta] = useState("[21]");
+  const [can_not_sports, setcan_not_sports] = useState([1,4,5]);
+  const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
+
   function SignApp(gender2) {
+    console.log(can_not_dieta);
     var formdata = new FormData();
     formdata.append("type", type);
     formdata.append("username", username);
@@ -88,15 +91,15 @@ export const RouterMap = () => {
     { id: 2, url: "my_cabinets", element: <MyCabinet /> },
     { id: 4, url: "about_us", element: <AboutUs /> },
     { id: 5, url: "contact", element: <Contact /> },
-    { id: 6, url: "signUp", element: <Registration email={email} password={password} username={username} first_name={first_name} last_name={last_name} setFirstname={setFirstname} setEmail={setEmail} setName={setName} setUsername={setUsername} setPassword={setPassword} /> },
+    { id: 6, url: "signUp", element: <Registration email={email} password={password} username={username} first_name={first_name} last_name={last_name} setFirstname={setFirstname} setEmail={setEmail}  setName={setName} setUsername={setUsername} setPassword={setPassword} /> },
     { id: 7, url: "femaleOrMale", element: <FemaleOrMale SignApp={SignApp} setGender={setGender} /> },
     { id: 8, url: "faq", element: <Question /> },
     { id: 9, url: "login", element: <Login /> },
-    { id: 10, url: "reference", element: <Reference /> },
-    { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser /> },
+    { id: 10, url: "reference", element: <Reference setweight={setweight}  setheight={setheight} setAge={setAge} /> },
+    { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser settype={settype} /> },
     { id: 12, url: "goal", element: <Goal /> },
-    { id: 13, url: "foods", element: <Foods /> },
-    { id: 14, url: "direction", element: <Direction /> },
+    { id: 13, url: "foods", element: <Foods setcan_not_dieta={setcan_not_dieta}   /> },
+    { id: 14, url: "direction", element: <Direction settype_loss={settype_loss} /> },
     { id: 15, url: "loader", element: <Loader /> },
     { id: 16, url: "conclusion", element: <Conclusion /> },
     { id: 17, url: "otherAccount", element: <OtherCreateAccount first_name={first_name} last_name={last_name}/> },
