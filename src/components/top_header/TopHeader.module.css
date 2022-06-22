@@ -213,6 +213,9 @@ padding-bottom: 0.6rem;
     width: auto !important;
   }
 
+  .Block_Navlink img{
+    width: 75%;
+  }
   .Top_Header {
     /* height: 100vh; */
     position: absolute;
