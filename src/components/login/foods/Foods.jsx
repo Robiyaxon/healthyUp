@@ -18,11 +18,11 @@ const Foods = React.memo((props) => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const navigate = useNavigate();
-  const [texnikaModal, setTexnikaModal] = useState("");
-  
-  const app = []
-
-  // app.push(texnikaModal)
+  const [texnikaModal, setTexnikaModal] = useState('');
+// app.push(texnikaModal)
+const menuItems = ["Easy", "Medium", "Hard"];
+const [activeButton, setActiveButton] = useState("");
+console.log(activeButton);
   useEffect(() => {
     axios(config)
       .then(function (response) {
@@ -35,17 +35,42 @@ const Foods = React.memo((props) => {
     props.setcan_not_dieta(texnikaModal)
   }
 
+  const arr = [
+    {id:1, name:"bla-bla"}
+  ]
+
+  arr.push(activeButton)
+
+  console.log(arr);
+
   console.log(texnikaModal);
-  console.log(app);
+  // console.log(app);
   return (
     <div className={style.Foods}>
       <h1>{t("foods")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          {data.map(a => <div className={style.Block_Card} onClick={() => app.push(a.id)
-          }>{a.name}</div>)}
+          {/* {map.map(a => 
+          <div className={style.Block_Card + ' ' + texnikaModal} onClick={() => setTexnikaModal('active')
+          }>{a.name}</div>)} */}
         </div>
       </div>
+      {menuItems.map((level, idx) => {
+        return (
+          <button
+            key={level}
+            onClick={() => {
+              setActiveButton(level);
+            }}
+            // style={{
+            //   display: activeButton === level ? "none" : ""
+            // }}
+            className={activeButton === level ? "none" : null}
+          >
+            {level}
+          </button>
+        );
+      })}
       <Button
         type="primary"
         htmlType="submit"
