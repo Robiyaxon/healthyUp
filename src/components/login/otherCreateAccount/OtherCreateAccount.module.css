@@ -25,3 +25,7 @@
   font-size: 20px;
   line-height: 24px;
 }
+
+.body__img_and_inp{
+  display: flex;
+}
