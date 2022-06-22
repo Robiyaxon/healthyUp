@@ -29,3 +29,8 @@
 .body__img_and_inp{
   display: flex;
 }
+
+.body__img_and_inp__inp{
+  width: 80%;
+  border: 3px solid firebrick;
+}

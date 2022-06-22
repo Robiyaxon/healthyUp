@@ -67,7 +67,7 @@ const OtherCreateAccount = ({ first_name, last_name }) => {
       </p>
       <div className={style.body__img_and_inp}>
         <UploadImg setImg={setImg} />
-        <div>
+        <div className={style.body__img_and_inp__inp}>
           <InputForm
             setUserName={setUserName}
             setPassword={setPassword}
