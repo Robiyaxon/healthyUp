@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import style from "./Foods.module.css"
-import { Button } from 'antd';
-import { useEffect } from 'react';
-// import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import style from "./Foods.module.css";
+import { Button } from "antd";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/product/",
@@ -13,37 +13,27 @@ var config = {
   },
 };
 const Foods = (props) => {
-
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   // const [data, setData] = useState([
-    
+
   // ]);
   const navigate = useNavigate();
   const [texnikaModal, setTexnikaModal] = useState("");
   const [app, setApp] = useState([]);
 
   const data = [
-    {id:1, name:"sdfgsdg"},
-    {id:2, name:"sdfgsdg"},
-    {id:3, name:"sdfgsdg"}
-  ]
-
-  // console.log(data);
-  
-  // const app = []
-
-
-  
+    { id: 1, name: "sdfgsdg" },
+    { id: 2, name: "sdfgsdg" },
+    { id: 3, name: "sdfgsdg" },
+  ];
 
   useEffect(() => {
-    
     // axios(config)
     //   .then(function (response) {
     //     // setData(response.data);
     //   })
     //   .catch(function (error) { });
   }, []);
-
 
   const click = async (id) => {
     console.log("ID == ", id);
@@ -56,23 +46,27 @@ const Foods = (props) => {
 
     // props.setcan_not_dieta(texnikaModal)
 
-    
     let temp = app;
-    temp.push(id)
+    temp.push(id);
     setApp(temp);
     console.log("here", app);
-  }
-
-  
+  };
 
   return (
     <div className={style.Foods}>
       <h1>Foods</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          Hello
-          {data.map(a => <div  key = {a.id} className={style.Block_Card} onClick={() => click(a.id)
-          }>{a.name}</div>)}
+          {t("foods")}
+          {data.map((a) => (
+            <div
+              key={a.id}
+              className={style.Block_Card}
+              onClick={() => click(a.id)}
+            >
+              {a.name}
+            </div>
+          ))}
         </div>
       </div>
       <Button
@@ -85,6 +79,6 @@ const Foods = (props) => {
         Continue
       </Button>
     </div>
-  )
-}
-export default Foods
+  );
+};
+export default Foods;
