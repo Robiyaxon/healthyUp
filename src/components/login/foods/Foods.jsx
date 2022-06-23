@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import style from "./Foods.module.css"
 import { Button } from 'antd';
 import { useEffect } from 'react';
-import { instance } from '../../../api/api';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 var config = {
@@ -15,16 +14,13 @@ var config = {
 };
 const Foods = (props) => {
 
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   // const [data, setData] = useState([
     
   // ]);
   const navigate = useNavigate();
   const [texnikaModal, setTexnikaModal] = useState("");
-  const [app, setApp] = useState([
-    {id:1}
-
-  ]);
+  const [app, setApp] = useState([]);
 
   const data = [
     {id:1, name:"sdfgsdg"},
@@ -37,33 +33,45 @@ const Foods = (props) => {
   // const app = []
 
 
-  const appPush  = {id: texnikaModal}
+  
 
   useEffect(() => {
-    let temp = app;
-    temp.push(texnikaModal)
-    setApp(temp);
+    
     // axios(config)
     //   .then(function (response) {
     //     // setData(response.data);
     //   })
     //   .catch(function (error) { });
   }, []);
-  const clikc = () => {
-    navigate("/femaleOrMale")
-    props.setcan_not_dieta(texnikaModal)
+
+
+  const click = async (id) => {
+    console.log("ID == ", id);
+
+    // navigate("/femaleOrMale")
+    // console.log("before ID == ", texnikaModal);
+
+    // setTexnikaModal(id);
+    // console.log("after ID == ", texnikaModal);
+
+    // props.setcan_not_dieta(texnikaModal)
+
+    
+    let temp = app;
+    temp.push(id)
+    setApp(temp);
+    console.log("here", app);
   }
 
-  console.log("ID", texnikaModal);
+  
 
-  console.log("here", app);
   return (
     <div className={style.Foods}>
-      <h1>{t("foods")}</h1>
+      <h1>Foods</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
           Hello
-          {data.map(a => <div className={style.Block_Card} onClick={() => setTexnikaModal(a.id)
+          {data.map(a => <div  key = {a.id} className={style.Block_Card} onClick={() => click(a.id)
           }>{a.name}</div>)}
         </div>
       </div>
@@ -71,9 +79,10 @@ const Foods = (props) => {
         type="primary"
         htmlType="submit"
         className="login-form-button"
-        onClick={clikc}
+        onClick={click}
       >
-        {t("Continue")}
+        {/* {t("Continue")} */}
+        Continue
       </Button>
     </div>
   )
