@@ -10,7 +10,6 @@ export default function ScrollToTop() {
   }, [pathname]);
   return null;
 }
-
 const style = {
   height: 40,
   width: 40,

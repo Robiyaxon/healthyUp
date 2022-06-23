@@ -7,9 +7,6 @@
   background-size: 100% 100%;
   z-index: 1;
 }
-.header {
-  padding-top: 300px;
-}
 .first {
   display: flex;
   justify-content: space-between;
@@ -358,6 +355,9 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+  .title{
+    font-size: 20px !important;
+  }
 }
 
 @media (min-width: 0) and (max-width: 1199.9px) {
@@ -399,6 +399,34 @@ body {
   .first_content h2 {
     width: 100%;
     text-align: center;
+  }
+
+  #app{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+  .image{
+    display: flex;
+  }
+  .image img{
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+  }
+  .title{
+    padding: 0;
+    font-size: 44px;
+    margin-top: 6rem;
+  }
+  .title div:first-child{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mozart{
+    margin-left: 1rem;
   }
 }
 @media (min-width: 1200px) and (max-width: 1293px) {

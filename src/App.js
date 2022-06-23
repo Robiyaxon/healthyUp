@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Routes } from "react-router-dom";
 import { Spin } from "antd";
-
 import ScrollToTop from "./ScrollerOn";
 import { TopHeader } from "./components/top_header/TopHeader";
 import { MyBackTop } from "./ScrollerOn";
 import { Footer } from "./components/footer/Footer";
 import { MySearch } from "./components/search/Search";
 import { RouterMap } from "./helpers/RouteMap";
-
+import "./App.css"
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {

@@ -6,10 +6,10 @@
   height: 100%;
 }
 .header {
-  padding-top: 250px;
+  padding-top: 100px;
   width: 75%;
   margin: 0 auto;
-  padding-bottom: 300px;
+  padding-bottom: 100px;
 }
 
 .header h2 {
@@ -18,9 +18,10 @@
   font-weight: 600;
   color: #231c00;
   text-align: center;
+  
 }
 .header_cards {
-  margin-top: 170px;
+  margin-top: 70px;
   display: grid;
   grid-template-columns: 30% 30% 35%;
   gap: 2%;
@@ -46,6 +47,8 @@
   font-family: "Poppins";
   padding-bottom: 40px;
 }
+
+
 .header_person {
   display: flex;
   align-items: center;
@@ -108,19 +111,19 @@
 
 .top,
 .bottom {
-  width: 116px;
+  width: 100px;
   height: 107px;
   object-fit: contain;
+  position: absolute;
+
 }
 
 .top {
-  position: absolute;
   top: -100px;
   left: 0;
 }
 
 .bottom {
-  position: absolute;
   bottom: -80px;
   right: -50px;
 }

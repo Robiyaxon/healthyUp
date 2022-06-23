@@ -1,0 +1,36 @@
+.body {
+  width: 80%;
+  margin: 8rem auto;
+}
+
+.body__title,
+.body__text{
+  font-family: var(----main-font-family);
+  font-style: normal;
+  color: #4c3c00;
+  text-align: center;
+}
+
+.body__title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  text-align: center;
+
+  color: #4c3c00;
+}
+
+.body__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.body__img_and_inp{
+  display: flex;
+}
+
+.body__img_and_inp__inp{
+  width: 80%;
+  border: 3px solid firebrick;
+}

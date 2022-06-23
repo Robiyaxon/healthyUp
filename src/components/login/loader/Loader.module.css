@@ -1,0 +1,103 @@
+@property --p {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: true;
+}
+.loader {
+  padding-top: 8rem;
+  margin: auto 0;
+  --p: 0;
+  display: grid;
+  align-items: center;
+  place-content: center;
+  transform: scale(0.5);
+  clip-path: circle(49%);
+  animation: p 10s steps(100);
+  color: hsl(calc(var(--p) * 2), 100%, 65%);
+  position: relative;
+  margin-bottom: 0;
+  background-color: transparent !important;
+}
+.loader:before,
+.loader:after {
+  grid-row: 1;
+  grid-column: 1;
+}
+.loader:before {
+  border: solid 5em transparent;
+  padding: 20em ;
+  border-radius: 50%;
+  --slice: calc(360deg / var(--n));
+  --s-gap: calc(var(--f) * var(--slice));
+  --solid: calc((1 - var(--f)) * var(--slice));
+  background: repeating-conic-gradient(
+      from calc(0.5 * var(--s-gap)),
+      currentcolor 0% var(--solid),
+      transparent 0% var(--slice)
+    )
+    border-box;
+  /* filter: blur(0.5px); */
+  --mask: conic-gradient(blue 0% calc(var(--p) * 1%), rgba(0, 17, 255, 0.3) 0%),
+    linear-gradient(blue, blue) border-box,
+    radial-gradient(
+      blue 0% 5.5em,
+      transparent calc(5.5em + 1px) calc(5.75em - 1px),
+      blue 5.75em calc(6em + 1px),
+      transparent calc(6em + 2px)
+    );
+  -webkit-mask: var(--mask);
+  -webkit-mask-composite: source-in, source-out;
+  content: "";
+  background-color:  #E6BF4C !important;
+  /* border: none !important; */
+}
+
+@keyframes p {
+  90%,
+  100% {
+    --p: 100;
+  }
+}
+
+.loader span{
+  margin-top: 8rem;
+  top: auto;
+  bottom: auto;
+  color: #BC9520 !important;
+}
+
+.loader span,
+.loader h1,
+.loader p {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+  margin-bottom: auto;
+  font-size: 50px;
+}
+
+.loader p {
+  top: 0;
+  font-family:var(----main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #112d0b;
+}
+
+.loader h1 {
+  top: -5rem;
+
+  font-family: var(----main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 51px;
+
+  text-align: center;
+
+  color: #4c3c00;
+}

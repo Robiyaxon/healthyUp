@@ -1,18 +1,19 @@
 import React from "react";
 import LoginPages from "../../../helpers/Helpers";
 
-const WhoIsTheUser = () => {
+const WhoIsTheUser = (props) => {
   const data = [
-    { id: 0, name: "User" },
-    { id: 1, name: "Dietolog" },
+    { id: 1, name: "User" },
     { id: 2, name: "Treyner" },
+    { id: 3, name: "Dietolog" },
   ];
   return (
-    <div>
-      <LoginPages
-        navigateUrl={"/femaleOrMale"}
+    <div className="WhoIsTheUser"> 
+      <LoginPages settype={props.settype}
+        navigateUrl={"/reference"}
         title={"Kim sifatida ro'yxatdan o'tmoqchisiz"}
         data={data}
+        navigateUrl2={"/otherAccount"}
       />
     </div>
   );

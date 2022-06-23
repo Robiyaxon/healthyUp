@@ -1,9 +1,9 @@
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./NumberSec.module.css";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
 
 export const NumberSec = () => {
@@ -11,7 +11,7 @@ export const NumberSec = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    instance.get("info_num").then((response) => setData(response.data));
+    instance.get("info_num/").then((response) => setData(response.data));
   }, [])
   return (
     <div className={styles.numberSec}>

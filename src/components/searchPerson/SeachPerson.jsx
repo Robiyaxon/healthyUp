@@ -14,7 +14,6 @@ const SeachPerson = () => {
   const [diatolog, setDietolog] = useState([]);
   const [trainer, setTrainer] = useState([]);
 
-
   useEffect(() => {
     instance
       .get("get_dietolog/")
@@ -26,25 +25,29 @@ const SeachPerson = () => {
   }, []);
 
   const mapTrainer = trainer
-    .sort((a, b) => b.reyting / b.reyting_count - a.reyting / a.reyting_count)
+    .filter((item) => item.image && item.reyting > 0)
+    .sort((a, b) => b.reyting - a.reyting)
     .slice(0, 4)
-    .map((item) => {
+    .map((item, index) => {
       return (
         <>
-          <div className={style.card_content}>
+          <div key={index} className={style.card_content}>
             <div className={style.img_bordered}>
               <div className={style.img_wrapper}>
-                <img src={item.image} alt="rasm bor" />
+                <img
+                  src={"http://10.10.7.17:8000" + item.image}
+                  alt="rasm bor"
+                />
               </div>
             </div>
             <div className={style.person}>
               {item.first_name} {item.last_name}
             </div>
             <div className={style.star}>
-              {item.reyting && item.reyting_count ? (
+              {item.reyting ? (
                 <>
                   {Array.apply(null, {
-                    length: item.reyting / item.reyting_count,
+                    length: Math.floor(item.reyting),
                   }).map((e, i) => (
                     <i key={i} className="fa-solid fa-star"></i>
                   ))}
@@ -57,25 +60,29 @@ const SeachPerson = () => {
     });
 
   const mapDiatolog = diatolog
-    .sort((a, b) => b.reyting / b.reyting_count - a.reyting / a.reyting_count)
+    .filter((item) => item.image && item.reyting > 0)
+    .sort((a, b) => b.reyting - a.reyting)
     .slice(0, 4)
-    .map((item) => {
+    .map((item, index) => {
       return (
         <>
-          <div className={style.card_content}>
+          <div key={index} className={style.card_content}>
             <div className={style.img_bordered}>
               <div className={style.img_wrapper}>
-                <img src={item.image} alt="rasm bor" />
+                <img
+                  src={"http://10.10.7.17:8000" + item.image}
+                  alt="rasm bor"
+                />
               </div>
             </div>
             <div className={style.person}>
               {item.first_name} {item.last_name}
             </div>
             <div className={style.star}>
-              {item.reyting && item.reyting_count ? (
+              {item.reyting ? (
                 <>
                   {Array.apply(null, {
-                    length: item.reyting / item.reyting_count,
+                    length: Math.floor(item.reyting),
                   }).map((e, i) => (
                     <i key={i} className="fa-solid fa-star"></i>
                   ))}

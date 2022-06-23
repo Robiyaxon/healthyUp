@@ -7,8 +7,7 @@ import drawer from "../../assets/home/header/drawer.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Drawer } from "antd";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom';
 export const TopHeader = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -71,7 +70,7 @@ export const TopHeader = () => {
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
-        <div className={style.Drawer_Block_Navlink + " " + style.borderXwidth}>
+        <div className={style.Drawer_Block_Navlink  + " " + style.stroke}  >
           {map2}
           <button className={style.Navlink_href} onClick={click}>
             <span></span>
