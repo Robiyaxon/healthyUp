@@ -7,15 +7,16 @@ import drawer from "../../assets/home/header/drawer.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Drawer } from "antd";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export const TopHeader = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
   const [scroll, setScroll] = useState("");
+  console.log(scroll);
 
   window.addEventListener("scroll", () => {
     if (window.scrollY < 100) {
@@ -44,12 +45,12 @@ export const TopHeader = () => {
     { id: 1, name: t("navbar5"), url: "/" },
     { id: 2, name: t("navbar1"), url: "about_us" },
     { id: 3, name: t("navbar2"), url: "contact" },
-    { id: 4, name: "FAQ", url: "faq" }
+    { id: 4, name: "FAQ", url: "faq" },
   ];
 
   const map2 = map.map((a) => (
     <NavLink
-    key={a.id}
+      key={a.id}
       onClick={onClose}
       className={({ isActive }) => (isActive ? "active" : "Navlink")}
       to={a.url}
@@ -63,40 +64,39 @@ export const TopHeader = () => {
   const showDrawer = () => {
     setVisible(true);
   };
-const click=()=>{
-  navigate("login")
-  setVisible(false);
-}
+  const click = () => {
+    navigate("login");
+    setVisible(false);
+  };
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
-        <div className={style.Drawer_Block_Navlink  + " " + style.borderXwidth}  >
+        <div className={style.Drawer_Block_Navlink + " " + style.borderXwidth}>
           {map2}
           <button className={style.Navlink_href} onClick={click}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-          {t("homeHeaderBtn1")}
+            {t("homeHeaderBtn1")}
           </button>
         </div>
       </Drawer>
-      <div className={style.Top_Header + ' ' + scroll}>
+      <div className={style.Top_Header + " " + scroll}>
         <div className={style.Block}>
           <NavLink to="/" className={style.Block_Navlink}>
             <img src={logo} alt="" />
           </NavLink>
           <div className={style.Menu__link}>
-            <div className={style.Navlink+ " " + style.stroke}>
-           
-                 {map2}
-             
+            <div className={style.Navlink + " " + style.stroke}>
+              {map2}
+
               <button className={style.Navlink_href} onClick={click}>
                 <span></span>
                 <span></span>
                 <span></span>
-                <span></span>     
-           {t("homeHeaderBtn1")}
+                <span></span>
+                {t("homeHeaderBtn1")}
               </button>
             </div>
 

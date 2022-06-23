@@ -1,23 +1,20 @@
-
 .Top_Header {
   /* height: 100vh; */
   position: fixed;
   padding: 40px 155px;
   width: 100%;
   z-index: 10;
-  transition: .3s all linear;
+  transition: 0.3s all linear;
 }
 
-.scroller{
-  background: rgba(0,0,0,0.3);
+.scroller {
+  background: rgba(0, 0, 0, 0.3);
   padding: 20px 155px;
 }
 
 .Block_Navlink {
   width: 20%;
 }
-
-
 
 .Navlink_href {
   width: 148px;
@@ -29,7 +26,8 @@
   border: none;
   cursor: pointer;
   transition: all 0.5s;
-  background-color: white;  font-size: 16px;
+  background-color: white;
+  font-size: 16px;
   color: #4c3c00;
   font-weight: 600;
   margin: 0 auto;

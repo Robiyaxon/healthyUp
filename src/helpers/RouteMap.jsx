@@ -25,6 +25,9 @@ const WhoIsTheUser = lazy(() =>
 const Reference = lazy(() =>
   import("./../components/login/reference/Reference.jsx")
 );
+const SearchPerson = lazy(() =>
+  import("../components/searchPerson/SeachPerson.jsx")
+);
 
 export const RouterMap = () => {
   let data = [
@@ -41,6 +44,7 @@ export const RouterMap = () => {
     { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser /> },
     { id: 12, url: "goal", element: <Goal /> },
     { id: 13, url: "direction", element: <Direction /> },
+    { id: 14, url: "search_person", element: <SearchPerson /> },
   ];
 
   const dataMapForRoute = data.map((d) => (

@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  background-color: #f7e8ca;
+  padding: 8rem 0;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.card_job2 {
+  margin-top: 15px !important;
+}
+
+/* form */
+.form_wrapper form {
+  max-width: 45%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 30px;
+}
+
+.form_wrapper input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 13px 15px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #b2afb8;
+  background-color: #f5f5f6;
+  border: none;
+  outline: none;
+}
+.form_wrapper form i {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  font-size: 30px;
+  color: #b2afb8;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/*  end form */
+
+/* first card title */
+.card_wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_job {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  color: #4c3c00;
+}
+
+.car_job_all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.car_job_all a {
+  display: inline-block;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  text-align: center;
+  color: #4c3c00;
+  cursor: pointer;
+}
+.car_job_all i {
+  margin-left: 0.5rem;
+  font-size: 20px;
+}
+/* cart 1 content */
+
+.card_content_wrapper {
+  margin-top: 20px;
+}
+.card_content_container {
+  display: grid;
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+  gap: 2%;
+  overflow: visible;
+}
+.card_content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.card_content:hover {
+  background: #eed075;
+  box-shadow: 0px 24px 54px rgba(160, 160, 160, 0.3);
+  border-radius: 10px;
+}
+.card_content:hover .img_bordered {
+  border: 2px solid #fff;
+}
+.card_content:hover .person {
+  color: #fff;
+}
+.card_content:hover .star i {
+  color: white;
+}
+.img_wrapper {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.img_bordered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 9px;
+  height: 106px;
+  width: 106px;
+  border-radius: 50%;
+  border: 2px solid #c6973d;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+
+.img_wrapper img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 9px;
+}
+.person {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px !important;
+  color: #4c3c00;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.5s;
+}
+.star {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.star i {
+  color: #c6973d;
+  width: 26px;
+  height: 26px;
+  margin-top: 40px;
+  transition: all 0.5s;
+}
+
+.star > i:not(:first-child) {
+  margin-left: 10%;
+}
+@media (min-width: 0px) and (max-width: 1100.9px) {
+  .wrapper {
+    padding: 6.5rem 0;
+  }
+  .form_wrapper form {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 750px) {
+  .form_wrapper form {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 950px) {
+  .card_content_container {
+    display: flex;
+    overflow: auto;
+    -ms-overflow-style: none;
+    gap: 5%;
+  }
+  .card_content_container::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
+  .card_job {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #4c3c00;
+  }
+  .person {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #4c3c00;
+  }
+  
+  .car_job_all a {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #4c3c00;
+  }
+  .car_job_all i {
+    font-size: 24px;
+  }
+}
