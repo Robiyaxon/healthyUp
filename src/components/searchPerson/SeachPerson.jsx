@@ -18,11 +18,9 @@ const SeachPerson = () => {
     instance
       .get("get_dietolog/")
       .then((response) => setDietolog(response.data));
-  }, []);
-
-  useEffect(() => {
     instance.get("get_treyner/").then((response) => setTrainer(response.data));
   }, []);
+
 
   const mapTrainer = trainer
     .filter((item) => item.image && item.reyting > 0)
