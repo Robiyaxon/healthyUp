@@ -13,6 +13,10 @@
   src: url('./fonts/poppins_regular.ttf') format('woff2');
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .container {
   width: 50%;
   position: relative;

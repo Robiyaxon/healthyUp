@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
+import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./NumberSec.module.css";

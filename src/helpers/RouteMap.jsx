@@ -19,22 +19,18 @@ const FemaleOrMale = lazy(() =>
 const WhoIsTheUser = lazy(() =>
   import("../components/login/Pages/WhoIsTheUser.jsx")
 );
-const Conclusion = lazy(() =>
-  import("./../components/conclusion/Conclusion")
-);
+const Conclusion = lazy(() => import("./../components/conclusion/Conclusion"));
 const Reference = lazy(() =>
   import("./../components/login/reference/Reference.jsx")
 );
-const Goal = lazy(() =>
-  import("./../components/login/Pages/Goal.jsx")
-);
-const Loader = lazy(() =>
-  import("./../components/login/loader/Loader.jsx")
-);
+const Goal = lazy(() => import("./../components/login/Pages/Goal.jsx"));
+const Loader = lazy(() => import("./../components/login/loader/Loader.jsx"));
 const OtherCreateAccount = lazy(() =>
   import("./../components/login/otherCreateAccount/OtherCreateAccount.jsx")
 );
-
+const SearchPerson = lazy(() =>
+  import("./../components/searchPerson/SeachPerson.jsx")
+);
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -48,7 +44,7 @@ export const RouterMap = () => {
   const [weight, setweight] = useState("");
   const [type_loss, settype_loss] = useState("");
   const [going_to_loss, setgoing_to_loss] = useState("1");
-  const [can_not_sports, setcan_not_sports] = useState([1,4,5]);
+  const [can_not_sports, setcan_not_sports] = useState([1, 4, 5]);
   const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
 
@@ -75,7 +71,7 @@ export const RouterMap = () => {
       redirect: "follow",
     };
 
-    fetch("http://10.10.8.46:8000/register/", requestOptions)
+    fetch("http://10.10.7.17:8000/register/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         if (result == 1) {
@@ -91,18 +87,68 @@ export const RouterMap = () => {
     { id: 2, url: "my_cabinets", element: <MyCabinet /> },
     { id: 4, url: "about_us", element: <AboutUs /> },
     { id: 5, url: "contact", element: <Contact /> },
-    { id: 6, url: "signUp", element: <Registration email={email} password={password} username={username} first_name={first_name} last_name={last_name} setFirstname={setFirstname} setEmail={setEmail}  setName={setName} setUsername={setUsername} setPassword={setPassword} /> },
-    { id: 7, url: "femaleOrMale", element: <FemaleOrMale SignApp={SignApp} setGender={setGender} /> },
+    {
+      id: 6,
+      url: "signUp",
+      element: (
+        <Registration
+          email={email}
+          password={password}
+          username={username}
+          first_name={first_name}
+          last_name={last_name}
+          setFirstname={setFirstname}
+          setEmail={setEmail}
+          setName={setName}
+          setUsername={setUsername}
+          setPassword={setPassword}
+        />
+      ),
+    },
+    {
+      id: 7,
+      url: "femaleOrMale",
+      element: <FemaleOrMale SignApp={SignApp} setGender={setGender} />,
+    },
     { id: 8, url: "faq", element: <Question /> },
     { id: 9, url: "login", element: <Login /> },
-    { id: 10, url: "reference", element: <Reference setweight={setweight}  setheight={setheight} setAge={setAge} /> },
-    { id: 11, url: "whoIsTheUser", element: <WhoIsTheUser settype={settype} /> },
+    {
+      id: 10,
+      url: "reference",
+      element: (
+        <Reference
+          setweight={setweight}
+          setheight={setheight}
+          setAge={setAge}
+        />
+      ),
+    },
+    {
+      id: 11,
+      url: "whoIsTheUser",
+      element: <WhoIsTheUser settype={settype} />,
+    },
     { id: 12, url: "goal", element: <Goal /> },
-    { id: 13, url: "foods", element: <Foods setcan_not_dieta={setcan_not_dieta}   /> },
-    { id: 14, url: "direction", element: <Direction settype_loss={settype_loss} /> },
+    {
+      id: 13,
+      url: "foods",
+      element: <Foods setcan_not_dieta={setcan_not_dieta} />,
+    },
+    {
+      id: 14,
+      url: "direction",
+      element: <Direction settype_loss={settype_loss} />,
+    },
     { id: 15, url: "loader", element: <Loader /> },
     { id: 16, url: "conclusion", element: <Conclusion /> },
-    { id: 17, url: "otherAccount", element: <OtherCreateAccount first_name={first_name} last_name={last_name}/> },
+    {
+      id: 17,
+      url: "otherAccount",
+      element: (
+        <OtherCreateAccount first_name={first_name} last_name={last_name} />
+      ),
+    },
+    { id: 18, url: "search_person", element: <SearchPerson /> },
   ];
 
   const dataMapForRoute = data.map((d) => (

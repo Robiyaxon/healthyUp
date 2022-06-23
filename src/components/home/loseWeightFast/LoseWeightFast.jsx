@@ -21,8 +21,8 @@ const LoseWeightFast = () => {
   const dataMap = data.map((d) => {
     return (
       <div className={styles.blocks__box} key={d.id}>
-        <h1>{d.id === 10 ? d.id : "0" + d.id}</h1>
-        <p>{language === "uz" ? d.uz_text  : language === "en" ? d.en_text : language === "ru" ?  d.ru_text : null}</p>
+        <h1>{d.id === 10 ? d.id : "0" + d.id || "01"}</h1>
+        <p>{language === "uz" ? d.uz_text  : language === "en" ? d.en_text : language === "ru" ?  d.ru_text : 'salom'}</p>
       </div>
     );
   });

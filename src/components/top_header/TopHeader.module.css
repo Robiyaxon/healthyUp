@@ -1,38 +1,17 @@
-.stroke  a {
-  position: relative;
-  transition: all 0.4s !important;
-padding-bottom: 0.6rem;
-}
-.stroke a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #ffa700;
-  height: 2px;
-}
-.stroke a:hover:after {
-  width: 65%;
-  transition: all 0.4s !important;
-
-}
 .Top_Header {
   /* height: 100vh; */
   position: fixed;
   padding: 40px 155px;
   width: 100%;
   z-index: 10;
-  transition: .3s all linear;
+  transition: 0.3s all linear;
 }
 
-.scroller{
+.scroller {
   background: rgb(249 237 215);
   padding: 20px 155px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .Block_Navlink {
@@ -49,7 +28,8 @@ padding-bottom: 0.6rem;
   border: none;
   cursor: pointer;
   transition: all 0.5s;
-  background-color: white;  font-size: 16px;
+  background-color: white;
+  font-size: 16px;
   color: #4c3c00;
   font-weight: 600;
   margin: 0 auto;
@@ -213,6 +193,9 @@ padding-bottom: 0.6rem;
     width: auto !important;
   }
 
+  .Block_Navlink img {
+    width: 75%;
+  }
   .Top_Header {
     /* height: 100vh; */
     position: absolute;

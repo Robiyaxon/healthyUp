@@ -65,9 +65,9 @@ const OtherCreateAccount = ({ first_name, last_name }) => {
       <p className={style.body__text}>
         O‘zingiz haqingizda ma'lumotlarni to‘ldiring
       </p>
-      <div>
+      <div className={style.body__img_and_inp}>
         <UploadImg setImg={setImg} />
-        <div>
+        <div className={style.body__img_and_inp__inp}>
           <InputForm
             setUserName={setUserName}
             setPassword={setPassword}

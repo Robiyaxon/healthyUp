@@ -32,7 +32,6 @@ const App = () => {
           <div className="select"></div>
         </>
       )}
-
       <MyBackTop />
       <MySearch />
       <Footer />
