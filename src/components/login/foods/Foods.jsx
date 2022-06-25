@@ -18,7 +18,6 @@ const Foods = (props) => {
 
   // ]);
   const navigate = useNavigate();
-  const [texnikaModal, setTexnikaModal] = useState("");
   const [app, setApp] = useState([]);
 
   const data = [

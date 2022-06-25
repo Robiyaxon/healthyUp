@@ -60,12 +60,13 @@
 
 @media(min-width:0) and (max-width:800.9px) {
     .HomeHeader {
-        padding: 110px 26px 0 26px;
+        padding: 110px 26px 3rem;
         height: auto;
-
+        background-size: auto;
     }
     .Block__Title {
         width: 100%;
+        text-align: center;
     }
     .Block {
         flex-direction: column-reverse;
@@ -76,13 +77,17 @@
         height: auto;
     }
     .Block__Title h1 {
-        font-size: 43px;
-        line-height: 64px;
+        font-size: 30px;
+        line-height: 40px;
         width: 100%;
         margin-top: 50px;
     }
     .SignUp {
         margin-top: 30px;
+    }
+    .Block__Title p{
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 @media(min-width:801px) and (max-width:1200.9px){
