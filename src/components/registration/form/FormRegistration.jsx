@@ -79,6 +79,7 @@ function FormRegistration(props) {
   formdata.append("username", props.username);
   formdata.append("email", props.email);
 
+<<<<<<< HEAD
   // var requestOptions = {
   //   method: "POST",
   //   body: formdata,
@@ -97,6 +98,18 @@ function FormRegistration(props) {
  
  navigate("/whoIsTheUser")
 //  ));
+=======
+  var requestOptions = {
+    method: "POST",
+    body: formdata,
+    redirect: "follow",
+  };
+  const click = () => {
+    fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser")))
+      .catch((error) => console.log(error));
+>>>>>>> 8b4298b1c5d22ee07969d3630f24242fb280df73
   }
   return (
     <div className={styles.form_wrapper}>

@@ -18,6 +18,7 @@ const SeachPerson = () => {
     instance
       .get("get_dietolog/")
       .then((response) => setDietolog(response.data));
+
     instance.get("get_treyner/").then((response) => setTrainer(response.data));
   }, []);
 
@@ -26,37 +27,38 @@ const SeachPerson = () => {
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
     .slice(0, 4)
-    .map((item, index) => {
+    .map((item) => {
       return (
         <>
-        <NavLink to={"singilur/" + item.id}> 
-          <div key={index} className={style.card_content}>
-            <div className={style.img_bordered}>
-              <div className={style.img_wrapper}>
-                <img
-                  src={"http://10.10.7.17:8000" + item.image}
-                  alt="rasm bor"
-                />
+          <NavLink key={item.id}  className={style.card_content} to={"/singilur/" + item.id}>
+            <div >
+              <div className={style.img_bordered}>
+                <div className={style.img_wrapper}>
+                  <img
+                    src={"http://ehealthuz.pythonanywhere.com" + item.image}
+                    alt="rasm bor"
+                  />
+                </div>
+              </div>
+              <div className={style.person}>
+                {item.first_name} {item.last_name}
+              </div>
+              <div className={style.star}>
+                {item.reyting ? (
+                  <>
+                    {Array.apply(null, {
+                      length: Math.floor(item.reyting),
+                    }).map((e, i) => (
+                      <i key={i} className="fa-solid fa-star"></i>
+                    ))}
+                  </>
+                ) : null}
               </div>
             </div>
-            <div className={style.person}>
-              {item.first_name} {item.last_name}
-            </div>
-            <div className={style.star}>
-              {item.reyting ? (
-                <>
-                  {Array.apply(null, {
-                    length: Math.floor(item.reyting),
-                  }).map((e, i) => (
-                    <i key={i} className="fa-solid fa-star"></i>
-                  ))}
-                </>
-              ) : null}
-            </div>
-          </div>
-        </NavLink>
-        <SearchCards item={item} index={index} />
-        
+            <SearchCards item={item} />
+          </NavLink>
+
+
         </>
       );
     });

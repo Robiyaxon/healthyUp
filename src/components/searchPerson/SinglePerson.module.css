@@ -1,3 +1,120 @@
-.PerconAc{
+.PerconAc {
+    /* border: 2px solid red; */
+    padding: 120px 226px;
+    background: rgba(247, 231, 200, 0.3);
+
+}
+
+.shadow {
+    background: rgba(247, 231, 200, 0.3);
+    filter: blur(300px);
     border: 2px solid red;
+    width: 101px;
+    height: 101px;
+}
+
+.block {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.block img {
+    /* border: 2px solid red; */
+    margin-right: 104px;
+    width: 472px;
+    height: 535px;
+}
+
+.block p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+    color: #55963B;
+}
+
+.block h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    color: #29292C;
+    margin-top: 4px;
+}
+
+.Document {
+    margin-top: 50px;
+}
+
+@media(min-width:0) and (max-width:750.9px) {
+    .PerconAc {
+        padding: 30px 5px;
+    }
+
+    .Block90 {
+        width: 100%;
+    }
+
+    .block img {
+        /* border: 2px solid red; */
+        margin-right: 0;
+        width: 80%;
+        margin-bottom: 1rem;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .block h1 {
+        font-size: 16px;
+    }
+
+    .block p {
+        font-size: 15px;
+    }
+}
+
+@media(min-width:751px) and (max-width:1250.9px) {
+    .PerconAc {
+        padding: 30px 50px;
+    }
+
+    .Block90 {
+        width: 100%;
+    }
+
+    .block img {
+        width: 67%;
+        margin-right: 0;
+
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .block h1 {
+        font-size: 27px;
+    }
+
+    .block p {
+        font-size: 18px;
+    }
 }

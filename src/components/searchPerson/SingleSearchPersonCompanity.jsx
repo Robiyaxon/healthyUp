@@ -11,8 +11,7 @@ const withRouter = (WrappedComponent) => (props) => {
 class SingleCompanenty extends React.Component {
   componentDidMount() {
     let userId = this.props.params.userId;
-    instance
-      .get("get_treyner/" + userId)
+    instance.get("get_user/" + userId)
       .then((response) => this.props.setPersonSingle(response.data));
   }
   render() {
