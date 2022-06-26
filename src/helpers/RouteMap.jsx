@@ -31,6 +31,13 @@ const OtherCreateAccount = lazy(() =>
 const SearchPerson = lazy(() =>
   import("./../components/searchPerson/SeachPerson.jsx")
 );
+const AllDietolog = lazy(() =>
+  import("./../components/searchPerson/AllDietolog.jsx")
+);
+
+const AllTrainer = lazy(() =>
+  import("./../components/searchPerson/AllTrainer.jsx")
+);
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -149,6 +156,8 @@ export const RouterMap = () => {
       ),
     },
     { id: 18, url: "search_person", element: <SearchPerson /> },
+    { id: 19, url: "search_deatolog_all", element: <AllDietolog /> },
+    { id: 18, url: "search_trainer_all", element: <AllTrainer /> },
   ];
 
   const dataMapForRoute = data.map((d) => (

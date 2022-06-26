@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "eslint-plugin-react-hooks": "^4.7.0-next-955cad9bc-20220623",
     "react-countup": "^6.2.0",
     "react-visibility-sensor": "^5.1.1",
     "react-yandex-maps": "^4.6.0"
