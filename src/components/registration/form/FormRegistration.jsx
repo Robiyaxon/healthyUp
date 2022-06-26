@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { instance } from "../../../api/api";
 function FormRegistration(props) {
   const navigate = useNavigate();
   const [errorText, seterrorText] = useState(null)

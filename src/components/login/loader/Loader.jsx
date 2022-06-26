@@ -8,7 +8,6 @@ const Loader = () => {
 
   setTimeout(() => {
     var dom = document.getElementsByTagName("span") && document.getElementsByTagName("span")[4] ? document.getElementsByTagName("span")[4].textContent : "some error"
-    console.log( dom );
     if (Number(dom) === 100) {
       console.log(dom===100);
       navigate('/')

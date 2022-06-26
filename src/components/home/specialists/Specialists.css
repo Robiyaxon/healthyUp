@@ -7,7 +7,7 @@ li a {
 }
 
 .Doctors h4 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -17,13 +17,13 @@ li a {
   margin: 0 auto 3rem;
   text-align: center;
 
-  color: #010B19;
+  color: #010b19;
 
   opacity: 0.7;
 }
 
 .Doctors h1 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -32,7 +32,7 @@ li a {
 
   text-align: center;
 
-  color: #010B19;
+  color: #010b19;
 }
 
 .clear-fix:after {
@@ -70,13 +70,15 @@ li a {
   margin: 10px;
   border: 2px solid grey;
 }
-.card__collection .cards h2{
+.card__collection .cards h2 {
   margin-top: 1rem;
-  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 1rem;
 }
 
 .card__collection .cards--one {
-  backface-visiblility: hidden;
+  content-visibility: hidden;
 }
 
 .card__collection .cards--one:hover:after {
@@ -130,7 +132,7 @@ li a {
   color: #fff;
   text-transform: uppercase;
   font-size: 18px;
-  background: #dfc085 ;
+  background: #dfc085;
   width: 126px;
   height: 55px;
   transform: skewY(5deg);
@@ -146,7 +148,7 @@ li a {
 
 .card__collection .cards--one__rect--back {
   display: block;
-  background: #dfc085 ;
+  background: #dfc085;
   width: 126px;
   height: 55px;
   transform: skewY(7deg);
@@ -293,7 +295,7 @@ li a {
 
 .card__collection .cards--three {
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 .card__collection .cards--three:hover .cards--three__rect-1 {
@@ -350,11 +352,11 @@ li a {
   font-size: 20px;
   color: #fff;
   transform: skewX(20deg);
-  line-height: 6rem;
+  line-height: 5px;
 }
 
 .card__collection .cards--three__rect-1 .shadow-1 {
-  background: linear-gradient(270deg, #dfc085  -9.87%, #e2bb45  111.47%);
+  background: linear-gradient(270deg, #dfc085 -9.87%, #e2bb45 111.47%);
 
   width: 230px;
   height: 100px;
@@ -374,7 +376,7 @@ li a {
   left: 1000%;
   opacity: 0.9;
   transform: skewX(-20deg);
-  z-index: 8;
+  z-index: 5;
   transition: all 0.5s ease-in;
 }
 
@@ -383,7 +385,7 @@ li a {
   display: block;
   width: 50px;
   height: 40px;
-  background: #dfc085 ;
+  background: #dfc085;
   opacity: 1;
   position: absolute;
   left: 500%;
@@ -396,7 +398,7 @@ li a {
   display: block;
   width: 50px;
   height: 40px;
-  background: linear-gradient(270deg, #dfc085  -9.87%, #d5b144  111.47%);
+  background: linear-gradient(270deg, #dfc085 -9.87%, #d5b144 111.47%);
 
   opacity: 1;
   position: absolute;
@@ -407,7 +409,7 @@ li a {
 }
 
 .card__collection .cards--three__rect-2 .shadow-2 {
-  background: #dfc085 ;
+  background: #dfc085;
   width: 100%;
   height: 100%;
   display: block;
@@ -436,7 +438,7 @@ li a {
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, #dfc085  -9.87%, #ddb94b  111.47%);
+  background: linear-gradient(270deg, #dfc085 -9.87%, #ddb94b 111.47%);
 
   border-radius: 50%;
   transform: scale(0);
@@ -480,93 +482,93 @@ li a {
   transition-delay: 0.4s;
 }
 
-@media(min-width:0) and (max-width:550.9px) {
+@media (min-width: 0) and (max-width: 550.9px) {
   .Doctors {
-      padding: 20px;
+    padding: 20px;
   }
 
   .Doctors h4 {
-      font-size: 16px;
-      width: 100%;
-      margin: 0 auto 3rem;
+    font-size: 16px;
+    width: 100%;
+    margin: 0 auto 3rem;
   }
 
   .Doctors h1 {
-      font-size: 30px;
-      width: 100%;
+    font-size: 30px;
+    width: 100%;
   }
   .card__collection {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      font-family: "Do Hyeon", sans-serif;
-      overflow: hidden;
-      width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    font-family: "Do Hyeon", sans-serif;
+    overflow: hidden;
+    width: 100%;
   }
-   .cards {
-      width: 90% !important;
-      display: block;
-      background-size: cover;
-      float: left;
-      border-radius: 15px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      background-position: center;
-      margin: 10px 0;
+  .cards {
+    width: 90% !important;
+    display: block;
+    background-size: cover;
+    float: left;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    margin: 10px 0;
   }
 }
-@media(min-width:551px) and (max-width:900.9px){
+@media (min-width: 551px) and (max-width: 900.9px) {
   .Doctors {
-      padding: 20px;
+    padding: 20px;
   }
   .Doctors h4 {
-      font-size: 16px;
-      width: 100%;
-      margin: 0 auto 3rem;
+    font-size: 16px;
+    width: 100%;
+    margin: 0 auto 3rem;
   }
 
   .Doctors h1 {
-      font-size: 30px;
-      width: 100%;
+    font-size: 30px;
+    width: 100%;
   }
   .card__collection {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      font-family: "Do Hyeon", sans-serif;
-      overflow: hidden;
-      width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    font-family: "Do Hyeon", sans-serif;
+    overflow: hidden;
+    width: 100%;
   }
-   .cards {
-      width: 46% !important;
-      display: block;
-      background-size: cover;
-      float: left;
-      border-radius: 15px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      background-position: center;
-      margin: 10px 0;
-  }  
+  .cards {
+    width: 46% !important;
+    display: block;
+    background-size: cover;
+    float: left;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    margin: 10px 0;
+  }
 }
-@media(min-width:901px) and (max-width:1300.9px){
+@media (min-width: 901px) and (max-width: 1300.9px) {
   .Doctors {
-      padding: 30px;
+    padding: 30px;
   }
   .card__collection {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      font-family: "Do Hyeon", sans-serif;
-      overflow: hidden;
-      width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    font-family: "Do Hyeon", sans-serif;
+    overflow: hidden;
+    width: 100%;
   }
 }

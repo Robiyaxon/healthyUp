@@ -1,13 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import style from "./SearchPerson.module.css";
 import { Link, NavLink } from "react-router-dom";
-// import girl from "./../../assets/search_person/girl.png";
 import { instance } from "./../../api/api";
 import { useTranslation } from "react-i18next";
 import SearchCards from "./SearchCards";
 
 const SeachPerson = () => {
   const { t } = useTranslation();
+  
   const [value, setValue] = useState("");
   const [search, setSearch] = useState([]);
   const [diatolog, setDietolog] = useState([]);
@@ -94,7 +95,7 @@ const SeachPerson = () => {
           <div className={style.card_job}>{t("dietolog")}</div>
           <div className={style.car_job_all}>
             <Link to="/search_deatolog_all">
-              {t("all")} <i class="fa-solid fa-chevron-right"></i>
+              {t("all")} <i className="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </div>
@@ -111,7 +112,7 @@ const SeachPerson = () => {
           </div>
           <div className={style.car_job_all}>
             <Link to="/search_trainer_all">
-              {t("all")} <i class="fa-solid fa-chevron-right"></i>
+              {t("all")} <i className="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </div>

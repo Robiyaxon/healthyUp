@@ -1,5 +1,6 @@
 .specialists {
   background-image: url(../../../assets/home/specialists/bg.png);
+  background-size: cover;
 }
 
 .title {
@@ -117,6 +118,7 @@
     width: 100%;
     margin-bottom: 2rem;
   }
+
 }
 
 @media (min-width: 701px) and (max-width: 1189.9px) {

@@ -6,7 +6,8 @@ import { message } from "antd";
 import YandexMap from "./Map";
 import { useTranslation } from "react-i18next";
 import { instance } from "./../../api/api";
-
+  import AOS from "aos"
+import "aos/dist/aos.css"
 const Contact = () => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
@@ -15,6 +16,7 @@ const Contact = () => {
   const [tel, setTel] = useState("");
   const [textarea, setTextarea] = useState("");
   useEffect(() => {
+    AOS.init({ duration: 2000 })
     instance.get("footer/").then((response) => setData(response.data));
   }, []);
   const success = () => {
@@ -65,7 +67,7 @@ const Contact = () => {
     </Form.Item>
   ));
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} data-aos="zoom-out">
       <h1>{t("contact")}</h1>
       <div className={style.Login}>
         <Form

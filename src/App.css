@@ -97,12 +97,14 @@
   border-radius: 10px !important;
   border: 2px solid #151514 !important;
 }
-
-.hidden {
-}
-
 .none{
   border: 3px solid firebrick !important;
+}
+
+.ant-rate {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem !important;
 }
 
 @media (min-width: 0) and (max-width: 1100.9px) {

@@ -1,20 +1,19 @@
-import React, { useEffect, useState }  from "react";
-
+import React, { useEffect, useState } from "react";
 import { NumberSec } from "./NumberSec";
-
 import style from "./AboutUs.module.css";
 import { instance } from './../../api/api';
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 const AboutUs = () => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
+    AOS.init({ duration: 2000 })
     instance.get("aboutus/").then((response) => setData(response.data));
   }, []);
 
   const map = data.map((d) => {
     return (
-      <div className={style.first} key={d.id}>
+      <div className={style.first} key={d.id} data-aos="flip-right">
         <div className={style.manWrapper}>
           <img src={d.img} alt="man img" />
         </div>

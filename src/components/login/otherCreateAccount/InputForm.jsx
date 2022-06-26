@@ -22,7 +22,6 @@ const InputForm = ({type, img}) => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log(values);
     var data = new FormData();
     data.append("username", values.userName);
     data.append("password", values.password);

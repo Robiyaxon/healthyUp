@@ -7,7 +7,6 @@ const UploadImg = ({setImg, setPassword}) => {
 
   const handleImageUpload = e => {
     const [file] = e.target.files;
-    console.log(e.target.files[0].name);
     setImg(e.target.files[0].name);
     if (file) {
       const reader = new FileReader();

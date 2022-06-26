@@ -2,7 +2,6 @@ import React from 'react'
 import style from "./SinglePerson.module.css"
 import { Spin } from 'antd';
 export const SinglePerson = (props) => {
-  console.log(props);
   if (!props.person) {
     <div className="SpinStyle">
       <Spin />
