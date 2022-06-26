@@ -11,7 +11,9 @@ const Direction = (props) => {
     <div>
       <LoginPages
         settype={props.settype_loss}
-        navigateUrl={"/foods"}
+        navigateUrl={"/sports"}
+        navigateUrl2={"/foods"}
+        navigateUrl3={"/foods&sport"}
         title={"Qaysi yo‘nalish sizga maqul "}
         data={data}
 

@@ -7,7 +7,7 @@ import style from "./FemaleOrMale.module.css";
 import { useNavigate } from "react-router-dom";
 const FemaleOrMale = (props) => {
   const { t } = useTranslation();
-  const navigate = useNavigate
+  const navigate = useNavigate()
   const women = () => {
     props.setGender("2")
     props.SignApp("2")

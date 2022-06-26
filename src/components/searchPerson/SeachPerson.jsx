@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import style from "./SearchPerson.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import girl from "./../../assets/search_person/girl.png";
 import { instance } from "./../../api/api";
 
@@ -29,6 +29,7 @@ const SeachPerson = () => {
     .map((item, index) => {
       return (
         <>
+        <NavLink to={"singilur/" + item.id}> 
           <div key={index} className={style.card_content}>
             <div className={style.img_bordered}>
               <div className={style.img_wrapper}>
@@ -53,6 +54,8 @@ const SeachPerson = () => {
               ) : null}
             </div>
           </div>
+        </NavLink>
+        
         </>
       );
     });

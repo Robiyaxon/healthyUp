@@ -50,8 +50,10 @@
     ]
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^0.27.2",
     "react-countup": "^6.2.0",
+    "react-reveal": "^1.2.2",
     "react-visibility-sensor": "^5.1.1",
     "react-yandex-maps": "^4.6.0"
   }

@@ -20,17 +20,21 @@ const LoginPages = ({
   data,
   title,
   settype,
+  navigateUrl3 = navigateUrl2
 }) => {
   const navigate = useNavigate();
 
   const OnClick = (who) => {
     const id = Number(who.target.id) === 1 ;
-    console.log(id);
     if (Number(who.target.id) === 1) {
       navigate(navigateUrl);
-    } else {
-      navigate(navigateUrl2);   
+    } else if(Number(who.target.id) === 2){
+      navigate(navigateUrl2);
+    }else if(Number(who.target.id) === 3){
+      navigate(navigateUrl3);
     }
+    console.log(id);
+  //  
     settype(who.target.id);
   };
 
