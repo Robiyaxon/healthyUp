@@ -2,10 +2,10 @@ import React from "react";
 import style from "./SearchPerson.module.css";
 import { URL_FOR_IMG } from "../../api/api";
 import person from "./../../assets/search_person/person.png";
-function SearchCards({ item, index }) {
+function SearchCards({ item}) {
   return (
     <>
-      <div key={index} className={style.card_content}>
+      <div key={item.id} className={style.card_content}>
         <div className={style.img_bordered}>
           <div className={style.img_wrapper}>
             {item.image ? (

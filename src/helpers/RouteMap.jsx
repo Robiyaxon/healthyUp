@@ -197,7 +197,7 @@ export const RouterMap = () => {
 
   return <Routes>
     {dataMapForRoute}
-    <Route path="search_person/singilur" element={<SingleSearchPersonCompanity />}>
+    <Route path="singilur" element={<SingleSearchPersonCompanity />}>
       <Route path=":userId" element={<SingleSearchPersonCompanity />} />
     </Route>
   </Routes>;

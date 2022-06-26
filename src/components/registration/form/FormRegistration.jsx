@@ -85,7 +85,6 @@ function FormRegistration(props) {
     redirect: "follow",
   };
   const click = () => {
-    props.SignApp()
     fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser")))
