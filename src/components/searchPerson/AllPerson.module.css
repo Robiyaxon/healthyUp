@@ -36,12 +36,6 @@
     max-width: 100%;
     margin: 0 auto;
   }
-  .card_content_container {
-    display: grid;
-    grid-template-columns: 48.5% 48.5%;
-    gap: 2% 2%;
-    padding-bottom: 150px;
-  }
 }
 
 @media (min-width: 0px) and (max-width: 749.9px) {
@@ -49,7 +43,7 @@
     display: grid;
     grid-template-columns: 48.5% 48.5%;
     gap: 1% 2%;
-    padding-bottom: 150px;
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 750px) and (max-width: 950px) {
@@ -57,7 +51,7 @@
     display: grid;
     grid-template-columns: 31.5% 31.5% 31.5%;
     gap: 2% 2%;
-    padding-bottom: 150px;
+    padding-bottom: 40px;
   }
 }
 
@@ -102,6 +96,6 @@
     display: grid;
     grid-template-columns: 98%;
     gap: 1%;
-    padding-bottom: 150px;
+    padding-bottom: 10px;
   }
 }
