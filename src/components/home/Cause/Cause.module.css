@@ -106,12 +106,19 @@
 @media (min-width: 0) and (max-width: 950.9px) {
   .Cause {
     padding: 3rem 24px;
-
     background-size: 100% 100%;
+    background-size: cover;
+  }
+
+  .Chek img,
+  .advice2 img,
+  .advice img{
+    width: 40px;
   }
 
   .Chek {
     margin-top: 30px;
+    align-items: center;
   }
 
   .diseases {
@@ -125,18 +132,19 @@
     line-height: 40px;
     width: 90%;
     margin: 0 auto;
-}
+  }
   .diseases h2,
   .Chek h2 {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 30px;
   }
   .advice {
-    margin: 0 auto;
+    margin: 1rem auto 0;
   }
   .advice3,
   .advice {
     justify-content: center !important;
+    align-items: center;
   }
   .diseases__block,
   .diseases__block2 {
