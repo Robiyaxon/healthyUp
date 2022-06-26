@@ -30,34 +30,8 @@ const SeachPerson = () => {
       return (
         <>
           <NavLink key={item.id}  className={style.card_content} to={"/singilur/" + item.id}>
-            <div >
-              <div className={style.img_bordered}>
-                <div className={style.img_wrapper}>
-                  <img
-                    src={"http://ehealthuz.pythonanywhere.com" + item.image}
-                    alt="rasm bor"
-                  />
-                </div>
-              </div>
-              <div className={style.person}>
-                {item.first_name} {item.last_name}
-              </div>
-              <div className={style.star}>
-                {item.reyting ? (
-                  <>
-                    {Array.apply(null, {
-                      length: Math.floor(item.reyting),
-                    }).map((e, i) => (
-                      <i key={i} className="fa-solid fa-star"></i>
-                    ))}
-                  </>
-                ) : null}
-              </div>
-            </div>
             <SearchCards item={item} />
           </NavLink>
-
-
         </>
       );
     });

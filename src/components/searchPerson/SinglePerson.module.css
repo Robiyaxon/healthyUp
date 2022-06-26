@@ -89,7 +89,7 @@
 
 @media(min-width:751px) and (max-width:1250.9px) {
     .PerconAc {
-        padding: 30px 50px;
+        padding: 60px 50px;
     }
 
     .Block90 {
@@ -109,6 +109,38 @@
         align-items: center;
         justify-content: space-around;
     }
+
+    .block h1 {
+        font-size: 27px;
+    }
+
+    .block p {
+        font-size: 18px;
+    }
+}
+@media(min-width:1251px) and (max-width:1350.9px) {
+    .PerconAc {
+        padding: 60px 50px;
+    }
+
+    .Block90 {
+        width: 100%;
+    }
+.block{
+    border: 2px solid red;
+    justify-content: space-between;
+}
+    .block img {
+        width: 45%;
+        margin-right: 0;
+
+        margin-bottom: 1rem;
+    }
+
+ .Block90{
+    width: 45%;
+    border: 2px solid red;
+ }
 
     .block h1 {
         font-size: 27px;

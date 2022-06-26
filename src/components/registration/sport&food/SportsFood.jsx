@@ -33,7 +33,7 @@ const Sport_Food = (props) => {
   }
   return (
     <div className={style.Foods}>
-      <h1>Shugullana olmaydigon sportingizni tanlang</h1>
+      <h1>{t("no_sport")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
           {data.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click(a.id)
@@ -47,7 +47,8 @@ const Sport_Food = (props) => {
           }>{a.name}</div>)}
         </div>
       </div>
-      <Button
+      <div style={{textAlign:"center"}}>
+ <Button
         type="primary"
         htmlType="submit"
         className="login-form-button"
@@ -55,6 +56,8 @@ const Sport_Food = (props) => {
       >
         {t("Continue")}
       </Button>
+      </div>
+     
     </div>
   )
 }

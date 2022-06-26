@@ -25,7 +25,7 @@ const Sports = (props) => {
   console.log(app);
   return (
     <div className={style.Foods}>
-      <h1>Shugullana olmaydigon sportingizni tanlang</h1>
+      <h1>{t("no_sport")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
           {data.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click(a.id)
