@@ -76,7 +76,7 @@ li a {
 }
 
 .card__collection .cards--one {
-  backface-visiblility: hidden;
+  content-visibility: hidden;
 }
 
 .card__collection .cards--one:hover:after {

@@ -8,8 +8,6 @@ import "aos/dist/aos.css"
 import styles from "./LoseWeightFast.module.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from 'react-redux';
-
-
 const LoseWeightFast = () => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
@@ -25,7 +23,7 @@ const LoseWeightFast = () => {
       <div className={styles.blocks__box} data-aos="flip-right" key={d.id}>
         <h1>{d.id === 10 ? d.id : "0" + d.id || "01"}</h1>
         <p>{language === "uz" ? d.uz_text : language === "en" ? d.en_text : language === "ru" ? d.ru_text : 'salom'}</p>
-        <div class="go-corner" href="#">
+        <div className="go-corner" href="#">
         </div>
       </div>
     );

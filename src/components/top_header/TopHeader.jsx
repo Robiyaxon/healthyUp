@@ -15,8 +15,6 @@ export const TopHeader = () => {
   const defaultLang = localStorage.getItem("lang") || "uz";
   const [lang, setLang] = useState(defaultLang);
   const [scroll, setScroll] = useState("");
-  console.log(scroll);
-
   window.addEventListener("scroll", () => {
     if (window.scrollY < 100) {
       setScroll("");
@@ -27,7 +25,7 @@ export const TopHeader = () => {
 
   useEffect(() => {
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", () => { });
     };
   }, []);
 
@@ -70,7 +68,7 @@ export const TopHeader = () => {
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
-        <div className={style.Drawer_Block_Navlink  + " " + style.stroke}  >
+        <div className={style.Drawer_Block_Navlink + " " + style.stroke}  >
           {map2}
           <button className={style.Navlink_href} onClick={click}>
             <span></span>

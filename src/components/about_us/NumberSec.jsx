@@ -76,6 +76,6 @@ export const NumberSec = () => {
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 };

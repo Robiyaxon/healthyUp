@@ -10,8 +10,6 @@ const Reference = (props) => {
   const onFinish = (values) => {
 
     navigate('/direction');
-
-    console.log("Received values of form: ", values);
   };
   const map = [
     {

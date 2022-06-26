@@ -1,14 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from "./Conclusion.module.css"
 import { useNavigate } from 'react-router-dom';
 import img from "../../assets/about_us/header.png"
 import { useEffect } from 'react';
 import { instance } from '../../api/api';
-
 const Conclusion = ({ token }) => {
   const navigate = useNavigate()
-  const [data, setData] = useState([]);
-  console.log(token);
   const qidiruv = () => {
     navigate("/faq")
   }
@@ -21,9 +18,9 @@ const Conclusion = ({ token }) => {
         Authorization:  token}
     }
     instance.get(`user`, config).then(
-      (response) => console.log("hellor")
+      (response) => console.log(response)
     );
-  }, []);
+  }, [token]);
   return (
     <div className={style.Conclusion}>
       <h1 className={style.Title}>Profilingizning xulosasi</h1>

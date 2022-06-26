@@ -1,16 +1,14 @@
-/* eslint-disable react/jsx-pascal-case */
 /* eslint-disable eqeqeq */
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
 import { Home } from "./../components/home/Home";
 import Sports from "../components/registration/sport/Sports";
-import Sport_Food from "../components/registration/sport&food/SportsFood";
+import SportFood from "../components/registration/sport&food/SportsFood";
 const Question = lazy(() => import("./../components/question/Question.jsx"));
 const Foods = lazy(() => import("../components/login/foods/Foods"));
 const AboutUs = lazy(() => import("./../components/about_us/AboutUs"));
 const Contact = lazy(() => import("./../components/contact/Contact"));
-const MyCabinet = lazy(() => import("./../components/my_cabinet/My_Cabinet"));
 const Login = lazy(() => import("./../components/login/Login.jsx"));
 const Direction = lazy(() => import("../components/login/Pages/Direction.jsx"));
 const SingleSearchPersonCompanity = lazy(() => import("../components/searchPerson/SingleSearchPersonCompanity.jsx"));
@@ -61,13 +59,8 @@ export const RouterMap = () => {
   const [can_not_sports, setcan_not_sports] = useState([1, 4, 5]);
   const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
-
   const [token, setToken] = useState("");
-
-  const user = { username, email }
-  console.log(user);
   function SignApp(gender2) {
-    console.log(can_not_dieta);
     var formdata = new FormData();
     formdata.append("type", type);
     formdata.append("username", username);
@@ -106,7 +99,6 @@ export const RouterMap = () => {
 
   let data = [
     { id: 1, url: "/", element: <Home /> },
-    { id: 2, url: "my_cabinets", element: <MyCabinet /> },
     { id: 4, url: "about_us", element: <AboutUs /> },
     { id: 5, url: "contact", element: <Contact /> },
     {
@@ -159,7 +151,7 @@ export const RouterMap = () => {
     {
       id: 45,
       url: "foods&sport",
-      element: <Sport_Food setcan_not_sports={setcan_not_sports} setcan_not_dieta={setcan_not_dieta} />,
+      element: <SportFood setcan_not_sports={setcan_not_sports} setcan_not_dieta={setcan_not_dieta} />,
     },
     {
       id: 20,

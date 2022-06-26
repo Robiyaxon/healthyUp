@@ -17,10 +17,6 @@ const App = () => {
   const handleLoading = () => {
     setIsLoading(false);
   };
-
-  const a = "sdfdsfsdf"
-  console.log(a.slice(1, -1))
-
   return (
     <div className="App">
       {isLoading ? (

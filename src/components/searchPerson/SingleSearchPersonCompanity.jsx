@@ -16,7 +16,6 @@ class SingleCompanenty extends React.Component {
       .then((response) => this.props.setPersonSingle(response.data));
   }
   render() {
-    console.log(this.props.person);
     return (
       <div>
         <SinglePerson person={this.props.person} {...this.props} />

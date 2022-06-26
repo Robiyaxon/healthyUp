@@ -31,7 +31,6 @@ const Sport_Food = (props) => {
     props.setcan_not_sports(app)
     props.setcan_not_dieta(app2)
   }
-  console.log(app);
   return (
     <div className={style.Foods}>
       <h1>Shugullana olmaydigon sportingizni tanlang</h1>

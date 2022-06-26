@@ -5,7 +5,7 @@ import {
   Map,
   Placemark,
   ZoomControl,
-  FullscreenControl,
+FullscreenControl,
   GeolocationControl,
 } from "react-yandex-maps";
 const YandexMap = () => (

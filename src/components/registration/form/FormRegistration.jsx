@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { instance } from "../../../api/api";
 function FormRegistration(props) {
   const navigate = useNavigate();
   const [errorText, seterrorText] = useState(null)
@@ -80,21 +79,17 @@ function FormRegistration(props) {
   formdata.append("username", props.username);
   formdata.append("email", props.email);
 
-  // var requestOptions = {
-  //   method: "POST",
-  //   body: formdata,
-  //   redirect: "follow",
-  // };
-  // const click=()=>{
-
-  // props.SignApp()
-  //   fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
-  //   .then((response) => response.text())
-  //   .then((result) =>console.log(Number(result) === 200 ?<>{seterrorText(t("erroreMAIL"))}</>: navigate("/whoIsTheUser")))
-  //   .catch((error) =>console.log(error));
-  // }
-  const click=()=>{ navigate("/whoIsTheUser")
-//  instance.post("email/", FormData).then((response) => console.log(Number(response) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> :));
+  var requestOptions = {
+    method: "POST",
+    body: formdata,
+    redirect: "follow",
+  };
+  const click = () => {
+    props.SignApp()
+    fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser")))
+      .catch((error) => console.log(error));
   }
   return (
     <div className={styles.form_wrapper}>

@@ -11,7 +11,7 @@ import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
 import styles from "./Carousel.module.css";
 var config = {
   method: "get",
-  url: "http://10.10.8.46:8000/new/",
+  url: "http://ehealthuz.pythonanywhere.com/new/",
   headers: {
     "Content-Type": "application/json",
   },
