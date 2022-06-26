@@ -169,7 +169,7 @@ export const RouterMap = () => {
       id: 17,
       url: "otherAccount",
       element: (
-        <OtherCreateAccount first_name={first_name} last_name={last_name} type={type}/>
+        <OtherCreateAccount first_name={first_name} last_name={last_name} type={type} />
       ),
     },
     { id: 18, url: "search_person", element: <SearchPerson /> },
@@ -194,7 +194,6 @@ export const RouterMap = () => {
       }
     />
   ));
-
   return <Routes>
     {dataMapForRoute}
     <Route path="singilur" element={<SingleSearchPersonCompanity />}>

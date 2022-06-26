@@ -29,8 +29,8 @@ const SeachPerson = () => {
     .map((item) => {
       return (
         <>
-          <NavLink to={"/singilur/" + item.id}>
-            <div key={item.id} className={style.card_content}>
+          <NavLink key={item.id}  className={style.card_content} to={"/singilur/" + item.id}>
+            <div >
               <div className={style.img_bordered}>
                 <div className={style.img_wrapper}>
                   <img
