@@ -12,13 +12,32 @@ function AllDietolog() {
   const [maxIndex, setMaxIndex] = useState(0);
   const [pageSize, setPageSize] = useState(16);
 
+  let update = () => {
+    if (window.innerWidth > 950) {
+      setPageSize(16);
+    } else if (window.innerWidth < 950 && window.innerWidth > 750) {
+      setPageSize(12);
+    } else if (window.innerWidth < 750 && window.innerWidth > 400) {
+      setPageSize(8);
+    } else if (window.innerWidth < 400) {
+      setPageSize(4);
+    }
+  };
+
   useEffect(() => {
-    setMinIndex(0);
-    setMaxIndex(pageSize);
+    window.addEventListener("resize", update);
+  }, []);
+
+  useEffect(() => {
     instance.get("get_treyner/").then((response) => {
       return setTrainer(response.data);
     });
   }, []);
+
+  useEffect(() => {
+    setMinIndex(0);
+    setMaxIndex(pageSize);
+  }, [pageSize]);
 
   function HandleChange(page) {
     setCurrent(page);
@@ -47,7 +66,7 @@ function AllDietolog() {
           current={current}
           total={trainer.length}
           onChange={HandleChange}
-          style={{ textAlign: "center" }}
+          style={{ textAlign: "center", marginTop: "1rem" }}
         />
       </div>
     </div>
