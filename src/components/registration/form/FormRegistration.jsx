@@ -93,8 +93,8 @@ function FormRegistration(props) {
   //   .then((result) =>console.log(Number(result) === 200 ?<>{seterrorText(t("erroreMAIL"))}</>: navigate("/whoIsTheUser")))
   //   .catch((error) =>console.log(error));
   // }
-  const click=()=>{
- instance.post("email/", FormData).then((response) => console.log(Number(response) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser")));
+  const click=()=>{ navigate("/whoIsTheUser")
+//  instance.post("email/", FormData).then((response) => console.log(Number(response) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> :));
   }
   return (
     <div className={styles.form_wrapper}>
