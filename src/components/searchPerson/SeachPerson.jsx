@@ -20,6 +20,7 @@ const SeachPerson = () => {
     instance.get("get_treyner/").then((response) => setTrainer(response.data));
   }, []);
 
+
   const mapTrainer = trainer
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)

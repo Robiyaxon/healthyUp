@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-import style from "./Foods.module.css"
-import { Button } from 'antd';
-import { useEffect } from 'react';
-import { instance } from '../../../api/api';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import style from "./Foods.module.css";
+import { Button } from "antd";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 var config = {
   method: "get",
   url: "http://10.10.8.46:8000/product/",
@@ -13,48 +12,72 @@ var config = {
     "Content-Type": "application/json",
   },
 };
-const Foods = React.memo((props) => {
-
+const Foods = (props) => {
   const { t } = useTranslation();
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([
+
+  // ]);
   const navigate = useNavigate();
-  const [texnikaModal, setTexnikaModal] = useState("");
-  
-  const app = []
+  const [app, setApp] = useState([]);
 
-  // app.push(texnikaModal)
+  const data = [
+    { id: 1, name: "sdfgsdg" },
+    { id: 2, name: "sdfgsdg" },
+    { id: 3, name: "sdfgsdg" },
+  ];
+
   useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) { });
+    // axios(config)
+    //   .then(function (response) {
+    //     // setData(response.data);
+    //   })
+    //   .catch(function (error) { });
   }, []);
-  const clikc = () => {
-    navigate("/femaleOrMale")
-    props.setcan_not_dieta(texnikaModal)
-  }
 
-  console.log(texnikaModal);
-  console.log(app);
+  const click = async (id) => {
+    console.log("ID == ", id);
+
+    // navigate("/femaleOrMale")
+    // console.log("before ID == ", texnikaModal);
+
+    // setTexnikaModal(id);
+    // console.log("after ID == ", texnikaModal);
+
+    // props.setcan_not_dieta(texnikaModal)
+
+    let temp = app;
+    temp.push(id);
+    setApp(temp);
+    console.log("here", app);
+  };
+
   return (
     <div className={style.Foods}>
-      <h1>{t("foods")}</h1>
+      <h1>Foods</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          {data.map(a => <div className={style.Block_Card} onClick={() => app.push(a.id)
-          }>{a.name}</div>)}
+          {t("foods")}
+          {data.map((a) => (
+            <div
+              key={a.id}
+              className={style.Block_Card}
+              onClick={() => click(a.id)}
+            >
+              {a.name}
+            </div>
+          ))}
         </div>
       </div>
       <Button
         type="primary"
         htmlType="submit"
         className="login-form-button"
-        onClick={clikc}
+        onClick={click}
       >
-        {t("Continue")}
+        {/* {t("Continue")} */}
+        Continue
       </Button>
     </div>
-  )
-})
-export default Foods
+  );
+};
+export default Foods;

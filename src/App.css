@@ -95,7 +95,7 @@
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   height: 60px !important;
   border-radius: 10px !important;
-  border: 2px solid #886600 !important;
+  border: 2px solid #151514 !important;
 }
 
 @media (min-width: 0) and (max-width: 1100.9px) {
@@ -105,7 +105,11 @@
 
   .Navlink,
   .active {
-    width: 90% !important;
+    width: auto !important;
     margin: 1rem 0;
+  }
+
+  .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper{
+    width: 60%;
   }
 }
