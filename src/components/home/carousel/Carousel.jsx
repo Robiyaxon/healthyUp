@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector } from "react-redux";
 import main from "../../../assets/home/carousel/main.png";
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
 
 import styles from "./Carousel.module.css";
@@ -14,6 +15,7 @@ export const MyCarousel = () => {
   const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
     instance.get("new/").then((response) => setData(response.data));
+    AOS.init({duration:2000})
   }, []);
   const dataMap = data.map((d) => (
     <Item
@@ -27,7 +29,7 @@ export const MyCarousel = () => {
   console.log(dataMap);
 
   return (
-    <div className={styles.carousel}>
+    <div className={styles.carousel}  data-aos="zoom-out">
       <Carousel>
         {dataMap}
       </Carousel>

@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 import { instance } from "../../../api/api";
 
 import style from "./HomeHeader.module.css";
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 export const HomeHeader = () => {
 
   const [data, setData] = useState([]);
@@ -60,7 +61,8 @@ export const HomeHeader = () => {
     </div>
   ));
   useEffect(() => {
+    AOS.init({duration:2000})
     instance.get("homeheader/").then((response) => setData(response.data));
   }, []);
-  return <div className={style.HomeHeader}>{map}</div>;
+  return <div className={style.HomeHeader} data-aos="zoom-out">{map}</div>;
 };

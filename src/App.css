@@ -98,6 +98,13 @@
   border: 2px solid #151514 !important;
 }
 
+.hidden {
+}
+
+.none{
+  border: 3px solid firebrick !important;
+}
+
 @media (min-width: 0) and (max-width: 1100.9px) {
   .ant-drawer-wrapper-body {
     width: 90% !important;

@@ -1,0 +1,49 @@
+.Foods {
+    padding: 290px 175px 20px 175px;
+    background-color: white;
+    height: 100vh;
+}
+
+.Foods h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+    width: 530px;
+    margin: 0 auto 56px auto;
+    color: #4C3C00;
+}
+
+.Select {
+    width: 472px;
+    border-radius: 10px;
+    /* height: 60px !important; */
+   
+}
+.Select_block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block_Card{
+    width: 100px;
+    border: 2px solid rgb(201, 196, 196);
+    height: 100px;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+}
+.Block_Card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

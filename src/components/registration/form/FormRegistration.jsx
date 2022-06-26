@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { instance } from "../../../api/api";
 function FormRegistration(props) {
   const navigate = useNavigate();
+  const [errorText, seterrorText] = useState(null)
+  const { t } = useTranslation()
   const map = [
     {
       id: 1,
       message: "Please input your Name!",
-      name: "name",
+      name: "last_name",
       label: "Name",
       value: props.last_name,
       setname1: props.setName,
@@ -21,7 +25,7 @@ function FormRegistration(props) {
       message: "Please input your Firstname!",
       name: "firstname",
       label: "Firstname",
-      value: props.first_name ,
+      value: props.first_name,
       setname1: props.setFirstname,
       type: "text",
       placeholder: "Enter your Firstname",
@@ -31,7 +35,7 @@ function FormRegistration(props) {
       message: "Please input your Username!",
       name: "username",
       label: "Username",
-      value:  props.username ,
+      value: props.username,
       setname1: props.setUsername,
       type: "text",
       placeholder: "Enter your Username",
@@ -41,7 +45,7 @@ function FormRegistration(props) {
       message: "Please input your Password!",
       name: "password",
       label: "Create a password",
-      value:  props.password ,
+      value: props.password,
       setname1: props.setPassword,
       type: "password",
       placeholder: "Enter your Username",
@@ -51,10 +55,10 @@ function FormRegistration(props) {
       message: "Please input your Email!",
       name: "setEmail",
       label: "Email",
-      value:  props.email ,
+      value: props.email,
       setname1: props.setEmail,
       type: "email",
-      placeholder: "Enter your E",
+      placeholder: "Enter your Email",
     },
   ];
   const map2 = map.map((a) => (
@@ -72,14 +76,34 @@ function FormRegistration(props) {
       />
     </Form.Item>
   ));
+  var formdata = new FormData();
+  formdata.append("username", props.username);
+  formdata.append("email", props.email);
+
+  // var requestOptions = {
+  //   method: "POST",
+  //   body: formdata,
+  //   redirect: "follow",
+  // };
+  // const click=()=>{
+
+  // props.SignApp()
+  //   fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
+  //   .then((response) => response.text())
+  //   .then((result) =>console.log(Number(result) === 200 ?<>{seterrorText(t("erroreMAIL"))}</>: navigate("/whoIsTheUser")))
+  //   .catch((error) =>console.log(error));
+  // }
   const click=()=>{
-    navigate("/whoIsTheUser")
-    // props.SignApp()
+//  instance.post("email/", FormData).then((response) => console.log(Number(response) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : 
+ 
+ navigate("/whoIsTheUser")
+//  ));
   }
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
         <h3>Registration</h3>
+        <h2>{errorText}</h2>
         <Form
           name="basic"
           initialValues={{ remember: true }}

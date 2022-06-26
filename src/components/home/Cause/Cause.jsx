@@ -6,12 +6,14 @@ import chek from "../../../assets/home/header/chek.svg";
 import { instance } from "./../../../api/api";
 
 import style from "./Cause.module.css";
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 export const Cause = () => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
 
   useEffect(() => {
+    AOS.init({duration:3000})
     instance.get("ill/").then((response) => setData(response.data));
   }, []);
 
@@ -29,7 +31,7 @@ export const Cause = () => {
     </h1>
   ));
   return (
-    <div className={style.Cause}>
+    <div className={style.Cause} data-aos="zoom-out">
       {map}
       <div className={style.Chek}>
         <img src={chek} alt="rasm bor edi!" />

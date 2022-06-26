@@ -1,15 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from "./Conclusion.module.css"
 import { useNavigate } from 'react-router-dom';
 import img from "../../assets/about_us/header.png"
-const Conclusion = () => {
+import { useEffect } from 'react';
+import { instance } from '../../api/api';
+
+const Conclusion = ({ token }) => {
   const navigate = useNavigate()
+  // const [data, setData] = useState([]);
+  console.log(token);
+  localStorage.setItem("token", token)
   const qidiruv = () => {
     navigate("/faq")
   }
   const profile = () => {
     navigate("/foods")
   }
+  useEffect(() => {
+    const config = {
+      headers: {
+        Authorization:  token
+      }
+    }
+    instance.get(`user`, config).then(
+      (response) => console.log("hellor")
+    );
+  }, [token]);
   return (
     <div className={style.Conclusion}>
       <h1 className={style.Title}>Profilingizning xulosasi</h1>
@@ -38,12 +54,11 @@ const Conclusion = () => {
         <img src={img} alt="" />
         <div className={style.Topshiriq2}>
           <p>1-topshiriq</p>
-        
-        </div>  
-        <label class={style.checkbox}>
-            <input type="checkbox" class={style.checkbox__input} />
-            <span class={style.checkbox__inner}></span>
-          </label>
+        </div>
+        <label className={style.checkbox}>
+          <input type="checkbox" className={style.checkbox__input} />
+          <span className={style.checkbox__inner}></span>
+        </label>
       </div>
     </div>
   )
