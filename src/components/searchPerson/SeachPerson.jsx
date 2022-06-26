@@ -1,16 +1,15 @@
-import React from "react";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./SearchPerson.module.css";
 import { Link, NavLink } from "react-router-dom";
 // import girl from "./../../assets/search_person/girl.png";
 import { instance } from "./../../api/api";
+import { useTranslation } from "react-i18next";
+import SearchCards from "./SearchCards";
 
 const SeachPerson = () => {
+  const { t } = useTranslation();
   const [value, setValue] = useState("");
-  const inputElement = useRef();
-  const inputFocus = () => {
-    inputElement.current.focus();
-  };
+  const [search, setSearch] = useState([]);
   const [diatolog, setDietolog] = useState([]);
   const [trainer, setTrainer] = useState([]);
 
@@ -55,6 +54,7 @@ const SeachPerson = () => {
             </div>
           </div>
         </NavLink>
+        <SearchCards item={item} index={index} />
         
         </>
       );
@@ -67,30 +67,7 @@ const SeachPerson = () => {
     .map((item, index) => {
       return (
         <>
-          <div key={index} className={style.card_content}>
-            <div className={style.img_bordered}>
-              <div className={style.img_wrapper}>
-                <img
-                  src={"http://10.10.7.17:8000" + item.image}
-                  alt="rasm bor"
-                />
-              </div>
-            </div>
-            <div className={style.person}>
-              {item.first_name} {item.last_name}
-            </div>
-            <div className={style.star}>
-              {item.reyting ? (
-                <>
-                  {Array.apply(null, {
-                    length: Math.floor(item.reyting),
-                  }).map((e, i) => (
-                    <i key={i} className="fa-solid fa-star"></i>
-                  ))}
-                </>
-              ) : null}
-            </div>
-          </div>
+          <SearchCards item={item} index={index} />
         </>
       );
     });
@@ -102,26 +79,22 @@ const SeachPerson = () => {
         <div className={style.form_wrapper}>
           <form>
             <input
-              ref={inputElement}
               type="text"
               name="person"
               value={value}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder="Qidiruv"
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder={t("search")}
             />
-            <i
-              onClick={inputFocus}
-              className="fa-solid fa-magnifying-glass"
-            ></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </form>
         </div>
         {/* form end */}
         {/* card 1 start title */}
         <div className={style.card_wrapper}>
-          <div className={style.card_job}>Dietolog</div>
+          <div className={style.card_job}>{t("dietolog")}</div>
           <div className={style.car_job_all}>
-            <Link to="/searched_person">
-              Barchasi <i class="fa-solid fa-chevron-right"></i>
+            <Link to="/search_deatolog_all">
+              {t("all")} <i class="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </div>
@@ -134,11 +107,11 @@ const SeachPerson = () => {
         {/* card 2 start title */}
         <div className={style.card_wrapper}>
           <div className={style.card_job + " " + style.card_job2}>
-            Treynerlar
+            {t("trainer")}
           </div>
           <div className={style.car_job_all}>
-            <Link to="/searched_person">
-              Barchasi <i class="fa-solid fa-chevron-right"></i>
+            <Link to="/search_trainer_all">
+              {t("all")} <i class="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </div>

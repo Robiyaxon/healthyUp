@@ -105,6 +105,7 @@
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .card_content:hover {
   background: #eed075;
   box-shadow: 0px 24px 54px rgba(160, 160, 160, 0.3);
@@ -145,8 +146,8 @@
 }
 
 .img_wrapper img {
-  width: 88px;
-  height: 88px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 9px;
@@ -169,7 +170,10 @@
   text-align: center;
   justify-content: center;
   transition: all 0.5s;
+  width: 70%;
+  margin: 0 auto;
 }
+
 .star i {
   color: #c6973d;
   width: 26px;
@@ -196,6 +200,7 @@
     margin: 0 auto;
   }
 }
+
 @media (min-width: 0px) and (max-width: 950px) {
   .card_content_container {
     display: flex;
@@ -224,7 +229,7 @@
     text-align: center;
     color: #4c3c00;
   }
-  
+
   .car_job_all a {
     font-family: "Poppins";
     font-style: normal;

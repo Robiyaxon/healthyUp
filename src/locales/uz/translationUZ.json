@@ -40,6 +40,10 @@
   "information":"Ma'lumotlarni to'ldiring",
   "loseWeightFast": "TEZ OZISH UCHUN PARHEZLARNING ENG SAMARALILARI",
   "foods":"Yemaydigan mahsulotingizni belgilab qo‘ying",
-  "erroreMAIL" : "Email va userName allaqachon ishlatilgan!"
+  "erroreMAIL" : "Email va userName allaqachon ishlatilgan!",
+  "search":"Qidiruv",
+  "dietolog":"Dietolog",
+  "all":"Barchasi",
+  "trainer":"Treynerlar"
 
 }

@@ -7,3 +7,4 @@ export const instance = axios.create({
     Accept: "application/json",
   },
 });
+export const URL_FOR_IMG = "http://ehealthuz.pythonanywhere.com";

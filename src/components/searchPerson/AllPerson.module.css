@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  background-color: #f7e8ca;
+  padding: 8rem 0;
+  padding-bottom: 50px;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.card_content_wrapper {
+  margin-top: 20px;
+}
+.card_content_container {
+  display: grid;
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+  gap: 5% 2%;
+  padding-bottom: 150px;
+}
+
+@media (min-width: 0px) and (max-width: 1100.9px) {
+  .wrapper {
+    padding: 6.5rem 0;
+  }
+  .form_wrapper form {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 750px) {
+  .form_wrapper form {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .card_content_container {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    gap: 2% 2%;
+    padding-bottom: 150px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 749.9px) {
+  .card_content_container {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    gap: 1% 2%;
+    padding-bottom: 150px;
+  }
+}
+@media (min-width: 750px) and (max-width: 950px) {
+  .card_content_container {
+    display: grid;
+    grid-template-columns: 31.5% 31.5% 31.5%;
+    gap: 2% 2%;
+    padding-bottom: 150px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 950px) {
+  .card_content_container::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
+  .card_job {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #4c3c00;
+  }
+  .person {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #4c3c00;
+  }
+
+  .car_job_all a {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #4c3c00;
+  }
+  .car_job_all i {
+    font-size: 24px;
+  }
+}
+@media (min-width: 0px) and (max-width: 400px) {
+  .card_content_container {
+    display: grid;
+    grid-template-columns: 98%;
+    gap: 1%;
+    padding-bottom: 150px;
+  }
+}
