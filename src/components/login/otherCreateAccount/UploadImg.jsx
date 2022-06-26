@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import otherAccount from '../../../assets/login/otherAccount.png'
 
 const UploadImg = ({setImg, setPassword}) => {
   const uploadedImage = useRef(null);
@@ -6,6 +7,8 @@ const UploadImg = ({setImg, setPassword}) => {
 
   const handleImageUpload = e => {
     const [file] = e.target.files;
+    console.log(e.target.files[0].name);
+    setImg(e.target.files[0].name);
     if (file) {
       const reader = new FileReader();
       const { current } = uploadedImage;
@@ -14,7 +17,8 @@ const UploadImg = ({setImg, setPassword}) => {
         current.src = e.target.result;
       };
       reader.readAsDataURL(file);
-      setImg(file)
+      setImg(file.name)
+      console.log(file.name.name);
     }
   };
 
@@ -38,9 +42,9 @@ const UploadImg = ({setImg, setPassword}) => {
       />
       <div
         style={{
-          height: "60px",
-          width: "60px",
-          border: "1px dashed black"
+          height: "auto",
+          width: "130px",
+          cursor:"pointer"
         }}
         onClick={() => imageUploader.current.click()}
       >
@@ -51,10 +55,10 @@ const UploadImg = ({setImg, setPassword}) => {
             height: "100%",
             position: "acsolute"
           }}
+          src={otherAccount}
           alt=''
         />
       </div>
-      Click to upload Image
     </div>
   );
 }

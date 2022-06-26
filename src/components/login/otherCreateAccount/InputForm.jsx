@@ -1,6 +1,7 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Button, Form, Input, Select } from "antd";
+import { Button, Form, Input, Select, InputNumber, Slider, DatePicker } from "antd";
+import axios from "axios";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -17,67 +18,56 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({
-  setUserName,
-  setPassword,
-  setEmail,
-  setFirst_name,
-  setLast_name,
-  setBio,
-  setAge,
-  setAddres
-}) => {
+const InputForm = ({type, img}) => {
   const [form] = Form.useForm();
-
-  const onGenderChange = (value) => {
-    switch (value) {
-      case "male":
-        form.setFieldsValue({
-          userName: "Hi, man!",
-        });
-        return;
-
-      case "female":
-        form.setFieldsValue({
-          userName: "Hi, lady!",
-        });
-        return;
-
-      case "other":
-        form.setFieldsValue({
-          userName: "Hi there!",
-        });
-    }
-  };
 
   const onFinish = (values) => {
     console.log(values);
-    setPassword(values.password);
-    setUserName(values.userName);
-    setFirst_name(values.first_name);
-    setLast_name(values.last_name);
-    setBio(values.bio);
-    setAge(values.age);
-    setAddres(values.addres);
-    setEmail(values.email);
-  };
+    var data = new FormData();
+    data.append("username", values.userName);
+    data.append("password", values.password);
+    data.append("email", values.email);
+    data.append("first_name", values.first_name);
+    data.append("last_name", values.last_name);
+    data.append("bio", values.bio);
+    data.append("age", values.age);
+    data.append("experience", values.experience);
+    data.append("birthday", "1975-05-22");
+    data.append("addres", values.addres);
+    data.append("information", values.information);
+    data.append("phone", "+998997777799");
+    data.append("type", type);
+    data.append("gender", values.gender);
+    data.append("birthday", values.birthday);
+    data.append("phone", values.phone);
+    data.append("pic", img);
+  
+    var config = {
+      method: "post",
+      url: "http://10.10.7.17:8000/register/",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
 
-  const onReset = () => {
-    form.resetFields();
-  };
-
-  const onFill = () => {
-    form.setFieldsValue({
-      userName: "Hello world!",
-      password: "Hello world!",
-      email: "Hello world!",
-      first_name: "first_name",
-      last_name: "last_name",
-      addres: "addres",
-      bio: "bio",
-      age: 23,
-      gender: "male",
+    axios(config)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
     });
+  };
+
+  const config1 = {
+    rules: [
+      {
+        type: 'object',
+        required: true,
+        message: 'Please select time!',
+      },
+    ],
   };
 
   return (
@@ -137,6 +127,18 @@ const InputForm = ({
       >
         <Input />
       </Form.Item>
+      <Form.Item name="experience" label="Experience">
+        <Slider
+          marks={{
+            0: '.',
+            10: '.',
+            20: '.',
+            30: '.',
+            40: '.',
+            50: '.',
+          }}
+        />
+      </Form.Item>
       <Form.Item
         name="bio"
         label="bio"
@@ -148,16 +150,25 @@ const InputForm = ({
       >
         <Input />
       </Form.Item>
+      
+      <Form.Item label="Age">
+        <Form.Item name="age" noStyle>
+          <InputNumber min={1} max={10} />
+        </Form.Item>
+      </Form.Item>
+       <Form.Item name="birthday" label="DatePicker" {...config1}>
+        <DatePicker />
+      </Form.Item>
       <Form.Item
-        name="age"
-        label="Age"
+        name="phone"
+        label="Telefon raqam"
         rules={[
           {
             required: true,
           },
         ]}
       >
-        <Input />
+         <InputNumber min={1} max={10} />
       </Form.Item>
       <Form.Item
         name="addres"
@@ -171,19 +182,8 @@ const InputForm = ({
         <Input />
       </Form.Item>
       <Form.Item
-        name="info"
-        label="Info"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        name="gender"
-        label="Gender"
+        name="information"
+        label="Information"
         rules={[
           {
             required: true,
@@ -192,45 +192,33 @@ const InputForm = ({
       >
         <Select
           placeholder="Select a option and change input text above"
-          onChange={onGenderChange}
           allowClear
         >
-          <Option value="male">male</Option>
-          <Option value="female">female</Option>
-          <Option value="other">other</Option>
+          <Option value="1">Boshlang'ich</Option>
+          <Option value="2">O'rta</Option>
+          <Option value="3">Oliy</Option>
         </Select>
       </Form.Item>
       <Form.Item
-        noStyle
-        shouldUpdate={(prevValues, currentValues) =>
-          prevValues.gender !== currentValues.gender
-        }
+        name="gender"
+        label="gender"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
       >
-        {({ getFieldValue }) =>
-          getFieldValue("gender") === "other" ? (
-            <Form.Item
-              name="customizeGender"
-              label="Customize Gender"
-              rules={[
-                {
-                  required: true,
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-          ) : null
-        }
+        <Select
+          placeholder="Select a option and change input text above"
+          allowClear
+        >
+          <Option value="1">Erkak</Option>
+          <Option value="2">Ayol</Option>
+        </Select>
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
           Submit
-        </Button>
-        <Button htmlType="button" onClick={onReset}>
-          Reset
-        </Button>
-        <Button type="link" htmlType="button" onClick={onFill}>
-          Fill form
         </Button>
       </Form.Item>
     </Form>

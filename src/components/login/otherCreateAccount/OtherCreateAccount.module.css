@@ -28,9 +28,15 @@
 
 .body__img_and_inp{
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
 }
 
 .body__img_and_inp__inp{
-  width: 80%;
-  border: 3px solid firebrick;
+  width: 60%;
+}
+
+.body__img_and_inp__img{
+  width: 30%;
 }

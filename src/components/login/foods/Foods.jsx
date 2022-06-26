@@ -26,7 +26,7 @@ const Foods = (props) => {
   console.log(app);
   return (
     <div className={style.Foods}>
-      <h1>{t("foods")}</h1>
+      <h1>Foods</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
           {data.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click(a.id)
@@ -39,9 +39,10 @@ const Foods = (props) => {
         className="login-form-button"
         onClick={click2}
       >
-        {t("Continue")}
+        {/* {t("Continue")} */}
+        Continue
       </Button>
     </div>
-  )
-}
-export default Foods
+  );
+};
+export default Foods;
