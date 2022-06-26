@@ -1,7 +1,11 @@
+/* eslint-disable react/jsx-pascal-case */
+/* eslint-disable eqeqeq */
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
 import { Home } from "./../components/home/Home";
+import Sports from "../components/registration/sport/Sports";
+import Sport_Food from "../components/registration/sport&food/SportsFood";
 const Question = lazy(() => import("./../components/question/Question.jsx"));
 const Foods = lazy(() => import("../components/login/foods/Foods"));
 const AboutUs = lazy(() => import("./../components/about_us/AboutUs"));
@@ -9,6 +13,7 @@ const Contact = lazy(() => import("./../components/contact/Contact"));
 const MyCabinet = lazy(() => import("./../components/my_cabinet/My_Cabinet"));
 const Login = lazy(() => import("./../components/login/Login.jsx"));
 const Direction = lazy(() => import("../components/login/Pages/Direction.jsx"));
+const SingleSearchPersonCompanity = lazy(() => import("../components/searchPerson/SingleSearchPersonCompanity.jsx"));
 
 const Registration = lazy(() =>
   import("./../components/registration/Registration.jsx")
@@ -45,16 +50,22 @@ export const RouterMap = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [height, setheight] = useState("");
   const [weight, setweight] = useState("");
   const [type_loss, settype_loss] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [going_to_loss, setgoing_to_loss] = useState("1");
   const [can_not_sports, setcan_not_sports] = useState([1, 4, 5]);
   const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
 
+  const [token, setToken] = useState("");
+
+  const user = { username, email }
+  console.log(user);
   function SignApp(gender2) {
     console.log(can_not_dieta);
     var formdata = new FormData();
@@ -78,17 +89,21 @@ export const RouterMap = () => {
       redirect: "follow",
     };
 
-    fetch("http://10.10.7.17:8000/register/", requestOptions)
+
+    fetch("http://ehealthuz.pythonanywhere.com/register/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
+        localStorage.getItem("token", result)
         if (result == 1) {
           console.log("xato");
         } else {
-          console.log(result);
+          setToken(result.slice(1, -1));
+          console.log(result.slice(1, -1));
         }
       })
       .catch((error) => console.log("error", error));
   }
+
   let data = [
     { id: 1, url: "/", element: <Home /> },
     { id: 2, url: "my_cabinets", element: <MyCabinet /> },
@@ -142,12 +157,22 @@ export const RouterMap = () => {
       element: <Foods setcan_not_dieta={setcan_not_dieta} />,
     },
     {
+      id: 45,
+      url: "foods&sport",
+      element: <Sport_Food setcan_not_sports={setcan_not_sports} setcan_not_dieta={setcan_not_dieta} />,
+    },
+    {
+      id: 20,
+      url: "sports",
+      element: <Sports setcan_not_sports={setcan_not_sports} />,
+    },
+    {
       id: 14,
       url: "direction",
       element: <Direction settype_loss={settype_loss} />,
     },
     { id: 15, url: "loader", element: <Loader /> },
-    { id: 16, url: "conclusion", element: <Conclusion /> },
+    { id: 16, url: "conclusion", element: <Conclusion token={token} /> },
     {
       id: 17,
       url: "otherAccount",
@@ -178,5 +203,10 @@ export const RouterMap = () => {
     />
   ));
 
-  return <Routes>{dataMapForRoute}</Routes>;
+  return <Routes>
+    {dataMapForRoute}
+    <Route path="search_person/singilur" element={<SingleSearchPersonCompanity />}>
+      <Route path=":userId" element={<SingleSearchPersonCompanity />} />
+    </Route>
+  </Routes>;
 };
