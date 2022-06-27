@@ -10,20 +10,9 @@ export default function ScrollToTop() {
   }, [pathname]);
   return null;
 }
-const style = {
-  height: 40,
-  width: 40,
-  lineHeight: "40px",
-  borderRadius: 4,
-  // backgroundColor: "#000",
-  color: "#fff",
-  textAlign: "center",
-  fontSize: 14,
-};
-
 export const MyBackTop = () => {
   return (
-    <BackTop style={style}>
+    <BackTop className="style">
       <div>
         <UpCircleOutlined />
       </div>

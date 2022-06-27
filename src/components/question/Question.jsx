@@ -4,12 +4,12 @@ import Question2 from "./Question2";
 import faq from "../../assets/FAQ/faq.png";
 import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
-const Question = () => {
+const Question =  React.memo(() => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {
     instance.get("question/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
   return (
     <div className={style.WrapperQuestion}>
       <div className={style.Question}></div>    
@@ -34,5 +34,5 @@ const Question = () => {
       </div>
     </div>
   );
-};
+})
 export default Question;

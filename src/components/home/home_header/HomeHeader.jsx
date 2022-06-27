@@ -7,7 +7,7 @@ import { instance } from "../../../api/api";
 import style from "./HomeHeader.module.css";
 import AOS from "aos"
 import "aos/dist/aos.css"
-export const HomeHeader = () => {
+export const HomeHeader =  React.memo(() => {
 
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
@@ -63,6 +63,6 @@ export const HomeHeader = () => {
   useEffect(() => {
     AOS.init({duration:2000})
     instance.get("homeheader/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
   return <div className={style.HomeHeader} data-aos="zoom-out">{map}</div>;
-};
+})

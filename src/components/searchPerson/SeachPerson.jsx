@@ -1,28 +1,21 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import style from "./SearchPerson.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { instance } from "./../../api/api";
 import { useTranslation } from "react-i18next";
 import SearchCards from "./SearchCards";
-
-const SeachPerson = () => {
+const SeachPerson = React.memo(() => {
   const { t } = useTranslation();
-  
   const [value, setValue] = useState("");
-  const [search, setSearch] = useState([]);
+  // const [search, setSearch] = useState([]);
   const [diatolog, setDietolog] = useState([]);
   const [trainer, setTrainer] = useState([]);
-
   useEffect(() => {
     instance
       .get("get_dietolog/")
       .then((response) => setDietolog(response.data));
-
     instance.get("get_treyner/").then((response) => setTrainer(response.data));
-  }, []);
-
-
+  }, [setTrainer]);
   const mapTrainer = trainer
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
@@ -30,35 +23,9 @@ const SeachPerson = () => {
     .map((item) => {
       return (
         <>
-          <NavLink key={item.id}  className={style.card_content} to={"/singilur/" + item.id}>
-            <div >
-              <div className={style.img_bordered}>
-                <div className={style.img_wrapper}>
-                  <img
-                    src={"http://ehealthuz.pythonanywhere.com" + item.image}
-                    alt="rasm bor"
-                  />
-                </div>
-              </div>
-              <div className={style.person}>
-                {item.first_name} {item.last_name}
-              </div>
-              <div className={style.star}>
-                {item.reyting ? (
-                  <>
-                    {Array.apply(null, {
-                      length: Math.floor(item.reyting),
-                    }).map((e, i) => (
-                      <i key={i} className="fa-solid fa-star"></i>
-                    ))}
-                  </>
-                ) : null}
-              </div>
-            </div>
+          <div key={item.id} className={style.card_content} >
             <SearchCards item={item} />
-          </NavLink>
-
-
+          </div>
         </>
       );
     });
@@ -67,10 +34,10 @@ const SeachPerson = () => {
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
     .slice(0, 4)
-    .map((item, index) => {
+    .map((item) => {
       return (
         <>
-          <SearchCards item={item} index={index} />
+          <SearchCards item={item}/>
         </>
       );
     });
@@ -85,7 +52,7 @@ const SeachPerson = () => {
               type="text"
               name="person"
               value={value}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => setValue(e.target.value)}
               placeholder={t("search")}
             />
             <i className="fa-solid fa-magnifying-glass"></i>
@@ -131,6 +98,6 @@ const SeachPerson = () => {
       </div>
     </div>
   );
-};
+})
 
 export default SeachPerson;

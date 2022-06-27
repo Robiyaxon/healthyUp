@@ -4,11 +4,9 @@ import man2 from "./../../../assets/home/comment/man2.png";
 import man1 from "./../../../assets/home/comment/man1.png";
 import top from "./../../../assets/home/comment/top.png";
 import bottom from "./../../../assets/home/comment/bottom.png";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
-function Comment() {
-  useEffect(() => {
-  }, []);
+const Comment = React.memo(() =>{
   return (
     <div className={styles.header_wrapper}>
       <div className={styles.header}>
@@ -91,6 +89,5 @@ function Comment() {
       </div>
     </div>
   );
-}
-
+})
 export default Comment;

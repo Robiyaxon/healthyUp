@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useEffect, useState } from "react";
 import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
 import { Rate } from "antd";
@@ -8,6 +7,7 @@ import person from "../../../assets/home/specialists/person.png";
 
 import styles from "./Specialists.module.css";
 import "./Specialists.css";
+import { NavLink } from 'react-router-dom';
 
 var config = {
   method: "get",
@@ -17,16 +17,15 @@ var config = {
   },
 };
 
-export const Specialists = () => {
+export const Specialists = React.memo(() => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios(config)
       .then(function (response) {
         setData(response.data);
       })
-      .catch(function (error) {});
-  }, []);
-  console.log(data);
+      .catch(function (error) { });
+  }, [data]);
   const dataMap = data
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
@@ -36,9 +35,9 @@ export const Specialists = () => {
         ? "http://ehealthuz.pythonanywhere.com/" + d.image
         : person;
       // let image = "http://ehealthuz.pythonanywhere.com/" + img;
-      console.log(img);
       return (
-        <div className="cards cards--three" key={index}>
+        <NavLink to={"/singilur/" + d.id} className="cards cards--three" key={index}>
+
           <img src={img} className="img-responsive" alt="" />
           <Rate disabled defaultValue={d.reyting / d.reyting_count} />
 
@@ -64,7 +63,7 @@ export const Specialists = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </NavLink>
       );
     });
   return (
@@ -78,4 +77,4 @@ export const Specialists = () => {
       </div>
     </div>
   );
-};
+})

@@ -11,23 +11,19 @@ const Login = () => {
   const navigate = useNavigate();
 
   const [errorClass, setErrorClass] = useState("")
-
   const onFinish = (values) => {
     // console.log("Received values of form: ", values);
-
     var formdata = new FormData();
     formdata.append("username", values.username);
     formdata.append("password", values.password);
-
     var requestOptions = {
       method: "POST",
       body: formdata,
       redirect: "follow",
     };
-
-    fetch("http://10.10.8.46:8000/kirish/", requestOptions)
+    fetch("http://ehealthuz.pythonanywhere.com/kirish/", requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(Number(result) === 404 ? setErrorClass(style.errorTrue) : navigate('/home')))
+      .then((result) => Number(result) === 404 ? setErrorClass(style.errorTrue) : navigate('home'))
       .catch((error) => console.log("error", error));
   };
 

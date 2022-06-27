@@ -1,14 +1,36 @@
 * {
   padding: 0;
 }
-
+.olma{
+  border: 2px solid red;
+  width: 100px;
+  border: 2px solid rgb(201, 196, 196);
+  height: 100px;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 1s all;
+  display: none;
+}
 .WhoIsTheUser {
   background: rgba(247, 231, 200, 0.3);
 
 }
-.click{
+.style{
+  height: 40;
+  width: 40;
+  line-height: 40px;
+  border-radius: 4;
+  color: "#fff";
+  text-align: center;
+  font-size: 14;
+}
+.click {
   border: 2px solid red !important;
 }
+
 .SpinStyle {
   height: 100vh;
   width: 100% !important;
@@ -99,7 +121,8 @@
   border-radius: 10px !important;
   border: 2px solid #151514 !important;
 }
-.none{
+
+.none {
   border: 3px solid firebrick !important;
 }
 
@@ -120,7 +143,7 @@
     margin: 1rem 0;
   }
 
-  .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper{
+  .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
     width: 70% !important;
   }
 }

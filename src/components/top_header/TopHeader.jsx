@@ -27,7 +27,7 @@ export const TopHeader = () => {
     return () => {
       window.removeEventListener("scroll", () => { });
     };
-  }, []);
+  }, [scroll]);
 
   function handleChange(event) {
     setLang(event.target.value);
@@ -71,10 +71,7 @@ export const TopHeader = () => {
         <div className={style.Drawer_Block_Navlink + " " + style.stroke}  >
           {map2}
           <button className={style.Navlink_href} onClick={click}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          
             {t("homeHeaderBtn1")}
           </button>
         </div>

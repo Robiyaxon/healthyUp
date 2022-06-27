@@ -5,7 +5,7 @@ import erkak from "../../../assets/login/erkak.svg";
 import ayol from "../../../assets/login/ayol.svg";
 import style from "./FemaleOrMale.module.css";
 import { useNavigate } from "react-router-dom";
-const FemaleOrMale = (props) => {
+const FemaleOrMale =  React.memo((props) => {
   const { t } = useTranslation();
   const navigate = useNavigate()
   const women = () => {
@@ -37,5 +37,5 @@ const FemaleOrMale = (props) => {
       </div>
     </div>
   );
-};
+})
 export default FemaleOrMale;

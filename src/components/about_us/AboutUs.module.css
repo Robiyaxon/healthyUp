@@ -17,7 +17,6 @@
 
 .header .first:nth-child(even) {
   flex-direction: row-reverse !important;
-  border: 3px solidd rebeccapurple;
 }
 
 .second {
@@ -135,7 +134,7 @@ body {
   grid-column: 1 / -1;
   grid-row: 1;
   font-family: "Prata", serif;
-  font-size: 8vw;
+  font-size: 7vw;
   width: 100%;
   z-index: 2;
 }
@@ -235,6 +234,7 @@ body {
   .rotatingText_description {
     font-size: 18px;
   }
+  
 }
 .rotatingText_adjective {
   font-family: "Open Sans", sans-serif;
@@ -358,6 +358,10 @@ body {
   .title{
     font-size: 20px !important;
   }
+
+  .manWrapper{
+    margin-top: 8rem !important;
+  }
 }
 
 @media (min-width: 0) and (max-width: 1199.9px) {
@@ -374,7 +378,7 @@ body {
   }
 
   .manWrapper {
-    margin: 0 auto;
+    margin: 10rem auto 0;
     width: 70%;
   }
   .girlWrapper {
@@ -418,7 +422,7 @@ body {
   .title{
     padding: 0;
     font-size: 44px;
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
   .title div:first-child{
     display: flex;
@@ -428,10 +432,13 @@ body {
   .mozart{
     margin-left: 1rem;
   }
+  .header .first:nth-child(even){
+    flex-direction: column !important;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1293px) {
   .second,
   .first {
-    padding: 0 30px 50px;
+    padding: 8rem 30px 50px;
   }
 }

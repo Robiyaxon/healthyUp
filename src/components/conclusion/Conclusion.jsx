@@ -8,30 +8,29 @@ import { axios } from "axios";
 const Conclusion = ({ token }) => {
   const navigate = useNavigate();
   // const [data, setData] = useState([]);
-  console.log(token);
-  localStorage.setItem("token", token);
   const qidiruv = () => {
     navigate("/faq");
   };
   const profile = () => {
     navigate("/foods");
   };
-  // const config = {
-  //   method: "get",
-  //   url: "http://ehealthuz.pythonanywhere.com/user/",
-  //   headers: {
-  //     Authorization: localStorage.getItem("token"),
-  //   },
+  // var config = {
+  //   method: 'get',
+  //   url: 'https://ehealthuz.pythonanywhere.com/user/',
+  //   headers: { 
+  //     'Authorization': `token ${localStorage.getItem('token')}`
+  //   }
   // };
   // useEffect(() => {
 
   //   axios(config)
-  //     .then(function (response) {
-  //       console.log(response.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
+  //   .then(function (response) {
+  //     console.log(response.data)
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   });
+    
   // }, []);
   console.log(localStorage.getItem("token"))
 

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import style from "./Sports.module.css"
+import style from "../../login/foods/Foods.module.css"
 import { Button } from 'antd';
 import { useEffect } from 'react';
 import { instance } from '../../../api/api';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-const Sport_Food = (props) => {
+const Sport_Food =  React.memo((props) => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
@@ -33,7 +33,7 @@ const Sport_Food = (props) => {
   }
   return (
     <div className={style.Foods}>
-      <h1>Shugullana olmaydigon sportingizni tanlang</h1>
+      <h1>{t("no_sport")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
           {data.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click(a.id)
@@ -47,7 +47,8 @@ const Sport_Food = (props) => {
           }>{a.name}</div>)}
         </div>
       </div>
-      <Button
+      <div style={{textAlign:"center"}}>
+ <Button
         type="primary"
         htmlType="submit"
         className="login-form-button"
@@ -55,7 +56,9 @@ const Sport_Food = (props) => {
       >
         {t("Continue")}
       </Button>
+      </div>
+     
     </div>
   )
-}
+})
 export default Sport_Food

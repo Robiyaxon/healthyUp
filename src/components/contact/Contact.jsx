@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { instance } from "./../../api/api";
   import AOS from "aos"
 import "aos/dist/aos.css"
-const Contact = () => {
+const Contact =  React.memo(() => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -18,7 +18,7 @@ const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 })
     instance.get("footer/").then((response) => setData(response.data));
-  }, []);
+  }, [data]);
   const success = () => {
     if ((name !== "", firstname !== "", tel !== "", textarea !== "")) {
       message.success("This is a success message");
@@ -141,5 +141,5 @@ const Contact = () => {
       <YandexMap />
     </div>
   );
-};
+})
 export default Contact;

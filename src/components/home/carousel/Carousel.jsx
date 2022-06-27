@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { useTranslation } from "react-i18next";
 import Carousel from "react-elastic-carousel";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import main from "../../../assets/home/carousel/main.png";
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -10,15 +10,15 @@ import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
 import styles from "./Carousel.module.css";
 import { instance } from './../../../api/api';
 
-export const MyCarousel = () => {
+export const MyCarousel =  React.memo(() => {
   const [data, setData] = useState([]);
-  const { language } = useSelector((state) => state.langReducer);
+  // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
     instance.get("new/").then((response) => setData(response.data));
     AOS.init({duration:2000})
-  }, []);
+  }, [setData]);
   const dataMap = data.map((d) => (
-    <Item
+    <Item key={d.id}
       picture={(d.img) || main}
       title={
         d.title
@@ -26,8 +26,6 @@ export const MyCarousel = () => {
       text={d.text}
     />
   ));
-  console.log(dataMap);
-
   return (
     <div className={styles.carousel}  data-aos="zoom-out">
       <Carousel>
@@ -36,7 +34,7 @@ export const MyCarousel = () => {
       <LoseWeightFast />
     </div>
   );
-};
+})
 
 const Item = ({
   picture = main,

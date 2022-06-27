@@ -8,7 +8,7 @@ import "aos/dist/aos.css"
 import styles from "./LoseWeightFast.module.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from 'react-redux';
-const LoseWeightFast = () => {
+const LoseWeightFast =  React.memo(() => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
   const { language } = useSelector((state) => state.langReducer);
@@ -16,7 +16,7 @@ const LoseWeightFast = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 })
     instance.get("advice/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
 
   const dataMap = data.map((d) => {
     return (
@@ -40,6 +40,6 @@ const LoseWeightFast = () => {
       </div>
     </div>
   );
-};
+})
 
 export default LoseWeightFast;

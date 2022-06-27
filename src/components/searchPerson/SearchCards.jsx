@@ -3,10 +3,10 @@ import style from "./SearchPerson.module.css";
 import { URL_FOR_IMG } from "../../api/api";
 import person from "./../../assets/search_person/person.png";
 import { NavLink } from 'react-router-dom';
-function SearchCards({ item }) {
+const SearchCards=React.memo(({ item }) =>{
   return (
     <>
-      <NavLink to={"/singilur/" + item.id} key={item.id} className={style.card_content}>
+      <NavLink to={"/singilur/"+ item.id } key={item.id} className={style.card_content}>
         <div >
           <div className={style.img_bordered}>
             <div className={style.img_wrapper}>
@@ -37,6 +37,6 @@ function SearchCards({ item }) {
 
     </>
   );
-}
+})
 
 export default SearchCards;
