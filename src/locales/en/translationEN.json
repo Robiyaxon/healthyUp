@@ -16,11 +16,11 @@
   "question":"Frequently Asked Questions",
   "question_text":"Here are a few of the questions we get the most. If you don't see what's on your mind, reach out to us anytime on phone, chat, or email.",
   "contact":"Contact",
-  "userName":"Your name",
+  "userName":"Name",
   "plaseholderUserName":"Enter your Name",
   "userSurname":"Surname",
   "plaseholderUserSurname":"Enter your  surname",
-  "userTel":"Your phone number",
+  "userTel":"Phone number",
   "Working_Days":"Working days",
   "week":"Monday-Saturday",
   "Working_hours":"Working hours",
@@ -48,5 +48,8 @@
   "trainer":"Trainer",
   "no_sport":"Choose a sport that you can't do",
   "my_serch":"More than 500+ professionals have registered on our site",
-  "text_my_serch":"To help people who are overweight  More than 500+ professionals have registered on our site"
+  "text_my_serch":"To help people who are overweight  More than 500+ professionals have registered on our site",
+  "borthday":"Date of birth:",
+  "expertReference":"Reference",
+  "experience":"Work experience:"
 }

@@ -4,14 +4,17 @@ import Question2 from "./Question2";
 import faq from "../../assets/FAQ/faq.png";
 import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
+import AOS from "aos"
+import "aos/dist/aos.css"
 const Question =  React.memo(() => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {
+    AOS.init({ duration: 2000 })
     instance.get("question/").then((response) => setData(response.data));
   }, [setData]);
   return (
-    <div className={style.WrapperQuestion}>
+    <div className={style.WrapperQuestion} data-aos="zoom-out">
       <div className={style.Question}></div>    
       <div className={style.WrapperCard}>
         <div className={style.CardBlock}>

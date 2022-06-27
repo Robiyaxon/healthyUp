@@ -2,19 +2,21 @@ import React from 'react'
 import style from "./SinglePerson.module.css"
 import person34 from "./../../assets/search_person/person.png";
 import { Spin } from 'antd';
+import { useTranslation } from 'react-i18next';
 export const SinglePerson = React.memo(({ person }) => {
+  const {t}=useTranslation()
   if (!person) {
     return <div className="SpinStyle">
       <Spin />
     </div>
   }
   const map = [
-    { id: 1, label: "Familya", name: person.last_name },
-    { id: 2, label: "Ism:", name: person.first_name },
-    { id: 3, label: "Tug‘ilgan sana:", name: person.birthday? person.birthday:<>Tug`ilganlik sanasi berkitilgan</>},
-    { id: 5, label: "Telefon raqamingiz:", name: person.phone? person.phone:<>Telefon nomer Berkitilgan</> },
-    { id: 6, label: "Ma'lumoti::", name: person.information===1?<>Boshlang`ich</>:person.information===2?<>O`rta</>:<>OLIY</>},
-    { id: 7, label: "Ish taribasi:", name:person.experience + " yil" },
+    { id: 1, label: t("userSurname"), name: person.last_name },
+    { id: 2, label: t("userName"), name: person.first_name },
+    { id: 3, label: t("borthday"), name: person.birthday? person.birthday:<>Tug`ilganlik sanasi berkitilgan</>},
+    { id: 5, label: t("userTel"), name: person.phone? person.phone:<>Telefon nomer Berkitilgan</> },
+    { id: 6, label: t("expertReference"), name: person.information===1?<>Boshlang`ich</>:person.information===2?<>O`rta</>:<>OLIY</>},
+    { id: 7, label: t("experience"), name:person.experience + " yil" },
   ]
 
   const map2 = map.map(a => <div key={a.id} className={style.card}>
