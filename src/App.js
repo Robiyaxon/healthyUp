@@ -10,6 +10,7 @@ import { RouterMap } from "./helpers/RouteMap";
 import "./App.css"
 
 const App = () => {
+
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     window.addEventListener("load", handleLoading);

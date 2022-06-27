@@ -16,11 +16,11 @@
   "question_text": "Bu erda bizni eng ko'p oladigan savollarning bir nechtasi. Agar xayolingizda nima borligini ko'rmasangiz, istalgan vaqtda telefon, chat yoki elektron pochta orqali biz bilan bog'laning.",
   "question": "Tez-tez so'raladigan savollar",
   "contact": "Aloqa",
-  "userName": "Ismingiz",
+  "userName": "Ism",
   "userSurname": "Familya",
   "plaseholderUserName": "Ismingizni kiriting",
   "plaseholderUserSurname": "Familiyangizni kiriting",
-  "userTel": "Telefon raqamingiz",
+  "userTel": "Telefon raqam",
   "Working_Days": "Ish kunlari",
   "week": "Dushanba-Shanba",
   "Working_hours": "Ish vaqti:  ",
@@ -47,6 +47,9 @@
   "trainer":"Treynerlar",
   "no_sport":"Shug`ullana olmaydigon sportingizni tanlang",
   "my_serch":"500 dan ortiq mutaxassislar bizning saytimizda ro'yxatdan o'tgan",
-  "text_my_serch":"Ortiqcha vazndan qiynalayotgan insonlarga yordam berish uchun 500+ dan ziyod mutaxassislar saytimizda ro‘yxatdan otdi"
+  "text_my_serch":"Ortiqcha vazndan qiynalayotgan insonlarga yordam berish uchun 500+ dan ziyod mutaxassislar saytimizda ro‘yxatdan otdi",
+  "borthday":"Tug‘ilgan sana:",
+  "expertReference":"Malumot",
+  "experience":"Ish taribasi:"
 
 }

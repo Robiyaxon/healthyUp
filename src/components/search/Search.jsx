@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import Search from "antd/lib/input/Search";
-// import img1 from "../../assets/home/search/group.svg";
+import img1 from "../../assets/home/header/logo.png";
 import style from "./Search.module.css";
 import { useTranslation } from 'react-i18next';
 
@@ -30,11 +30,11 @@ export const MySearch = memo(() => {
         </div>
         <div className={style.SearchImg}>
           <div className={style.Search_Img}>
-            {/* <img
+            <img
               src={img1}
               alt=""
               className={style.img1}
-            /> */}
+            />
           </div>
         </div>
       </div>

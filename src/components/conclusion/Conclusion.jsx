@@ -1,38 +1,41 @@
-import React from "react";
+import React, { memo, useState } from "react";
 import style from "./Conclusion.module.css";
 import { useNavigate } from "react-router-dom";
 import img from "../../assets/about_us/header.png";
 import { useEffect } from "react";
-import { instance } from "../../api/api";
-import { axios } from "axios";
-const Conclusion = ({ token }) => {
+import axios from "axios";
+import { instance } from './../../api/api';
+
+const Conclusion = memo(({ token }) => {
   const navigate = useNavigate();
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const qidiruv = () => {
-    navigate("/faq");
+    navigate("/search_person");
   };
   const profile = () => {
     navigate("/foods");
   };
-  // var config = {
-  //   method: 'get',
-  //   url: 'https://ehealthuz.pythonanywhere.com/user/',
-  //   headers: { 
-  //     'Authorization': `token ${localStorage.getItem('token')}`
-  //   }
-  // };
-  // useEffect(() => {
 
-  //   axios(config)
-  //   .then(function (response) {
-  //     console.log(response.data)
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-    
-  // }, []);
-  console.log(localStorage.getItem("token"))
+  useEffect(() => {
+    var config = {
+      method: "get",
+      url: "https://ehealthuz.pythonanywhere.com/user/",
+      headers: {
+        Authorization: `token ${localStorage.getItem("token")}`,
+      },
+    };
+    axios(config)
+      .then(function (response) {
+        setData(response.data);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      // instance('user_task',
+      // {headers: Authorization: token ${localStorage.getItem("token")}`,
+      // }).then(res=>console.log(res.data))
+  }, []);
 
   return (
     <div className={style.Conclusion}>
@@ -40,15 +43,15 @@ const Conclusion = ({ token }) => {
       <div className={style.Profile}>
         <div className={style.Block}>
           <p>Statistik vazin</p>
-          <h1>67 kg </h1>
+          <h1>{data.weight} kg </h1>
         </div>
         <div className={style.Block}>
           <p>Kunlik yeyilishi kerak bolgan KK</p>
-          <h1>767 kk </h1>
+          <h1>{data.week_result} kk </h1>
         </div>
         <div className={style.Block}>
           <p>Kunlik yo‘qotilyotgan vazin</p>
-          <h1>0.1 kg </h1>
+          <h1>{data.intended_weight} kg </h1>
         </div>
       </div>
       <div className={style.navigate}>
@@ -77,5 +80,5 @@ const Conclusion = ({ token }) => {
       </div>
     </div>
   );
-};
+})
 export default Conclusion;

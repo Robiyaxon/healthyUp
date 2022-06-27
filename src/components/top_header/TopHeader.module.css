@@ -28,7 +28,7 @@
 }
 
 .stroke a:hover:after {
-  width: 85%;
+  width: 65%;
   transition: 0.3s all linear !important;
 }
 
