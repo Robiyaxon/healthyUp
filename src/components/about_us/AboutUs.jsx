@@ -4,13 +4,18 @@ import style from "./AboutUs.module.css";
 import { instance } from './../../api/api';
 import AOS from "aos"
 import "aos/dist/aos.css"
-const AboutUs = () => {
+import { Spin } from 'antd';
+const AboutUs = React.memo(() => {
   const [data, setData] = useState([]);
   useEffect(() => {
     AOS.init({ duration: 2000 })
     instance.get("aboutus/").then((response) => setData(response.data));
-  }, []);
-
+  }, [setData]);
+  if (data) {
+    <div className="SpinStyle">
+      <Spin />
+    </div>
+  }
   const map = data.map((d) => {
     return (
       <div className={style.first} key={d.id} data-aos="flip-right">
@@ -50,5 +55,5 @@ const AboutUs = () => {
       <NumberSec />
     </div>
   );
-};
+})
 export default AboutUs;

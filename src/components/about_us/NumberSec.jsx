@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-
+import React from "react";
 import styles from "./NumberSec.module.css";
 import { instance } from './../../api/api';
 
-export const NumberSec = () => {
+export const NumberSec =  React.memo(() => {
   const [data, setData] = useState({})
   const { t } = useTranslation();
 
-  useEffect(() => {
-    instance.get("info_num/").then((response) => setData(response.data));
-  }, [])
+  // useEffect(() => {
+  //   instance.get("info_num/").then((response) => setData(response.data));
+  // }, [setData])
   return (
     <div className={styles.numberSec}>
       <div className={styles.numberSec__block}>
@@ -78,4 +78,4 @@ export const NumberSec = () => {
       </div>
     </div>
   );
-};
+})

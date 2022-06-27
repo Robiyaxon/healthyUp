@@ -26,8 +26,8 @@
 .block img {
     /* border: 2px solid red; */
     margin-right: 104px;
-    width: 472px;
-    height: 535px;
+    width: 442px;
+    object-fit: cover;
 }
 
 .block p {
@@ -48,6 +48,7 @@
     line-height: 39px;
     color: #29292C;
     margin-top: 4px;
+    margin-bottom: 1rem;
 }
 
 .Document {

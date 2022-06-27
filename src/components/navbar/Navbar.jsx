@@ -2,7 +2,7 @@ import React from "react";
 import style from "./navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-export const Navbar = (props) => {
+export const Navbar =  React.memo((props) => {
   const { t } = useTranslation();
   const map = [
     { id: 1, name: t("navbar5"), url: "/" },
@@ -29,4 +29,4 @@ export const Navbar = (props) => {
       </a>
     </div>
   );
-};
+})

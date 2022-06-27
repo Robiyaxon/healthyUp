@@ -77,11 +77,12 @@
     padding: 3rem 2%;
   }
   .item img {
-    width: 15%;
-    height: auto;
+    width: 50%;
+    height: 50%;
     left: auto;
     right: auto;
-  }
+    object-fit: contain;
+}
   .item__text {
     width: 100%;
     margin-top: auto;
@@ -91,7 +92,7 @@
     font-size: 18px;
     line-height: 27px;
     text-align: center;
-    margin: auto auto 18px;
+    margin: auto auto 0.3rem;
   }
   .item__text p {
     font-size: 12px;

@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import style from "./Sports.module.css"
+import style from "../../login/foods/Foods.module.css"
 import { Button } from 'antd';
 import { useEffect } from 'react';
 import { instance } from '../../../api/api';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-const Sports = (props) => {
+const Sports =  React.memo((props) => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const [app, setApp] = useState([]);
   useEffect(() => {
     instance.get("sport/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
   const click = async (id) => {
     let temp = app;
     temp.push(id)
@@ -32,7 +32,8 @@ const Sports = (props) => {
           }>{a.name}</div>)}
         </div>
       </div>
-      <Button
+      <div style={{textAlign:"center"}}>
+        <Button
         type="primary"
         htmlType="submit"
         className="login-form-button"
@@ -40,7 +41,9 @@ const Sports = (props) => {
       >
         {t("Continue")}
       </Button>
+      </div>
+      
     </div>
   )
-}
+})
 export default Sports

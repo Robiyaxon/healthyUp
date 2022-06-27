@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { instance } from '../../../api/api';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-const Foods = (props) => {
+const Foods =  React.memo((props) => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Foods = (props) => {
   const [selectedList, setSelectedList] = useState({});
   useEffect(() => {
     instance.get("product/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
   console.log(selectedList);
   const click = async (id) => {
     let temp = app;
@@ -47,5 +47,5 @@ const Foods = (props) => {
 
     </div>
   );
-};
+})
 export default Foods;

@@ -4,8 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import img from "../../assets/about_us/header.png"
 import { useEffect } from 'react';
 import { instance } from '../../api/api';
-const Conclusion = ({ token }) => {
+const Conclusion =  React.memo(({ token }) => {
   const navigate = useNavigate()
+  // const [data, setData] = useState([]);
+  console.log(token);
+  localStorage.setItem("token", token)
   const qidiruv = () => {
     navigate("/faq")
   }
@@ -15,7 +18,8 @@ const Conclusion = ({ token }) => {
   useEffect(() => {
     const config = {
       headers: {
-        Authorization:  token}
+        Authorization:  token
+      }
     }
     instance.get(`user`, config).then(
       (response) => console.log(response)
@@ -57,5 +61,5 @@ const Conclusion = ({ token }) => {
       </div>
     </div>
   )
-}
+})
 export default Conclusion

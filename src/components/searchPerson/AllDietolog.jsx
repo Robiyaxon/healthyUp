@@ -3,14 +3,14 @@ import style from "./AllPerson.module.css";
 import { instance } from "./../../api/api";
 import SearchCards from "./SearchCards";
 
-function AllDietolog() {
+const AllDietolog = React.memo(()=> {
   const [diatolog, setDietolog] = useState([]);
 
   useEffect(() => {
     instance
       .get("get_dietolog/")
       .then((response) => setDietolog(response.data));
-  }, []);
+  }, [setDietolog]);
 
   const mapDiatolog = diatolog
     .filter((item) => item.image && item.reyting > 0)
@@ -32,6 +32,5 @@ function AllDietolog() {
       </div>
     </div>
   );
-}
-
+})
 export default AllDietolog;

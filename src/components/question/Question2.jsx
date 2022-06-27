@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   MinusOutlined,PlusOutlined
 } from '@ant-design/icons'
-const Question = ({ id, question_uz, answer_uz,question_ru, answer_ru,question_en,answer_en}) => {
+const Question =  React.memo(({ id, question_uz, answer_uz,question_ru, answer_ru,question_en,answer_en}) => {
   const { language } = useSelector((state) => state.langReducer);
   const [showInfo, setShowInfo] = useState(false);
   return (
@@ -34,6 +34,6 @@ const Question = ({ id, question_uz, answer_uz,question_ru, answer_ru,question_e
           )}</p>}
     </article>
   );
-};
+})
 
 export default Question;

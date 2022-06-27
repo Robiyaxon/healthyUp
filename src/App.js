@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     window.addEventListener("load", handleLoading);
     return () => window.removeEventListener("load", handleLoading);
-  }, []);
+  }, [isLoading]);
 
   const handleLoading = () => {
     setIsLoading(false);
@@ -21,7 +21,9 @@ const App = () => {
     <div className="App">
       {isLoading ? (
         <>
-          <Spin />
+          <div className="SpinStyle">
+            <Spin />
+          </div>
         </>
       ) : (
         <>

@@ -1,7 +1,7 @@
 .Foods {
-    padding: 290px 175px 20px 175px;
+    padding: 220px 175px 60px 175px;
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .Foods h1 {
@@ -34,13 +34,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+      flex-wrap: wrap;
 }
 
 .Block_Card {
     width: 100px;
     border: 2px solid rgb(201, 196, 196);
     height: 100px;
-    margin-right: 2rem;
+    margin:1rem  1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +57,24 @@
     width: 471px;
     height: 50px;
     border: none;
-    margin-top: 92px;
+    margin-top: 62px;
     border-radius: 10px;
     cursor: pointer;
+}
+@media(min-width:0) and (max-width:750.9px){
+    .Foods {
+        padding: 120px 20px 60px 20px;
+        background-color: white;
+        min-height: 100vh;
+    }
+    .Foods button {
+        width: 80%;
+        margin-top: 42px;
+    }
+    .Foods h1 {
+        font-size: 26px;
+        line-height: 51px;
+        width: 100%;
+        margin: 0 auto 46px auto;
+    }
 }

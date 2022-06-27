@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import style from "./Sports.module.css"
+import style from "../../login/foods/Foods.module.css"
 import { Button } from 'antd';
 import { useEffect } from 'react';
 import { instance } from '../../../api/api';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-const Sport_Food = (props) => {
+const Sport_Food =  React.memo((props) => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
@@ -60,5 +60,5 @@ const Sport_Food = (props) => {
      
     </div>
   )
-}
+})
 export default Sport_Food

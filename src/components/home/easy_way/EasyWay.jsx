@@ -4,13 +4,13 @@ import styles from "./EasyWay.module.css";
 import { instance } from "../../../api/api";
 import AOS from "aos"
 import "aos/dist/aos.css"
-const EasyWay = () => {
+const EasyWay =  React.memo(() => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     AOS.init({duration:2000})
     instance.get("home_card/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
 
   const dataMap = data.map((d) => {
     return (
@@ -38,6 +38,6 @@ const EasyWay = () => {
       {dataMap}
     </div>
   );
-};
+})
 
 export default EasyWay;

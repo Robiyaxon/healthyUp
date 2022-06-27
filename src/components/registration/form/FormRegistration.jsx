@@ -4,7 +4,7 @@ import styles from "./FormRegistration.module.css";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-function FormRegistration(props) {
+const FormRegistration = React.memo((props) =>{
   const navigate = useNavigate();
   const [errorText, seterrorText] = useState(null)
   const { t } = useTranslation()
@@ -86,7 +86,6 @@ function FormRegistration(props) {
   };
   const click = () => {
     fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
-      .then((response) => response.text())
       .then((result) => console.log(Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser")))
       .catch((error) => console.log(error));
   }
@@ -109,6 +108,6 @@ function FormRegistration(props) {
       </div>
     </div>
   );
-}
+})
 
 export default FormRegistration;

@@ -1,69 +1,40 @@
 import React, { useEffect, useState } from "react";
 // import { useTranslation } from "react-i18next";
 import Carousel from "react-elastic-carousel";
-import { useSelector } from "react-redux";
-import axios from "axios";
+// import { useSelector } from "react-redux";
 import main from "../../../assets/home/carousel/main.png";
 import AOS from "aos"
 import "aos/dist/aos.css"
 import LoseWeightFast from "../loseWeightFast/LoseWeightFast";
 
 import styles from "./Carousel.module.css";
-var config = {
-  method: "get",
-  url: "http://ehealthuz.pythonanywhere.com/new/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+import { instance } from './../../../api/api';
 
-export const MyCarousel = () => {
+export const MyCarousel =  React.memo(() => {
   const [data, setData] = useState([]);
-  const { language } = useSelector((state) => state.langReducer);
+  // const { language } = useSelector((state) => state.langReducer);
   useEffect(() => {
+    instance.get("new/").then((response) => setData(response.data));
     AOS.init({duration:2000})
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {});
-  }, []);
-  // const { t } = useTranslation();
-
+  }, [setData]);
+  const dataMap = data.map((d) => (
+    <Item key={d.id}
+      picture={(d.img) || main}
+      title={
+        d.title
+      }
+      text={d.text}
+    />
+  ));
   return (
-    <div className={styles.carousel} data-aos="zoom-out">
-      <Carousel  >
-        <Item
-          picture={(data && data[0] && data[0].img) || main}
-          title={
-            data && data[0] && data[0].title && language === "uz"
-              ? data && data[0] && data[0].title
-              : language === "en"
-              ? data && data[0] && data[0].en_title
-              : language === "ru"
-              ? data && data[0] && data[0].ru_title
-              : "bir"
-          }
-          text={data && data[0] && data[0].text}
-        />
-        <Item
-          picture={data && data[0] && data[0].img}
-          title={
-            data && data[0] && data[0].title && language === "uz"
-              ? data && data[0] && data[0].title
-              : language === "en"
-              ? data && data[0] && data[0].en_title
-              : language === "ru"
-              ? data && data[0] && data[0].ru_title
-              : "bir"
-          }
-          text={data && data[0] && data[0].text}
-        />
+    <div className={styles.carousel}  data-aos="zoom-out">
+      <Carousel>
+        {dataMap}
       </Carousel>
       <LoseWeightFast />
     </div>
   );
-};
+})
 
 const Item = ({
   picture = main,
@@ -75,7 +46,7 @@ const Item = ({
       <img src={picture} alt="" />
       <div className={styles.item__text}>
         <h1>{title}</h1>
-        <p>{window.innerWidth > 801 ? text : text.substring(0, 250) + "..."}</p>
+        <p>{window.innerWidth > 801 ? text : text.substring(0, 200) + "..."}</p>
       </div>
     </div>
   );

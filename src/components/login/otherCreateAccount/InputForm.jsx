@@ -43,7 +43,7 @@ const InputForm = ({type, img}) => {
   
     var config = {
       method: "post",
-      url: "http://10.10.7.17:8000/register/",
+      url: "http://ehealthuz.pythonanywhere.com/register/",
       headers: {
         "Content-Type": "application/json",
       },

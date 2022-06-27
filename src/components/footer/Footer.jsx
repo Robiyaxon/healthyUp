@@ -9,12 +9,12 @@ import telegram from "../../assets/home/footer/telegram.svg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
-export const Footer = () => {
+export const Footer =  React.memo(() => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {
     instance.get("footer/").then((response) => setData(response.data));
-  }, []);
+  }, [setData]);
   const map = data.map((a) => (
     <div className={style.Footer} key={a.id}>
       <div className={style.Block1}>
@@ -68,4 +68,4 @@ export const Footer = () => {
       <p className={style.Title}>{t("footer")}</p>
     </div>
   );
-};
+})

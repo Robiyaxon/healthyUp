@@ -292,7 +292,8 @@
   }
 
   .header_title {
-    font-size: 40px;
+    font-size: 25px;
+    line-height: 35px;
   }
   .header_lenta_wrapper {
     width: 120px;
@@ -453,13 +454,14 @@
 @media (max-width: 500px) {
   .header_lenta_wrapper {
     margin-top: -11%;
+    display: none;
   }
   .header__text {
     margin-top: 8rem !important;
   }
   .header_sport_wrapper {
     width: 90%;
-    margin: 0 auto;
+    margin: 2rem auto 0;
   }
   .header_sport img {
     width: 60%;
@@ -471,6 +473,9 @@
   }
   .header_meal img {
     height: 180px;
+  }
+  .header{
+    padding-top: 0;
   }
 }
 
