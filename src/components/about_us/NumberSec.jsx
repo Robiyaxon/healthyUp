@@ -10,9 +10,9 @@ export const NumberSec =  React.memo(() => {
   const [data, setData] = useState({})
   const { t } = useTranslation();
 
-  // useEffect(() => {
-  //   instance.get("info_num/").then((response) => setData(response.data));
-  // }, [setData])
+  useEffect(() => {
+    instance.get("info_num").then((response) => setData(response.data));
+  }, [setData])
   return (
     <div className={styles.numberSec}>
       <div className={styles.numberSec__block}>
