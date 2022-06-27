@@ -46,6 +46,7 @@ const InputForm = ({type, img}) => {
       url: "http://10.10.7.17:8000/register/",
       headers: {
         "Content-Type": "application/json",
+        "Authentication": "token " + localStorage.getItem("token")
       },
       data: data,
     };

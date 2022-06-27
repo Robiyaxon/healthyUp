@@ -6,7 +6,9 @@ import { MyBackTop } from "./ScrollerOn";
 import { Footer } from "./components/footer/Footer";
 import { MySearch } from "./components/search/Search";
 import { RouterMap } from "./helpers/RouteMap";
+
 import "./App.css"
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -17,6 +19,8 @@ const App = () => {
   const handleLoading = () => {
     setIsLoading(false);
   };
+  console.log(localStorage.getItem("token"))
+
   return (
     <div className="App">
       {isLoading ? (

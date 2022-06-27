@@ -153,3 +153,12 @@ input[type='checkbox'] {
     line-height: 24px;
     color: #112D0B;
 }
+
+@media (min-width:0) and (max-width:790.9px) {
+    .Conclusion{
+        padding: 7rem 1rem ;
+    }
+    .topshiriq{
+        flex-direction: column;
+    }
+}
