@@ -28,9 +28,9 @@ const Foods =  React.memo((props) => {
     props.setcan_not_dieta(app)
   };
   
-    const deleteCard =(id)=>{
-      return data.filter(item=>item.id!==id)
-    }
+    // const deleteCard =(id)=>{
+    //   return data.filter(item=>item.id!==id)
+    // }
  
  
   return (
@@ -38,7 +38,7 @@ const Foods =  React.memo((props) => {
       <h1>{t("foods")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          {data.map(a => <div  key={a.id} className={ style.Block_Card} onClick={()=>{deleteCard(a.id)}
+          {data.map(a => <div  key={a.id} className={ style.Block_Card} onClick={()=>{click(a.id)}
           }>
           {language === "uz" ? (
             <>{a.name}</>
