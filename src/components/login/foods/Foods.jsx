@@ -20,7 +20,6 @@ const Foods = React.memo((props) => {
     props.setcan_not_dieta(app)
 
   };
-  console.log(app);
   const deleteItem = (index, id) => () => {
      setData((items) => items.filter((_, i) => i !== index))
       let temp = app;

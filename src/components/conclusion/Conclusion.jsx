@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import img from "../../assets/about_us/header.png";
 import { useEffect } from "react";
 import axios from "axios";
-import { instance } from './../../api/api';
-
 const Conclusion = memo(({ token }) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
@@ -27,14 +25,10 @@ const Conclusion = memo(({ token }) => {
     axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-      // instance('user_task',
-      // {headers: Authorization: token ${localStorage.getItem("token")}`,
-      // }).then(res=>console.log(res.data))
   }, []);
 
   return (

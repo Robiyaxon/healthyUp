@@ -12,7 +12,6 @@ const Login = () => {
 
   const [errorClass, setErrorClass] = useState("")
   const onFinish = (values) => {
-    // console.log("Received values of form: ", values);
     var formdata = new FormData();
     formdata.append("username", values.username);
     formdata.append("password", values.password);

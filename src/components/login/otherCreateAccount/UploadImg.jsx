@@ -17,7 +17,6 @@ const UploadImg = ({setImg, setPassword}) => {
       };
       reader.readAsDataURL(file);
       setImg(file.name)
-      console.log(file.name.name);
     }
   };
 

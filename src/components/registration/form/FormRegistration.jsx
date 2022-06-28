@@ -86,7 +86,7 @@ const FormRegistration = React.memo((props) =>{
   };
   const click = () => {
     fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
-      .then((result) => console.log(Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser")))
+      .then((result) =>Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser"))
       .catch((error) => console.log(error));
   }
   return (

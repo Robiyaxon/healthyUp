@@ -1,11 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
 import style from "./LoginPages.module.css";
-
 export const BtnAnimation = React.memo(({ text, link, classes = "" }) => {
-  // useEffect(() => {}, []);
   return (
     <NavLink to={link} className={"container " + classes}>
       <span>{text}</span>
@@ -25,7 +22,6 @@ const LoginPages = ({
   const navigate = useNavigate();
 
   const OnClick = (who) => {
-    // const id = Number(who.target.id) === 1 ;
     if (Number(who.target.id) === 1) {
       navigate(navigateUrl);
     } else if(Number(who.target.id) === 2){
@@ -33,8 +29,6 @@ const LoginPages = ({
     }else if(Number(who.target.id) === 3){
       navigate(navigateUrl3);
     }
-    // console.log(id);
-  //  
     settype(who.target.id);
   };
 
