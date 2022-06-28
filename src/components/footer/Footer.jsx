@@ -12,9 +12,8 @@ import { instance } from './../../api/api';
 export const Footer =  React.memo(() => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
-  useEffect(() => {
-    instance.get("footer/").then((response) => setData(response.data));
-  }, [setData]);
+  useEffect(() => {instance.get("footer/").then((response) => setData(response.data));
+  }, []);
   const map = data.map((a) => (
     <div className={style.Footer} key={a.id}>
       <div className={style.Block1}>

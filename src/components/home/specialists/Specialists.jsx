@@ -25,7 +25,7 @@ export const Specialists = React.memo(() => {
         setData(response.data);
       })
       .catch(function (error) { });
-  }, [data]);
+  }, [setData]);
   const dataMap = data
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
