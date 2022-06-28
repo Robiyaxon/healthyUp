@@ -84,12 +84,13 @@ export const RouterMap = () => {
     fetch("http://ehealthuz.pythonanywhere.com/register/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        localStorage.getItem("token", result)
         if (result == 1) {
           console.log("xato");
         } else {
           setToken(result.slice(1, -1));
           console.log(result.slice(1, -1));
+        localStorage.setItem("token", result.slice(1, -1))
+
         }
       })
       .catch((error) => console.log("error", error));

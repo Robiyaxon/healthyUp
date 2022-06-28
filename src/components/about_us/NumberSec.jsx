@@ -13,13 +13,10 @@ export const NumberSec =  React.memo(() => {
   useEffect(() => {
     instance.get("info_num").then((response) => setData(response.data));
   }, [setData])
+
   return (
     <div className={styles.numberSec}>
       <div className={styles.numberSec__block}>
-        <h1 className={styles.numberSec__title}>
-          Healthy Up is a <strong>100% digital agency </strong> offering
-          innovative solutions
-        </h1>
         <div className={styles.counter_body}>
           <div className={styles.counter_block}>
             <CountUp start={1} end={data.bemorlar} duration={0.7}>

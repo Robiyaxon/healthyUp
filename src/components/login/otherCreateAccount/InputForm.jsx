@@ -46,6 +46,7 @@ const InputForm = ({type, img}) => {
       url: "http://ehealthuz.pythonanywhere.com/register/",
       headers: {
         "Content-Type": "application/json",
+        "Authentication": "token " + localStorage.getItem("token")
       },
       data: data,
     };
