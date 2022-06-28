@@ -16,7 +16,8 @@
 }
 .WhoIsTheUser {
   background: rgba(247, 231, 200, 0.3);
-
+padding-top: 5rem;
+margin-bottom: 4rem;
 }
 .style{
   height: 40;
