@@ -20,8 +20,6 @@ const App = () => {
   const handleLoading = () => {
     setIsLoading(false);
   };
-  console.log(localStorage.getItem("token"))
-
   return (
     <div className="App">
       {isLoading ? (

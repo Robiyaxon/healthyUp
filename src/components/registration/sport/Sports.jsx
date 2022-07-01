@@ -16,10 +16,12 @@ const Sports = React.memo((props) => {
   useEffect(() => {
     instance.get("sport/").then((response) => setData(response.data));
   }, [setData]);
-  const click = async (id) => {
+  const deleteItem = (index, id) => () => {
+    setData((items) => items.filter((_, i) => i !== index))
     let temp = app;
     temp.push(id)
     setApp(temp);
+    return data.filter(item => item.id !== id)
   }
   const click2 = () => {
     navigate("/femaleOrMale")
@@ -30,8 +32,7 @@ const Sports = React.memo((props) => {
       <h1>{t("no_sport")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          {data.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click(a.id)
-          }>  {language === "uz" ? (
+          {data.map((a, index) => <div key={a.id} className={style.Block_Card} onClick={deleteItem(index, a.id)}>  {language === "uz" ? (
             <>{a.name}</>
           ) : language === "en" ? (
             <>{a.en_name}</>

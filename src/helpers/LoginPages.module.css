@@ -1,7 +1,8 @@
 .body {
   width: 30%;
-  margin: 5rem auto 0;
-  height: 86vh;
+  margin: 0 auto 0;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;

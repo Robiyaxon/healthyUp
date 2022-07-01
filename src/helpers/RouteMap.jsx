@@ -92,7 +92,6 @@ export const RouterMap = () => {
           console.log("xato");
         } else {
           setToken(result.slice(1, -1));
-          console.log(result.slice(1, -1));
         localStorage.setItem("token", result.slice(1, -1))
 
         }

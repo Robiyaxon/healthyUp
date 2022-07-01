@@ -1,6 +1,6 @@
 .PerconAc {
     /* border: 2px solid red; */
-    padding: 120px 226px;
+    padding: 100px 226px;
     background: rgba(247, 231, 200, 0.3);
 
 }
@@ -25,8 +25,8 @@
 
 .block img {
     /* border: 2px solid red; */
-    margin-right: 104px;
-    width: 442px;
+    margin-right: 124px;
+    width: 45%;
     object-fit: cover;
 }
 
@@ -55,9 +55,9 @@
     margin-top: 50px;
 }
 
-@media(min-width:0) and (max-width:750.9px) {
+@media(min-width:0) and (max-width:650.9px) {
     .PerconAc {
-        padding: 30px 5px;
+        padding: 30px 20px;
     }
 
     .Block90 {
@@ -76,21 +76,26 @@
         width: 100%;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
     .block h1 {
-        font-size: 16px;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
     }
 
     .block p {
-        font-size: 15px;
+        font-size: 17px;
+        margin-top: 0.5rem;
+        text-align: center;
     }
 }
 
-@media(min-width:751px) and (max-width:1250.9px) {
+@media(min-width:651px) and (max-width:650.9px) {
     .PerconAc {
-        padding: 60px 50px;
+        padding: 60px 30px;
     }
 
     .Block90 {
@@ -100,8 +105,7 @@
     .block img {
         width: 67%;
         margin-right: 0;
-
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .card {
@@ -112,39 +116,78 @@
     }
 
     .block h1 {
-        font-size: 27px;
+        font-size: 20px;
     }
 
     .block p {
         font-size: 18px;
     }
 }
-@media(min-width:1251px) and (max-width:1350.9px) {
+
+@media(min-width:651px) and (max-width:950.9px) {
     .PerconAc {
-        padding: 60px 50px;
+        padding: 60px 30px;
+    }
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .Block90 {
+        width: 100%;
+    }
+
+    .block {
+        justify-content: space-between;
+    }
+
+    .block img {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        margin: 0 auto 2rem;
     }
 
     .Block90 {
         width: 100%;
     }
-.block{
-    border: 2px solid red;
-    justify-content: space-between;
-}
-    .block img {
-        width: 45%;
-        margin-right: 0;
-
-        margin-bottom: 1rem;
-    }
-
- .Block90{
-    width: 45%;
-    border: 2px solid red;
- }
 
     .block h1 {
-        font-size: 27px;
+        font-size: 25px;
+    }
+
+    .block p {
+        font-size: 18px;
+    }
+}
+@media(min-width:951px) and (max-width:1390.9px) {
+    .PerconAc {
+        padding: 60px 30px;
+        border: 2px solid red;
+    }
+    .Block90 {
+        width: 100%;
+        border: 2px solid red;
+    }
+
+    .block {
+        justify-content: space-between;
+    }
+
+    .block img {
+        width: 45%;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        margin: 0 auto 2rem;
+    }
+
+    .Block90 {
+        width: 45%;
+    }
+
+    .block h1 {
+        font-size: 25px;
     }
 
     .block p {
