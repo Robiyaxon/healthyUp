@@ -2,7 +2,7 @@ import React from "react";
 import "antd/dist/antd.css";
 import { Button, Form, Input, Select, InputNumber, Slider, DatePicker } from "antd";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { instance } from "../../api/api";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -19,10 +19,8 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({type, img}) => {
+const InputForm = ({type, img, data}) => {
   const [form] = Form.useForm();
-
-  const navigate = useNavigate()
 
   const onFinish = (values) => {
     var data = new FormData();
@@ -37,32 +35,20 @@ const InputForm = ({type, img}) => {
     data.append("birthday", "1975-05-22");
     data.append("addres", values.addres);
     data.append("information", values.information);
-    data.append("phone", "+998997777799");
+    data.append("phone", values.phone);
     data.append("type", type);
     data.append("gender", values.gender);
     data.append("birthday", values.birthday);
     data.append("phone", values.phone);
     data.append("pic", img);
   
-    var config = {
-      method: "post",
-      url: "http://ehealthuz.pythonanywhere.com/register/",
-      headers: {
-        "Content-Type": "application/json",
-        // "Authentication": "token " + localStorage.getItem("token")
-      },
-      data: data,
-    };
-
-    axios(config)
+    instance.put('user/', data)
     .then(function (response) {
       console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
     });
-
-    navigate('/userSettings')
   };
 
   const config1 = {
@@ -75,6 +61,8 @@ const InputForm = ({type, img}) => {
     ],
   };
 
+  console.log(data.userName);
+
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item
@@ -85,8 +73,9 @@ const InputForm = ({type, img}) => {
             required: true,
           },
         ]}
+        // getValueProps={data.userName}
       >
-        <Input />
+        <Input value={data.userName}/>
       </Form.Item>
       <Form.Item
         name="password"

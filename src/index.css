@@ -175,6 +175,11 @@ body{
   border: 2px solid blue !important;
 }
 
+.accent-color-fill{
+  fill: #dfc085 !important;
+  background: #dfc085 !important;
+}
+
 @media (min-width: 0) and (max-width: 750.9px) {
   .Wrapper {
     margin-top: 26px;

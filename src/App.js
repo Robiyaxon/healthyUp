@@ -38,7 +38,7 @@ const App = () => {
           <div className="select"></div>
         </>
       )}
-      <MyBackTop />
+      {/* <MyBackTop /> */}
       <MySearch />
       <Footer />
     </div>

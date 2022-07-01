@@ -3,7 +3,6 @@ import style from "./Conclusion.module.css";
 import { useNavigate } from "react-router-dom";
 import img from "../../assets/about_us/header.png";
 import { useEffect } from "react";
-import axios from "axios";
 import { instance } from './../../api/api';
 
 const Conclusion = memo(({ token }) => {
@@ -17,21 +16,14 @@ const Conclusion = memo(({ token }) => {
   };
 
   useEffect(() => {
-    var config = {
-      method: "get",
-      url: "https://ehealthuz.pythonanywhere.com/user/",
-      headers: {
-        Authorization: `token ${localStorage.getItem("token")}`,
-      },
-    };
-    axios(config)
-      .then(function (response) {
-        setData(response.data);
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    instance.get('user/')
+    .then(function (response) {
+      setData(response.data);
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
       // instance('user_task',
       // {headers: Authorization: token ${localStorage.getItem("token")}`,
       // }).then(res=>console.log(res.data))

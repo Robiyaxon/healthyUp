@@ -32,7 +32,6 @@ const AllDietolog= React.memo(() =>{
     window.addEventListener("resize", update);
     instance.get("get_treyner/").then((response) => {
       return setTrainer(response.data);
-
     });
     setMinIndex(0);
     setMaxIndex(pageSize);
