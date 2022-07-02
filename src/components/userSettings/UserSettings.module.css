@@ -40,3 +40,7 @@
 .body__img_and_inp__img{
   width: 30%;
 }
+
+.__main{
+  display: flex;
+}

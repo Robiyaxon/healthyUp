@@ -111,7 +111,7 @@ margin-bottom: 4rem;
   color: #886600 !important;
 }
 
-.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+/* .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   height: 60px !important;
   border-radius: 10px !important;
   border: 2px solid #886600 !important;
@@ -121,7 +121,7 @@ margin-bottom: 4rem;
   height: 60px !important;
   border-radius: 10px !important;
   border: 2px solid #151514 !important;
-}
+} */
 
 .none {
   border: 3px solid firebrick !important;

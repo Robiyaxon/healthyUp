@@ -18,7 +18,7 @@ const OtherCreateAccount = ({ first_name, last_name, type }) => {
       </p>
       <div>
         <UploadImg setImg={setImg} />
-        <div>
+        <div className={style.InputForm}>
           <InputForm type={type} img={img} />
         </div>
       </div>

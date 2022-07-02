@@ -49,7 +49,7 @@ const UserSettings = ({ first_name, last_name, type }) => {
       <p className={style.body__text}>
         O‘zingiz haqingizda ma'lumotlarni tahrirlang
       </p>
-      <div>
+      <div className={style.__main}>
         <UploadImg setImg={setImg} />
         <div>
           <InputForm type={type} img={img} data={data}/>
