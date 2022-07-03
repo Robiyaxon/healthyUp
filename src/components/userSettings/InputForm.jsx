@@ -1,6 +1,14 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Button, Form, Input, Select, InputNumber, Slider, DatePicker } from "antd";
+import {
+  Button,
+  Form,
+  Input,
+  Select,
+  InputNumber,
+  Slider,
+  DatePicker,
+} from "antd";
 import axios from "axios";
 import { instance } from "../../api/api";
 const { Option } = Select;
@@ -19,7 +27,7 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({type, img, data}) => {
+const InputForm = ({ type, img, data }) => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
@@ -41,22 +49,32 @@ const InputForm = ({type, img, data}) => {
     data.append("birthday", values.birthday);
     data.append("phone", values.phone);
     data.append("pic", img);
-  
-    instance.put('user/', data)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+
+    var config = {
+      method: "put",
+      url: "http://ehealthuz.pythonanywhere.com/update_user/",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "token " + localStorage.getItem("token"),
+      },
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const config1 = {
     rules: [
       {
-        type: 'object',
+        type: "object",
         required: true,
-        message: 'Please select time!',
+        message: "Please select time!",
       },
     ],
   };
@@ -73,9 +91,8 @@ const InputForm = ({type, img, data}) => {
             required: true,
           },
         ]}
-        // getValueProps={data.userName}
       >
-        <Input value={data.userName}/>
+        <Input value={'data.userName'} />
       </Form.Item>
       <Form.Item
         name="password"
@@ -124,12 +141,12 @@ const InputForm = ({type, img, data}) => {
       <Form.Item name="experience" label="Experience">
         <Slider
           marks={{
-            0: '.',
-            10: '.',
-            20: '.',
-            30: '.',
-            40: '.',
-            50: '.',
+            0: ".",
+            10: ".",
+            20: ".",
+            30: ".",
+            40: ".",
+            50: ".",
           }}
         />
       </Form.Item>
@@ -144,13 +161,13 @@ const InputForm = ({type, img, data}) => {
       >
         <Input />
       </Form.Item>
-      
+
       <Form.Item label="Age">
         <Form.Item name="age" noStyle>
-          <InputNumber min={1} max={10} />
+          <InputNumber min={16} max={70} />
         </Form.Item>
       </Form.Item>
-       <Form.Item name="birthday" label="DatePicker" {...config1}>
+      <Form.Item name="birthday" label="DatePicker" {...config1}>
         <DatePicker />
       </Form.Item>
       <Form.Item
@@ -162,7 +179,7 @@ const InputForm = ({type, img, data}) => {
           },
         ]}
       >
-         <InputNumber min={1} max={10} />
+        <InputNumber minLength={7} maxLength={12} />
       </Form.Item>
       <Form.Item
         name="addres"

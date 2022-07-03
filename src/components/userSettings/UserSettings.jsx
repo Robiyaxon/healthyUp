@@ -1,10 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import UploadImg from "./UploadImg";
 
 import style from "./UserSettings.module.css";
 import InputForm from "./InputForm";
-import { useState } from "react";
-import { instance } from './../../api/api';
 import axios from 'axios';
 
 
@@ -26,9 +24,14 @@ const UserSettings = ({ first_name, last_name, type }) => {
         url: "http://ehealthuz.pythonanywhere.com/user/",
         headers: {
           "Content-Type": "application/json",
-          "Authentication": "token " + localStorage.getItem("token")
+          "Authorization": "token " + localStorage.getItem("token")
         },
       };
+
+      console.log(
+        localStorage.getItem("token")
+
+      );
   
       axios(config)
       .then(function (response) {

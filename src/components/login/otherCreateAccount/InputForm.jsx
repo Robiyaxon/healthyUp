@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
-import { Button, Form, Input, Select, InputNumber, Slider, DatePicker } from "antd";
+import {
+  Button,
+  Form,
+  Input,
+  Select,
+  InputNumber,
+  Slider,
+  DatePicker,
+  Space,
+} from "antd";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -19,10 +28,23 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({type, img}) => {
+const InputForm = ({ type, img }) => {
   const [form] = Form.useForm();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const [date, setDate] = useState("");
+
+  useEffect(() => {
+    if (!type) {
+      navigate("/whoIsTheUser");
+    }
+  }, [type, navigate]);
+
+  const onChange = (data, dateString) => {
+    setDate(dateString);
+    console.log(dateString);
+  };
 
   const onFinish = (values) => {
     var data = new FormData();
@@ -34,45 +56,45 @@ const InputForm = ({type, img}) => {
     data.append("bio", values.bio);
     data.append("age", values.age);
     data.append("experience", values.experience);
-    data.append("birthday", "1975-05-22");
+    // data.append("birthday", "1975-05-22");
     data.append("addres", values.addres);
     data.append("information", values.information);
-    data.append("phone", "+998997777799");
+    data.append("user_type", type);
     data.append("type", type);
     data.append("gender", values.gender);
-    data.append("birthday", values.birthday);
+    data.append("birthday", date);
     data.append("phone", values.phone);
     data.append("pic", img);
-  
+
+    data.append("type_loss", 1);
+    data.append("height", 1);
+    data.append("weight", 1);
+    data.append("going_to_loss", 1);
+    data.append("can_not_dieta", 1);
+
+    console.log(values.birthday);
     var config = {
       method: "post",
       url: "http://ehealthuz.pythonanywhere.com/register/",
       headers: {
         "Content-Type": "application/json",
-        // "Authentication": "token " + localStorage.getItem("token")
       },
       data: data,
     };
 
     axios(config)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-    navigate('/userSettings')
-  };
-
-  const config1 = {
-    rules: [
-      {
-        type: 'object',
-        required: true,
-        message: 'Please select time!',
-      },
-    ],
+      .then(function (response) {
+        if (Number(response.data) !== 1) {
+          localStorage.setItem("token", response.data);
+          console.log(response.data);
+          navigate("/userSetting");
+        } else {
+          alert("Some error!");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -135,12 +157,12 @@ const InputForm = ({type, img}) => {
       <Form.Item name="experience" label="Experience">
         <Slider
           marks={{
-            0: '.',
-            10: '.',
-            20: '.',
-            30: '.',
-            40: '.',
-            50: '.',
+            0: ".",
+            10: ".",
+            20: ".",
+            30: ".",
+            40: ".",
+            50: ".",
           }}
         />
       </Form.Item>
@@ -155,15 +177,15 @@ const InputForm = ({type, img}) => {
       >
         <Input />
       </Form.Item>
-      
+
       <Form.Item label="Age">
         <Form.Item name="age" noStyle>
-          <InputNumber min={1} max={10} />
+          <InputNumber min={16} max={70} />
         </Form.Item>
       </Form.Item>
-       <Form.Item name="birthday" label="DatePicker" {...config1}>
-        <DatePicker />
-      </Form.Item>
+      <Space direction="vertical">
+        <DatePicker onChange={onChange} />
+      </Space>
       <Form.Item
         name="phone"
         label="Telefon raqam"
@@ -173,7 +195,7 @@ const InputForm = ({type, img}) => {
           },
         ]}
       >
-         <InputNumber min={1} max={10} />
+        <InputNumber minLength={7} maxLength={12} />
       </Form.Item>
       <Form.Item
         name="addres"

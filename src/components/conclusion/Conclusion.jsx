@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import img from "../../assets/about_us/header.png";
 import { useEffect } from "react";
 import { instance } from './../../api/api';
+import axios from "axios";
 
 const Conclusion = memo(({ token }) => {
   const navigate = useNavigate();
@@ -16,18 +17,28 @@ const Conclusion = memo(({ token }) => {
   };
 
   useEffect(() => {
-    instance.get('user/')
-    .then(function (response) {
-      setData(response.data);
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    var config = {
+      method: "get",
+      url: "http://ehealthuz.pythonanywhere.com/user/",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "token " + localStorage.getItem("token")
+      },
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+          localStorage.setItem("token", response.data);
+          console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
       // instance('user_task',
       // {headers: Authorization: token ${localStorage.getItem("token")}`,
       // }).then(res=>console.log(res.data))
-  }, []);
+  }, [data]);
 
   return (
     <div className={style.Conclusion}>
