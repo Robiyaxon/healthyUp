@@ -41,7 +41,7 @@ export const HomeHeader =  React.memo(() => {
           type="button"
           className={style.SignUp}
         >
-          <NavLink to="signUp">
+          <NavLink to="whoIsTheUser">
           {language === "uz" ? (
             <>{a.text2_uz}</>
           ) : language === "en" ? (

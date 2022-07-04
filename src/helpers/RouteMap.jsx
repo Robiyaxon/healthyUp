@@ -37,9 +37,12 @@ const SearchPerson = lazy(() =>
 const AllDietolog = lazy(() =>
   import("./../components/searchPerson/AllDietolog")
 );
-
 const AllTrainer = lazy(() =>
   import("./../components/searchPerson/AllTrainer")
+);
+
+const UserSettings = lazy(() =>
+  import("./../components/userSettings/UserSettings")
 );
 
 export const RouterMap = () => {
@@ -113,6 +116,8 @@ export const RouterMap = () => {
           setName={setName}
           setUsername={setUsername}
           setPassword={setPassword}
+          type={type}
+
         />
       ),
     },
@@ -172,6 +177,7 @@ export const RouterMap = () => {
     { id: 18, url: "search_person", element: <SearchPerson /> },
     { id: 19, url: "search_deatolog_all", element: <AllDietolog /> },
     { id: 20, url: "search_trainer_all", element: <AllTrainer /> },
+    { id: 20, url: "userSettings", element: <UserSettings /> },
   ];
 
   const dataMapForRoute = data.map((d) => (

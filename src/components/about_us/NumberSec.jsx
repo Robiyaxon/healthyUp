@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import React from "react";
-import styles from "./NumberSec.module.css";
+
 import { instance } from './../../api/api';
 
-export const NumberSec =  React.memo(() => {
+import styles from "./NumberSec.module.css";
+
+export const NumberSec =  memo(() => {
   const [data, setData] = useState({})
   const { t } = useTranslation();
 

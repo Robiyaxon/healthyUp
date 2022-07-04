@@ -10,7 +10,7 @@ const WhoIsTheUser = (props) => {
   return (
     <div className="WhoIsTheUser"> 
       <LoginPages settype={props.settype}
-        navigateUrl={"/reference"}
+        navigateUrl={"/signUp"}
         title={"Kim sifatida ro'yxatdan o'tmoqchisiz"}
         data={data}
         navigateUrl2={"/otherAccount"}

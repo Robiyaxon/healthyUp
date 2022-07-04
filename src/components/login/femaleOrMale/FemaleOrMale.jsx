@@ -11,14 +11,13 @@ const FemaleOrMale =  React.memo((props) => {
   const women = () => {
     props.setGender("2")
     props.SignApp("2")
-    navigate("/conclusion")
-
+    navigate("/loader")
   };
 
   const man = () => {
     props.setGender("1")
     props.SignApp("1")
-    navigate("/conclusion")
+    navigate("/loader")
   };
 
   return (

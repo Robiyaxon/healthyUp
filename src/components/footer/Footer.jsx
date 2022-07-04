@@ -8,8 +8,8 @@ import chiziq from "../../assets/home/footer/chiziq.svg";
 import telegram from "../../assets/home/footer/telegram.svg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { instance } from './../../api/api';
-export const Footer =  React.memo(() => {
+import { instance } from "./../../api/api";
+export const Footer = React.memo(() => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   useEffect(() => {instance.get("footer/").then((response) => setData(response.data));
@@ -67,4 +67,4 @@ export const Footer =  React.memo(() => {
       <p className={style.Title}>{t("footer")}</p>
     </div>
   );
-})
+});

@@ -63,6 +63,7 @@
 
 .counter_block h1{
   color: #fff;
+  text-align: center;
 }
 
 @media (min-width: 0) and (max-width: 599.9px) {
