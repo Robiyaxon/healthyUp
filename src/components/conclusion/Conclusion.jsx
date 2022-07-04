@@ -1,14 +1,15 @@
 import React, { memo, useState } from "react";
 import style from "./Conclusion.module.css";
 import { useNavigate } from "react-router-dom";
-import img from "../../assets/about_us/header.png";
+// import img from "../../assets/about_us/header.png";
 import { useEffect } from "react";
-import { instance } from './../../api/api';
+
 import axios from "axios";
 
-const Conclusion = memo(({ token }) => {
+const Conclusion = memo(() => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  // const [video, setVideo] = useState([]);
   const qidiruv = () => {
     navigate("/search_person");
   };
@@ -22,23 +23,26 @@ const Conclusion = memo(({ token }) => {
       url: "http://ehealthuz.pythonanywhere.com/user/",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "token " + localStorage.getItem("token")
+        Authorization: "token " + localStorage.getItem("token"),
       },
-      data: data,
     };
 
     axios(config)
       .then(function (response) {
-          localStorage.setItem("token", response.data);
-          console.log(response.data);
+        setData(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-      // instance('user_task',
-      // {headers: Authorization: token ${localStorage.getItem("token")}`,
-      // }).then(res=>console.log(res.data))
-  }, [data]);
+  }, []);
+
+  const days = data.weekly_task && data.weekly_task.dushanba;
+
+  if (data.task_sport_can_not) {
+    console.log(data.task_sport_can_not);
+  } else if (data.task_dieta_can_not) {
+    console.log(data.task_dieta_can_not);
+  }
 
   return (
     <div className={style.Conclusion}>
@@ -54,7 +58,7 @@ const Conclusion = memo(({ token }) => {
         </div>
         <div className={style.Block}>
           <p>Kunlik yo‘qotilyotgan vazin</p>
-          <h1>{data.intended_weight} kg </h1>
+          <h1>{days} kg </h1>
         </div>
       </div>
       <div className={style.navigate}>
@@ -71,8 +75,22 @@ const Conclusion = memo(({ token }) => {
         unutmang!
       </p>
       <div className={style.topshiriq}>
-        {/* <video src=""></video> */}
-        <img src={img} alt="" />
+        {data.task_sport_can_not ? (
+          <iframe
+            width="420"
+            height="345"
+            title="video"
+            src={data.task_sport_can_not[0].video}
+          />
+        ) : data.task_dieta_can_not ? (
+          <iframe
+            width="420"
+            height="345"
+            title="video"
+            src={data.task_dieta_can_not[0].video}
+          />
+        ) : null}
+
         <div className={style.Topshiriq2}>
           <p>1-topshiriq</p>
         </div>
@@ -83,5 +101,5 @@ const Conclusion = memo(({ token }) => {
       </div>
     </div>
   );
-})
+});
 export default Conclusion;

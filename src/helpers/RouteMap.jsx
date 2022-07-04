@@ -118,6 +118,8 @@ export const RouterMap = () => {
           setName={setName}
           setUsername={setUsername}
           setPassword={setPassword}
+          type={type}
+
         />
       ),
     },

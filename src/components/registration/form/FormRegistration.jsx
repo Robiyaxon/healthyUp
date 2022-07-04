@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
@@ -8,6 +8,18 @@ const FormRegistration = React.memo((props) =>{
   const navigate = useNavigate();
   const [errorText, seterrorText] = useState(null)
   const { t } = useTranslation()
+
+  useEffect(() => {
+    if(!props.type){
+      console.log('Some Error!');
+      console.log(props.type);
+      navigate('/whoIsTheUser')
+      
+    }else{
+      console.log('ok!');
+    }
+  }, [props.type, navigate]);
+
   const map = [
     {
       id: 1,
@@ -75,6 +87,7 @@ const FormRegistration = React.memo((props) =>{
       />
     </Form.Item>
   ));
+
   var formdata = new FormData();
   formdata.append("username", props.username);
   formdata.append("email", props.email);
@@ -86,7 +99,7 @@ const FormRegistration = React.memo((props) =>{
   };
   const click = () => {
     fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
-      .then((result) =>Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/whoIsTheUser"))
+      .then((result) =>Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/reference"))
       .catch((error) => console.log(error));
   }
   return (
