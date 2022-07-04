@@ -12,7 +12,6 @@ const FormRegistration = React.memo((props) =>{
   useEffect(() => {
     if(!props.type){
       console.log('Some Error!');
-      console.log(props.type);
       navigate('/whoIsTheUser')
       
     }else{
