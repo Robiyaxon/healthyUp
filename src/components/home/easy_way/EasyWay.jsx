@@ -4,9 +4,13 @@ import styles from "./EasyWay.module.css";
 import { instance } from "../../../api/api";
 import AOS from "aos"
 import "aos/dist/aos.css"
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 const EasyWay =  React.memo(() => {
   const [data, setData] = useState([]);
+  const { language } = useSelector((state) => state.langReducer);
 
+const {t}=useTranslation()
   useEffect(() => {
     AOS.init({duration:2000})
     instance.get("home_card/").then((response) => setData(response.data));
@@ -17,8 +21,24 @@ const EasyWay =  React.memo(() => {
       <div className={styles.header_sport_wrapper} key={d.id} data-aos="flip-up">
         <div className={styles.header_sport}>
           <div className={styles.header__text}>
-            <h1>{d.title_en}</h1>
-            <p>{d.text_uz}</p>
+            <h1> {language === "uz" ? (
+            <>{d.title_uz}</>
+          ) : language === "en" ? (
+            <>{d.title_en}</>
+          ) : language === "ru" ? (
+            <>{d.title_ru}</>
+          ) : (
+            <>Vazin yo‘qotish qiyin emas</>
+          )}</h1>
+            <p>{language === "uz" ? (
+            <>{d.text_uz}</>
+          ) : language === "en" ? (
+            <>{d.text_en}</>
+          ) : language === "ru" ? (
+            <>{d.text_ru}</>
+          ) : (
+            <>Vazin yo‘qotish qiyin emas</>
+          )}</p>
           </div>
           <div className={styles.Boy}>
             <img src={d.img} alt="boy" />
@@ -33,7 +53,7 @@ const EasyWay =  React.memo(() => {
   return (
     <div className={styles.header} >
       <h2 className={styles.header_title}>
-        Vazin yo`qotishning eng sodda va oson yollari
+      {t("route")}
       </h2>
       {dataMap}
     </div>

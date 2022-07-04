@@ -10,7 +10,6 @@ import {
   DatePicker,
 } from "antd";
 import axios from "axios";
-import { instance } from "../../api/api";
 const { Option } = Select;
 const layout = {
   labelCol: {

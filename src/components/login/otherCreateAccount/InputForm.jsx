@@ -43,7 +43,6 @@ const InputForm = ({ type, img }) => {
 
   const onChange = (data, dateString) => {
     setDate(dateString);
-    console.log(dateString);
   };
 
   const onFinish = (values) => {
@@ -86,7 +85,6 @@ const InputForm = ({ type, img }) => {
       .then(function (response) {
         if (Number(response.data) !== 1) {
           localStorage.setItem("token", response.data);
-          console.log(response.data);
           navigate("/userSetting");
         } else {
           alert("Some error!");

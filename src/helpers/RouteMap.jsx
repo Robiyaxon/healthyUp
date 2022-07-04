@@ -58,7 +58,7 @@ export const RouterMap = () => {
   const [weight, setweight] = useState("");
   const [type_loss, settype_loss] = useState("");
   const [going_to_loss, setgoing_to_loss] = useState("1");
-  const [can_not_sports, setcan_not_sports] = useState([1, 4, 5]);
+  const [can_not_sports, setcan_not_sports] = useState([]);
   const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
   const [token, setToken] = useState("");
@@ -93,10 +93,10 @@ export const RouterMap = () => {
         if (result == 1) {
           console.log("xato");
           navigate('/signUp')
+          console.log(result);
         } else {
           setToken(result.slice(1, -1));
         localStorage.setItem("token", result.slice(1, -1))
-
         }
       })
       .catch((error) => console.log("error", error));
