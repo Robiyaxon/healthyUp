@@ -189,7 +189,6 @@
     line-height: 40px;
   }
 }
-
 @media (max-width: 1200px) {
   .header_sport,
   .header_meal {
@@ -432,7 +431,7 @@
     margin-top: 8rem;
   }
   .header_sport img {
-    width: 50%;
+width: 50%;
     height: auto;
     margin: 0 auto 1rem;
     position: relative;

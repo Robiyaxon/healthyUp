@@ -23,23 +23,23 @@ export const MyCarousel =  React.memo(() => {
       picture={(d.img) || main}
       title={
         language === "uz" ? (
-          <>{d.title}</>
+          d.title
         ) : language === "en" ? (
-          <>{d.en_title}</>
+          d.en_title
         ) : language === "ru" ? (
-          <>{d.ru_title}</>
+         d.ru_title
         ) : (
-          <>Vazin yo‘qotish qiyin emas</>
+          "Vazin yo‘qotish qiyin emas"
         )
       }
       text={ language === "uz" ? (
-        <>{d.text}</>
+        d.text
       ) : language === "en" ? (
-        <>{d.en_text}</>
+        d.en_text
       ) : language === "ru" ? (
-        <>{d.ru_text}</>
+        d.ru_text
       ) : (
-        <>Vazin yo‘qotish qiyin emas</>
+        "Vazin yo‘qotish qiyin emas"
       )}
     />
   ));
