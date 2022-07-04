@@ -6,7 +6,7 @@ import { MyBackTop } from "./ScrollerOn";
 import { Footer } from "./components/footer/Footer";
 import { MySearch } from "./components/search/Search";
 import { RouterMap } from "./helpers/RouteMap";
-import "./App.css"
+import "./App.css";
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {

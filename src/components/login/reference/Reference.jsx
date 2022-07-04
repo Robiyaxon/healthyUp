@@ -8,7 +8,6 @@ const Reference = (props) => {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-
     navigate('/direction');
   };
   const map = [
