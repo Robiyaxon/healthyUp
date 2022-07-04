@@ -10,10 +10,6 @@ const Conclusion = memo(({ token }) => {
   const qidiruv = () => {
     navigate("/search_person");
   };
-  const profile = () => {
-    navigate("/foods");
-  };
-
   useEffect(() => {
     var config = {
       method: "get",
@@ -51,9 +47,6 @@ const Conclusion = memo(({ token }) => {
       <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
           Mutaxassis qidirish
-        </button>
-        <button onClick={profile} className={style.button2}>
-          Mening profilim
         </button>
       </div>
       <h1 className={style.Title}>Topshiriqlar</h1>
