@@ -7,12 +7,12 @@ const Loader = () => {
   const navigate = useNavigate();
 
   setTimeout(() => {
-    // var dom = document.getElementsByTagName("span") && document.getElementsByTagName("span")[4] ? document.getElementsByTagName("span")[4].textContent : "some error"
-    // if (Number(dom) === 100) {
-    //   navigate('/conclusion')
-    // } else {
-    //   console.log(dom === 100 + " error");
-    // }
+    var dom = document.getElementsByTagName("span") && document.getElementsByTagName("span")[4] ? document.getElementsByTagName("span")[4].textContent : "some error"
+    if (Number(dom) === 100) {
+      navigate('/conclusion')
+    } else {
+      console.log(dom === 100 + " error");
+    }
   }, 10000);
 
   return (

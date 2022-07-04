@@ -162,8 +162,10 @@
     right: -15px;
   }
 
-  .header{
+  .header {
     padding-bottom: 60px;
+    width: calc(100%-50px);
+    margin: 0 25px;
   }
 }
 @media (min-width: 0) and (max-width: 767.9px) {
@@ -171,7 +173,7 @@
     background-image: url("./../../../assets/home/comment/mobileBg.png");
   }
   .header_card1 {
-    padding-top: 70px;
+    padding: 40px 35px;
   }
   .header_cards {
     margin-top: 40px;
@@ -184,6 +186,7 @@
   .header_card3 {
     margin-left: 0px;
     margin-top: 0;
+    display: none;
   }
   .header h2 {
     font-weight: 700;
@@ -192,6 +195,13 @@
   .top,
   .bottom {
     display: none;
+  }
+
+  .header {
+    padding-bottom: 30px;
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    padding-top: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199.9px) {

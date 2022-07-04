@@ -168,7 +168,8 @@
   }
 
   .blocks__box {
-    width: 80%;
+    width: calc(100% - 50px);
+    padding: 0 25px;
     height: 90px;
   }
 

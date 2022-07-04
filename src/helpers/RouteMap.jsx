@@ -3,6 +3,7 @@
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
+import { useNavigate } from 'react-router-dom';
 import SingleSearchPersonCompanity from "../components/searchPerson/SingleSearchPersonCompanity"
 const Home = lazy(() => import("./../components/home/Home"));
 const Question = lazy(() => import("./../components/question/Question"));
@@ -43,7 +44,7 @@ const AllTrainer = lazy(() =>
 
 const UserSettings = lazy(() =>
   import("./../components/userSettings/UserSettings")
-);
+)
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -61,6 +62,8 @@ export const RouterMap = () => {
   const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
   const [token, setToken] = useState("");
+
+  const navigate = useNavigate()
   function SignApp(gender2) {
     var formdata = new FormData();
     formdata.append("type", type);
@@ -89,6 +92,7 @@ export const RouterMap = () => {
       .then((result) => {
         if (result == 1) {
           console.log("xato");
+          navigate('/signUp')
         } else {
           setToken(result.slice(1, -1));
         localStorage.setItem("token", result.slice(1, -1))

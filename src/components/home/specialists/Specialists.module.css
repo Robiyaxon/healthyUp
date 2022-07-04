@@ -100,16 +100,21 @@
 }
 
 @media (min-width: 0) and (max-width: 700.9px) {
-  .desc {
-    width: 80%;
+  .title{
+    margin-top: 2rem;
     font-size: 20px;
-    line-height: 36px;
+    line-height: 30px;
   }
+  .desc {
+    width: 85%;
+    font-size: 18px;
+    line-height: 25px;
+}
 
   .block {
     display: flex;
-    width: 80%;
-    margin: 2rem auto;
+    width: calc(100% - 50px);
+    margin: 2rem 25px;
     justify-content: space-between;
     flex-direction: column;
   }
@@ -119,6 +124,9 @@
     margin-bottom: 2rem;
   }
 
+  .specialists{
+    padding-bottom: 2rem;
+  }
 }
 
 @media (min-width: 701px) and (max-width: 1189.9px) {
