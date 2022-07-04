@@ -7,7 +7,7 @@ import "antd/dist/antd.css";
 import { Pagination } from "antd";
 import { useTranslation } from "react-i18next";
 
-const AllDietolog= React.memo(() =>{
+const AllDietolog = React.memo(() => {
   const [trainer, setTrainer] = useState([]);
   const [current, setCurrent] = useState(1);
   const [minIndex, setMinIndex] = useState(0);
@@ -15,7 +15,6 @@ const AllDietolog= React.memo(() =>{
   const [pageSize, setPageSize] = useState(16);
   const [search, setSearch] = useState([]);
   const { t } = useTranslation();
-  // const [value, setValue] = useState("");
   let update = () => {
     if (window.innerWidth > 950) {
       setPageSize(16);
@@ -42,9 +41,7 @@ const AllDietolog= React.memo(() =>{
     setMaxIndex(page * pageSize);
   }
 
-  const clickSearch = () => {
-
-  }
+  const clickSearch = () => {};
 
   const mapDiatolog = trainer
     .sort((a, b) => b.reyting - a.reyting)
@@ -84,6 +81,6 @@ const AllDietolog= React.memo(() =>{
       </div>
     </div>
   );
-})
+});
 
 export default AllDietolog;

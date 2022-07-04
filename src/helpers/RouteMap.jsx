@@ -37,7 +37,6 @@ const SearchPerson = lazy(() =>
 const AllDietolog = lazy(() =>
   import("./../components/searchPerson/AllDietolog")
 );
-
 const AllTrainer = lazy(() =>
   import("./../components/searchPerson/AllTrainer")
 );

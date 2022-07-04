@@ -1,7 +1,7 @@
 * {
   padding: 0;
 }
-.olma{
+.olma {
   border: 2px solid red;
   width: 100px;
   border: 2px solid rgb(201, 196, 196);
@@ -19,7 +19,7 @@
 padding-top: 5rem;
 margin-bottom: 4rem;
 }
-.style{
+.style {
   height: 40;
   width: 40;
   line-height: 40px;
@@ -97,13 +97,12 @@ margin-bottom: 4rem;
 }
 
 .ant-btn-primary {
-  background: #CB9A39 !important;
+  background: #cb9a39 !important;
   border-color: none;
-
 }
 
 .ant-select-selection-placeholder {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   /* font-size: 20px; */
