@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { instance } from '../../../api/api';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-const Sport_Food =  React.memo((props) => {
+const Sport_Food = React.memo((props) => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
@@ -16,12 +16,15 @@ const Sport_Food =  React.memo((props) => {
     instance.get("sport/").then((response) => setData(response.data));
     instance.get("product/").then((response) => setData2(response.data));
   }, []);
-  const click = async (id) => {
+  const deleteItem = (index, id) => () => {
+    setData((items) => items.filter((_, i) => i !== index))
     let temp = app;
     temp.push(id)
     setApp(temp);
+    return data.filter(item => item.id !== id)
   }
-  const click3 = async (id) => {
+  const deleteItem2 = (index, id) => () => {
+    setData2((items) => items.filter((_, i) => i !== index))
     let temp = app2;
     temp.push(id)
     setApp2(temp);
@@ -36,28 +39,26 @@ const Sport_Food =  React.memo((props) => {
       <h1>{t("no_sport")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          {data.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click(a.id)
-          }>{a.name}</div>)}
+          {data.map((a, index) => <div key={a.id} className={style.Block_Card} onClick={deleteItem(index, a.id)}>{a.name}</div>)}
         </div>
       </div>
       <h1>{t("foods")}</h1>
       <div className={style.Select_block}>
         <div className={style.card}>
-          {data2.map(a => <div key={a.id} className={style.Block_Card} onClick={() => click3(a.id)
-          }>{a.name}</div>)}
+          {data2.map((a, index) => <div key={a.id} className={style.Block_Card} onClick={deleteItem2(index, a.id)}>{a.name}</div>)}
         </div>
       </div>
-      <div style={{textAlign:"center"}}>
- <Button
-        type="primary"
-        htmlType="submit"
-        className="login-form-button"
-        onClick={click2}
-      >
-        {t("Continue")}
-      </Button>
+      <div style={{ textAlign: "center" }}>
+        <Button
+          type="primary"
+          htmlType="submit"
+          className="login-form-button"
+          onClick={click2}
+        >
+          {t("Continue")}
+        </Button>
       </div>
-     
+
     </div>
   )
 })

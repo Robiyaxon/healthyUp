@@ -41,6 +41,10 @@ const AllTrainer = lazy(() =>
   import("./../components/searchPerson/AllTrainer")
 );
 
+const UserSettings = lazy(() =>
+  import("./../components/userSettings/UserSettings")
+);
+
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
   const [first_name, setFirstname] = useState("");
@@ -83,12 +87,12 @@ export const RouterMap = () => {
     fetch("http://ehealthuz.pythonanywhere.com/register/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        localStorage.getItem("token", result)
         if (result == 1) {
           console.log("xato");
         } else {
           setToken(result.slice(1, -1));
-          console.log(result.slice(1, -1));
+        localStorage.setItem("token", result.slice(1, -1))
+
         }
       })
       .catch((error) => console.log("error", error));
@@ -172,6 +176,7 @@ export const RouterMap = () => {
     { id: 18, url: "search_person", element: <SearchPerson /> },
     { id: 19, url: "search_deatolog_all", element: <AllDietolog /> },
     { id: 20, url: "search_trainer_all", element: <AllTrainer /> },
+    { id: 20, url: "userSettings", element: <UserSettings /> },
   ];
 
   const dataMapForRoute = data.map((d) => (

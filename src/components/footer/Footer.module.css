@@ -81,7 +81,7 @@
 }
 
 .facebook_icon {
-    transition: all 0.5s   !important;
+    transition: all 0.5s !important;
 
 
 }
@@ -103,11 +103,13 @@
 .instagram_icon:hover {
     transform: rotate(-360deg);
 }
-.chiziq{
+
+.chiziq {
     text-align: center;
     width: 100%;
     margin: 0 auto;
 }
+
 .Wrapper {
     background-color: white;
     width: 100% !important;
@@ -132,7 +134,18 @@
         width: 100%;
         justify-content: center;
     }
-
+    .Block2 a {
+        text-align: center;
+    }
+    .Block1 p {
+     margin:0.5rem auto;
+    }
+    .Block1 img {
+        margin: 0 auto 1rem;
+    }
+    .Block1 a {
+        text-align: center;
+    }
     .Block2,
     .Block1,
     .Block3 {
@@ -153,9 +166,10 @@
     }
 
     .Block2 a {
-        margin: 0px;
+        margin: 5px 0;
     }
-    .Title{
+
+    .Title {
         width: 80%;
         margin: 0 auto;
         font-size: 16px;
@@ -169,14 +183,19 @@
         width: 100%;
         justify-content: space-between;
     }
-
+    .Block1 p {
+     margin: 0 auto;
+    }
     .Block2,
     .Block1,
     .Block3 {
-        width: 34%;
-        margin: 0.5rem 0;
+        width: 50%;
+        margin:1rem 0;
+        text-align: center;
     }
-
+    .Block1 img {
+        margin: 14px auto;
+    }
     .Block2 {
         justify-content: flex-end;
     }
@@ -195,7 +214,7 @@
     }
 
     .Block2 a {
-        margin: 0px;
+        margin: 0.5rem 0;
     }
 }
 

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { instance } from "../../api/api";
 import { SinglePerson } from "./SinglePerson";
 import { setPersonSingle } from './../../redux/SingleSearchPerson';
+
 // const withRouter = (WrappedComponent) => (props) => {
 //   const params = useParams();
 //   return <WrappedComponent {...props} params={params} />;

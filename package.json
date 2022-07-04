@@ -2,7 +2,6 @@
   "name": "react-feeds-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/my-app",
   "devDependencies": {
     "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -53,6 +52,7 @@
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "eslint-plugin-react-hooks": "^4.7.0-next-955cad9bc-20220623",
+    "gh-pages": "^4.0.0",
     "react-countup": "^6.2.0",
     "react-reveal": "^1.2.2",
     "react-visibility-sensor": "^5.1.1",

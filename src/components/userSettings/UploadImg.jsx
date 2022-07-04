@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import otherAccount from '../../../assets/login/otherAccount.png'
+import otherAccount from '../../assets/login/otherAccount.png'
 
 const UploadImg = ({setImg, setPassword}) => {
   const uploadedImage = useRef(null);
@@ -17,6 +17,7 @@ const UploadImg = ({setImg, setPassword}) => {
       };
       reader.readAsDataURL(file);
       setImg(file.name)
+      console.log(file.name.name);
     }
   };
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "antd/dist/antd.css";
 import {
   Button,
@@ -8,10 +8,9 @@ import {
   InputNumber,
   Slider,
   DatePicker,
-  Space,
 } from "antd";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { instance } from "../../api/api";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -28,23 +27,8 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({ type, img }) => {
+const InputForm = ({ type, img, data }) => {
   const [form] = Form.useForm();
-
-  const navigate = useNavigate();
-
-  const [date, setDate] = useState("");
-
-  useEffect(() => {
-    if (!type) {
-      navigate("/whoIsTheUser");
-    }
-  }, [type, navigate]);
-
-  const onChange = (data, dateString) => {
-    setDate(dateString);
-    console.log(dateString);
-  };
 
   const onFinish = (values) => {
     var data = new FormData();
@@ -56,46 +40,46 @@ const InputForm = ({ type, img }) => {
     data.append("bio", values.bio);
     data.append("age", values.age);
     data.append("experience", values.experience);
-    // data.append("birthday", "1975-05-22");
+    data.append("birthday", "1975-05-22");
     data.append("addres", values.addres);
     data.append("information", values.information);
-    data.append("user_type", type);
+    data.append("phone", values.phone);
     data.append("type", type);
     data.append("gender", values.gender);
-    data.append("birthday", date);
+    data.append("birthday", values.birthday);
     data.append("phone", values.phone);
     data.append("pic", img);
 
-    data.append("type_loss", 1);
-    data.append("height", 1);
-    data.append("weight", 1);
-    data.append("going_to_loss", 1);
-    data.append("can_not_dieta", 1);
-
-    console.log(values.birthday);
     var config = {
-      method: "post",
-      url: "http://ehealthuz.pythonanywhere.com/register/",
+      method: "put",
+      url: "http://ehealthuz.pythonanywhere.com/update_user/",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "token " + localStorage.getItem("token"),
       },
       data: data,
     };
 
     axios(config)
       .then(function (response) {
-        if (Number(response.data) !== 1) {
-          localStorage.setItem("token", response.data);
-          console.log(response.data);
-          navigate("/userSetting");
-        } else {
-          alert("Some error!");
-        }
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   };
+
+  const config1 = {
+    rules: [
+      {
+        type: "object",
+        required: true,
+        message: "Please select time!",
+      },
+    ],
+  };
+
+  console.log(data.userName);
 
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
@@ -108,7 +92,7 @@ const InputForm = ({ type, img }) => {
           },
         ]}
       >
-        <Input />
+        <Input value={'data.userName'} />
       </Form.Item>
       <Form.Item
         name="password"
@@ -183,9 +167,9 @@ const InputForm = ({ type, img }) => {
           <InputNumber min={16} max={70} />
         </Form.Item>
       </Form.Item>
-      <Space direction="vertical">
-        <DatePicker onChange={onChange} />
-      </Space>
+      <Form.Item name="birthday" label="DatePicker" {...config1}>
+        <DatePicker />
+      </Form.Item>
       <Form.Item
         name="phone"
         label="Telefon raqam"

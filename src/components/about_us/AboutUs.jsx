@@ -5,8 +5,11 @@ import { instance } from './../../api/api';
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { Spin } from 'antd';
+
 const AboutUs = React.memo(() => {
+
   const [data, setData] = useState([]);
+
   useEffect(() => {
     AOS.init({ duration: 2000 })
     instance.get("aboutus/").then((response) => setData(response.data));
@@ -16,6 +19,7 @@ const AboutUs = React.memo(() => {
       <Spin />
     </div>
   }
+  
   const map = data.map((d) => {
     return (
       <div className={style.first} key={d.id} data-aos="flip-right">

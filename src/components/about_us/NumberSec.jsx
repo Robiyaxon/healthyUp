@@ -1,25 +1,23 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import React from "react";
-import styles from "./NumberSec.module.css";
+
 import { instance } from './../../api/api';
 
-export const NumberSec =  React.memo(() => {
+import styles from "./NumberSec.module.css";
+
+export const NumberSec =  memo(() => {
   const [data, setData] = useState({})
   const { t } = useTranslation();
 
   useEffect(() => {
     instance.get("info_num").then((response) => setData(response.data));
   }, [setData])
+
   return (
     <div className={styles.numberSec}>
       <div className={styles.numberSec__block}>
-        <h1 className={styles.numberSec__title}>
-          Healthy Up is a <strong>100% digital agency </strong> offering
-          innovative solutions
-        </h1>
         <div className={styles.counter_body}>
           <div className={styles.counter_block}>
             <CountUp start={1} end={data.bemorlar} duration={0.7}>

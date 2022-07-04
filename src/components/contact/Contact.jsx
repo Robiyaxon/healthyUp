@@ -18,7 +18,7 @@ const Contact =  React.memo(() => {
   useEffect(() => {
     AOS.init({ duration: 2000 })
     instance.get("footer/").then((response) => setData(response.data));
-  }, [data]);
+  }, [setData]);
   const success = () => {
     if ((name !== "", firstname !== "", tel !== "", textarea !== "")) {
       message.success("This is a success message");

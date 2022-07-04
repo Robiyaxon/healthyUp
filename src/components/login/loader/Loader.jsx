@@ -9,10 +9,9 @@ const Loader = () => {
   setTimeout(() => {
     var dom = document.getElementsByTagName("span") && document.getElementsByTagName("span")[4] ? document.getElementsByTagName("span")[4].textContent : "some error"
     if (Number(dom) === 100) {
-      console.log(dom===100);
       navigate('/')
-    }else{
-      console.log( dom===100 + " error");
+    } else {
+      console.log(dom === 100 + " error");
 
     }
   }, 10000);
@@ -21,7 +20,7 @@ const Loader = () => {
     <div className={style.loader}>
       <h1>Ma'lumotlarni qayta ishlash</h1>
       <p>Sizning ovqatlanish rejangiz hisoblanmoqda...</p>
-      <CountUp id={'count'} start={1} end={100}  duration={9}></CountUp>
+      <CountUp id={'count'} start={1} end={100} duration={9}></CountUp>
     </div>
   );
 };

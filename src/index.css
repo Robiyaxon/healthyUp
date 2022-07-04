@@ -1,6 +1,6 @@
 :root {
   --main-font-family: "Poppins";
-  --main-font-color: #231c00
+  --main-font-color: #231c00;
 }
 
 * {
@@ -9,14 +9,13 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: 'Poppins';
-  src: url('./fonts/poppins_regular.ttf') format('woff2');
+  font-family: "Poppins";
+  src: url("./fonts/poppins_regular.ttf") format("woff2");
 }
 
-body{
+body {
   overflow-x: hidden;
 }
-
 
 .container {
   width: 50%;
@@ -76,32 +75,32 @@ body{
   height: 100%;
 }
 
-.hHJTFD{
+.hHJTFD {
   overflow-x: hidden !important;
 }
 
-.guIbWC{
+.guIbWC {
   overflow: inherit !important;
 }
 
 .krmNah {
   box-shadow: 0 0 1px 3px #dfc085 !important;
-  background-color: rgba(223, 192, 133, .5) !important;
+  background-color: rgba(223, 192, 133, 0.5) !important;
 }
 
-.jhmYzC{
+.jhmYzC {
   box-shadow: 0 0 1px 2px #e4cea3 !important;
 }
 
 .eWjCzc,
 .eAyARa {
-  border: 1px solid #DFC085 !important;
-  color: #DFC085 !important;
-  background: linear-gradient(to left, #fff, #F6E4C2) !important;
+  border: 1px solid #dfc085 !important;
+  color: #dfc085 !important;
+  background: linear-gradient(to left, #fff, #f6e4c2) !important;
 }
 
-.eAyARa{
-  opacity: .4;
+.eAyARa {
+  opacity: 0.4;
 }
 
 * {
@@ -158,7 +157,7 @@ body{
 }
 
 .ant-btn-primary {
-  background: #CB9A39 !important;
+  background: #cb9a39 !important;
   border-color: none;
 }
 
@@ -173,6 +172,39 @@ body{
 .scroll23 {
   position: fixed !important;
   border: 2px solid blue !important;
+}
+
+.ant-input:hover,
+.ant-slider-handle,
+.ant-slider-dot-active {
+  border-color: #dfc085 !important;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-number:focus,
+.ant-input-number-focused,
+.ant-picker:hover, .ant-picker-focused,
+.ant-input-number:hover {
+  box-shadow: 0 0 0 2px #dfc08585 !important;
+  border-color: #dfc085 !important;
+}
+
+.ant-slider-mark{
+  display: none;
+}
+
+.ant-slider-track{
+  background-color: #dfc085 !important;
+}
+
+.ant-input-number,
+.ant-picker{
+  width: 100% !important;
+}
+
+.ant-col-8{
+  max-width: 20% !important;
 }
 
 @media (min-width: 0) and (max-width: 750.9px) {
