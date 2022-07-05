@@ -181,9 +181,11 @@ const InputForm = ({ type, img }) => {
           <InputNumber min={16} max={70} />
         </Form.Item>
       </Form.Item>
-      <Space direction="vertical">
-        <DatePicker onChange={onChange} />
-      </Space>
+      <Form.Item label="Birthday">
+        <Space direction="vertical">
+          <DatePicker onChange={onChange} />
+        </Space>
+      </Form.Item>
       <Form.Item
         name="phone"
         label="Telefon raqam"

@@ -28,7 +28,7 @@
 .Chek img,
 .advice3 img{
   width: 60px;
-  height: 60px;
+  height: auto;
   margin-right: 16px;
 }
 
