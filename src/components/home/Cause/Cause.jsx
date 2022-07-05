@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-import chek from "../../../assets/home/header/chek.svg";
+import chek from "../../../assets/home/header/chek.png";
 
 import { instance } from "./../../../api/api";
 

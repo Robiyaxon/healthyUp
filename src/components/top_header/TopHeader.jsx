@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import i18n from "./../../i18n";
 import style from "./TopHeader.module.css";
 import { useDispatch } from "react-redux";
-import logo from "../../assets/home/search/logo2.svg";
+import logo from "../../assets/home/search/logo2.png";
 import drawer from "../../assets/home/header/drawer.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
