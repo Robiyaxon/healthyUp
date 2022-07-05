@@ -62,6 +62,7 @@
     }
     .login_form button {
         width: 300px;
+        margin-top: 50px;
     }
     .login_form {
         width: 100%;

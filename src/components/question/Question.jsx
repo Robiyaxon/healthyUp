@@ -22,7 +22,7 @@ const Question =  React.memo(() => {
           <div>
             <h1>  {t("question")}</h1>
             <p>
-            {t("question_text")}
+            {window.innerWidth > 801 ? t("question_text") : window.innerWidth < 430 ? t("question_text").substring(0, 100) + "..." : t("question_text").substring(0, 200) + "..."}
             </p>
           </div>
         </div>
