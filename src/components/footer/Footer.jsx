@@ -28,19 +28,19 @@ export const Footer = React.memo(() => {
           to="about_us"
           className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
         >
-          Biz haqimizda
+         {t("navbar1")}
         </NavLink>
         <NavLink
           to="contact"
           className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
         >
-          Bog'lanish
+       {t("navbar2")}
         </NavLink>
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
         >
-          Foydali maslahat
+         {t("navbar5")}
         </NavLink>
       </div>
       <div className={style.Block3}>
