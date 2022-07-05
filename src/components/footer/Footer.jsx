@@ -45,17 +45,17 @@ export const Footer = React.memo(() => {
       </div>
       <div className={style.Block3}>
         <a href={a.facebook} className={style.facebook_icon}>
-          <img src={facebook} alt="" />
+          <img src={facebook} alt="rasm bor edi!" />
         </a>
         <a href={a.instagram} className={style.instagram_icon}>
-          <img src={instagram} alt="" />
+          <img src={instagram} alt="rasm bor edi!" />
         </a>
         <a href={a.telegram} className={style.telegram_icon}>
-          <img src={telegram} alt="" />
+          <img src={telegram} alt="rasm bor edi!" />
         </a>
 
         <a href={a.application}>
-          <img src={google} alt="" />
+          <img src={google} alt="rasm bor edi!" />
         </a>
       </div>
     </div>
@@ -63,7 +63,7 @@ export const Footer = React.memo(() => {
   return (
     <div className={style.Wrapper}>
       {map}
-      <img src={chiziq} alt="" className={style.chiziq} />
+      <img src={chiziq} alt="rasm bor edi!" className={style.chiziq} />
       <p className={style.Title}>{t("footer")}</p>
     </div>
   );

@@ -1,11 +1,7 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState,useEffect } from "react";
 import style from "./Conclusion.module.css";
 import { useNavigate } from "react-router-dom";
-// import img from "../../assets/about_us/header.png";
-import { useEffect } from "react";
-
 import axios from "axios";
-
 const Conclusion = memo(() => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
@@ -68,7 +64,7 @@ const Conclusion = memo(() => {
         unutmang!
       </p>
       <div className={style.topshiriq}>
-        {data.task_sport_can_not ? (
+        {/* {data.task_sport_can_not ? (
           <iframe
             width="420"
             height="345"
@@ -82,7 +78,7 @@ const Conclusion = memo(() => {
             title="video"
             src={data.task_dieta_can_not[0].video}
           />
-        ) : null}
+        ) : null} */}
 
         <div className={style.Topshiriq2}>
           <p>1-topshiriq</p>

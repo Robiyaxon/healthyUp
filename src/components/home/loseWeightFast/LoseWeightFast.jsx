@@ -35,7 +35,7 @@ const LoseWeightFast =  React.memo(() => {
         {t("loseWeightFast")}
       </h1>
       <div className={styles.main__block}>
-        <img src={main} alt="" />
+        <img src={main} alt="rasm bor edi!" />
         <div className={styles.blocks}>{dataMap}</div>
       </div>
     </div>

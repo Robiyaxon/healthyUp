@@ -38,7 +38,7 @@ export const Specialists = React.memo(() => {
       return (
         <NavLink to={"/singilur/" + d.id} className="cards cards--three" key={index}>
 
-          <img src={img} className="img-responsive" alt="" />
+          <img src={img} className="img-responsive" alt="rasm bor edi!" />
           <Rate disabled defaultValue={d.reyting / d.reyting_count} />
 
           <span className="cards--three__rect-1">

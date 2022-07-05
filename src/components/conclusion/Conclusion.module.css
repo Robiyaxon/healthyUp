@@ -164,10 +164,12 @@ input[type="checkbox"] {
 
 @media (min-width: 0) and (max-width: 650.9px) {
   .Conclusion {
-    padding: 7rem 1rem 1rem;
+    padding: 100px 10px 10px;
   }
   .topshiriq {
     flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 100%;
   }
   .Title {
     margin-bottom: 0;
@@ -177,7 +179,7 @@ input[type="checkbox"] {
   .Profile {
     padding-top: 0;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     margin: 2rem auto 0;
   }
   .p {

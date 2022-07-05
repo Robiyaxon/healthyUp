@@ -18,7 +18,7 @@ const Question =  React.memo(() => {
       <div className={style.Question}></div>    
       <div className={style.WrapperCard}>
         <div className={style.CardBlock}>
-          <img src={faq} alt="" />
+          <img src={faq} alt="rasm bor edi!" />
           <div>
             <h1>  {t("question")}</h1>
             <p>

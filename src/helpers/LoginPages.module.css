@@ -56,13 +56,16 @@
 @media (min-width:0) and (max-width:950.9px) {
   .body{
     width: 80%;
+    padding-top: 100px;
+
   }
   .body button{
     width: 95%
   }
 
   .body h1{
-    font-size: 30px;
+    font-size: 28px;
+    width: 100%;
     line-height: 40px;
   }
 }

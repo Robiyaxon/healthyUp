@@ -53,7 +53,7 @@
 }
 @media(min-width:0) and (max-width:900.9px) {
     .Reference {
-        padding: 140px 20px 20px 20px;
+        padding: 100px 20px 20px 20px;
         height: auto;
     }
     .Reference h1{
