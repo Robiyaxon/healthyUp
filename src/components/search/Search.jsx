@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import Search from "antd/lib/input/Search";
 import { useTranslation } from 'react-i18next';
 
 import img1 from "../../assets/home/header/logo.webp";
