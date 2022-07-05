@@ -3,7 +3,7 @@ import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
 import { Rate } from "antd";
 import axios from "axios";
 
-import person from "../../../assets/home/specialists/person.png";
+import person from "../../../assets/home/specialists/person.webp";
 
 import styles from "./Specialists.module.css";
 import "./Specialists.css";

@@ -1,5 +1,5 @@
 .Cause {
-  background-image: url("../../../assets/home/couse1.png");
+  background-image: url("../../../assets/home/couse1.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 6rem 0 0 0;
@@ -24,7 +24,11 @@
   align-items: flex-start;
 }
 
-.Chek img {
+.advice2 img,
+.Chek img,
+.advice3 img{
+  width: 60px;
+  height: 60px;
   margin-right: 16px;
 }
 
@@ -65,7 +69,6 @@
 }
 
 .advice2 img {
-  margin-right: 16px;
 }
 
 .img {

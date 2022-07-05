@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import style from "./Footer.module.css";
 import logo2 from "../../assets/home/search/logo2.svg";
-import facebook from "../../assets/home/footer/f.svg";
-import instagram from "../../assets/home/footer/i.svg";
-import google from "../../assets/home/footer/googleplay.svg";
-import chiziq from "../../assets/home/footer/chiziq.svg";
-import telegram from "../../assets/home/footer/telegram.svg";
+import facebook from "../../assets/home/footer/f.webp";
+import instagram from "../../assets/home/footer/i.webp";
+import google from "../../assets/home/footer/googleplay.webp";
+import chiziq from "../../assets/home/footer/chiziq.webp";
+import telegram from "../../assets/home/footer/telegram.webp";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { instance } from "./../../api/api";

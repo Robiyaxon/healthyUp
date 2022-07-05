@@ -80,6 +80,15 @@
     margin: 0 33px 30px 0;
 }
 
+.Block3 a img{
+    width: 45px;
+    height: auto;
+}
+
+.Block3 a:last-child img{
+    width: 200px;
+}
+
 .facebook_icon {
     transition: all 0.5s !important;
 

@@ -1,7 +1,6 @@
 import React, { memo, useState } from "react";
 import style from "./Conclusion.module.css";
 import { useNavigate } from "react-router-dom";
-// import img from "../../assets/about_us/header.png";
 import { useEffect } from "react";
 
 import axios from "axios";
@@ -9,7 +8,7 @@ import axios from "axios";
 const Conclusion = memo(() => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
-  // const [video, setVideo] = useState([]);
+
   const qidiruv = () => {
     navigate("/search_person");
   };

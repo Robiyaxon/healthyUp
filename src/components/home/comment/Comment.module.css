@@ -1,5 +1,5 @@
 .header_wrapper {
-  background-image: url("./../../../assets/home/comment/commentBg.png");
+  background-image: url("./../../../assets/home/comment/commentBg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -170,7 +170,7 @@
 }
 @media (min-width: 0) and (max-width: 767.9px) {
   .header_wrapper {
-    background-image: url("./../../../assets/home/comment/mobileBg.png");
+    background-image: url("./../../../assets/home/comment/mobileBg.webp");
   }
   .header_card1 {
     padding: 40px 35px;

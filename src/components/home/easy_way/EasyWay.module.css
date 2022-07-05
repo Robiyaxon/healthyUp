@@ -1,5 +1,5 @@
 .header {
-  background-image: url(../../../assets/home/easy_way/background.png);
+  background-image: url(../../../assets/home/easy_way/background.webp);
   width: 100%;
   background-size: cover;
   height: 100%;
@@ -39,14 +39,14 @@
 }
 
 .header .header_sport_wrapper:nth-child(odd) .header_lenta{
-  background-image: url(../../../assets/home/easy_way/metr1.png);
+  background-image: url(../../../assets/home/easy_way/metr1.webp);
   background-repeat: no-repeat;
   height: 200px;
   width: 100%;
   background-size: contain;
 }
 .header .header_sport_wrapper:nth-child(even) .header_lenta{
-  background-image: url(../../../assets/home/easy_way/metr2.png);
+  background-image: url(../../../assets/home/easy_way/metr2.webp);
   background-repeat: no-repeat;
   height: 200px;
   width: 100%;
@@ -62,7 +62,7 @@
 .header_meal {
   display: flex;
   justify-content: flex-start;
-  background-image: url(./../../../assets/home/easy_way/boyBg.png);
+  background-image: url(./../../../assets/home/easy_way/boyBg.webp);
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: 100% 90%;
@@ -78,7 +78,7 @@
 .header_sport {
   display: flex;
   justify-content: space-between;
-  background-image: url(./../../../assets/home/easy_way/boyBg.png);
+  background-image: url(./../../../assets/home/easy_way/boyBg.webp);
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: 100% 90%;
@@ -192,7 +192,7 @@
 @media (max-width: 1200px) {
   .header_sport,
   .header_meal {
-    background-image: url(./../../../assets/home/easy_way/mobileBoyBg.png);
+    background-image: url(./../../../assets/home/easy_way/mobileBoyBg.webp);
   }
   .header__meal_text {
     width: 90%;

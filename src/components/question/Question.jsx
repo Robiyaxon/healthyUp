@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./Question.module.css";
 import Question2 from "./Question2";
-import faq from "../../assets/FAQ/faq.png";
+import faq from "../../assets/FAQ/faq.webp";
 import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
 import AOS from "aos"

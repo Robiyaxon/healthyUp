@@ -1,8 +1,8 @@
 import React from "react";
 // import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import erkak from "../../../assets/login/erkak.svg";
-import ayol from "../../../assets/login/ayol.svg";
+import erkak from "../../../assets/login/erkak.webp";
+import ayol from "../../../assets/login/ayol.webp";
 import style from "./FemaleOrMale.module.css";
 import { useNavigate } from "react-router-dom";
 const FemaleOrMale =  React.memo((props) => {

@@ -3,7 +3,7 @@ import i18n from "./../../i18n";
 import style from "./TopHeader.module.css";
 import { useDispatch } from "react-redux";
 import logo from "../../assets/home/search/logo2.svg";
-import drawer from "../../assets/home/header/drawer.png";
+import drawer from "../../assets/home/header/drawer.webp";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Drawer } from "antd";

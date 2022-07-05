@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { instance } from "./../../../api/api";
 
-import main from "../../../assets/home/main.png";
+import main from "../../../assets/home/main.webp";
 import AOS from "aos"
 import "aos/dist/aos.css"
 import styles from "./LoseWeightFast.module.css";

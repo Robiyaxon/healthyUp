@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Comment.module.css";
-import man2 from "./../../../assets/home/comment/man2.png";
-import man1 from "./../../../assets/home/comment/man1.png";
-import top from "./../../../assets/home/comment/top.png";
-import bottom from "./../../../assets/home/comment/bottom.png";
+import man2 from "./../../../assets/home/comment/man2.webp";
+import man1 from "./../../../assets/home/comment/man1.webp";
+import top from "./../../../assets/home/comment/top.webp";
+import bottom from "./../../../assets/home/comment/bottom.webp";
 // import { useEffect } from "react";
 
 const Comment = React.memo(() =>{

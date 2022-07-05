@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { useTranslation } from "react-i18next";
 import Carousel from "react-elastic-carousel";
 // import { useSelector } from "react-redux";
-import main from "../../../assets/home/carousel/main.png";
+import main from "../../../assets/home/carousel/main.webp";
 import AOS from "aos"
 import "aos/dist/aos.css"
 import LoseWeightFast from "../loseWeightFast/LoseWeightFast";

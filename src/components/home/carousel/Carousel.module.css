@@ -1,7 +1,7 @@
 .carousel {
   background-color: #f5f5f6;
   padding: 8rem 8%;
-  background-image: url("../../../assets/home/carousel/background.png");
+  background-image: url("../../../assets/home/carousel/background.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -9,7 +9,7 @@
 .item {
   display: flex;
   justify-content: space-evenly;
-  background-image: url("../../../assets/home/carousel/bg.png")
+  background-image: url("../../../assets/home/carousel/bg.webp")
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   background-repeat: no-repeat;
   background-position-y: bottom;

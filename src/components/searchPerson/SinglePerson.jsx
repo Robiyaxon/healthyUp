@@ -1,6 +1,6 @@
 import React from 'react'
 import style from "./SinglePerson.module.css"
-import person34 from "./../../assets/search_person/person.png";
+import person34 from "./../../assets/search_person/person.webp";
 import { Spin } from 'antd';
 import { useTranslation } from 'react-i18next';
 export const SinglePerson = React.memo(({ person }) => {

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import Search from "antd/lib/input/Search";
-import img1 from "../../assets/home/header/logo.png";
+import img1 from "../../assets/home/header/logo.webp";
 import style from "./Search.module.css";
 import { useTranslation } from 'react-i18next';
 
