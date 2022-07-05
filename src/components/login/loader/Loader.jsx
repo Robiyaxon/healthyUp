@@ -16,13 +16,13 @@ const Loader = () => {
   }, 10000);
 
   return (
-    <>
+    <div className={style.loader__body}>
       <h1 className={style.loader__title}>Ma'lumotlarni qayta ishlash</h1>
       <p  className={style.loader__text}>Sizning ovqatlanish rejangiz hisoblanmoqda...</p>
       <div className={style.loader}>
         <CountUp id={"count"} start={1} end={100} duration={9}></CountUp>
       </div>
-    </>
+    </div>
   );
 };
 

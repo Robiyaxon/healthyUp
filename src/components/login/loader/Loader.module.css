@@ -3,8 +3,17 @@
   initial-value: 0;
   inherits: true;
 }
+
+.loader__body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .loader {
-  margin: auto 0;
+  margin: 0 0;
   --p: 0;
   display: grid;
   align-items: center;
@@ -24,7 +33,7 @@
 }
 .loader:before {
   border: solid 5em transparent;
-  padding: 20%;
+  padding: 14%;
   border-radius: 50%;
   --slice: calc(360deg / var(--n));
   --s-gap: calc(var(--f) * var(--slice));
@@ -67,7 +76,7 @@
   margin-bottom: auto;
   font-size: 50px;
   margin-left: 0;
-  margin-top: 5rem;
+  margin-top: 4rem;
   top: 0;
   bottom: 0;
   color: #bc9520 !important;

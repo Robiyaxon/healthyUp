@@ -31,9 +31,7 @@ const Conclusion = memo(() => {
   const days = data.weekly_task && data.weekly_task.dushanba;
 
   if (data.task_sport_can_not) {
-    console.log(data.task_sport_can_not);
-  } else if (data.task_dieta_can_not) {
-    console.log(data.task_dieta_can_not);
+    // console.log(data);
   }
 
   return (
@@ -58,35 +56,61 @@ const Conclusion = memo(() => {
           Mutaxassis qidirish
         </button>
       </div>
-      <h1 className={style.Title}>Topshiriqlar</h1>
-      <p className={style.p}>
-        Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
-        unutmang!
-      </p>
-      <div className={style.topshiriq}>
-        {/* {data.task_sport_can_not ? (
-          <iframe
-            width="420"
-            height="345"
-            title="video"
-            src={data.task_sport_can_not[0].video}
-          />
-        ) : data.task_dieta_can_not ? (
-          <iframe
-            width="420"
-            height="345"
-            title="video"
-            src={data.task_dieta_can_not[0].video}
-          />
-        ) : null} */}
 
-        <div className={style.Topshiriq2}>
-          <p>1-topshiriq</p>
-        </div>
-        <label className={style.checkbox}>
-          <input type="checkbox" className={style.checkbox__input} />
-          <span className={style.checkbox__inner}></span>
-        </label>
+      <div className={style.topshiriq}>
+        {data &&
+        data.task_sport_can_not &&
+        data.task_sport_can_not[0] &&
+        data.task_sport_can_not[0].video ? (
+          <>
+            <h1 className={style.Title}>Topshiriqlar</h1>
+            <p className={style.p}>
+              Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
+              unutmang!
+            </p>
+            <div className={style.topshiriq}>
+              <iframe
+                width="420"
+                height="345"
+                title="video"
+                src={data.task_sport_can_not[0].video}
+              />
+              <div className={style.Topshiriq2}>
+                <p>1-topshiriq</p>
+              </div>
+              <label className={style.checkbox}>
+                <input type="checkbox" className={style.checkbox__input} />
+                <span className={style.checkbox__inner}></span>
+              </label>
+            </div>
+          </>
+        ) : data &&
+          data.task_dieta_can_not &&
+          data.task_dieta_can_not[0] &&
+          data.task_dieta_can_not[0].video ? (
+          <>
+            <h1 className={style.Title}>Topshiriqlar</h1>
+            <p className={style.p}>
+              Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
+              unutmang!
+            </p>
+            <div className={style.topshiriq}>
+              <iframe
+                width="420"
+                height="345"
+                title="video"
+                src={data.task_dieta_can_not[0].video}
+              />
+              <div className={style.Topshiriq2}>
+                <p>1-topshiriq</p>
+              </div>
+              <label className={style.checkbox}>
+                <input type="checkbox" className={style.checkbox__input} />
+                <span className={style.checkbox__inner}></span>
+              </label>
+            </div>
+          </>
+        ) : null}
       </div>
     </div>
   );

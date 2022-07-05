@@ -63,7 +63,10 @@ const Item = ({
       <img src={picture} alt="rasm bor edi!" />
       <div className={styles.item__text}>
         <h1>{title}</h1>
-        <p>{window.innerWidth > 801 ? text : text.substring(0, 200) + "..."}</p>
+        <p>
+          {window.innerWidth > 801 ? text : window.innerWidth < 430 ? text.substring(0, 100) + "..." : text.substring(0, 200) + "..."}
+        
+        </p>
       </div>
     </div>
   );
