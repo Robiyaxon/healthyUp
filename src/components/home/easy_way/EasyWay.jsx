@@ -6,13 +6,13 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-const EasyWay =  React.memo(() => {
+const EasyWay = React.memo(() => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
 
-const {t}=useTranslation()
+  const { t } = useTranslation()
   useEffect(() => {
-    AOS.init({duration:2000})
+    AOS.init({ duration: 2000 })
     instance.get("home_card/").then((response) => setData(response.data));
   }, [setData]);
 
@@ -22,23 +22,24 @@ const {t}=useTranslation()
         <div className={styles.header_sport}>
           <div className={styles.header__text}>
             <h1> {language === "uz" ? (
-            <>{d.title_uz}</>
-          ) : language === "en" ? (
-            <>{d.title_en}</>
-          ) : language === "ru" ? (
-            <>{d.title_ru}</>
-          ) : (
-            <>Vazin yo‘qotish qiyin emas</>
-          )}</h1>
+             d.title_uz
+            ) : language === "en" ? (
+            d.title_uz
+            ) : language === "ru" ? (
+             d.title_uz
+            ) : (
+              <>Vazin yo‘qotish qiyin emas</>
+            )}</h1>
             <p>{language === "uz" ? (
-            <>{d.text_uz}</>
-          ) : language === "en" ? (
-            <>{d.text_en}</>
-          ) : language === "ru" ? (
-            <>{d.text_ru}</>
-          ) : (
-            <>Vazin yo‘qotish qiyin emas</>
-          )}</p>
+              window.innerWidth > 801 ? d.text_uz : window.innerWidth < 430 ? d.title_uz.substring(0, 200) + "..." : d.text_uz.substring(0, 200) + "..."
+            ) : language === "en" ? (
+              window.innerWidth > 801 ? d.text_en : window.innerWidth < 430 ? d.title_uz.substring(0, 200) + "..." : d.text_en.substring(0, 200) + "..."
+
+            ) : language === "ru" ? (
+              window.innerWidth > 801 ? d.text_ru : window.innerWidth < 430 ? d.title_uz.substring(0, 200) + "..." : d.text_ru.substring(0, 200) + "..."
+            ) : (
+              <>Vazin yo‘qotish qiyin emas</>
+            )}</p>
           </div>
           <div className={styles.Boy}>
             <img src={d.img} alt="boy" />
@@ -53,7 +54,7 @@ const {t}=useTranslation()
   return (
     <div className={styles.header} >
       <h2 className={styles.header_title}>
-      {t("route")}
+        {t("route")}
       </h2>
       {dataMap}
     </div>
