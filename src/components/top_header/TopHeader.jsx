@@ -68,7 +68,7 @@ export const TopHeader = () => {
   };
   return (
     <>
-      <Drawer placement="right" onClose={onClose} visible={visible}>
+      <Drawer placement="right" onClose={onClose} visible={visible} >
         <div className={style.Drawer_Block_Navlink + " " + scroll}>
           {map2}
           <button className={style.Navlink_href} onClick={click}>

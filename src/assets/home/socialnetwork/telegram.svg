@@ -1,12 +1,1 @@
-<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#paint0_linear_88_1457)"/>
-<path d="M26.7634 43.2103L31.3622 55.6918L51.7898 27.3232L26.7634 43.2103Z" fill="#C2DAEC"/>
-<path d="M31.869 45.9819L31.4255 55.813L42.207 46.6736L31.869 45.9819Z" fill="#9FCDE2"/>
-<path d="M56.7792 22.5292L16.5258 37.8249C15.3907 38.2579 15.4171 39.8788 16.5733 40.2642L26.9535 43.77L50.5913 28.5166L31.869 45.977L46.4466 57.0382C47.9619 58.1892 50.1636 57.4131 50.623 55.5704L58.5005 24.0551C58.7539 23.0414 57.7613 22.1597 56.7792 22.5292Z" fill="#ECF8FD"/>
-<defs>
-<linearGradient id="paint0_linear_88_1457" x1="11.7179" y1="11.7196" x2="68.2835" y2="68.2852" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00AFE5"/>
-<stop offset="1" stop-color="#0094D4"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 80c22.091 0 40-17.909 40-40S62.091 0 40 0 0 17.909 0 40s17.909 40 40 40Z" fill="url(#a)"/><path d="m26.763 43.21 4.6 12.482L51.79 27.323 26.763 43.21Z" fill="#C2DAEC"/><path d="m31.869 45.982-.444 9.831 10.782-9.14-10.338-.691Z" fill="#9FCDE2"/><path d="M56.78 22.53 16.525 37.824c-1.135.433-1.109 2.054.047 2.44l10.38 3.505 23.638-15.253-18.722 17.46 14.578 11.061c1.515 1.151 3.717.375 4.176-1.468l7.878-31.515c.253-1.014-.74-1.895-1.722-1.526Z" fill="#ECF8FD"/><defs><linearGradient id="a" x1="11.718" y1="11.72" x2="68.284" y2="68.285" gradientUnits="userSpaceOnUse"><stop stop-color="#00AFE5"/><stop offset="1" stop-color="#0094D4"/></linearGradient></defs></svg>

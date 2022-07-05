@@ -66,6 +66,7 @@
         font-size: 24px;
         line-height: 51px;
         width: 100%;
+        border: 2px solid red;
         color: #231C00;
     }
 
