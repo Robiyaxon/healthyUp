@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import i18n from "./../../i18n";
 import style from "./TopHeader.module.css";
 import { useDispatch } from "react-redux";
-import logo from "../../assets/home/search/logo2.svg";
+import logo from "../../assets/home/search/logo2.png";
 import drawer from "../../assets/home/header/drawer.webp";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -68,11 +68,11 @@ export const TopHeader = () => {
   };
   return (
     <>
-      <Drawer placement="right" onClose={onClose} visible={visible}>
-        <div className={style.Drawer_Block_Navlink + " " + style.stroke}  >
+      <Drawer placement="right" onClose={onClose} visible={visible} >
+        <div className={style.Drawer_Block_Navlink + " " + scroll}>
           {map2}
           <button className={style.Navlink_href} onClick={click}>
-          
+
             {t("homeHeaderBtn1")}
           </button>
         </div>
@@ -80,7 +80,7 @@ export const TopHeader = () => {
       <div className={style.Top_Header + " " + scroll}>
         <div className={style.Block}>
           <NavLink to="/" className={style.Block_Navlink}>
-            <img src={logo} alt="" />
+            <img src={logo} alt="rasm bor edi!" />
           </NavLink>
           <div className={style.Menu__link}>
             <div className={style.Navlink + " " + style.stroke}>
@@ -101,7 +101,7 @@ export const TopHeader = () => {
               <option value="en">EN</option>
             </select>
             <div className={style.Drawer_Block}>
-              <img src={drawer} alt="" onClick={showDrawer} />
+              <img src={drawer} alt="rasm bor edi!" onClick={showDrawer} />
             </div>
           </div>
         </div>

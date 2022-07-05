@@ -1,9 +1,8 @@
-import React, { memo, useState } from "react";
-import style from "./Conclusion.module.css";
+import React, { memo, useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-
 import axios from "axios";
+
+import style from "./Conclusion.module.css";
 
 const Conclusion = memo(() => {
   const navigate = useNavigate();
@@ -34,7 +33,7 @@ const Conclusion = memo(() => {
   const days = data.weekly_task && data.weekly_task.dushanba;
 
   if (data.task_sport_can_not) {
-    console.log(data);
+    // console.log(data);
   }
 
   return (

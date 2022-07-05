@@ -96,7 +96,7 @@ export const RouterMap = () => {
           console.log(result);
         } else {
           setToken(result.slice(1, -1));
-        localStorage.setItem("token", result.slice(1, -1))
+          localStorage.setItem("token", result.slice(1, -1))
         }
       })
       .catch((error) => console.log("error", error));

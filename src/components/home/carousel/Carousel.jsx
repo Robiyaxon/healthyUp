@@ -60,7 +60,7 @@ const Item = ({
 }) => {
   return (
     <div className={styles.item}>
-      <img src={picture} alt="" />
+      <img src={picture} alt="rasm bor edi!" />
       <div className={styles.item__text}>
         <h1>{title}</h1>
         <p>

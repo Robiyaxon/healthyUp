@@ -2,9 +2,9 @@
   background-image: url(../../../assets/home/easy_way/background.webp);
   width: 100%;
   background-size: cover;
-  height: 100%;
   padding-top: 80px;
 }
+
 .header_title {
   font-family: Poppins, sans-serif;
   font-size: 56px;
@@ -28,13 +28,14 @@
   width: 100%;
   position: relative;
 }
+
 .header .header_sport_wrapper:nth-child(odd) .Boy {
   position: relative;
   width: 60%;
 }
 
-.header .header_sport_wrapper:nth-child(odd) .header__text{
-  width:100%;
+.header .header_sport_wrapper:nth-child(odd) .header__text {
+  width: 100%;
   margin-left: -10rem;
 }
 
@@ -146,9 +147,11 @@
   color: #20082d;
   width: 80%;
 }
+
 .header__meal_text p {
   width: 80%;
 }
+
 .header__meal_text {
   width: 100%;
 }
@@ -168,6 +171,7 @@
   margin-left: 87px;
   margin-top: -195px;
 }
+
 .food_lenta_wrapper img {
   width: 350px;
   height: 300px;
@@ -178,45 +182,56 @@
     width: 50%;
   }
 }
+
 @media (max-width: 1400px) {
+
   .header__text h1,
   .header__meal_text h1 {
     font-size: 28px;
   }
+
   .header__text p,
   .header__meal_text p {
     font-size: 16px;
     line-height: 40px;
   }
 }
+
 @media (max-width: 1200px) {
+
   .header_sport,
   .header_meal {
     background-image: url(./../../../assets/home/easy_way/mobileBoyBg.webp);
   }
+
   .header__meal_text {
     width: 90%;
     margin-left: 15%;
   }
+
   .header_sport_wrapper {
     width: 70%;
     margin: 0 auto;
   }
+
   .Boy {
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
   }
+
   .Boy img {
     width: 60%;
     height: auto;
     top: -4rem;
   }
+
   .header__text {
     width: 90%;
     margin-left: 15px;
   }
+
   .header__text,
   .header__meal_text {
     padding-bottom: 20px;
@@ -261,6 +276,7 @@
     margin-left: 0px;
     position: relative;
   }
+
   .header_meal {
     display: flex;
     flex-direction: column;
@@ -284,6 +300,7 @@
   .header__meal_text p {
     width: 100%;
   }
+
   .header__text h1,
   .header__meal_text h1 {
     width: 100%;
@@ -294,6 +311,7 @@
     font-size: 25px;
     line-height: 35px;
   }
+
   .header_lenta_wrapper {
     width: 120px;
     height: auto;
@@ -302,59 +320,79 @@
     margin-top: -13%;
   }
 }
+
 @media (max-width: 998px) {
   .header_lenta_wrapper {
     height: 120px;
     margin-top: -8%;
   }
+
   .header_meal img {
     height: 400px;
   }
+
   .header_sport_wrapper {
     width: 70%;
     margin: 0 auto;
   }
+
   .Boy {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 400px;
   }
+
   .Boy img {
     width: 50%;
     top: 0;
   }
+
   .header__text {
     margin-top: -2rem;
   }
 }
+
 @media (max-width: 800px) {
   .header_lenta_wrapper {
     margin-top: -8%;
   }
+  .header .header_sport_wrapper:nth-child(odd) .header__text {
+    width: 100%;
+    margin-left: -13rem;
+  }
+  .header{
+    padding: 80px 0 100px;
+  }
   .header__text {
     margin-top: -3rem;
   }
+
   .header__meal_text {
     margin-top: 0px;
     padding-top: 0px;
   }
+
   .header_meal {
     padding-top: 80px;
   }
+
   .header_meal img {
     height: 300px;
   }
+
   .header_sport_wrapper {
     width: 70%;
     margin: 0 auto;
   }
+
   .Boy {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 450px;
   }
+
   .header_sport img {
     width: 65%;
     margin: 0 auto;
@@ -365,19 +403,23 @@
     margin-bottom: 5px;
   }
 }
+
 @media (max-width: 700px) {
   .header_lenta_wrapper {
     margin-top: -10%;
   }
+
   .header_sport_wrapper {
     width: 74%;
     margin: 0 auto;
   }
+
   .Boy {
     height: 400px;
     display: flex;
     justify-content: center;
   }
+
   .header_sport img {
     width: 55%;
     margin: 0 auto;
@@ -387,51 +429,63 @@
     text-align: center;
     margin-bottom: 5px;
   }
+
   .header_meal img {
     height: 300px;
   }
+
   .header__text {
     margin-top: -8rem;
   }
 }
+
 @media (max-width: 600px) {
   .header_meal img {
     height: 230px;
   }
+
   .header_sport {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around !important;
   }
+
   .header_lenta_wrapper {
     margin-top: -9%;
   }
+
   .food_lenta_wrapper {
     margin-left: 46px;
     margin-top: -117px;
   }
+
   .food_lenta_wrapper img {
     width: 200px;
     height: 180px;
   }
+
   .Boy {
     height: auto;
     display: flex;
     justify-content: center;
   }
+
   .header_sport_wrapper {
     width: 90%;
     margin: 0 auto;
   }
+
   .header_meal_wrapper {
     width: 90%;
     margin: 0 auto;
   }
+
   .header__text {
     margin-top: 8rem;
   }
+
   .header_sport img {
-width: 50%;
+    width: 50%;
     height: auto;
     margin: 0 auto 1rem;
     position: relative;
@@ -439,29 +493,35 @@ width: 50%;
     top: -1px;
     margin-bottom: -118px;
   }
+
   .header__text h1,
   .header__meal_text h1 {
     font-size: 18px;
     line-height: 35px;
   }
+
   .header__text p,
   .header__meal_text p {
     font-size: 16px;
     line-height: 28px;
   }
 }
+
 @media (max-width: 500px) {
   .header_lenta_wrapper {
     margin-top: -11%;
     display: none;
   }
+
   .header__text {
     margin-top: 8rem !important;
   }
+
   .header_sport_wrapper {
     width: 90%;
     margin: 2rem auto 0;
   }
+
   .header_sport img {
     width: 60%;
     margin: 0 auto;
@@ -470,10 +530,12 @@ width: 50%;
     top: -60px;
     margin-bottom: -200px;
   }
+
   .header_meal img {
     height: 180px;
   }
-  .header{
+
+  .header {
     padding-top: 0;
   }
 }
@@ -482,14 +544,17 @@ width: 50%;
   .header_lenta_wrapper {
     margin-top: -17%;
   }
+
   .header_meal_wrapper {
     width: 90%;
     margin: 0 auto;
   }
+
   .header_sport_wrapper {
     width: 90%;
     margin: 0 auto;
   }
+
   .header_sport img {
     width: 70%;
     margin: 0 auto;
@@ -498,24 +563,29 @@ width: 50%;
     top: -58px;
     margin-bottom: -200px;
   }
+
   .header__text h1,
   .header__meal_text h1 {
     font-size: 18px;
     line-height: 16px;
   }
+
   .header__text p,
   .header__meal_text p {
     line-height: 24px;
   }
 }
+
 @media (max-width: 300px) {
   .header_lenta_wrapper {
     margin-top: -22%;
   }
+
   .header_sport_wrapper {
     width: 90%;
     margin: 0 auto;
   }
+
   .header_sport img {
     width: 90%;
     margin: 0 auto;

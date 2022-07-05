@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
-import style from "./Footer.module.css";
-import logo2 from "../../assets/home/search/logo2.svg";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+import logo2 from "../../assets/home/search/logo2.png";
 import facebook from "../../assets/home/footer/f.webp";
 import instagram from "../../assets/home/footer/i.webp";
 import google from "../../assets/home/footer/googleplay.webp";
 import chiziq from "../../assets/home/footer/chiziq.webp";
 import telegram from "../../assets/home/footer/telegram.webp";
-import { NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+
 import { instance } from "./../../api/api";
+
+import style from "./Footer.module.css";
+
 export const Footer = React.memo(() => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
@@ -28,34 +32,34 @@ export const Footer = React.memo(() => {
           to="about_us"
           className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
         >
-          Biz haqimizda
+         {t("navbar1")}
         </NavLink>
         <NavLink
           to="contact"
           className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
         >
-          Bog'lanish
+       {t("navbar2")}
         </NavLink>
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active2" : "Navlink2")}
         >
-          Foydali maslahat
+         {t("navbar5")}
         </NavLink>
       </div>
       <div className={style.Block3}>
         <a href={a.facebook} className={style.facebook_icon}>
-          <img src={facebook} alt="" />
+          <img src={facebook} alt="rasm bor edi!" />
         </a>
         <a href={a.instagram} className={style.instagram_icon}>
-          <img src={instagram} alt="" />
+          <img src={instagram} alt="rasm bor edi!" />
         </a>
         <a href={a.telegram} className={style.telegram_icon}>
-          <img src={telegram} alt="" />
+          <img src={telegram} alt="rasm bor edi!" />
         </a>
 
         <a href={a.application}>
-          <img src={google} alt="" />
+          <img src={google} alt="rasm bor edi!" />
         </a>
       </div>
     </div>
@@ -63,7 +67,7 @@ export const Footer = React.memo(() => {
   return (
     <div className={style.Wrapper}>
       {map}
-      <img src={chiziq} alt="" className={style.chiziq} />
+      <img src={chiziq} alt="rasm bor edi!" className={style.chiziq} />
       <p className={style.Title}>{t("footer")}</p>
     </div>
   );

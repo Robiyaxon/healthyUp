@@ -51,7 +51,7 @@ const AboutUs = React.memo(() => {
         <div className={style.image}>
           <img
             src="https://denverweightlossclinic.com/wp-content/uploads/2.png"
-            alt=""
+            alt="rasm bor edi!"
           />
         </div>
       </div>

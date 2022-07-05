@@ -8,8 +8,6 @@ import { RouterMap } from "./helpers/RouteMap";
 
 import "./App.css"
 
-
-
 const App = () => {
 
   const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +35,6 @@ const App = () => {
           <div className="select"></div>
         </>
       )}
-      {/* <MyBackTop /> */}
       <MySearch />
       <Footer />
     </div>

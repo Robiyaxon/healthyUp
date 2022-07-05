@@ -54,7 +54,7 @@ const UploadImg = ({setImg, setPassword}) => {
             position: "acsolute"
           }}
           src={otherAccount}
-          alt=''
+          alt='rasm bor edi!'
         />
       </div>
     </div>

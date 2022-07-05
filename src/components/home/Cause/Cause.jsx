@@ -86,7 +86,7 @@ export const Cause =  React.memo(() => {
           </div>
         </div>
         {data.map((a) => (
-          <img key={a.id} src={a.img} alt="" className={style.img} />
+          <img key={a.id} src={a.img} alt="rasm bor edi!" className={style.img} />
         ))}
 
         <div className={style.diseases__block}>

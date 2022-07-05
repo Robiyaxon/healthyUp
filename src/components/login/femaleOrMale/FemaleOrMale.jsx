@@ -23,7 +23,6 @@ const FemaleOrMale =  React.memo((props) => {
   return (
     <div className={style.jinsi}>
       <h1>{t("gender")}</h1>
-      <img src="" alt="" />
       <div className={style.Wrapper_Card}>
         <div className={style.Card} onClick={man}>
           <img src={erkak} alt="rasm bor edi!" />

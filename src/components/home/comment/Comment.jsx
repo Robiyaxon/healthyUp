@@ -5,13 +5,15 @@ import man1 from "./../../../assets/home/comment/man1.webp";
 import top from "./../../../assets/home/comment/top.webp";
 import bottom from "./../../../assets/home/comment/bottom.webp";
 // import { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 const Comment = React.memo(() =>{
+  const {t}=useTranslation()
   return (
     <div className={styles.header_wrapper}>
       <div className={styles.header}>
         <h2 >
-          Sharxlar
+     {t("Comments")}
         </h2>
         <div className={styles.header_cards}>
           {/* card 1 started */}
@@ -72,10 +74,10 @@ const Comment = React.memo(() =>{
             />
             <div className={styles.header_card3_content}>
               <h4>
-                Sizga yordam berayotganimizdan mamnunmiz{" "}
+              {t("happy")}
               </h4>
               <p>
-                Saytimiz orqali sizga yordam berayotganmizdan hursandmiz
+               {t("help_you")}
               </p>
             </div>
             <img
