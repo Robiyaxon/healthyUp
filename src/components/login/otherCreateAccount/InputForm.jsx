@@ -71,7 +71,7 @@ const InputForm = ({ type, img }) => {
     data.append("going_to_loss", 1);
     data.append("can_not_dieta", 1);
 
-    console.log(values.birthday);
+    console.log(date);
     var config = {
       method: "post",
       url: "http://ehealthuz.pythonanywhere.com/register/",
@@ -85,7 +85,7 @@ const InputForm = ({ type, img }) => {
       .then(function (response) {
         if (Number(response.data) !== 1) {
           localStorage.setItem("token", response.data);
-          navigate("/userSetting");
+          navigate("/");
         } else {
           alert("Some error!");
         }
