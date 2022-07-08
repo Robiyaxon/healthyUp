@@ -4,17 +4,20 @@ import UploadImg from "./UploadImg";
 import style from "./OtherCreateAccount.module.css";
 import InputForm from "./InputForm";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const OtherCreateAccount = ({ first_name, last_name, type }) => {
   const [img, setImg] = useState(null);
 
+  const {t} = useTranslation()
+
   return (
     <div className={style.body}>
       <h1 className={style.body__title}>
-        Salom {first_name} {last_name}
+        {/* Salom {first_name} {last_name} */}
       </h1>
       <p className={style.body__text}>
-        O‘zingiz haqingizda ma'lumotlarni to‘ldiring
+        {t("dataAcc")}
       </p>
       <div>
         <UploadImg setImg={setImg} />
