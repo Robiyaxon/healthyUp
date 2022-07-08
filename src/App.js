@@ -6,8 +6,6 @@ import { Footer } from "./components/footer/Footer";
 import { MySearch } from "./components/search/Search";
 import { RouterMap } from "./helpers/RouteMap";
 
-
-
 import "./App.css"
 
 const App = () => {
