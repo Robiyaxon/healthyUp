@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Spin } from "antd";
-
-
- 
 import ScrollToTop from "./ScrollerOn";
 import { TopHeader } from "./components/top_header/TopHeader";
 import { Footer } from "./components/footer/Footer";
