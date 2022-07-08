@@ -85,7 +85,7 @@
   background-size: 100% 90%;
   border-radius: 30px;
   width: 100%;
-  min-height: 600px;
+  height: 600px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -180,6 +180,7 @@
 @media (max-width: 2000px) {
   .header_sport img {
     width: 50%;
+    
   }
 }
 
@@ -198,7 +199,9 @@
 }
 
 @media (max-width: 1200px) {
-
+.header_sport{
+  height: auto !important;
+}
   .header_sport,
   .header_meal {
     background-image: url(./../../../assets/home/easy_way/mobileBoyBg.webp);
