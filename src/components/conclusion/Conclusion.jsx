@@ -26,13 +26,15 @@ const {t}=useTranslation()
     axios(config)
       .then(function (response) {
         setData(response.data);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   }, []);
 
-  const days = data.weekly_task && data.weekly_task.dushanba;
+  const days = data.weight + data.height;
+  const week_result = data.weight - data.height;
 
   if (data.task_sport_can_not) {
     // console.log(data);
@@ -47,12 +49,12 @@ const {t}=useTranslation()
           <h1>{data.weight} kg </h1>
         </div>
         <div className={style.Block}>
-          <p>{t("Kunlik")}</p>
-          <h1>{data.week_result} kk </h1>
+          <p>Kunlik yeyilishi kerak bolgan KK</p>
+          <h1>{week_result} kk </h1>
         </div>
         <div className={style.Block}>
           <p>Kunlik yo‘qotilyotgan vazin</p>
-          <h1>{days} kg </h1>
+          <h1>{days} kk </h1>
         </div>
       </div>
       <div className={style.navigate}>

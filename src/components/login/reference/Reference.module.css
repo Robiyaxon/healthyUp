@@ -1,70 +1,75 @@
 .Reference {
-    padding: 240px 175px 20px 175px;
-    background: rgba(247, 231, 200, 0.3);
-    height: 100vh;
+  padding: 240px 175px 20px 175px;
+  background: rgba(247, 231, 200, 0.3);
+  height: 100vh;
 }
 
 .Reference h1 {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 34px;
-    line-height: 51px;
-    text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+  text-align: center;
 
-    color: #4C3C00;
+  color: #4c3c00;
 }
 
 .login_form {
-    width: 472px;
-    text-align: center;
-    margin: 0 auto;
+  width: 472px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .login_form button {
-    width: 472px;
-    height: 50px;
-    border: none;
-    margin-top: 70px;
-    background: linear-gradient(265.62deg, #E6BF4C -14.74%, #BC9520 154.51%);
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    font-family: 'Poppins';
-
+  width: 372px;
+  height: 50px;
+  border: none;
+  margin-top: 70px;
+  background: linear-gradient(265.62deg, #e6bf4c -14.74%, #bc9520 154.51%);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Poppins";
 }
 
 .Input {
-    background: #FFFFFF;
-    width: 224px;
-    height: 42px;
-    margin: 0 auto;
-    border: 2px solid #C5C3CA;
-    border-radius: 10px;
-    margin-top: 40px;
+  background: #ffffff;
+  width: 224px;
+  height: 42px;
+  margin: 0 auto;
+  border: 2px solid #c5c3ca;
+  border-radius: 10px;
+  margin-top: 40px;
 }
 
 .Input input {
-    width: 224px;
-    height: 42px;
-    border-radius: 10px;
-
+  width: 224px;
+  height: 42px;
+  border-radius: 10px;
 }
-@media(min-width:0) and (max-width:900.9px) {
-    .Reference {
-        padding: 100px 20px 20px 20px;
-        height: auto;
-    }
-    .Reference h1{
+@media (min-width: 0) and (max-width: 900.9px) {
+  .Reference {
+    padding: 100px 20px 20px 20px;
+    height: auto;
+  }
+  .Reference h1 {
     font-size: 27px;
-    width: 100%;
-    }
-    .login_form button {
-        width: 300px;
-        margin-top: 50px;
-    }
-    .login_form {
-        width: 100%;
-    }
+    margin: 0 auto;
+  }
+  .login_form button {
+    margin-top: 30px;
+    width: 300px;
+  }
+
+  .Input,
+  .login_form,
+  .Reference h1{
+    max-width: 300px;
+  }
+
+  .login_form .Input:first-child{
+    margin-top: 30px;
+  }
 }

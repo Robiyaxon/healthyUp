@@ -142,7 +142,7 @@
         align-items: center;
     }
     .Footer {
-        padding: 2rem 25px;
+        padding: 2rem 25px 0;
         width: 100%;
         justify-content: center;
     }
@@ -166,7 +166,7 @@
     }
 
     .Block3 {
-        margin: 1.5rem 0;
+        margin: 1.5rem 0 0;
     }
 
     .Block2 {
@@ -179,6 +179,10 @@
 
     .Block2 a {
         margin: 5px 0;
+    }
+
+    .Block3 a:last-child{
+        margin-bottom: 1rem;
     }
 
     .Title {

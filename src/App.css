@@ -151,4 +151,8 @@ margin-bottom: 4rem;
   .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
     width: 70% !important;
   }
+
+  .WhoIsTheUser{
+    margin-bottom: 0;
+  }
 }

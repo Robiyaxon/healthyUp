@@ -53,19 +53,26 @@
   background-color: white;
 }
 
-@media (min-width:0) and (max-width:950.9px) {
-  .body{
-    width: 99%;
+@media (min-width: 0) and (max-width: 950.9px) {
+  .body {
+    width: 90%;
     padding-top: 100px;
-
+    /* padding-top: 35px; */
   }
-  .body button{
-    width: 95%
+  .body button {
+    max-width: 95%;
   }
 
-  .body h1{
-    font-size: 28px;
+  .body h1 {
+    font-size: 26px;
     width: 100%;
-    line-height: 40px;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 1101.9px) {
+  .body{
+    padding-top: 7rem;
+    width: 90%;
   }
 }
