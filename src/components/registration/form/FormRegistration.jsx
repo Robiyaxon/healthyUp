@@ -11,11 +11,10 @@ const FormRegistration = React.memo((props) =>{
 
   useEffect(() => {
     if(!props.type){
-      console.log('Some Error!');
       navigate('/whoIsTheUser')
       
     }else{
-      console.log('ok!');
+      
     }
   }, [props.type, navigate]);
 
