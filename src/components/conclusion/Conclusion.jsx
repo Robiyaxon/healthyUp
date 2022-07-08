@@ -66,10 +66,9 @@ const {t}=useTranslation()
         data.task_sport_can_not[0] &&
         data.task_sport_can_not[0].video ? (
           <>
-            <h1 className={style.Title}>Topshiriqlar</h1>
+            <h1 className={style.Title}>{t("Topshiriqlar")}</h1>
             <p className={style.p}>
-              Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
-              unutmang!
+            {t("unutmang")}
             </p>
             <div className={style.topshiriq}>
               <iframe
