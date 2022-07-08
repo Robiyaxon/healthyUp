@@ -125,4 +125,8 @@
   .loader{
     margin-bottom: 1rem;
   }
+
+  .loader__body{
+    height: auto;
+  }
 }

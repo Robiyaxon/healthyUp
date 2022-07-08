@@ -63,7 +63,7 @@
 }
 @media(min-width:0) and (max-width:750.9px){
     .Foods {
-        padding: 120px 20px 60px 20px;
+        padding: 120px 20px 60px;
         background-color: white;
         min-height: 100vh;
     }
@@ -73,8 +73,8 @@
     }
     .Foods h1 {
         font-size: 26px;
-        line-height: 51px;
+        line-height: 35px;
         width: 100%;
-        margin: 0 auto 46px auto;
+        margin: 0 auto 26px;
     }
 }

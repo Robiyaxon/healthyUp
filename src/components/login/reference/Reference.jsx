@@ -50,7 +50,7 @@ const Reference = (props) => {
         },
       ]}
     >
-      <Input   value={a.value}   onChange={(e) => a.setname1(e.target.value)} placeholder={a.placeholder} />
+      <Input value={a.value}   onChange={(e) => a.setname1(e.target.value)} placeholder={a.placeholder} />
     </Form.Item>
     </div>
   
