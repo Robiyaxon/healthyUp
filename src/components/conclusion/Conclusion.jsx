@@ -2,13 +2,15 @@ import React, { memo, useState,useEffect } from "react";
 import axios from "axios";
 
 import style from "./Conclusion.module.css";
+import { useNavigate } from 'react-router-dom';
 
 const Conclusion = memo(() => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
 
-  // const qidiruv = () => {
-  //   navigate("/search_person");
-  // };
+  const qidiruv = () => {
+    navigate("/search_person");
+  };
   useEffect(() => {
     var config = {
       method: "get",
@@ -51,11 +53,11 @@ const Conclusion = memo(() => {
           <h1>{days} kg </h1>
         </div>
       </div>
-      {/* <div className={style.navigate}>
+      <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
           Mutaxassis qidirish
         </button>
-      </div> */}
+      </div>
 
       <div className={style.topshiriq}>
         {data &&

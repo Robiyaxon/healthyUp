@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import SearchCards from "./SearchCards";
 const SeachPerson = React.memo(() => {
   const { t } = useTranslation();
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
   // const [search, setSearch] = useState([]);
   const [diatolog, setDietolog] = useState([]);
   const [trainer, setTrainer] = useState([]);
@@ -46,7 +46,7 @@ const SeachPerson = React.memo(() => {
     <div className={style.wrapper}>
       <div className={style.container}>
         {/* form start */}
-        <div className={style.form_wrapper}>
+        {/* <div className={style.form_wrapper}>
           <form>
             <input
               type="text"
@@ -57,7 +57,7 @@ const SeachPerson = React.memo(() => {
             />
             <i className="fa-solid fa-magnifying-glass"></i>
           </form>
-        </div>
+        </div> */}
         {/* form end */}
         {/* card 1 start title */}
         <div className={style.card_wrapper}>
