@@ -85,7 +85,7 @@ const InputForm = ({ type, img }) => {
       .then(function (response) {
         if (Number(response.data) !== 1) {
           localStorage.setItem("token", response.data);
-          navigate("/");
+          navigate("/loaderAcc");
         } else {
           alert("Some error!");
         }

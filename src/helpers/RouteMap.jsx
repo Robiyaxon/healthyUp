@@ -172,18 +172,19 @@ export const RouterMap = () => {
       element: <Direction settype_loss={settype_loss} />,
     },
     { id: 15, url: "loader", element: <Loader /> },
-    { id: 16, url: "conclusion", element: <Conclusion token={token} /> },
+    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!"/> },
+    { id: 17, url: "conclusion", element: <Conclusion token={token} /> },
     {
-      id: 17,
+      id: 18,
       url: "otherAccount",
       element: (
         <OtherCreateAccount first_name={first_name} last_name={last_name} type={type} />
       ),
     },
-    { id: 18, url: "search_person", element: <SearchPerson /> },
-    { id: 19, url: "search_deatolog_all", element: <AllDietolog /> },
-    { id: 20, url: "search_trainer_all", element: <AllTrainer /> },
-    { id: 20, url: "userSettings", element: <UserSettings /> },
+    { id: 19, url: "search_person", element: <SearchPerson /> },
+    { id: 20, url: "search_deatolog_all", element: <AllDietolog /> },
+    { id: 21, url: "search_trainer_all", element: <AllTrainer /> },
+    { id: 22, url: "userSettings", element: <UserSettings /> },
   ];
 
   const dataMapForRoute = data.map((d) => (

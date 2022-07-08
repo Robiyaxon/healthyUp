@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import style from "./Loader.module.css";
 
-const Loader = () => {
+const Loader = ({text = 'Sizning ovqatlanish rejangiz hisoblanmoqda...'}) => {
   const navigate = useNavigate();
 
   setTimeout(() => {
@@ -18,7 +18,7 @@ const Loader = () => {
   return (
     <div className={style.loader__body}>
       <h1 className={style.loader__title}>Ma'lumotlarni qayta ishlash</h1>
-      <p  className={style.loader__text}>Sizning ovqatlanish rejangiz hisoblanmoqda...</p>
+      <p  className={style.loader__text}>{text}</p>
       <div className={style.loader}>
         <CountUp id={"count"} start={1} end={100} duration={9}></CountUp>
       </div>
