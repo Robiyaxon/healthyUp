@@ -31,9 +31,9 @@ const EasyWay = React.memo(() => {
               <>Vazin yo‘qotish qiyin emas</>
             )}</h1>
             <p>{language === "uz" ? (
-              window.innerWidth > 801 ? d.text_uz : window.innerWidth < 430 ? d.title_uz.substring(0, 200) + "..." : d.text_uz.substring(0, 200) + "..."
+              window.innerWidth > 801 ? d.text_uz : d.title_uz.substring(0, 400) + "..."
             ) : language === "en" ? (
-              window.innerWidth > 801 ? d.text_en : window.innerWidth < 430 ? d.title_uz.substring(0, 200) + "..." : d.text_en.substring(0, 200) + "..."
+              window.innerWidth > 801 ? d.text_en : window.innerWidth < 430 ? d.title_uz.substring(0, 400) + "..." : d.text_en.substring(0, 400) + "..."
 
             ) : language === "ru" ? (
               window.innerWidth > 801 ? d.text_ru : window.innerWidth < 430 ? d.title_uz.substring(0, 200) + "..." : d.text_ru.substring(0, 200) + "..."
