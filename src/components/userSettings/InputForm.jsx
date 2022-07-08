@@ -77,9 +77,6 @@ const InputForm = ({ type, img, data }) => {
       },
     ],
   };
-
-  console.log(data.userName);
-
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item
