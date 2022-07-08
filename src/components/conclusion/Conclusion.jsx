@@ -1,11 +1,9 @@
 import React, { memo, useState,useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import style from "./Conclusion.module.css";
 
 const Conclusion = memo(() => {
-  const navigate = useNavigate();
   const [data, setData] = useState([]);
 
   // const qidiruv = () => {
