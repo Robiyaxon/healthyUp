@@ -24,12 +24,13 @@ const EasyWay = React.memo(() => {
             <h1> {language === "uz" ? (
              d.title_uz
             ) : language === "en" ? (
-            d.title_uz
+            d.title_en
             ) : language === "ru" ? (
-             d.title_uz
+             d.title_ru
             ) : (
               <>Vazin yo‘qotish qiyin emas</>
             )}</h1>
+<<<<<<< HEAD
             <p>{ language === "en" ? (
               window.innerWidth > 801 ? d.text_uz : window.innerWidth < 430 ? d.text_uz.substring(0, 400) + "..." : d.text_uz.substring(0, 400) + "..."
             ) : language === "en" ? (
@@ -37,6 +38,14 @@ const EasyWay = React.memo(() => {
 
             ) : language === "ru" ? (
               window.innerWidth > 801 ? d.text_ru : window.innerWidth < 430 ? d.text_ru.substring(0, 200) + "..." : d.text_ru.substring(0, 200) + "..."
+=======
+            <p>{language === "uz" ? (
+              window.innerWidth > 801 ? d.text_uz : d.text_uz.substring(0, 250) + "..."
+            ) : language === "en" ? (
+              window.innerWidth > 801 ? d.text_en : d.text_en.substring(0, 250) + "..." 
+            ) : language === "ru" ? (
+              window.innerWidth > 801 ? d.text_ru : d.text_ru.substring(0, 250) + "..."
+>>>>>>> 0d4460fc16c254cdbb89c72a7777ae08c9ab8109
             ) : (
               <>Vazin yo‘qotish qiyin emas</>
             )}</p>

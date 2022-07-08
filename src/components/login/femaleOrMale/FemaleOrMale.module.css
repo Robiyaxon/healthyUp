@@ -30,6 +30,10 @@
     cursor: pointer;
 }
 
+.Card img{
+    width: 300px;
+}
+
 .Card:hover:before {
     transform: scale(2.15);
 }
@@ -57,4 +61,11 @@
         padding: 100px 25px 20px 25px;
     }
 
+    .Card img{
+        width: 60%;
+    }
+
+    .Card{
+        margin-right: 0;
+    }
 }
