@@ -87,7 +87,7 @@ const InputForm = ({ type, img }) => {
           localStorage.setItem("token", response.data);
           navigate("/loaderAcc");
         } else {
-          alert("Some error!");
+          alert("Bu username alla qachon mavjud!");
         }
       })
       .catch(function (error) {
