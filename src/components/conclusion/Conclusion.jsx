@@ -3,9 +3,11 @@ import axios from "axios";
 
 import style from "./Conclusion.module.css";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Conclusion = memo(() => {
   const navigate = useNavigate();
+const {t}=useTranslation()
   const [data, setData] = useState([]);
 
   const qidiruv = () => {
@@ -38,14 +40,14 @@ const Conclusion = memo(() => {
 
   return (
     <div className={style.Conclusion}>
-      <h1 className={style.Title}>Profilingizning xulosasi</h1>
+      <h1 className={style.Title}>{t("xulosasi")}</h1>
       <div className={style.Profile}>
         <div className={style.Block}>
-          <p>Statistik vazin</p>
+          <p>{t("vazin")}</p>
           <h1>{data.weight} kg </h1>
         </div>
         <div className={style.Block}>
-          <p>Kunlik yeyilishi kerak bolgan KK</p>
+          <p>{t("Kunlik")}</p>
           <h1>{data.week_result} kk </h1>
         </div>
         <div className={style.Block}>
@@ -55,8 +57,7 @@ const Conclusion = memo(() => {
       </div>
       <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
-          Mutaxassis qidirish
-        </button>
+{t("qidirish")}        </button>
       </div>
 
       <div className={style.topshiriq}>

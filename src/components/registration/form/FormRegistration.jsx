@@ -11,11 +11,7 @@ const FormRegistration = React.memo((props) =>{
 
   useEffect(() => {
     if(!props.type){
-      navigate('/whoIsTheUser')
-      
-    }else{
-      
-    }
+      navigate('/whoIsTheUser') }
   }, [props.type, navigate]);
 
   const map = [

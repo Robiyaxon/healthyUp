@@ -102,7 +102,9 @@
   border: 1px solid #626262;
   background: transparent no-repeat center;
 }
-
+.Title{
+  width: 100%;
+}
 .checkbox__input:checked + .checkbox__inner {
   background-color: #55e027;
   border: 2px solid #b2afb8;
@@ -174,6 +176,7 @@ input[type="checkbox"] {
   .Title {
     margin-bottom: 0;
     font-size: 26px;
+ 
     line-height: 34px;
   }
   .Profile {
