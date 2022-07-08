@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 import style from "./Loader.module.css";
 
-const Loader = ({text = 'Sizning ovqatlanish rejangiz hisoblanmoqda...'}) => {
+const Loader = ({text = 'Sizning ovqatlanish rejangiz hisoblanmoqda...', link='/conclusion'}) => {
   const navigate = useNavigate();
 
   setTimeout(() => {
     var dom = document.getElementsByTagName("span") && document.getElementsByTagName("span")[4] ? document.getElementsByTagName("span")[4].textContent : "some error"
     if (Number(dom) === 100) {
-      navigate('/conclusion')
+      navigate(link)
     } else {
       console.log(dom === 100 + " error");
     }

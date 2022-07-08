@@ -172,7 +172,7 @@ export const RouterMap = () => {
       element: <Direction settype_loss={settype_loss} />,
     },
     { id: 15, url: "loader", element: <Loader /> },
-    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!"/> },
+    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!" link="/search_person"/> },
     { id: 17, url: "conclusion", element: <Conclusion token={token} /> },
     {
       id: 18,
