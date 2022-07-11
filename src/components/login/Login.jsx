@@ -36,11 +36,18 @@ const Login = () => {
         initialValues={{ remember: true }}
         onFinish={onFinish}
         autoComplete="off"
+        
       >
         <p className={style.error + ' ' + errorClass}>Username yoki password xato!</p>
         <Form.Item
           name="username"
-          rules={[{ message: "Please input your Username!" }]}
+          rules= {[
+            {
+              type: "string",
+              required: true,
+              message: "Please select time!",
+            },
+          ]}
         >
           <Input
             className={style.Input}
@@ -50,7 +57,13 @@ const Login = () => {
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ message: "Please input your Password!" }]}
+          rules= {[
+            {
+              type: "string",
+              required: true,
+              message: "Please select time!",
+            },
+          ]}
         >
           <Input
             prefix={<LockOutlined className="site-form-item-icon" />}

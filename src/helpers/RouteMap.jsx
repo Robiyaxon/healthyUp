@@ -45,6 +45,10 @@ const AllTrainer = lazy(() =>
 const UserSettings = lazy(() =>
   import("./../components/userSettings/UserSettings")
 )
+const PersonExpert = lazy(() =>
+  import("./../components/search/Person_expert")
+)
+
 
 
 export const RouterMap = () => {
@@ -172,7 +176,7 @@ export const RouterMap = () => {
       element: <Direction settype_loss={settype_loss} />,
     },
     { id: 15, url: "loader", element: <Loader /> },
-    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!" link="/userSettings"/> },
+    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!" link="/expertPerson"/> },
     { id: 17, url: "conclusion", element: <Conclusion token={token} /> },
     {
       id: 18,
@@ -185,6 +189,7 @@ export const RouterMap = () => {
     { id: 20, url: "search_deatolog_all", element: <AllDietolog /> },
     { id: 21, url: "search_trainer_all", element: <AllTrainer /> },
     { id: 22, url: "userSettings", element: <UserSettings /> },
+    { id: 22, url: "expertPerson", element: <PersonExpert /> },
   ];
 
   const dataMapForRoute = data.map((d) => (
