@@ -1,13 +1,13 @@
-import React, { memo, useState,useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import axios from "axios";
 
 import style from "./Conclusion.module.css";
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Conclusion = memo(() => {
   const navigate = useNavigate();
-const {t}=useTranslation()
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
 
   const qidiruv = () => {
@@ -59,7 +59,8 @@ const {t}=useTranslation()
       </div>
       <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
-{t("qidirish")}        </button>
+          {t("qidirish")}{" "}
+        </button>
       </div>
 
       <div className={style.topshiriq}>
@@ -69,9 +70,7 @@ const {t}=useTranslation()
         data.task_sport_can_not[0].video ? (
           <>
             <h1 className={style.Title}>{t("Topshiriqlar")}</h1>
-            <p className={style.p}>
-            {t("unutmang")}
-            </p>
+            <p className={style.p}>{t("unutmang")}</p>
             <div className={style.topshiriq}>
               <iframe
                 width="420"

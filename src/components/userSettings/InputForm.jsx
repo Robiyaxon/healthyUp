@@ -29,6 +29,10 @@ const tailLayout = {
 const InputForm = ({ type, img, data }) => {
   const [form] = Form.useForm();
 
+  if (!data.username) {
+    return <>Some wait...</>;
+  }
+
   const onFinish = (values) => {
     var data = new FormData();
     data.append("username", values.userName);
@@ -62,6 +66,7 @@ const InputForm = ({ type, img, data }) => {
     axios(config)
       .then(function (response) {
         console.log(response.data);
+        
       })
       .catch(function (error) {
         console.log(error);
@@ -78,64 +83,31 @@ const InputForm = ({ type, img, data }) => {
     ],
   };
 
-  console.log(data.userName);
-
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item
         name="userName"
         label="UserName"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input value={'data.userName'} />
-      </Form.Item>
-      <Form.Item
-        name="password"
-        label="Password"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input />
+        <Input defaultValue={data.username} />
       </Form.Item>
       <Form.Item
         name="email"
         label="Email"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input />
+        <Input defaultValue={data.email} />
       </Form.Item>
       <Form.Item
         name="first_name"
         label="First name"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input />
+        <Input defaultValue={data.first_name} />
       </Form.Item>
       <Form.Item
         name="last_name"
         label="Last name"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input />
+        <Input defaultValue={data.last_name} />
       </Form.Item>
       <Form.Item name="experience" label="Experience">
         <Slider
@@ -152,18 +124,16 @@ const InputForm = ({ type, img, data }) => {
       <Form.Item
         name="bio"
         label="bio"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
         <Input />
       </Form.Item>
 
       <Form.Item label="Age">
-        <Form.Item name="age" noStyle>
-          <InputNumber min={16} max={70} />
+        <Form.Item
+          name="age"
+          noStyle
+        >
+          <InputNumber min={16} max={70} defaultValue={data.age} />
         </Form.Item>
       </Form.Item>
       <Form.Item name="birthday" label="DatePicker" {...config1}>
@@ -172,33 +142,18 @@ const InputForm = ({ type, img, data }) => {
       <Form.Item
         name="phone"
         label="Telefon raqam"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
         <InputNumber minLength={7} maxLength={12} />
       </Form.Item>
       <Form.Item
         name="addres"
         label="Addres"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
         <Input />
       </Form.Item>
       <Form.Item
         name="information"
         label="Information"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
         <Select
           placeholder="Select a option and change input text above"
@@ -212,15 +167,11 @@ const InputForm = ({ type, img, data }) => {
       <Form.Item
         name="gender"
         label="gender"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
         <Select
           placeholder="Select a option and change input text above"
           allowClear
+          defaultValue={String(data.gender)}
         >
           <Option value="1">Erkak</Option>
           <Option value="2">Ayol</Option>
