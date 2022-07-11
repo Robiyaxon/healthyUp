@@ -56,7 +56,7 @@ const Login = () => {
           />
         </Form.Item>
         <Form.Item
-          name="password"
+          name="password" 
           rules= {[
             {
               type: "string",
