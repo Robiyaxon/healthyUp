@@ -21,8 +21,8 @@ const Login = () => {
       redirect: "follow",
     };
     fetch("http://ehealthuz.pythonanywhere.com/kirish/", requestOptions)
-      .then((response) => response.text())
-      .then((result) => Number(result) === 404 ? setErrorClass(style.errorTrue) : navigate('home'))
+      .then((response) => console.log(response.data) )
+      .then((result) => Number(result) === 404 ? setErrorClass(style.errorTrue) : navigate('/'))
       .catch((error) => console.log("error", error));
   };
 

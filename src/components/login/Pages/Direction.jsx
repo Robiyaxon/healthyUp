@@ -1,7 +1,9 @@
 import React from "react";
 import LoginPages from "../../../helpers/Helpers";
+import { useTranslation } from 'react-i18next';
 
 const Direction = (props) => {
+  const {t}=useTranslation()
   const data = [
     { id: 1, name: "Sport" },
     { id: 2, name: "Dieta" },
@@ -14,7 +16,7 @@ const Direction = (props) => {
         navigateUrl={"/sports"}
         navigateUrl2={"/foods"}
         navigateUrl3={"/foods&sport"}
-        title={"Qaysi yo‘nalish sizga maqul "}
+        title={t("yonalish")}
         data={data}
 
       />

@@ -1,7 +1,7 @@
 .body {
   width: 30%;
   margin: 0 auto 0;
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -53,16 +53,26 @@
   background-color: white;
 }
 
-@media (min-width:0) and (max-width:950.9px) {
-  .body{
-    width: 80%;
+@media (min-width: 0) and (max-width: 950.9px) {
+  .body {
+    width: 90%;
+    padding-top: 100px;
+    /* padding-top: 35px; */
   }
-  .body button{
-    width: 95%
+  .body button {
+    max-width: 95%;
   }
 
-  .body h1{
-    font-size: 30px;
-    line-height: 40px;
+  .body h1 {
+    font-size: 26px;
+    width: 100%;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 1101.9px) {
+  .body{
+    padding-top: 7rem;
+    width: 90%;
   }
 }

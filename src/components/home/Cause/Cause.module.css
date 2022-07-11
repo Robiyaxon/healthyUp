@@ -1,8 +1,8 @@
 .Cause {
-  background-image: url("../../../assets/home/couse1.png");
+  background-image: url("../../../assets/home/couse1.webp");
   background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 6rem 0 0 0;
+  background-size: 100% 100%;
+  padding: 5rem 0 3rem 0;
 }
 
 .Cause h1 {
@@ -24,7 +24,11 @@
   align-items: flex-start;
 }
 
-.Chek img {
+.advice2 img,
+.Chek img,
+.advice3 img{
+  width: 60px;
+  height: auto;
   margin-right: 16px;
 }
 
@@ -65,7 +69,6 @@
 }
 
 .advice2 img {
-  margin-right: 16px;
 }
 
 .img {
@@ -105,7 +108,7 @@
 
 @media (min-width: 0) and (max-width: 950.9px) {
   .Cause {
-    padding: 3rem 24px;
+    padding: 3rem 25px;
     background-size: 100% 100%;
     background-size: cover;
   }
@@ -128,10 +131,10 @@
     width: auto;
   }
   .Cause h1 {
-    font-size: 25px;
-    line-height: 40px;
     width: 90%;
     margin: 0 auto;
+    font-size: 20px;
+    line-height: 30px;
   }
   .diseases h2,
   .Chek h2 {

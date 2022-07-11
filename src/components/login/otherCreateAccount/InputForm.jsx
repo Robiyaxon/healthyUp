@@ -43,7 +43,6 @@ const InputForm = ({ type, img }) => {
 
   const onChange = (data, dateString) => {
     setDate(dateString);
-    console.log(dateString);
   };
 
   const onFinish = (values) => {
@@ -72,7 +71,7 @@ const InputForm = ({ type, img }) => {
     data.append("going_to_loss", 1);
     data.append("can_not_dieta", 1);
 
-    console.log(values.birthday);
+    console.log(date);
     var config = {
       method: "post",
       url: "http://ehealthuz.pythonanywhere.com/register/",
@@ -86,10 +85,9 @@ const InputForm = ({ type, img }) => {
       .then(function (response) {
         if (Number(response.data) !== 1) {
           localStorage.setItem("token", response.data);
-          console.log(response.data);
-          navigate("/userSetting");
+          navigate("/loaderAcc");
         } else {
-          alert("Some error!");
+          alert("Bu username alla qachon mavjud!");
         }
       })
       .catch(function (error) {
@@ -183,9 +181,11 @@ const InputForm = ({ type, img }) => {
           <InputNumber min={16} max={70} />
         </Form.Item>
       </Form.Item>
-      <Space direction="vertical">
-        <DatePicker onChange={onChange} />
-      </Space>
+      <Form.Item label="Birthday">
+        <Space direction="vertical">
+          <DatePicker onChange={onChange} />
+        </Space>
+      </Form.Item>
       <Form.Item
         name="phone"
         label="Telefon raqam"

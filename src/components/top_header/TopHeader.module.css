@@ -6,32 +6,6 @@
   z-index: 10;
   transition: 0.3s all linear !important;
 }
-
-.stroke a {
-  padding-bottom: 0.5rem !important;
-  position: relative;
-  transition: 0.3s all linear !important;
-}
-
-.stroke a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin:0 auto ;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background:  #ffa700;
-  height: 2px;
-  transition: 0.3s all linear !important;
-}
-
-.stroke a:hover:after {
-  width: 65%;
-  transition: 0.3s all linear !important;
-}
-
 .scroller {
   background: rgb(249 237 215);
   padding: 20px 155px;
@@ -230,7 +204,7 @@
   .Top_Header {
     /* height: 100vh; */
     position: absolute;
-    padding: 24px 26px 0 20px;
+    padding: 24px 25px 0;
     width: 100%;
   }
 

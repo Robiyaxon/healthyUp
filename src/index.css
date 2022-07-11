@@ -199,7 +199,8 @@ body {
 }
 
 .ant-input-number,
-.ant-picker{
+.ant-picker,
+.ant-space{
   width: 100% !important;
 }
 

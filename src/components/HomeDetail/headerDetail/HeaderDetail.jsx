@@ -1,8 +1,8 @@
 import React from "react";
 
-import img1 from "../../../assets/home_detail/header_detail/header_detail_img1.png";
-import img2 from "../../../assets/home_detail/header_detail/header_detail_img2.png";
-import img3 from "../../../assets/home_detail/header_detail/header_detail_img3.png";
+import img1 from "../../../assets/home_detail/header_detail/header_detail_img1.webp";
+import img2 from "../../../assets/home_detail/header_detail/header_detail_img2.webp";
+import img3 from "../../../assets/home_detail/header_detail/header_detail_img3.webp";
 import styles from "./HeaderDetail.module.css";
 
 function HeaderDetail() {

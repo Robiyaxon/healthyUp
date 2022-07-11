@@ -2,7 +2,7 @@
   background-color: white;
 }
 .header_wrapper {
-  background-image: url(./../../assets/about_us/aboutUSBG.png);
+  background-image: url(./../../assets/about_us/aboutUSBG.webp);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: 1;
@@ -29,7 +29,7 @@
 }
 .manWrapper {
   width: 48%;
-  background-image: url(./../../assets/about_us/desktop.png);
+  background-image: url(./../../assets/about_us/desktop.webp);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -38,7 +38,7 @@
   object-fit: cover;
 }
 .girlWrapper {
-  background-image: url(./../../assets/about_us/desktop.png);
+  background-image: url(./../../assets/about_us/desktop.webp);
   background-repeat: no-repeat;
   background-position: center;
   width: 45%;
@@ -87,11 +87,11 @@
 }
 
 .header__text__bg {
-  background-image: url(../../assets/about_us/headerBG.png);
+  background-image: url(../../assets/about_us/headerBG.webp);
 }
 
 .header__text {
-  background-image: url(../../assets/about_us/header.png);
+  background-image: url(../../assets/about_us/header.webp);
   background-repeat: no-repeat;
   background-size: auto 85%;
   background-position: 90% bottom;

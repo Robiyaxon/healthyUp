@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./Question.module.css";
 import Question2 from "./Question2";
-import faq from "../../assets/FAQ/faq.png";
+import faq from "../../assets/FAQ/faq.webp";
 import { useTranslation } from "react-i18next";
 import { instance } from './../../api/api';
 import AOS from "aos"
@@ -18,11 +18,11 @@ const Question =  React.memo(() => {
       <div className={style.Question}></div>    
       <div className={style.WrapperCard}>
         <div className={style.CardBlock}>
-          <img src={faq} alt="" />
+          <img src={faq} alt="rasm bor edi!" />
           <div>
             <h1>  {t("question")}</h1>
             <p>
-            {t("question_text")}
+            {window.innerWidth > 801 ? t("question_text") : window.innerWidth < 430 ? t("question_text").substring(0, 100) + "..." : t("question_text").substring(0, 200) + "..."}
             </p>
           </div>
         </div>

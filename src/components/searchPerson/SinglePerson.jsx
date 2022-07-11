@@ -1,6 +1,6 @@
 import React from 'react'
 import style from "./SinglePerson.module.css"
-import person34 from "./../../assets/search_person/person.png";
+import person34 from "./../../assets/search_person/person.webp";
 import { Spin } from 'antd';
 import { useTranslation } from 'react-i18next';
 export const SinglePerson = React.memo(({ person }) => {
@@ -40,7 +40,7 @@ export const SinglePerson = React.memo(({ person }) => {
         </div>
         <div className={style.Document}>
           <p>Batafsil malumot</p>
-          <h1>Mening ismim {person.last_name } {person.first_name}  {person.experience} yillik tajribam bor. sizga yordam bera oladigan darajada bilim va ko‘nikmalarga egaman. Oz fursat mobaynida juda ko‘p ozishni istagan insonlar bilan ishladim. deyarli ularning hammasi oz istagan natijaga erishdilar va erishib kelmoqdalar.</h1>
+          <h1>Mening ismim {person.last_name} {person.first_name}  {person.experience} yillik tajribam bor. sizga yordam bera oladigan darajada bilim va ko‘nikmalarga egaman. Oz fursat mobaynida juda ko‘p ozishni istagan insonlar bilan ishladim. deyarli ularning hammasi oz istagan natijaga erishdilar va erishib kelmoqdalar.</h1>
           <p>Manzili:</p>
           <h1>{person.addres}</h1>
         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-import chek from "../../../assets/home/header/chek.svg";
+import chek from "../../../assets/home/header/chek.webp";
 
 import { instance } from "./../../../api/api";
 
@@ -86,7 +86,7 @@ export const Cause = React.memo(() => {
           </div>
         </div>
         {data.map((a) => (
-          <img key={a.id} src={a.img} alt="" className={style.img} />
+          <img key={a.id} src={a.img} alt="rasm bor edi!" className={style.img} />
         ))}
 
         <div className={style.diseases__block}>

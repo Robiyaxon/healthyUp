@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import otherAccount from '../../../assets/login/otherAccount.png'
+import otherAccount from '../../../assets/login/otherAccount.webp'
 
 const UploadImg = ({setImg, setPassword}) => {
   const uploadedImage = useRef(null);
@@ -54,7 +54,7 @@ const UploadImg = ({setImg, setPassword}) => {
             position: "acsolute"
           }}
           src={otherAccount}
-          alt=''
+          alt='rasm bor edi!'
         />
       </div>
     </div>

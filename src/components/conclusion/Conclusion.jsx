@@ -1,87 +1,122 @@
-import React, { memo, useState } from "react";
-import style from "./Conclusion.module.css";
-import { useNavigate } from "react-router-dom";
-import img from "../../assets/about_us/header.png";
-import { useEffect } from "react";
-import { instance } from './../../api/api';
+import React, { memo, useState,useEffect } from "react";
 import axios from "axios";
 
-const Conclusion = memo(({ token }) => {
+import style from "./Conclusion.module.css";
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+const Conclusion = memo(() => {
   const navigate = useNavigate();
+const {t}=useTranslation()
   const [data, setData] = useState([]);
+
   const qidiruv = () => {
     navigate("/search_person");
   };
-  const profile = () => {
-    navigate("/foods");
-  };
-
   useEffect(() => {
     var config = {
       method: "get",
       url: "http://ehealthuz.pythonanywhere.com/user/",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "token " + localStorage.getItem("token")
+        Authorization: "token " + localStorage.getItem("token"),
       },
-      data: data,
     };
 
     axios(config)
       .then(function (response) {
-          localStorage.setItem("token", response.data);
-          console.log(response.data);
+        setData(response.data);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-      // instance('user_task',
-      // {headers: Authorization: token ${localStorage.getItem("token")}`,
-      // }).then(res=>console.log(res.data))
-  }, [data]);
+  }, []);
+
+  const days = data.weight + data.height;
+  const week_result = data.weight - data.height;
+
+  if (data.task_sport_can_not) {
+    // console.log(data);
+  }
 
   return (
     <div className={style.Conclusion}>
-      <h1 className={style.Title}>Profilingizning xulosasi</h1>
+      <h1 className={style.Title}>{t("xulosasi")}</h1>
       <div className={style.Profile}>
         <div className={style.Block}>
-          <p>Statistik vazin</p>
+          <p>{t("vazin")}</p>
           <h1>{data.weight} kg </h1>
         </div>
         <div className={style.Block}>
           <p>Kunlik yeyilishi kerak bolgan KK</p>
-          <h1>{data.week_result} kk </h1>
+          <h1>{week_result} kk </h1>
         </div>
         <div className={style.Block}>
           <p>Kunlik yo‘qotilyotgan vazin</p>
-          <h1>{data.intended_weight} kg </h1>
+          <h1>{days} kk </h1>
         </div>
       </div>
       <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
-          Mutaxassis qidirish
-        </button>
-        <button onClick={profile} className={style.button2}>
-          Mening profilim
-        </button>
+{t("qidirish")}        </button>
       </div>
-      <h1 className={style.Title}>Topshiriqlar</h1>
-      <p className={style.p}>
-        Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
-        unutmang!
-      </p>
+
       <div className={style.topshiriq}>
-        {/* <video src=""></video> */}
-        <img src={img} alt="" />
-        <div className={style.Topshiriq2}>
-          <p>1-topshiriq</p>
-        </div>
-        <label className={style.checkbox}>
-          <input type="checkbox" className={style.checkbox__input} />
-          <span className={style.checkbox__inner}></span>
-        </label>
+        {data &&
+        data.task_sport_can_not &&
+        data.task_sport_can_not[0] &&
+        data.task_sport_can_not[0].video ? (
+          <>
+            <h1 className={style.Title}>{t("Topshiriqlar")}</h1>
+            <p className={style.p}>
+            {t("unutmang")}
+            </p>
+            <div className={style.topshiriq}>
+              <iframe
+                width="420"
+                height="345"
+                title="video"
+                src={data.task_sport_can_not[0].video}
+              />
+              <div className={style.Topshiriq2}>
+                <p>1-topshiriq</p>
+              </div>
+              <label className={style.checkbox}>
+                <input type="checkbox" className={style.checkbox__input} />
+                <span className={style.checkbox__inner}></span>
+              </label>
+            </div>
+          </>
+        ) : data &&
+          data.task_dieta_can_not &&
+          data.task_dieta_can_not[0] &&
+          data.task_dieta_can_not[0].video ? (
+          <>
+            <h1 className={style.Title}>Topshiriqlar</h1>
+            <p className={style.p}>
+              Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
+              unutmang!
+            </p>
+            <div className={style.topshiriq}>
+              <iframe
+                width="420"
+                height="345"
+                title="video"
+                src={data.task_dieta_can_not[0].video}
+              />
+              <div className={style.Topshiriq2}>
+                <p>1-topshiriq</p>
+              </div>
+              <label className={style.checkbox}>
+                <input type="checkbox" className={style.checkbox__input} />
+                <span className={style.checkbox__inner}></span>
+              </label>
+            </div>
+          </>
+        ) : null}
       </div>
     </div>
   );
-})
+});
 export default Conclusion;

@@ -1,12 +1,11 @@
 import React, { memo } from "react";
-import Search from "antd/lib/input/Search";
-import img1 from "../../assets/home/header/logo.png";
-import style from "./Search.module.css";
 import { useTranslation } from 'react-i18next';
 
-export const MySearch = memo(() => {
+import img1 from "../../assets/home/header/logo.webp";
 
-  const onSearch = (value) => console.log(value);
+import style from "./Search.module.css";
+
+export const MySearch = memo(() => {
   const { t } = useTranslation()
 
   return (
@@ -19,20 +18,12 @@ export const MySearch = memo(() => {
           <p>
             {t("text_my_serch")}
           </p>
-          <Search
-            placeholder="Mutaxassis topish"
-            allowClear
-            enterButton="Qidirish"
-            size="large"
-            onSearch={onSearch}
-            className={style.input}
-          />
         </div>
         <div className={style.SearchImg}>
           <div className={style.Search_Img}>
             <img
               src={img1}
-              alt=""
+              alt="rasm bor edi!"
               className={style.img1}
             />
           </div>

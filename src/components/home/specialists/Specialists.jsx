@@ -3,11 +3,12 @@ import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
 import { Rate } from "antd";
 import axios from "axios";
 
-import person from "../../../assets/home/specialists/person.png";
+import person from "../../../assets/home/specialists/person.webp";
 
 import styles from "./Specialists.module.css";
 import "./Specialists.css";
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 var config = {
   method: "get",
@@ -18,6 +19,7 @@ var config = {
 };
 
 export const Specialists = React.memo(() => {
+  const {t}=useTranslation()
   const [data, setData] = useState([]);
   useEffect(() => {
     axios(config)
@@ -38,7 +40,7 @@ export const Specialists = React.memo(() => {
       return (
         <NavLink to={"/singilur/" + d.id} className="cards cards--three" key={index}>
 
-          <img src={img} className="img-responsive" alt="" />
+          <img src={img} className="img-responsive" alt="rasm bor edi!" />
           <Rate disabled defaultValue={d.reyting / d.reyting_count} />
 
           <span className="cards--three__rect-1">
@@ -66,9 +68,9 @@ export const Specialists = React.memo(() => {
     });
   return (
     <div className={styles.specialists}>
-      <h1 className={styles.title}>Mutaxassislar</h1>
+      <h1 className={styles.title}>{t("Specialists")}</h1>
       <p className={styles.desc}>
-        Saytimiz orqali eng yaxshi mutaxassislar orasiga qo'shiling
+     {t("Our_site")}
       </p>
       <div className={styles.block}>
         <div className="card__collection clear-fix">{dataMap}</div>

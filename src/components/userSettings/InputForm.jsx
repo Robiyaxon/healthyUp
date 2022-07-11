@@ -10,7 +10,6 @@ import {
   DatePicker,
 } from "antd";
 import axios from "axios";
-import { instance } from "../../api/api";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -78,9 +77,6 @@ const InputForm = ({ type, img, data }) => {
       },
     ],
   };
-
-  console.log(data.userName);
-
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item

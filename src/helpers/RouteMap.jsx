@@ -3,6 +3,7 @@
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
+import { useNavigate } from 'react-router-dom';
 import SingleSearchPersonCompanity from "../components/searchPerson/SingleSearchPersonCompanity"
 const Home = lazy(() => import("./../components/home/Home"));
 const Question = lazy(() => import("./../components/question/Question"));
@@ -43,7 +44,8 @@ const AllTrainer = lazy(() =>
 
 const UserSettings = lazy(() =>
   import("./../components/userSettings/UserSettings")
-);
+)
+
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -57,10 +59,12 @@ export const RouterMap = () => {
   const [weight, setweight] = useState("");
   const [type_loss, settype_loss] = useState("");
   const [going_to_loss, setgoing_to_loss] = useState("1");
-  const [can_not_sports, setcan_not_sports] = useState([1, 4, 5]);
+  const [can_not_sports, setcan_not_sports] = useState([]);
   const [can_not_dieta, setcan_not_dieta] = useState([]);
   const [type, settype] = useState("");
   const [token, setToken] = useState("");
+
+  const navigate = useNavigate()
   function SignApp(gender2) {
     var formdata = new FormData();
     formdata.append("type", type);
@@ -89,10 +93,11 @@ export const RouterMap = () => {
       .then((result) => {
         if (result == 1) {
           console.log("xato");
+          navigate('/signUp')
+          console.log(result);
         } else {
           setToken(result.slice(1, -1));
-        localStorage.setItem("token", result.slice(1, -1))
-
+          localStorage.setItem("token", result.slice(1, -1))
         }
       })
       .catch((error) => console.log("error", error));
@@ -117,6 +122,8 @@ export const RouterMap = () => {
           setName={setName}
           setUsername={setUsername}
           setPassword={setPassword}
+          type={type}
+
         />
       ),
     },
@@ -165,18 +172,19 @@ export const RouterMap = () => {
       element: <Direction settype_loss={settype_loss} />,
     },
     { id: 15, url: "loader", element: <Loader /> },
-    { id: 16, url: "conclusion", element: <Conclusion token={token} /> },
+    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!" link="/search_person"/> },
+    { id: 17, url: "conclusion", element: <Conclusion token={token} /> },
     {
-      id: 17,
+      id: 18,
       url: "otherAccount",
       element: (
         <OtherCreateAccount first_name={first_name} last_name={last_name} type={type} />
       ),
     },
-    { id: 18, url: "search_person", element: <SearchPerson /> },
-    { id: 19, url: "search_deatolog_all", element: <AllDietolog /> },
-    { id: 20, url: "search_trainer_all", element: <AllTrainer /> },
-    { id: 20, url: "userSettings", element: <UserSettings /> },
+    { id: 19, url: "search_person", element: <SearchPerson /> },
+    { id: 20, url: "search_deatolog_all", element: <AllDietolog /> },
+    { id: 21, url: "search_trainer_all", element: <AllTrainer /> },
+    { id: 22, url: "userSettings", element: <UserSettings /> },
   ];
 
   const dataMapForRoute = data.map((d) => (
@@ -203,3 +211,6 @@ export const RouterMap = () => {
     </Route>
   </Routes>;
 };
+
+
+

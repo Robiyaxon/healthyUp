@@ -1,5 +1,5 @@
 .Conclusion {
-  padding: 140px 155px 80px 155px;
+  padding: 170px 155px 80px 155px;
   background-color: #f7e8cd;
 }
 
@@ -102,7 +102,9 @@
   border: 1px solid #626262;
   background: transparent no-repeat center;
 }
-
+.Title{
+  width: 100%;
+}
 .checkbox__input:checked + .checkbox__inner {
   background-color: #55e027;
   border: 2px solid #b2afb8;
@@ -164,20 +166,23 @@ input[type="checkbox"] {
 
 @media (min-width: 0) and (max-width: 650.9px) {
   .Conclusion {
-    padding: 7rem 1rem 1rem;
+    padding: 100px 10px 10px;
   }
   .topshiriq {
     flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 100%;
   }
   .Title {
     margin-bottom: 0;
     font-size: 26px;
+ 
     line-height: 34px;
   }
   .Profile {
     padding-top: 0;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     margin: 2rem auto 0;
   }
   .p {

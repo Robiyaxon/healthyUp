@@ -1,8 +1,8 @@
 import React from "react";
 // import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import erkak from "../../../assets/login/erkak.svg";
-import ayol from "../../../assets/login/ayol.svg";
+import erkak from "../../../assets/login/erkak.webp";
+import ayol from "../../../assets/login/ayol.webp";
 import style from "./FemaleOrMale.module.css";
 import { useNavigate } from "react-router-dom";
 const FemaleOrMale =  React.memo((props) => {
@@ -11,20 +11,18 @@ const FemaleOrMale =  React.memo((props) => {
   const women = () => {
     props.setGender("2")
     props.SignApp("2")
-    navigate("/conclusion")
-
+    navigate("/loader")
   };
 
   const man = () => {
     props.setGender("1")
     props.SignApp("1")
-    navigate("/conclusion")
+    navigate("/loader")
   };
 
   return (
     <div className={style.jinsi}>
       <h1>{t("gender")}</h1>
-      <img src="" alt="" />
       <div className={style.Wrapper_Card}>
         <div className={style.Card} onClick={man}>
           <img src={erkak} alt="rasm bor edi!" />

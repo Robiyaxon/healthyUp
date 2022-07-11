@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { instance } from "../../../api/api";
-
+import girl from "../../../assets/home/header/girl.png"
 import style from "./HomeHeader.module.css";
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -41,7 +41,7 @@ export const HomeHeader =  React.memo(() => {
           type="button"
           className={style.SignUp}
         >
-          <NavLink to="signUp">
+          <NavLink to="whoIsTheUser">
           {language === "uz" ? (
             <>{a.text2_uz}</>
           ) : language === "en" ? (
@@ -55,7 +55,7 @@ export const HomeHeader =  React.memo(() => {
         </button>
       </div>
       <img
-        src={a.img}
+        src={girl}
         alt="rasm bor edi"
       />
     </div>
