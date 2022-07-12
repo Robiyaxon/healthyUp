@@ -1,97 +1,97 @@
 .Question {
-    background-repeat: no-repeat;
-    background-image: url("../../assets/FAQ/faq90.webp");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 800px;
-    padding: 80px 0;
+  background-repeat: no-repeat;
+  background-image: url("https://www.pngkit.com/png/detail/518-5183508_frequently-asked-questions-faq-png.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 800px;
+  padding: 80px 0;
 }
 .CardBlock {
-    background-color: #F39200;
-    box-shadow: 0 25px 30px 0 rgb(0 0 0 / 15%);
-    width: 70%;
-    padding: 45px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  background-color: #f39200;
+  box-shadow: 0 25px 30px 0 rgb(0 0 0 / 15%);
+  width: 70%;
+  padding: 45px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .CardBlock h1 {
-    font-size: 2.5rem;
-    font-weight:300;
-    line-height:1.2;
-    color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #fff;
 }
-.CardBlock p{
-    font-size: 18px;
-    color: #fff;
-    width: 600px;
+.CardBlock p {
+  font-size: 18px;
+  color: #fff;
+  width: 600px;
 }
 .WrapperCard {
+  width: 100%;
+  margin-top: -5rem;
+  display: flex;
+  justify-content: center;
+}
+.Faq {
+  display: flex;
+  padding: 0 0 0 8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.WrapperCard img {
+  width: 120px;
+  height: 120px;
+}
+.Faq h1 {
+  font-size: 56px;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: 64px;
+  width: 500px;
+  color: #231c00;
+}
+.accardion {
+  padding: 50px 144px;
+  background-color: white;
+}
+@media (min-width: 0) and (max-width: 880.9px) {
+  .Question {
+    height: 400px;
+    padding: 80px 0 0 0;
+  }
+  .CardBlock {
+    width: 95%;
+    margin-top: -2rem;
+    padding: 35px 3px;
+    justify-content: space-between;
+  }
+  .CardBlock h1 {
+    font-size: 24px;
     width: 100%;
-    margin-top: -5rem;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+  }
+  .CardBlock p {
+    text-align: center;
+    width: 100%;
+  }
+  .accardion {
+    padding: 50px 10px;
+  }
+  .CardBlock img {
+    display: none;
+  }
 }
-.Faq{
-    display: flex;
-    padding: 0 0 0 8rem;
-    align-items: center;
-    justify-content:space-between;
-}
-.WrapperCard img{
-    width: 120px;
-    height: 120px;
-}
-.Faq h1{
-    font-size: 56px;
-    font-family: "Poppins";
-    font-weight: 600;
-    line-height: 64px;
-    width: 500px;
-    color: #231c00;
-}
-.accardion{
-    padding:50px 144px ;
-    background-color: white;
-}
-@media(min-width:0) and (max-width:880.9px){
-    .Question {
-        height: 400px;
-        padding: 80px 0 0 0 ;
-    }  
-    .CardBlock {
-        width: 95%;
-        margin-top: -2rem;
-        padding: 35px 3px;
-        justify-content: space-between;
-    }
-    .CardBlock h1 {
-        font-size: 24px;
-        width: 100%;
-        text-align: center;
-    }
-    .CardBlock p{
-        text-align: center;
-        width: 100%;
-    }
-    .accardion{
-        padding:50px 10px ;
-    }
-    .CardBlock img{
-        display: none;
-    }
-}
-@media(min-width:881px) and (max-width:1200.9px){
-    .Question {
-        background-size: 100% 100%;
-        height: 400px;
-    }
-    .CardBlock {
-        width: 90%;
-    }
-    .accardion{
-        padding:50px 70px ;
-    }
+@media (min-width: 881px) and (max-width: 1200.9px) {
+  .Question {
+    background-size: 100% 100%;
+    height: 400px;
+  }
+  .CardBlock {
+    width: 90%;
+  }
+  .accardion {
+    padding: 50px 70px;
+  }
 }

@@ -6,9 +6,9 @@ import { message } from "antd";
 import YandexMap from "./Map";
 import { useTranslation } from "react-i18next";
 import { instance } from "./../../api/api";
-  import AOS from "aos"
-import "aos/dist/aos.css"
-const Contact =  React.memo(() => {
+import AOS from "aos";
+import "aos/dist/aos.css";
+const Contact = React.memo(() => {
   const [data, setData] = useState([]);
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -17,7 +17,7 @@ const Contact =  React.memo(() => {
   const [textarea, setTextarea] = useState("");
  
   useEffect(() => {
-    AOS.init({ duration: 2000 })
+    AOS.init({ duration: 2000 });
     instance.get("footer/").then((response) => setData(response.data));
   }, [setData]);
   const success = (formData) => {
@@ -167,5 +167,5 @@ const Contact =  React.memo(() => {
       <YandexMap />
     </div>
   );
-})
+});
 export default Contact;
