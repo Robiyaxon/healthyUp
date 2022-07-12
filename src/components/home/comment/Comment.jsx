@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React from "react";
 import styles from "./Comment.module.css";
 // import man2 from "./../../../assets/home/comment/man2.webp";
