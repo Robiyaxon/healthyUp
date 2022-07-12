@@ -2,9 +2,7 @@ import React from "react";
 import style from "./SearchPerson.module.css";
 import { URL_FOR_IMG } from "../../api/api";
 import person from "./../../assets/search_person/person.webp";
-import { useNavigate } from "react-router-dom";
 const SearchCards = React.memo(({ item }) => {
-  const navigate = useNavigate();
   return (
     <>
       <div
