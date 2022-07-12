@@ -15,11 +15,37 @@ const Contact =  React.memo(() => {
   const [firstname, setFirstname] = useState("");
   const [tel, setTel] = useState("");
   const [textarea, setTextarea] = useState("");
+ 
   useEffect(() => {
     AOS.init({ duration: 2000 })
     instance.get("footer/").then((response) => setData(response.data));
   }, [setData]);
-  const success = () => {
+  const success = (formData) => {
+ var formdata = new FormData();
+ formdata.append("first_name", firstname);
+ formdata.append("last_name", name);
+ formdata.append("phone", tel);
+ formdata.append("message", textarea);
+    fetch(`http://ehealthuz.pythonanywhere.com/contact/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        first_name: firstname,
+        last_name: name,
+        phone: tel,
+        message: textarea,
+      }),
+    })
+      .then(function (response) {console.log(response)})
+      .catch(function (error) {
+        console.log(error);
+      });
+    formData.first_name = "";
+    formData.last_name = "";
+    formData.phone = "";
+    formData.message = "";
     if ((name !== "", firstname !== "", tel !== "", textarea !== "")) {
       message.success("This is a success message");
     }

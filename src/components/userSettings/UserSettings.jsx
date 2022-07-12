@@ -14,7 +14,6 @@ const UserSettings = ({ first_name, last_name, type }) => {
     // instance.get('user/')
     //   .then(function (response) {
     //     setData(response.data);
-    //     console.log(response.data);
     //   })
     //   .catch(function (error) {
     //     console.log(error);
@@ -27,23 +26,15 @@ const UserSettings = ({ first_name, last_name, type }) => {
           "Authorization": "token " + localStorage.getItem("token")
         },
       };
-
-      console.log(
-        localStorage.getItem("token")
-
-      );
-  
       axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   
   }, []);
-  console.log(data);
   return (
     <div className={style.body}>
       <h1 className={style.body__title}>

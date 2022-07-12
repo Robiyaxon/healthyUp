@@ -20,10 +20,10 @@ const SeachPerson = React.memo(() => {
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
     .slice(0, 4)
-    .map((item) => {
+    .map((item,index) => {
       return (
         <>
-          <div key={item.id} className={style.card_content} >
+          <div key={index} className={style.card_content} >
             <SearchCards item={item} />
           </div>
         </>
@@ -34,11 +34,11 @@ const SeachPerson = React.memo(() => {
     .filter((item) => item.image && item.reyting > 0)
     .sort((a, b) => b.reyting - a.reyting)
     .slice(0, 4)
-    .map((item) => {
+    .map((item,index) => {
       return (
-        <>
+        <div key={item.id} className={style.card_content}>
           <SearchCards item={item}/>
-        </>
+        </div>
       );
     });
 

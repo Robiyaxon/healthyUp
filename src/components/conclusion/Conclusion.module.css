@@ -173,6 +173,9 @@ input[type="checkbox"] {
     margin-top: 1rem;
     width: 100%;
   }
+  .button1{
+    margin-bottom: 1rem;
+  }
   .Title {
     margin-bottom: 0;
     font-size: 26px;
@@ -230,5 +233,6 @@ input[type="checkbox"] {
   .button1,
   .button2 {
     width: 30%;
+    margin-bottom: 1rem;
   }
 }

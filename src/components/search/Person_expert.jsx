@@ -21,7 +21,6 @@ import { NavLink } from 'react-router-dom';
     axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -54,7 +53,9 @@ import { NavLink } from 'react-router-dom';
         </div>
         <div className={style.Document}>
           <p>Batafsil malumot</p>
-          <h1>Mening ismim {data.last_name} {data.first_name}  {data.experience} yillik tajribam bor. sizga yordam bera oladigan darajada bilim va ko‘nikmalarga egaman. Oz fursat mobaynida juda ko‘p ozishni istagan insonlar bilan ishladim. deyarli ularning hammasi oz istagan natijaga erishdilar va erishib kelmoqdalar.</h1>
+          <h1>{data.bio}</h1>
+          <h1>Mening ismim {data.last_name} {data.first_name}  {data.experience} yillik tajribam bor. sizga yordam bera oladigan darajada bilim va ko‘nikmalarga egaman.</h1>
+         
           <p>Manzili:</p>
           <h1>{data.addres}</h1>
         </div>

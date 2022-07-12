@@ -90,12 +90,13 @@
 
 .card_content_wrapper {
   margin-top: 20px;
+  overflow: auto !important;
 }
 .card_content_container {
   display: grid;
+  overflow: auto !important;
   grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
   gap: 2%;
-  overflow: visible;
 }
 .card_content {
   background: #fff;
@@ -202,13 +203,9 @@
 @media (min-width: 0px) and (max-width: 950px) {
   .card_content_container {
     display: flex;
-    overflow: auto;
-    -ms-overflow-style: none;
+    overflow: auto !important;
+    /* -ms-overflow-style: none; */
     gap: 5%;
-  }
-  .card_content_container::-webkit-scrollbar {
-    width: 0 !important;
-    display: none;
   }
   .card_job {
     font-family: "Poppins";

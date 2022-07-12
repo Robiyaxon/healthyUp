@@ -9,7 +9,7 @@ const Conclusion = memo(() => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [data, setData] = useState([]);
-
+  console.log(data);
   const qidiruv = () => {
     navigate("/search_person");
   };
@@ -29,7 +29,6 @@ const Conclusion = memo(() => {
     axios(config)
       .then(function (response) {
         setData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -40,7 +39,6 @@ const Conclusion = memo(() => {
   const week_result =  Math.abs(data.weight - data.height)
 
   if (data.task_sport_can_not) {
-    // console.log(data);
   }
 
   return (

@@ -62,7 +62,6 @@ const InputForm = ({ type, data }) => {
 
     axios(config)
       .then(function (response) {
-        console.log(response.data);
         navigate('/expertPerson')
       })
       .catch(function (error) {
@@ -130,11 +129,12 @@ const InputForm = ({ type, data }) => {
           <Option value="2">Ayol</Option>
         </Select>
       </Form.Item>
-      <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
+      <div className="buttonStyle">
+         <Button  htmlType="submit" className={"buttonSubmit"}>
           Submit
         </Button>
-      </Form.Item>
+      </div>
+     
     </Form>
   );
 };

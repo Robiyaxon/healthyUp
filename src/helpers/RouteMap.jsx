@@ -96,9 +96,7 @@ export const RouterMap = () => {
       .then((response) => response.text())
       .then((result) => {
         if (result == 1) {
-          console.log("xato");
           navigate('/signUp')
-          console.log(result);
         } else {
           setToken(result.slice(1, -1));
           localStorage.setItem("token", result.slice(1, -1))

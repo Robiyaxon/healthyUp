@@ -65,7 +65,6 @@ const InputForm = ({ type, img }) => {
     data.append("phone", values.phone);
     data.append("pic", img);
 
-    console.log(date);
     var config = {
       method: "post",
       url: "http://ehealthuz.pythonanywhere.com/register/",

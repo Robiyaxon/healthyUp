@@ -63,6 +63,8 @@
         padding: 110px 25px 3rem;
         height: auto;
         background-size: auto;
+        background-size: 100% 100%;
+
     }
     .Block__Title {
         width: 100%;

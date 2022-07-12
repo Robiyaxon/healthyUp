@@ -1,6 +1,28 @@
 * {
   padding: 0;
 }
+
+.buttonStyle {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.buttonSubmit {
+  width: 301px;
+  height: 50px !important;
+  border-radius: 10px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center !important;
+  line-height: 24px;
+  cursor: pointer;
+  background: linear-gradient(265.62deg, #e6bf4c -14.74%, #bc9520 154.51%) !important;
+  color: #ffffff !important;
+}
+
 .olma {
   width: 100px;
   border: 2px solid rgb(201, 196, 196);
@@ -13,11 +35,13 @@
   transition: 1s all;
   display: none;
 }
+
 .WhoIsTheUser {
   background: rgba(247, 231, 200, 0.3);
-padding-top: 5rem;
-margin-bottom: 4rem;
+  padding-top: 5rem;
+  margin-bottom: 4rem;
 }
+
 .style {
   height: 40;
   width: 40;
@@ -27,6 +51,7 @@ margin-bottom: 4rem;
   text-align: center;
   font-size: 14;
 }
+
 .click {
   border: 2px solid red !important;
 }
@@ -109,16 +134,17 @@ margin-bottom: 4rem;
   color: #886600 !important;
 }
 
- .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
   height: 40px !important;
   border-radius: 10px !important;
   /* border: 2px solid #886600 !important; */
 }
 
-.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder{
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
   display: flex;
   align-items: center;
 }
+
 /*
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   height: 60px !important;
@@ -140,7 +166,9 @@ margin-bottom: 4rem;
   .ant-drawer-wrapper-body {
     width: 90% !important;
   }
-
+  .buttonSubmit {
+    width: 250px !important;
+  }
   .Navlink,
   .active {
     width: auto !important;
@@ -151,7 +179,7 @@ margin-bottom: 4rem;
     width: 70% !important;
   }
 
-  .WhoIsTheUser{
+  .WhoIsTheUser {
     margin-bottom: 0;
   }
 }
