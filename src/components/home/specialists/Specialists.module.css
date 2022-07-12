@@ -39,13 +39,14 @@
   background-image: radial-gradient(circle at top right, #fff, #dfd9cd 50%);
   border-radius: 10px;
   transition: 1s all linear;
+  border: 2px solid red;
   height: 400px;
   margin-bottom: 3rem;
 }
 
 .img {
   width: 100%;
-  height: 100%;
+  height: 50%;
   margin-bottom: 3rem;
   background-repeat: no-repeat;
   background-size: contain;
