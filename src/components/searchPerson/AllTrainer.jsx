@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import style from "./AllPerson.module.css";
 import style2 from "./SearchPerson.module.css";
