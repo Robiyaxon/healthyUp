@@ -15,6 +15,7 @@
 .card_content_wrapper {
   margin-top: 20px;
 }
+
 .card_content_container {
   display: grid;
   grid-template-columns: 23.5% 23.5% 23.5% 23.5%;

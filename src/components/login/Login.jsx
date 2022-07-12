@@ -2,13 +2,13 @@ import React from "react";
 import style from "./Login.module.css";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 const Login = () => {
   const { t } = useTranslation();
-
+  const navigate = useNavigate()
   const [errorClass, setErrorClass] = useState("")
   const onFinish = (values) => {
     var formdata = new FormData();
@@ -20,9 +20,8 @@ const Login = () => {
       redirect: "follow",
     };
     fetch("http://ehealthuz.pythonanywhere.com/kirish/", requestOptions)
-      // .then((response) => console.log(response.data) )
-      .then((response) => console.log(response.data) 
-      // === 404 ? setErrorClass(style.errorTrue) : navigate('/'))
+          .then((response) =>response.data
+      === 404 ? setErrorClass(style.errorTrue) : navigate('/')
       )
       .catch((error) => console.log("error", error));
   };

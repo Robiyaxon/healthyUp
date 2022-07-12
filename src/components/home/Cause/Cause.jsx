@@ -6,14 +6,14 @@ import chek from "../../../assets/home/header/chek.webp";
 import { instance } from "./../../../api/api";
 
 import style from "./Cause.module.css";
-import AOS from "aos"
-import "aos/dist/aos.css"
-export const Cause =  React.memo(() => {
+import AOS from "aos";
+import "aos/dist/aos.css";
+export const Cause = React.memo(() => {
   const [data, setData] = useState([]);
   const { language } = useSelector((state) => state.langReducer);
-
+  console.log(data);
   useEffect(() => {
-    AOS.init({duration:3000})
+    AOS.init({ duration: 3000 });
     instance.get("ill/").then((response) => setData(response.data));
   }, [setData]);
 
@@ -126,4 +126,4 @@ export const Cause =  React.memo(() => {
       </div>
     </div>
   );
-})
+});

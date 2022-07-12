@@ -6,7 +6,7 @@ import EasyWay from "./easy_way/EasyWay";
 import Comment from "./comment/Comment";
 import { Specialists } from "./specialists/Specialists";
 
- const Home = () => {
+const Home = () => {
   return (
     <div>
       <HomeHeader />
@@ -18,4 +18,4 @@ import { Specialists } from "./specialists/Specialists";
     </div>
   );
 };
-export default Home
+export default Home;

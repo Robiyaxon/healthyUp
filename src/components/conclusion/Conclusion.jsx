@@ -39,10 +39,6 @@ const Conclusion = memo(() => {
   const days = data.weight + data.height;
   const week_result =  Math.abs(data.weight - data.height)
 
-  if (data.task_sport_can_not) {
-    // console.log(data);
-  }
-
   return (
     <div className={style.Conclusion}>
       <h1 className={style.Title}>{t("xulosasi")}</h1>
@@ -85,7 +81,7 @@ const Conclusion = memo(() => {
                 src={data.task_sport_can_not[0].video}
               />
               <div className={style.Topshiriq2}>
-                <p>1-topshiriq</p>
+                <p>{t("firstTask")}</p>
               </div>
               <label className={style.checkbox}>
                 <input type="checkbox" className={style.checkbox__input} />
@@ -98,10 +94,9 @@ const Conclusion = memo(() => {
           data.task_dieta_can_not[0] &&
           data.task_dieta_can_not[0].video ? (
           <>
-            <h1 className={style.Title}>Topshiriqlar</h1>
+            <h1 className={style.Title}>{t("tasks")}</h1>
             <p className={style.p}>
-              Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
-              unutmang!
+              {t('noteTask')}
             </p>
             <div className={style.topshiriq}>
               <iframe
@@ -111,7 +106,7 @@ const Conclusion = memo(() => {
                 src={data.task_dieta_can_not[0].video}
               />
               <div className={style.Topshiriq2}>
-                <p>1-topshiriq</p>
+                <p>{t("firstTask")}</p>
               </div>
               <label className={style.checkbox}>
                 <input type="checkbox" className={style.checkbox__input} />

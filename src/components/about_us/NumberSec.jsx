@@ -3,17 +3,17 @@ import VisibilitySensor from "react-visibility-sensor";
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 
-import { instance } from './../../api/api';
+import { instance } from "./../../api/api";
 
 import styles from "./NumberSec.module.css";
 
-export const NumberSec =  memo(() => {
-  const [data, setData] = useState({})
+export const NumberSec = memo(() => {
+  const [data, setData] = useState({});
   const { t } = useTranslation();
 
   useEffect(() => {
     instance.get("info_num").then((response) => setData(response.data));
-  }, [setData])
+  }, [setData]);
 
   return (
     <div className={styles.numberSec}>
@@ -28,7 +28,6 @@ export const NumberSec =  memo(() => {
               )}
             </CountUp>
             <h1>{t("aboutPatient")}</h1>
-
           </div>
           <div className={styles.counter_block}>
             <CountUp start={0} end={data.dietolog} duration={0.7}>
@@ -39,7 +38,6 @@ export const NumberSec =  memo(() => {
               )}
             </CountUp>
             <h1>{t("aboutDietologist")}</h1>
-
           </div>
           <div className={styles.counter_block}>
             <CountUp start={1} end={data.sportsmen} duration={0.7}>
@@ -50,7 +48,6 @@ export const NumberSec =  memo(() => {
               )}
             </CountUp>
             <h1>{t("aboutSportsman")}</h1>
-
           </div>
           <div className={styles.counter_block}>
             <CountUp start={1} end={data.ayollar} duration={0.7}>
@@ -76,4 +73,4 @@ export const NumberSec =  memo(() => {
       </div>
     </div>
   );
-})
+});
