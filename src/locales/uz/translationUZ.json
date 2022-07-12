@@ -67,8 +67,8 @@
   "royhat": "Kim sifatida ro'yxatdan o'tmoqchisiz",
   "yonalish": "Qaysi yo‘nalish sizga maqul",
   "dataAcc": "O‘zingiz haqingizda ma'lumotlarni to‘ldiring",
-  "dailyLossingWeight": "Kunlik yo‘qotilyotgan vazin",
-  "firstTask": "1-topshiriq",
-  "tasks": "Topshiriqlar",
-  "noteTask": "Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni unutmang!"
+  "settings": "Sozlamalar",
+  "dayEat": "Kunlik yeyilishi kerak bolgan KK",
+  "dayLose":"Kunlik yo‘qotilyotgan vazin"
+
 }

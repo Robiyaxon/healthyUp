@@ -6,10 +6,9 @@ import {
   Input,
   Select,
   InputNumber,
-  Slider,
-  DatePicker,
 } from "antd";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -26,28 +25,30 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({ type, img, data }) => {
+const InputForm = ({ type, data }) => {
   const [form] = Form.useForm();
+  const navigate = useNavigate()
+
+  if (!data.username) {
+    return <>Some wait...</>;
+  }
 
   const onFinish = (values) => {
     var data = new FormData();
-    data.append("username", values.userName);
-    data.append("password", values.password);
-    data.append("email", values.email);
-    data.append("first_name", values.first_name);
-    data.append("last_name", values.last_name);
-    data.append("bio", values.bio);
-    data.append("age", values.age);
-    data.append("experience", values.experience);
-    data.append("birthday", "1975-05-22");
-    data.append("addres", values.addres);
-    data.append("information", values.information);
-    data.append("phone", values.phone);
-    data.append("type", type);
-    data.append("gender", values.gender);
-    data.append("birthday", values.birthday);
-    data.append("phone", values.phone);
-    data.append("pic", img);
+    data.append("username", values.userName || data.username);
+    data.append("password", values.password || data.password);
+    data.append("email", values.email || data.email);
+    data.append("first_name", values.first_name || data.first_name);
+    data.append("last_name", values.last_name || data.last_name);
+    data.append("height", values.height || data.height);
+    data.append("age", values.age || data.age);
+    data.append("experience", values.experience || data.experience);
+    data.append("addres", values.addres || data.addres);
+    data.append("information", values.information || data.information);
+    data.append("phone", values.phone || data.phone);
+    data.append("type", data.type);
+    data.append("gender", values.gender || data.gender);
+    data.append("weight", values.weight || data.weight);
 
     var config = {
       method: "put",
@@ -62,162 +63,68 @@ const InputForm = ({ type, img, data }) => {
     axios(config)
       .then(function (response) {
         console.log(response.data);
+        navigate('/expertPerson')
       })
       .catch(function (error) {
         console.log(error);
       });
   };
 
-  const config1 = {
-    rules: [
-      {
-        type: "object",
-        required: true,
-        message: "Please select time!",
-      },
-    ],
-  };
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item
         name="userName"
         label="UserName"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input value={'data.userName'} />
-      </Form.Item>
-      <Form.Item
-        name="password"
-        label="Password"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input />
+        <Input defaultValue={data.username} />
       </Form.Item>
       <Form.Item
         name="email"
         label="Email"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input />
+        <Input defaultValue={data.email} />
       </Form.Item>
       <Form.Item
         name="first_name"
         label="First name"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input />
+        <Input defaultValue={data.first_name} />
       </Form.Item>
       <Form.Item
         name="last_name"
         label="Last name"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
-        <Input />
-      </Form.Item>
-      <Form.Item name="experience" label="Experience">
-        <Slider
-          marks={{
-            0: ".",
-            10: ".",
-            20: ".",
-            30: ".",
-            40: ".",
-            50: ".",
-          }}
-        />
+        <Input defaultValue={data.last_name} />
       </Form.Item>
       <Form.Item
-        name="bio"
-        label="bio"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
+        name="height"
+        label="height"
       >
-        <Input />
+        <Input defaultValue={data.height}/>
+      </Form.Item>
+      <Form.Item
+        name="weight"
+        label="weight"
+      >
+        <Input defaultValue={data.weight}/>
       </Form.Item>
 
       <Form.Item label="Age">
-        <Form.Item name="age" noStyle>
-          <InputNumber min={16} max={70} />
-        </Form.Item>
-      </Form.Item>
-      <Form.Item name="birthday" label="DatePicker" {...config1}>
-        <DatePicker />
-      </Form.Item>
-      <Form.Item
-        name="phone"
-        label="Telefon raqam"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <InputNumber minLength={7} maxLength={12} />
-      </Form.Item>
-      <Form.Item
-        name="addres"
-        label="Addres"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        name="information"
-        label="Information"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Select
-          placeholder="Select a option and change input text above"
-          allowClear
+        <Form.Item
+          name="age"
+          noStyle
         >
-          <Option value="1">Boshlang'ich</Option>
-          <Option value="2">O'rta</Option>
-          <Option value="3">Oliy</Option>
-        </Select>
+          <InputNumber min={16} max={70} defaultValue={data.age} />
+        </Form.Item>
       </Form.Item>
       <Form.Item
         name="gender"
         label="gender"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
       >
         <Select
           placeholder="Select a option and change input text above"
           allowClear
+          defaultValue={String(data.gender)}
         >
           <Option value="1">Erkak</Option>
           <Option value="2">Ayol</Option>

@@ -17,6 +17,7 @@ const AllDietolog = React.memo(() => {
   const [searchedData, setSearchedData] = useState([]);
 
   let handleSearch = (query) => {
+    console.log(query);
     fetch(`https://ehealthuz.pythonanywhere.com/search/?search=${query}`)
       .then((response) => response.json())
       .then((data) => setSearchedData(data))

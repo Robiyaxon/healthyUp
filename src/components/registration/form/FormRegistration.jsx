@@ -2,16 +2,19 @@ import React, { useEffect, useState } from "react";
 import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-const FormRegistration = React.memo((props) =>{
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import axios from "axios";
+
+const FormRegistration = React.memo((props) => {
   const navigate = useNavigate();
-  const [errorText, seterrorText] = useState(null)
-  const { t } = useTranslation()
+  const [errorText, seterrorText] = useState(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    if(!props.type){
-      navigate('/whoIsTheUser') }
+    if (!props.type) {
+      navigate("/whoIsTheUser");
+    }
   }, [props.type, navigate]);
 
   const map = [
@@ -82,20 +85,26 @@ const FormRegistration = React.memo((props) =>{
     </Form.Item>
   ));
 
-  var formdata = new FormData();
-  formdata.append("username", props.username);
-  formdata.append("email", props.email);
+  var data = new FormData();
+  data.append("username", props.username);
+  data.append("email", props.email);
 
-  var requestOptions = {
-    method: "POST",
-    body: formdata,
-    redirect: "follow",
+  var config = {
+    method: "post",
+    url: "http://ehealthuz.pythonanywhere.com/email/",
+    data: data,
   };
+
   const click = () => {
-    fetch("http://ehealthuz.pythonanywhere.com/email/", requestOptions)
-      .then((result) =>Number(result) === 200 ? <>{seterrorText(t("erroreMAIL"))}</> : navigate("/reference"))
-      .catch((error) => console.log(error));
-  }
+    axios(config).then((response) =>
+    Number(response.data) === 200 ? (
+        <>{seterrorText(t("erroreMAIL"))}</>
+      ) : (
+        navigate("/reference")
+      )
+    );
+  };
+
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
@@ -115,6 +124,6 @@ const FormRegistration = React.memo((props) =>{
       </div>
     </div>
   );
-})
+});
 
 export default FormRegistration;

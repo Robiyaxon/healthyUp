@@ -40,7 +40,7 @@ li a {
 }
 
 .img-responsive {
-  width: 80%;
+  width: 60%;
   text-align: center;
   height: auto;
 }
@@ -56,8 +56,8 @@ li a {
 }
 
 .card__collection .cards {
-  width: 380px;
-  height: 350px;
+  width: 330px;
+  height: 330px;
   display: block;
   background-size: cover;
   float: left;

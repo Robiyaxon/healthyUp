@@ -1,30 +1,24 @@
 .PerconAc {
-    /* border: 2px solid red; */
-    padding: 100px 226px;
+    padding: 160px 226px;
     background: rgba(247, 231, 200, 0.3);
 
 }
-
-.shadow {
-    background: rgba(247, 231, 200, 0.3);
-    filter: blur(300px);
-    border: 2px solid red;
-    width: 101px;
-    height: 101px;
+.Spes{
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 51px;
 }
-
 .block {
-    /* border: 2px solid red; */
     display: flex;
     align-items: center;
-    /* border: 2px solid red; */
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .block img {
-    /* border: 2px solid red; */
     margin-right: 124px;
     width: 45%;
     object-fit: cover;
@@ -52,12 +46,12 @@
 }
 
 .Document {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 @media(min-width:0) and (max-width:650.9px) {
     .PerconAc {
-        padding: 30px 20px;
+        padding: 80px 20px 30px;
     }
 
     .Block90 {
@@ -65,7 +59,6 @@
     }
 
     .block img {
-        /* border: 2px solid red; */
         margin-right: 0;
         width: 80%;
         margin-bottom: 1rem;
@@ -164,11 +157,9 @@
 @media(min-width:951px) and (max-width:1390.9px) {
     .PerconAc {
         padding: 60px 30px;
-        border: 2px solid red;
     }
     .Block90 {
         width: 100%;
-        border: 2px solid red;
     }
 
     .block {

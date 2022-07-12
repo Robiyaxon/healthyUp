@@ -21,8 +21,9 @@ const Login = () => {
       redirect: "follow",
     };
     fetch("http://ehealthuz.pythonanywhere.com/kirish/", requestOptions)
-      .then((response) => console.log(response.data) )
-      .then((result) => Number(result) === 404 ? setErrorClass(style.errorTrue) : navigate('/'))
+          .then((response) =>response.data
+      === 404 ? setErrorClass(style.errorTrue) : navigate('/')
+      )
       .catch((error) => console.log("error", error));
   };
 
@@ -36,11 +37,18 @@ const Login = () => {
         initialValues={{ remember: true }}
         onFinish={onFinish}
         autoComplete="off"
+        
       >
         <p className={style.error + ' ' + errorClass}>Username yoki password xato!</p>
         <Form.Item
           name="username"
-          rules={[{ message: "Please input your Username!" }]}
+          rules= {[
+            {
+              type: "string",
+              required: true,
+              message: "Please select time!",
+            },
+          ]}
         >
           <Input
             className={style.Input}
@@ -49,8 +57,14 @@ const Login = () => {
           />
         </Form.Item>
         <Form.Item
-          name="password"
-          rules={[{ message: "Please input your Password!" }]}
+          name="password" 
+          rules= {[
+            {
+              type: "string",
+              required: true,
+              message: "Please select time!",
+            },
+          ]}
         >
           <Input
             prefix={<LockOutlined className="site-form-item-icon" />}

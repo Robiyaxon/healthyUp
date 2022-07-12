@@ -45,7 +45,12 @@ const AllTrainer = lazy(() =>
 const UserSettings = lazy(() =>
   import("./../components/userSettings/UserSettings")
 )
-
+const OtherAccSettings = lazy(() =>
+  import("./../components/userSettings/OtherAccSettings")
+)
+const PersonExpert = lazy(() =>
+  import("./../components/search/Person_expert")
+)
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -86,7 +91,6 @@ export const RouterMap = () => {
       body: formdata,
       redirect: "follow",
     };
-
 
     fetch("http://ehealthuz.pythonanywhere.com/register/", requestOptions)
       .then((response) => response.text())
@@ -133,7 +137,7 @@ export const RouterMap = () => {
       element: <FemaleOrMale SignApp={SignApp} setGender={setGender} />,
     },
     { id: 6, url: "faq", element: <Question /> },
-    { id: 7, url: "login", element: <Login /> },
+    { id: 7, url: "login", element: <Login  settype={settype}/> },
     {
       id: 8,
       url: "reference",
@@ -172,7 +176,7 @@ export const RouterMap = () => {
       element: <Direction settype_loss={settype_loss} />,
     },
     { id: 15, url: "loader", element: <Loader /> },
-    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!" link="/search_person"/> },
+    { id: 16, url: "loaderAcc", element: <Loader text="Sizning ma'lumotingiz bazaga qo'shilmoqda!" link="/expertPerson"/> },
     { id: 17, url: "conclusion", element: <Conclusion token={token} /> },
     {
       id: 18,
@@ -184,7 +188,9 @@ export const RouterMap = () => {
     { id: 19, url: "search_person", element: <SearchPerson /> },
     { id: 20, url: "search_deatolog_all", element: <AllDietolog /> },
     { id: 21, url: "search_trainer_all", element: <AllTrainer /> },
+    { id: 22, url: "otherAccSettings", element: <OtherAccSettings /> },
     { id: 22, url: "userSettings", element: <UserSettings /> },
+    { id: 22, url: "expertPerson", element: <PersonExpert /> },
   ];
 
   const dataMapForRoute = data.map((d) => (
