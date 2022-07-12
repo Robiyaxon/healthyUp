@@ -30,8 +30,8 @@ import axios from 'axios';
     { id: 1, label: t("userSurname"), name: data.last_name },
     { id: 2, label: t("userName"), name: data.first_name },
     { id: 3, label: t("borthday"), name: data.birthday? data.birthday:<>Tug`ilganlik sanasi berkitilgan</>},
-    // { id: 5, label: t("userTel"), name: data.phone? data.phone:<>Telefon nomer Berkitilgan</> },
-    // { id: 6, label: t("expertReference"), name: data.information===1?<>Boshlang`ich</>:person.information===2?<>O`rta</>:<>OLIY</>},
+    { id: 5, label: t("userTel"), name: data.phone? data.phone:<>Telefon nomer Berkitilgan</> },
+    { id: 6, label: t("expertReference"), name: data.information===1?<>Boshlang`ich</>:data.information===2?<>O`rta</>:<>OLIY</>},
     { id: 7, label: t("experience"), name:data.experience + " yil" },
   ]
 
@@ -55,7 +55,7 @@ import axios from 'axios';
           <p>Batafsil malumot</p>
           <h1>Mening ismim {data.last_name} {data.first_name}  {data.experience} yillik tajribam bor. sizga yordam bera oladigan darajada bilim va ko‘nikmalarga egaman. Oz fursat mobaynida juda ko‘p ozishni istagan insonlar bilan ishladim. deyarli ularning hammasi oz istagan natijaga erishdilar va erishib kelmoqdalar.</h1>
           <p>Manzili:</p>
-          {/* <h1>{data.addres}</h1> */}
+          <h1>{data.addres}</h1>
         </div>
 
       </div>
