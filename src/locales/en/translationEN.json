@@ -66,6 +66,8 @@
   "unutmang":"Daily tasks for you. Don't forget to mark the task after completing it!",
   "royhat":"Who do you want to register as?",
   "yonalish":"Which direction is best for you?",
-  "dataAcc": "Fill in information about yourself"
-
+  "dataAcc": "Fill in information about yourself",
+  "settings":"Settings",
+  "dayEat":"KK that should be eaten daily",
+  "dayLose":"Daily weight loss"
 }

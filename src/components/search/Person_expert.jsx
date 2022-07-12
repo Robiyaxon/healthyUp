@@ -3,6 +3,7 @@ import style from "../searchPerson/SinglePerson.module.css"
 import person34 from "./../../assets/search_person/person.webp";
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
  const PersonExpert = React.memo(({ person }) => {
   const [data, setData] = useState([]);
 
@@ -57,6 +58,7 @@ import axios from 'axios';
           <p>Manzili:</p>
           <h1>{data.addres}</h1>
         </div>
+        <NavLink to={"/otherAccSettings"}>Settings</NavLink>
 
       </div>
 

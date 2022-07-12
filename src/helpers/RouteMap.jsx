@@ -45,11 +45,12 @@ const AllTrainer = lazy(() =>
 const UserSettings = lazy(() =>
   import("./../components/userSettings/UserSettings")
 )
+const OtherAccSettings = lazy(() =>
+  import("./../components/userSettings/OtherAccSettings")
+)
 const PersonExpert = lazy(() =>
   import("./../components/search/Person_expert")
 )
-
-
 
 export const RouterMap = () => {
   const [last_name, setName] = useState("");
@@ -90,7 +91,6 @@ export const RouterMap = () => {
       body: formdata,
       redirect: "follow",
     };
-
 
     fetch("http://ehealthuz.pythonanywhere.com/register/", requestOptions)
       .then((response) => response.text())
@@ -188,6 +188,7 @@ export const RouterMap = () => {
     { id: 19, url: "search_person", element: <SearchPerson /> },
     { id: 20, url: "search_deatolog_all", element: <AllDietolog /> },
     { id: 21, url: "search_trainer_all", element: <AllTrainer /> },
+    { id: 22, url: "otherAccSettings", element: <OtherAccSettings /> },
     { id: 22, url: "userSettings", element: <UserSettings /> },
     { id: 22, url: "expertPerson", element: <PersonExpert /> },
   ];
