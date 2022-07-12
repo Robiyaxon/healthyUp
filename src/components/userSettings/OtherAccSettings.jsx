@@ -6,7 +6,7 @@ import InputForm from "./InputForm";
 import axios from 'axios';
 
 
-const UserSettings = ({ first_name, last_name, type }) => {
+const OtherAccSettings = ({ first_name, last_name, type }) => {
   const [img, setImg] = useState(null);
   const [data, setData] = useState([]);
 
@@ -53,6 +53,7 @@ const UserSettings = ({ first_name, last_name, type }) => {
         O‘zingiz haqingizda ma'lumotlarni tahrirlang
       </p>
       <div className={style.__main}>
+        <UploadImg setImg={setImg} />
         <div>
           <InputForm type={type} img={img} data={data}/>
         </div>
@@ -61,4 +62,4 @@ const UserSettings = ({ first_name, last_name, type }) => {
   );
 };
 
-export default UserSettings;
+export default OtherAccSettings;

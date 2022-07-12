@@ -13,6 +13,9 @@ const Conclusion = memo(() => {
   const qidiruv = () => {
     navigate("/search_person");
   };
+  const settings = () => {
+    navigate("/userSettings");
+  };
   useEffect(() => {
     var config = {
       method: "get",
@@ -34,7 +37,7 @@ const Conclusion = memo(() => {
   }, []);
 
   const days = data.weight + data.height;
-  const week_result = data.weight - data.height;
+  const week_result =  Math.abs(data.weight - data.height)
 
   if (data.task_sport_can_not) {
     // console.log(data);
@@ -49,17 +52,20 @@ const Conclusion = memo(() => {
           <h1>{data.weight} kg </h1>
         </div>
         <div className={style.Block}>
-          <p>Kunlik yeyilishi kerak bolgan KK</p>
+          <p>{t("dayEat")}</p>
           <h1>{week_result} kk </h1>
         </div>
         <div className={style.Block}>
-          <p>Kunlik yo‘qotilyotgan vazin</p>
+          <p>{t("dayLose")}</p>
           <h1>{days} kk </h1>
         </div>
       </div>
       <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
-          {t("qidirish")}{" "}
+          {t("qidirish")}
+        </button>
+        <button onClick={settings} className={style.button1}>
+          {t("settings")}
         </button>
       </div>
 

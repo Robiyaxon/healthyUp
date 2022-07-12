@@ -8,7 +8,7 @@ const Reference = (props) => {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-    navigate('/direction');
+    navigate("/direction");
   };
   const map = [
     {
@@ -16,7 +16,7 @@ const Reference = (props) => {
       name: "years",
       message: "Please input your age!",
       placeholder: "00 (years)",
-      value:  props.age ,
+      value: props.age,
       setname1: props.setAge,
     },
     {
@@ -24,36 +24,38 @@ const Reference = (props) => {
       name: "Height",
       message: "Please input your Height!",
       placeholder: "00 (sm)",
-      value:  props.height ,
-      setname1: props.setheight
+      value: props.height,
+      setname1: props.setheight,
     },
     {
       id: 3,
       name: "kg",
       message: "Please input your Weight!",
       placeholder: "00 (kg)",
-      value:  props.weight ,
-      setname1: props.setweight
+      value: props.weight,
+      setname1: props.setweight,
     },
   ];
   const map2 = map.map((a) => (
     <div key={a.id}>
-
-        <Form.Item
-      
-      name={a.name}
-      className={style.Input}
-      rules={[
-        {
-          required: true,
-          message: a.message,
-        },
-      ]}
-    >
-      <Input value={a.value} type="number"   onChange={(e) => a.setname1(e.target.value)} placeholder={a.placeholder} />
-    </Form.Item>
+      <Form.Item
+        name={a.name}
+        className={style.Input}
+        rules={[
+          {
+            required: true,
+            message: a.message,
+          },
+        ]}
+      >
+        <Input
+          value={a.value}
+          type="number"
+          onChange={(e) => a.setname1(e.target.value)}
+          placeholder={a.placeholder}
+        />
+      </Form.Item>
     </div>
-  
   ));
   return (
     <div className={style.Reference}>

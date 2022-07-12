@@ -6,8 +6,6 @@ import {
   Input,
   Select,
   InputNumber,
-  Slider,
-  DatePicker,
 } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +25,7 @@ const tailLayout = {
   },
 };
 
-const InputForm = ({ type, img, data }) => {
+const InputForm = ({ type, data }) => {
   const [form] = Form.useForm();
   const navigate = useNavigate()
 
@@ -42,7 +40,7 @@ const InputForm = ({ type, img, data }) => {
     data.append("email", values.email || data.email);
     data.append("first_name", values.first_name || data.first_name);
     data.append("last_name", values.last_name || data.last_name);
-    data.append("bio", values.bio || data.bio);
+    data.append("height", values.height || data.height);
     data.append("age", values.age || data.age);
     data.append("experience", values.experience || data.experience);
     data.append("addres", values.addres || data.addres);
@@ -50,8 +48,7 @@ const InputForm = ({ type, img, data }) => {
     data.append("phone", values.phone || data.phone);
     data.append("type", data.type);
     data.append("gender", values.gender || data.gender);
-    data.append("birthday", values.birthday || data.birthday);
-    data.append("pic", img || data.pic);
+    data.append("weight", values.weight || data.weight);
 
     var config = {
       method: "put",
@@ -73,15 +70,6 @@ const InputForm = ({ type, img, data }) => {
       });
   };
 
-  const config1 = {
-    rules: [
-      {
-        type: "object",
-        required: true,
-        message: "Please select time!",
-      },
-    ],
-  };
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <Form.Item
@@ -108,23 +96,17 @@ const InputForm = ({ type, img, data }) => {
       >
         <Input defaultValue={data.last_name} />
       </Form.Item>
-      <Form.Item name="experience" label="Experience">
-        <Slider
-          marks={{
-            0: ".",
-            10: ".",
-            20: ".",
-            30: ".",
-            40: ".",
-            50: ".",
-          }}
-        />
+      <Form.Item
+        name="height"
+        label="height"
+      >
+        <Input defaultValue={data.height}/>
       </Form.Item>
       <Form.Item
-        name="bio"
-        label="bio"
+        name="weight"
+        label="weight"
       >
-        <Input defaultValue={data.bio}/>
+        <Input defaultValue={data.weight}/>
       </Form.Item>
 
       <Form.Item label="Age">
@@ -134,35 +116,6 @@ const InputForm = ({ type, img, data }) => {
         >
           <InputNumber min={16} max={70} defaultValue={data.age} />
         </Form.Item>
-      </Form.Item>
-      <Form.Item name="birthday" label="DatePicker" {...config1}>
-        <DatePicker />
-      </Form.Item>
-      <Form.Item
-        name="phone"
-        label="Telefon raqam"
-      >
-        <InputNumber minLength={7} maxLength={12} defaultValue={data.phone}/>
-      </Form.Item>
-      <Form.Item
-        name="addres"
-        label="Addres"
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        name="information"
-        label="Information"
-      >
-        <Select
-          placeholder="Select a option and change input text above"
-          allowClear
-          defaultValue={String(data.information)}
-        >
-          <Option value="1">Boshlang'ich</Option>
-          <Option value="2">O'rta</Option>
-          <Option value="3">Oliy</Option>
-        </Select>
       </Form.Item>
       <Form.Item
         name="gender"
