@@ -1,12 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
-import {
-  Button,
-  Form,
-  Input,
-  Select,
-  InputNumber,
-} from "antd";
+import { Button, Form, Input, Select } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const { Option } = Select;
@@ -27,28 +21,43 @@ const tailLayout = {
 
 const InputForm = ({ type, data }) => {
   const [form] = Form.useForm();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState(data.email);
+  const [last_name, setLast_name] = useState(data.last_name);
+  const [first_name, setFirst_name] = useState(data.first_name);
+  const [age, setAge] = useState(data.age);
+
+  useEffect(() => {
+    setUsername(data.username);
+    setEmail(data.email);
+    setLast_name(data.last_name);
+    setFirst_name(data.first_name);
+    setAge(data.age);
+  }, [data]);
+
+  console.log(data.username + " " + username);
   if (!data.username) {
     return <>Some wait...</>;
   }
 
+  const Change = (e) => {
+    setUsername(e.target.value);
+  };
+
   const onFinish = (values) => {
     var data = new FormData();
-    data.append("username", values.userName || data.username);
-    data.append("password", values.password || data.password);
-    data.append("email", values.email || data.email);
-    data.append("first_name", values.first_name || data.first_name);
-    data.append("last_name", values.last_name || data.last_name);
-    data.append("height", values.height || data.height);
-    data.append("age", values.age || data.age);
-    data.append("experience", values.experience || data.experience);
-    data.append("addres", values.addres || data.addres);
+    data.append("username", username || data.username);
+    // data.append("password", values.password || data.password);
+    data.append("email", email || data.email);
+    data.append("first_name", first_name || data.first_name);
+    data.append("last_name", last_name || data.last_name);
+    data.append("age", age || data.age);
     data.append("information", values.information || data.information);
     data.append("phone", values.phone || data.phone);
     data.append("type", data.type);
     data.append("gender", values.gender || data.gender);
-    data.append("weight", values.weight || data.weight);
 
     var config = {
       method: "put",
@@ -63,7 +72,7 @@ const InputForm = ({ type, data }) => {
     axios(config)
       .then(function (response) {
         console.log(response.data);
-        navigate('/expertPerson')
+        navigate("/expertPerson");
       })
       .catch(function (error) {
         console.log(error);
@@ -72,55 +81,49 @@ const InputForm = ({ type, data }) => {
 
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-      <Form.Item
-        name="userName"
-        label="UserName"
-      >
-        <Input defaultValue={data.username} />
-      </Form.Item>
-      <Form.Item
-        name="email"
-        label="Email"
-      >
-        <Input defaultValue={data.email} />
-      </Form.Item>
-      <Form.Item
-        name="first_name"
-        label="First name"
-      >
-        <Input defaultValue={data.first_name} />
-      </Form.Item>
-      <Form.Item
-        name="last_name"
-        label="Last name"
-      >
-        <Input defaultValue={data.last_name} />
-      </Form.Item>
-      <Form.Item
-        name="height"
-        label="height"
-      >
-        <Input defaultValue={data.height}/>
-      </Form.Item>
-      <Form.Item
-        name="weight"
-        label="weight"
-      >
-        <Input defaultValue={data.weight}/>
-      </Form.Item>
-
-      <Form.Item label="Age">
-        <Form.Item
-          name="age"
-          noStyle
+      <label>Username:</label>
+      <input value={username} onChange={Change} placeholder={"Username"} />
+      <br />
+      <label>Email:</label>
+      <Input
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder={"Email"}
+      />
+      <br />
+      <label>First Name:</label>
+      <Input
+        value={first_name}
+        onChange={(e) => setFirst_name(e.target.value)}
+        placeholder={"First Name"}
+      />
+      <br />
+      <label>Last Name:</label>c
+      <Input
+        value={last_name}
+        onChange={(e) => setLast_name(e.target.value)}
+        placeholder={"Last Name"}
+      />
+      <br />
+      <label>Age</label>
+      <Input
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        placeholder={"Age"}
+      />
+      {/* <Input value={age} onChange={(e) => setAge(e.target.value)} /> */}
+      <Form.Item name="information" label="information">
+        <Select
+          placeholder="Select a option and change input text above"
+          allowClear
+          defaultValue={String(data.information)}
         >
-          <InputNumber min={16} max={70} defaultValue={data.age} />
-        </Form.Item>
+          <Option value="1">boshlang'ich</Option>
+          <Option value="2">O'rta</Option>
+          <Option value="3">Oliy</Option>
+        </Select>
       </Form.Item>
-      <Form.Item
-        name="gender"
-        label="gender"
-      >
+      <Form.Item name="gender" label="gender">
         <Select
           placeholder="Select a option and change input text above"
           allowClear

@@ -76,8 +76,18 @@
     justify-content: center;
 }
 
-.Block3 a {
+.Block3 a{
     margin: 0 33px 30px 0;
+}
+
+
+.Block3 .telegram_icon{
+    margin: 0;
+}
+
+.Block3 .telegram_icon img{
+    margin: 0 33px 30px 0;
+
 }
 
 .Block3 a img{
@@ -93,6 +103,10 @@
     transition: all 0.5s !important;
 
 
+}
+
+.telegram_icon{
+    width: 70px;
 }
 
 .telegram_icon:hover {

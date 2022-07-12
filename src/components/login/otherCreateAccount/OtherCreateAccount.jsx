@@ -10,6 +10,7 @@ const OtherCreateAccount = ({ first_name, last_name, type }) => {
   const [img, setImg] = useState(null);
 
   const {t} = useTranslation()
+  console.log(img);
 
   return (
     <div className={style.body}>

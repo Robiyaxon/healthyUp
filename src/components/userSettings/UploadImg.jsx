@@ -1,13 +1,15 @@
 import React, { useRef } from "react";
-import otherAccount from '../../assets/login/otherAccount.webp'
 
-const UploadImg = ({setImg, setPassword}) => {
+const UploadImg = ({setImg, img}) => {
   const uploadedImage = useRef(null);
   const imageUploader = useRef(null);
-
+  console.log(img);
+  if (!img) {
+    return <> dfgdfg</>
+  }
   const handleImageUpload = e => {
     const [file] = e.target.files;
-    setImg(e.target.files[0].name);
+    setImg(e.target.files);
     if (file) {
       const reader = new FileReader();
       const { current } = uploadedImage;
@@ -16,7 +18,7 @@ const UploadImg = ({setImg, setPassword}) => {
         current.src = e.target.result;
       };
       reader.readAsDataURL(file);
-      setImg(file.name)
+      setImg(file)
       console.log(file.name.name);
     }
   };
@@ -54,7 +56,8 @@ const UploadImg = ({setImg, setPassword}) => {
             height: "100%",
             position: "acsolute"
           }}
-          src={otherAccount}
+          src={'https://ehealthuz.pythonanywhere.com' + img}
+          
           alt='rasm bor edi!'
         />
       </div>

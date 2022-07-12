@@ -2,13 +2,12 @@ import React from "react";
 import style from "./Login.module.css";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 const Login = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   const [errorClass, setErrorClass] = useState("")
   const onFinish = (values) => {

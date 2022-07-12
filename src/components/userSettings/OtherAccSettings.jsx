@@ -7,8 +7,8 @@ import axios from 'axios';
 
 
 const OtherAccSettings = ({ first_name, last_name, type }) => {
-  const [img, setImg] = useState(null);
   const [data, setData] = useState([]);
+  const [img, setImg] = useState(null)
 
   useEffect(() => {
     // instance.get('user/')
@@ -30,19 +30,31 @@ const OtherAccSettings = ({ first_name, last_name, type }) => {
 
       console.log(
         localStorage.getItem("token")
-
       );
   
       axios(config)
       .then(function (response) {
         setData(response.data);
         console.log(response.data);
+        setImg(response.data ? response.data.image : null)
       })
       .catch(function (error) {
         console.log(error);
       });
   
   }, []);
+
+  // console.log(img);
+
+
+  if (!data) {
+    return <>Some wait...</>
+  }
+  
+// console.log(data.image);
+
+
+
   console.log(data);
   return (
     <div className={style.body}>
@@ -53,7 +65,7 @@ const OtherAccSettings = ({ first_name, last_name, type }) => {
         O‘zingiz haqingizda ma'lumotlarni tahrirlang
       </p>
       <div className={style.__main}>
-        <UploadImg setImg={setImg} />
+        <UploadImg setImg={setImg} img={img} />
         <div>
           <InputForm type={type} img={img} data={data}/>
         </div>
