@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import UploadImg from "./UploadImg";
+import InputFormUser from "./InputFormUser";
 
-import style from "./UserSettings.module.css";
-import InputForm from "./InputForm";
 import axios from 'axios';
 
+import style from "./UserSettings.module.css";
 
 const UserSettings = ({ first_name, last_name, type }) => {
-  const [img, setImg] = useState(null);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -54,7 +52,7 @@ const UserSettings = ({ first_name, last_name, type }) => {
       </p>
       <div className={style.__main}>
         <div>
-          <InputForm type={type} img={img} data={data}/>
+          <InputFormUser type={type} data={data}/>
         </div>
       </div>
     </div>

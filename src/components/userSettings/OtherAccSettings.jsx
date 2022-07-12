@@ -46,7 +46,6 @@ const OtherAccSettings = ({ first_name, last_name, type }) => {
 
   // console.log(img);
 
-
   if (!data) {
     return <>Some wait...</>
   }
