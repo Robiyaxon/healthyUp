@@ -65,12 +65,6 @@ const InputForm = ({ type, img }) => {
     data.append("phone", values.phone);
     data.append("pic", img);
 
-    data.append("type_loss", 1);
-    data.append("height", 1);
-    data.append("weight", 1);
-    data.append("going_to_loss", 1);
-    data.append("can_not_dieta", 1);
-
     console.log(date);
     var config = {
       method: "post",
