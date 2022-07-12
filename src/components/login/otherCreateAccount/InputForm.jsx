@@ -34,7 +34,7 @@ const InputForm = ({ type, img }) => {
   const navigate = useNavigate();
 
   const [date, setDate] = useState("");
-
+<iframe width="956" height="538" src="https://www.youtube.com/embed/DvP-9jL7lsQ" title="Mini RONALDO (10 years old) // МАЛЕНЬКИЙ РОНАЛДУ (10 лет) vs Живой Футбол. НОВЫЙ ТАЛАНТ !!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   useEffect(() => {
     if (!type) {
       navigate("/whoIsTheUser");
@@ -65,7 +65,7 @@ const InputForm = ({ type, img }) => {
     data.append("phone", values.phone);
     data.append("pic", img);
 
-    console.log(date);
+    console.log(img);
     var config = {
       method: "post",
       url: "http://ehealthuz.pythonanywhere.com/register/",
