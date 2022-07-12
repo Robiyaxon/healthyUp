@@ -13,8 +13,18 @@ const AllDietolog = React.memo(() => {
   const [minIndex, setMinIndex] = useState(0);
   const [maxIndex, setMaxIndex] = useState(0);
   const [pageSize, setPageSize] = useState(16);
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState("");
+  const [searchedData, setSearchedData] = useState([]);
+
+  let handleSearch = (query) => {
+    fetch(`https://ehealthuz.pythonanywhere.com/search/?search=${query}`)
+      .then((response) => response.json())
+      .then((data) => setSearchedData(data))
+      .catch((e) => console.log(e));
+  };
+
   const { t } = useTranslation();
+  // pagenation changing by width of window
   let update = () => {
     if (window.innerWidth > 950) {
       setPageSize(16);
@@ -35,13 +45,31 @@ const AllDietolog = React.memo(() => {
     setMinIndex(0);
     setMaxIndex(pageSize);
   }, [pageSize]);
+
+  // pagenation
   function HandleChange(page) {
     setCurrent(page);
     setMinIndex((page - 1) * pageSize);
     setMaxIndex(page * pageSize);
+    window.scrollTo(0, 0);
   }
 
-  const clickSearch = () => {};
+  // function handleSearch() {
+  //   if (search === "") {
+  //     return trainer;
+  //   } else if (search.length > 1) {
+  //     return trainer
+  //       .map(
+  //         (item) => item.first_name.toLocaleLowerCase(),
+  //         (item) => item.last_name.toLocaleLowerCase()
+  //       )
+  //       .filter(
+  //         (item) =>
+  //           item.first_name.includes(search.toLocaleLowerCase()) ||
+  //           item.item.last_name.includes(search.toLocaleLowerCase())
+  //       );
+  //   }
+  // }
 
   const mapDiatolog = trainer
     .sort((a, b) => b.reyting - a.reyting)
@@ -64,7 +92,10 @@ const AllDietolog = React.memo(() => {
             onChange={(e) => setSearch(e.target.value)}
             placeholder={t("search")}
           />
-          <i className="fa-solid fa-magnifying-glass" onClick={clickSearch}></i>
+          <i
+            className="fa-solid fa-magnifying-glass"
+            onClick={() => handleSearch(search)}
+          ></i>
         </form>
       </div>
       <div className={style.container}>

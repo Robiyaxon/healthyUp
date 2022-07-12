@@ -14,10 +14,13 @@
   transition: 1s all;
   display: none;
 }
+.Foods_Block_Card__UNWpv {
+  text-align: center;
+}
 .WhoIsTheUser {
   background: rgba(247, 231, 200, 0.3);
-padding-top: 5rem;
-margin-bottom: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
 }
 .style {
   height: 40;
@@ -110,13 +113,13 @@ margin-bottom: 4rem;
   color: #886600 !important;
 }
 
- .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
   height: 40px !important;
   border-radius: 10px !important;
   /* border: 2px solid #886600 !important; */
 }
 
-.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder{
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
   display: flex;
   align-items: center;
 }
@@ -152,7 +155,7 @@ margin-bottom: 4rem;
     width: 70% !important;
   }
 
-  .WhoIsTheUser{
+  .WhoIsTheUser {
     margin-bottom: 0;
   }
 }

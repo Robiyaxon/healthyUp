@@ -1,13 +1,13 @@
-import React, { memo, useState,useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import axios from "axios";
 
 import style from "./Conclusion.module.css";
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Conclusion = memo(() => {
   const navigate = useNavigate();
-const {t}=useTranslation()
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
 
   const qidiruv = () => {
@@ -36,10 +36,6 @@ const {t}=useTranslation()
   const days = data.weight + data.height;
   const week_result = data.weight - data.height;
 
-  if (data.task_sport_can_not) {
-    // console.log(data);
-  }
-
   return (
     <div className={style.Conclusion}>
       <h1 className={style.Title}>{t("xulosasi")}</h1>
@@ -49,17 +45,18 @@ const {t}=useTranslation()
           <h1>{data.weight} kg </h1>
         </div>
         <div className={style.Block}>
-          <p>Kunlik yeyilishi kerak bolgan KK</p>
+          <p> {t("Kunlik")}</p>
           <h1>{week_result} kk </h1>
         </div>
         <div className={style.Block}>
-          <p>Kunlik yo‘qotilyotgan vazin</p>
+          <p>{t("dailyLossingWeight")}</p>
           <h1>{days} kk </h1>
         </div>
       </div>
       <div className={style.navigate}>
         <button onClick={qidiruv} className={style.button1}>
-{t("qidirish")}        </button>
+          {t("qidirish")}{" "}
+        </button>
       </div>
 
       <div className={style.topshiriq}>
@@ -69,9 +66,7 @@ const {t}=useTranslation()
         data.task_sport_can_not[0].video ? (
           <>
             <h1 className={style.Title}>{t("Topshiriqlar")}</h1>
-            <p className={style.p}>
-            {t("unutmang")}
-            </p>
+            <p className={style.p}>{t("unutmang")}</p>
             <div className={style.topshiriq}>
               <iframe
                 width="420"
@@ -80,7 +75,7 @@ const {t}=useTranslation()
                 src={data.task_sport_can_not[0].video}
               />
               <div className={style.Topshiriq2}>
-                <p>1-topshiriq</p>
+                <p>{t("firstTask")}</p>
               </div>
               <label className={style.checkbox}>
                 <input type="checkbox" className={style.checkbox__input} />
@@ -93,10 +88,9 @@ const {t}=useTranslation()
           data.task_dieta_can_not[0] &&
           data.task_dieta_can_not[0].video ? (
           <>
-            <h1 className={style.Title}>Topshiriqlar</h1>
+            <h1 className={style.Title}>{t("tasks")}</h1>
             <p className={style.p}>
-              Siz uchun kunlik topshiriqlar. Topshiriqni bajargach belgilashni
-              unutmang!
+              {t('noteTask')}
             </p>
             <div className={style.topshiriq}>
               <iframe
@@ -106,7 +100,7 @@ const {t}=useTranslation()
                 src={data.task_dieta_can_not[0].video}
               />
               <div className={style.Topshiriq2}>
-                <p>1-topshiriq</p>
+                <p>{t("firstTask")}</p>
               </div>
               <label className={style.checkbox}>
                 <input type="checkbox" className={style.checkbox__input} />

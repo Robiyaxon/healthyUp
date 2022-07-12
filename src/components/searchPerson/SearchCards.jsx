@@ -2,12 +2,16 @@ import React from "react";
 import style from "./SearchPerson.module.css";
 import { URL_FOR_IMG } from "../../api/api";
 import person from "./../../assets/search_person/person.webp";
-import { NavLink } from 'react-router-dom';
-const SearchCards=React.memo(({ item }) =>{
+import { NavLink } from "react-router-dom";
+const SearchCards = React.memo(({ item }) => {
   return (
     <>
-      <NavLink to={"/singilur/"+ item.id } key={item.id} className={style.card_content}>
-        <div >
+      <NavLink
+        to={"/singilur/" + item.id}
+        key={item.id}
+        className={style.card_content}
+      >
+        <div>
           <div className={style.img_bordered}>
             <div className={style.img_wrapper}>
               {item.image ? (
@@ -32,11 +36,9 @@ const SearchCards=React.memo(({ item }) =>{
             ) : null}
           </div>
         </div>
-
       </NavLink>
-
     </>
   );
-})
+});
 
 export default SearchCards;
