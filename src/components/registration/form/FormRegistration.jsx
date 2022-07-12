@@ -97,8 +97,7 @@ const FormRegistration = React.memo((props) => {
 
   const click = () => {
     axios(config).then((response) =>
-    // console.log(Number(response.status) === 200) &&
-    Number(response.status) === 200 ? (
+    Number(response.data) === 200 ? (
         <>{seterrorText(t("erroreMAIL"))}</>
       ) : (
         navigate("/reference")

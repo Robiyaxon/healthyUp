@@ -137,7 +137,7 @@ export const RouterMap = () => {
       element: <FemaleOrMale SignApp={SignApp} setGender={setGender} />,
     },
     { id: 6, url: "faq", element: <Question /> },
-    { id: 7, url: "login", element: <Login /> },
+    { id: 7, url: "login", element: <Login  settype={settype}/> },
     {
       id: 8,
       url: "reference",
