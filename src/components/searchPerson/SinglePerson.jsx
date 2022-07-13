@@ -54,7 +54,6 @@ export const SinglePerson = React.memo(({ person }) => {
   return (
     <div className={style.PerconAc}>
       <div className={style.shadow}></div>
-      {/* <h1>{person.last_name}</h1>? */}
       <div className={style.block}>
         {person.image ? (
           <img
