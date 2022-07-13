@@ -15,12 +15,6 @@ const layout = {
     span: 16,
   },
 };
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
 
 const InputForm = ({ type, data }) => {
   const [form] = Form.useForm();
@@ -124,7 +118,8 @@ const InputForm = ({ type, data }) => {
         className={styles.inp}
       />
       {/* <Input value={age} onChange={(e) => setAge(e.target.value)} /> */}
-      <Form.Item name="information" label="information">
+      <label>Information</label>
+      <Form.Item name="information" className={styles.select}>
         <Select
           placeholder="Select a option and change input text above"
           allowClear
@@ -136,25 +131,21 @@ const InputForm = ({ type, data }) => {
         </Select>
       </Form.Item>
       <label>Gender</label>
-      <Form.Item name="gender"
-      className={styles.select}
-      >
+      <Form.Item name="gender" className={styles.select}>
         <Select
           placeholder="Select a option and change input text above"
           allowClear
           defaultValue={String(data.gender)}
-          
         >
           <Option value="1">Erkak</Option>
           <Option value="2">Ayol</Option>
         </Select>
       </Form.Item>
       <div className="buttonStyle">
-         <Button  htmlType="submit" className={"buttonSubmit"}>
+        <Button htmlType="submit" className={"buttonSubmit"}>
           Submit
         </Button>
       </div>
-     
     </Form>
   );
 };
