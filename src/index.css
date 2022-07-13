@@ -208,6 +208,10 @@ body {
   max-width: 20% !important;
 }
 
+.ant-btn{
+  border: none !important;
+}
+
 @media (min-width: 0) and (max-width: 750.9px) {
   .Wrapper {
     margin-top: 26px;
