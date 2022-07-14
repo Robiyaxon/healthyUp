@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
-import "antd/dist/antd.css";
 import { Button, Form, Input, Select } from "antd";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+import "antd/dist/antd.css";
+
+import styles from "./InputForm.module.css";
+
 const { Option } = Select;
+
 const layout = {
   labelCol: {
     span: 8,
@@ -87,13 +92,19 @@ const InputFormUser = ({ type, data }) => {
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
       <label>Username:</label>
-      <Input value={username} onChange={Change} placeholder={"Username"} />
+      <Input
+        value={username}
+        onChange={Change}
+        placeholder={"Username"}
+        className={styles.inp}
+      />
       <br />
       <label>Email:</label>
       <Input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder={"Email"}
+        className={styles.inp}
       />
       <br />
       <label>First Name:</label>
@@ -101,6 +112,7 @@ const InputFormUser = ({ type, data }) => {
         value={first_name}
         onChange={(e) => setFirst_name(e.target.value)}
         placeholder={"First Name"}
+        className={styles.inp}
       />
       <br />
       <label>Last Name:</label>c
@@ -108,6 +120,7 @@ const InputFormUser = ({ type, data }) => {
         value={last_name}
         onChange={(e) => setLast_name(e.target.value)}
         placeholder={"Last Name"}
+        className={styles.inp}
       />
       <br />
       <label>Age</label>
@@ -115,6 +128,7 @@ const InputFormUser = ({ type, data }) => {
         value={age}
         onChange={(e) => setAge(e.target.value)}
         placeholder={"Age"}
+        className={styles.inp}
       />
       <br />
       <label>Height</label>
@@ -122,16 +136,17 @@ const InputFormUser = ({ type, data }) => {
         value={height}
         onChange={(e) => setHeight(e.target.value)}
         placeholder={"Height"}
+        className={styles.inp}
       />
       <label>Weight</label>
       <Input
         value={weight}
         onChange={(e) => setWeight(e.target.value)}
         placeholder={"Height"}
+        className={styles.inp}
       />
       <label>Gender</label>
-
-      <Form.Item name="gender">
+      <Form.Item name="gender" className={styles.select}>
         <Select
           placeholder="Select a option and change input text above"
           allowClear
@@ -141,11 +156,11 @@ const InputFormUser = ({ type, data }) => {
           <Option value="2">Ayol</Option>
         </Select>
       </Form.Item>
-      <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
+      <div className="buttonStyle">
+        <Button htmlType="submit" className={"buttonSubmit"}>
           Submit
         </Button>
-      </Form.Item>
+      </div>
     </Form>
   );
 };
