@@ -17,13 +17,6 @@ const layout = {
     span: 16,
   },
 };
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-
 const InputFormUser = ({ type, data }) => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
