@@ -69,5 +69,10 @@
   "dataAcc": "Fill in information about yourself",
   "settings":"Settings",
   "dayEat":"KK that should be eaten daily",
-  "dayLose":"Daily weight loss"
+  "dayLose":"Daily weight loss",
+  "hello": "Hello",
+  "AccountSettings": "Edit information about yourself",
+  "age":"Age",
+  "genderSetting": "Gender"
+
 }

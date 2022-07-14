@@ -5,6 +5,7 @@ import axios from "axios";
 
 import "antd/dist/antd.css";
 import styles from "./InputForm.module.css";
+import { useTranslation } from 'react-i18next';
 
 const { Option } = Select;
 const layout = {
@@ -25,6 +26,8 @@ const InputForm = ({ type, data }) => {
   const [last_name, setLast_name] = useState(data.last_name);
   const [first_name, setFirst_name] = useState(data.first_name);
   const [age, setAge] = useState(data.age);
+
+  const {t} = useTranslation()
 
   useEffect(() => {
     setUsername(data.username);
@@ -78,43 +81,43 @@ const InputForm = ({ type, data }) => {
 
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-      <label>Username:</label>
+      <label>{t("Username")}:</label>
       <Input
         value={username}
         onChange={Change}
-        placeholder={"Username"}
+        placeholder={t("Username")}
         className={styles.inp}
       />
       <br />
-      <label>Email:</label>
+      <label>{t("email")}:</label>
       <Input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder={"Email"}
+        placeholder={t("email")}
         className={styles.inp}
       />
       <br />
-      <label>First Name:</label>
+      <label>{t("userName")}:</label>
       <Input
         value={first_name}
         onChange={(e) => setFirst_name(e.target.value)}
-        placeholder={"First Name"}
+        placeholder={t("userName")}
         className={styles.inp}
       />
       <br />
-      <label>Last Name:</label>c
+      <label>{t("userSurname")}:</label>
       <Input
         value={last_name}
         onChange={(e) => setLast_name(e.target.value)}
-        placeholder={"Last Name"}
+        placeholder={t("userSurname")}
         className={styles.inp}
       />
       <br />
-      <label>Age</label>
+      <label>{t("age")}</label>
       <Input
         value={age}
         onChange={(e) => setAge(e.target.value)}
-        placeholder={"Age"}
+        placeholder={t("age")}
         className={styles.inp}
       />
       {/* <Input value={age} onChange={(e) => setAge(e.target.value)} /> */}
@@ -130,7 +133,7 @@ const InputForm = ({ type, data }) => {
           <Option value="3">Oliy</Option>
         </Select>
       </Form.Item>
-      <label>Gender</label>
+      <label>{t("genderSetting")}</label>
       <Form.Item name="gender" className={styles.select}>
         <Select
           placeholder="Select a option and change input text above"

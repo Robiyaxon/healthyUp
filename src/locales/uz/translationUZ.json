@@ -69,6 +69,10 @@
   "dataAcc": "O‘zingiz haqingizda ma'lumotlarni to‘ldiring",
   "settings": "Sozlamalar",
   "dayEat": "Kunlik yeyilishi kerak bolgan KK",
-  "dayLose":"Kunlik yo‘qotilyotgan vazin"
+  "dayLose":"Kunlik yo‘qotilyotgan vazin",
+  "hello": "Salom",
+  "AccountSettings": "O‘zingiz haqingizda ma'lumotlarni tahrirlang",
+  "age":"Yosh",
+  "genderSetting": "Jins"
 
 }
