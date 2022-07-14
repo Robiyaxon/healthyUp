@@ -19,7 +19,6 @@ const layout = {
   },
 };
 
-
 const InputFormUser = ({ type, data }) => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
