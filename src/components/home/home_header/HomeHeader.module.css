@@ -63,7 +63,7 @@
         padding: 110px 25px 3rem;
         height: auto;
         background-size: auto;
-        background-size: 100% 100%;
+        background-size: cover;
 
     }
     .Block__Title {
@@ -116,7 +116,7 @@
 }
 @media(min-width:1201px) and (max-width:1480.9px){
     .HomeHeader {
-        padding: 110px 100px 0;
+        padding: 110px 30px 0;
     }
     .Block img {
         width: 50%;

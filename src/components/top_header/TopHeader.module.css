@@ -31,7 +31,7 @@
   font-size: 16px;
   color: #4c3c00;
   font-weight: 600;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
 }
 
 .Navlink_href span {
@@ -144,7 +144,7 @@
 }
 
 .Navlink {
-  width: 87%;
+  width: 800px;
   justify-content: flex-end;
 }
 
@@ -168,7 +168,7 @@
 
 .Menu__link {
   width: 70%;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .Menu__link select {
@@ -182,6 +182,7 @@
   border: none;
   cursor: pointer;
   font-weight: 500;
+  margin-left: 2rem;
 }
 
 .Drawer_Block {
@@ -245,14 +246,19 @@
     margin-top: 2rem;
     background-color: #ffa700;
   }
+  .scroller {
+    display: none;
+  }
 }
 
 @media (min-width: 1101px) and (max-width: 1400.9px) {
   .Top_Header {
     /* height: 100vh; */
-    position: absolute;
-    padding: 50px 15px 0 15px;
-    width: 100%;
+    /* position: absolute; */
+    right: 0;
+    left: 0;
+    padding: 50px 15px 0;
+    width: calc(100% - 15px);
   }
 
   .Block_Navlink {

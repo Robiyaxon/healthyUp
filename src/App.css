@@ -85,8 +85,7 @@
 
 .active {
   color: #ffa700;
-  width: 20%;
-  text-align: center;
+  text-align: revert;
   font-family: var(----main-font-family);
   font-style: normal;
   font-weight: 500;
@@ -100,12 +99,12 @@
 
 .active,
 .Navlink {
-  margin: 0 26px 0 0;
+  padding: 0 1em;
 }
 
 .Navlink {
-  width: 20%;
-  text-align: center;
+  width: auto;
+  text-align: revert;
   font-family: var(----main-font-family);
   font-style: normal;
   font-weight: 500;

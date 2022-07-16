@@ -119,7 +119,6 @@ body {
 
 .active {
   color: #ffa700;
-  width: 20%;
   text-align: center;
   font-family: var(----main-font-family);
   font-style: normal;
@@ -138,7 +137,6 @@ body {
 }
 
 .Navlink {
-  width: 20%;
   text-align: center;
   font-family: var(----main-font-family);
   font-style: normal;

@@ -68,9 +68,6 @@
   align-items: flex-start;
 }
 
-.advice2 img {
-}
-
 .img {
   margin-top: 26px;
 }
@@ -155,9 +152,6 @@
   }
 }
 @media (min-width: 951px) and (max-width: 1494.9px) {
-  .Cause {
-    margin-top: 3rem;
-  }
   .Chek {
     margin-top: 51px;
   }

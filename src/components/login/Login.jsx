@@ -32,6 +32,7 @@ const Login = () => {
       )
     );
   };
+  
   // useEffect(() => {
   //   var config = {
   //     method: "get",
@@ -51,6 +52,7 @@ const Login = () => {
   //     });
   // }, []);
   // console.log(data2);
+
   return (
     <div className={style.Login}>
       <h1>{t("homeHeaderBtn1")}</h1>

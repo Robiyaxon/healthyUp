@@ -79,7 +79,7 @@ export const TopHeader = () => {
       </Drawer>
       <div className={style.Top_Header + " " + scroll}>
         <div className={style.Block}>
-          <NavLink to="/" className={style.Block_Navlink}>
+          <NavLink to="/home" className={style.Block_Navlink}>
             <img src={logo} alt="rasm bor edi!" />
           </NavLink>
           <div className={style.Menu__link}>
