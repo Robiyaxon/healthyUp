@@ -13,7 +13,7 @@ const AllDietolog = React.memo(() => {
   const [minIndex, setMinIndex] = useState(0);
   const [maxIndex, setMaxIndex] = useState(0);
   const [pageSize, setPageSize] = useState(16);
-  const [search, setSearch] = useState([]);
+  // const [search, setSearch] = useState([]);
 
   const { t } = useTranslation();
   let update = () => {
@@ -57,7 +57,7 @@ const AllDietolog = React.memo(() => {
   return (
     <div className={style.wrapper}>
       <div className={style2.form_wrapper}>
-        <form>
+        {/* <form>
           <input
             type="text"
             name="person"
@@ -66,7 +66,7 @@ const AllDietolog = React.memo(() => {
             placeholder={t("search")}
           />
           <i className="fa-solid fa-magnifying-glass"></i>
-        </form>
+        </form> */}
       </div>
       <div className={style.container}>
         <div className={style.card_content_wrapper}>

@@ -182,31 +182,32 @@ body {
 .ant-input-focused,
 .ant-input-number:focus,
 .ant-input-number-focused,
-.ant-picker:hover, .ant-picker-focused,
+.ant-picker:hover,
+.ant-picker-focused,
 .ant-input-number:hover {
   box-shadow: 0 0 0 2px #dfc08585 !important;
   border-color: #dfc085 !important;
 }
 
-.ant-slider-mark{
+.ant-slider-mark {
   display: none;
 }
 
-.ant-slider-track{
+.ant-slider-track {
   background-color: #dfc085 !important;
 }
 
 .ant-input-number,
 .ant-picker,
-.ant-space{
+.ant-space {
   width: 100% !important;
 }
 
-.ant-col-8{
+.ant-col-8 {
   max-width: 20% !important;
 }
 
-.ant-btn{
+.ant-btn {
   border: none !important;
 }
 
@@ -262,5 +263,11 @@ body {
   .container {
     width: 45%;
     font-size: 14px;
+  }
+}
+
+@media (min-width: 951px) and (max-width: 1390.9px) {
+  .SinglePerson_PerconAc__exBXO {
+    padding: 100px 30px;
   }
 }

@@ -9,7 +9,6 @@ import styles from "./InputForm.module.css";
 import { useTranslation } from 'react-i18next';
 
 const { Option } = Select;
-
 const layout = {
   labelCol: {
     span: 8,
