@@ -86,19 +86,7 @@ const AllDietolog = React.memo(() => {
   return (
     <div className={style.wrapper}>
       <div className={style2.form_wrapper}>
-        <form>
-          <input
-            type="text"
-            name="person"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder={t("search")}
-          />
-          <i
-            className="fa-solid fa-magnifying-glass"
-            onClick={() => handleSearch(search)}
-          ></i>
-        </form>
+      
       </div>
       <div className={style.container}>
         <div className={style.card_content_wrapper}>
